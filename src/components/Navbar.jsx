@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import vgilLogo from '../assets/home/vgil-logo.png';
+import vgilLogo from '../assets/home/ownwer-img/vg-logo-2.png';
 
 // Import raw data for rich mega-menu content
 import { PRODUCTS_DATA } from '../data/productsData';

@@ -9,6 +9,7 @@ import conversationalAiImg from '../assets/Products-img/conversational-ai-compan
 import transactCoreImg from '../assets/Products-img/TransactCore.png';
 import auditFluxImg from '../assets/Products-img/AuditFlux.png';
 import finFlowImg from '../assets/Products-img/FinFlow.png';
+import heroBg from '../assets/home/hero-bg-img.jpg'
 
 export const PRODUCTS_DATA = [
   {

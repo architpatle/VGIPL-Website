@@ -46,13 +46,13 @@ import csAutomationImg from '../assets/Products-img/Cyber-sentinel/automation.jp
 import csAnalysisImg from '../assets/Products-img/Cyber-sentinel/analysis.jpg';
 
 // Import Product Background Images
-import bgAutopsy from '../assets/Products-img/products-bg-img/Product Autopsy@2x.png';
-import bgCoreBanking from '../assets/Products-img/products-bg-img/Product Core Banking@2x.png';
-import bgCyberSecurity from '../assets/Products-img/products-bg-img/Product Cyber security@2x.png';
-import bgEapmc from '../assets/Products-img/products-bg-img/Product e apmc@2x.png';
-import bgErp from '../assets/Products-img/products-bg-img/Product ERP solution@2x.png';
-import bgMis from '../assets/Products-img/products-bg-img/Product MIS Solution@2x.png';
-import bgVpay from '../assets/Products-img/products-bg-img/Product V pay@2x.png';
+import bgAutopsy from '../assets/home/hero-bg-img.jpg';
+import bgCoreBanking from '../assets/home/hero-bg-img.jpg';
+import bgCyberSecurity from '../assets/home/hero-bg-img.jpg';
+import bgEapmc from '../assets/home/hero-bg-img.jpg';
+import bgErp from '../assets/home/hero-bg-img.jpg';
+import bgMis from '../assets/home/hero-bg-img.jpg';
+import bgVpay from '../assets/home/hero-bg-img.jpg';
 
 function ProductSingle() {
   const { slug } = useParams();
@@ -374,7 +374,7 @@ function ProductSingle() {
                 <img
                   src={product.logo}
                   alt={`${product.title} Logo`}
-                  style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '8px' }}
+                  style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', marginBottom: '8px' }}
                 />
               </div>
             )}

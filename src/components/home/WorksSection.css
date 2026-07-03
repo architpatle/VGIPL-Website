@@ -62,9 +62,9 @@
     display: none ;
   }
 
-  .featured-works-item .content {
+  /* .featured-works-item .content {
     padding-bottom: 24px;
-  }
+  } */
 
   .featured-works-item .bot {
     display: flex;

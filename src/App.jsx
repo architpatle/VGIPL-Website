@@ -32,6 +32,7 @@ import ResourceSingle from './pages/ResourceSingle';
 import BoardManagement from './pages/BoardManagement';
 import AIPage from './pages/AIPage';
 import NotFound from './pages/NotFound';
+import FloatingSocial from './components/FloatingSocial/FloatingSocial';
 
 function App() {
   const location = useLocation();
@@ -58,6 +59,7 @@ function App() {
       <ScrollTop />
       <main id="wrapper">
         <Navbar />
+        <FloatingSocial />
         <div id="page-content">
           <Routes>
             <Route path="/" element={<HomeV1 />} />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MENU_DATA } from '../data/menuData';
 import { CAREERS_DATA } from '../data/careersData';
-import vgilLogo from "../assets/home/vgil-logo.png";
+import vgilLogo from "../assets/home/ownwer-img/vg-logo-2.png";
 
 function MobileMenu() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -360,13 +360,13 @@ function MobileMenu() {
           </ul>
 
           <div className="new-mb-footer">
-            <div className="new-mb-socials">
+            {/* <div className="new-mb-socials">
               <a href="#" className="new-mb-social-btn"><i className="icon icon-linkedin-in"></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-instagram"></i></a>
               <a href="mailto:presales@vgipl.in" className="new-mb-social-btn"><i className="icon icon-envelope" style={{ transform: 'translateY(1px)' }}></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-facebook-f"></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-youtube"></i></a>
-            </div>
+            </div> */}
             <p className="new-mb-email">Email: presales@vgipl.in</p>
           </div>
         </div>

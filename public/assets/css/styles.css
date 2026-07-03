@@ -5155,7 +5155,7 @@ button.animate-btn::after,
   position: absolute;
   inset: 16px 16px 0 16px;
   border-radius: 40px;
-  /* background-image: url(./../images/section/hero-1.jpg); */
+  background-image: url(../../../src/assets/home/hero-bg-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5749,7 +5749,7 @@ button.animate-btn::after,
 
 .featured-works-item .content {
   flex-shrink: 0;
-  padding: 32px 40px 16px;
+  padding: 8px 20px 8px;
 }
 
 .featured-works-item .content .pagi-dot {
@@ -5780,7 +5780,7 @@ button.animate-btn::after,
 .featured-works-item .content .bot {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .featured-works-item .content .bot .heading {
@@ -5821,11 +5821,11 @@ button.animate-btn::after,
   visibility: visible;
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .featured-works-item .content {
     padding: 32px 20px 16px;
   }
-}
+} */
 
 @media (max-width: 767px) {
   .featured-works-item {
@@ -5852,9 +5852,9 @@ button.animate-btn::after,
     font-size: 14px;
   }
 
-  .featured-works-item .content {
+  /* .featured-works-item .content {
     padding: 16px 10px 16px;
-  }
+  } */
 
   .featured-works-item .content .bot {
     gap: 12px;
@@ -7180,7 +7180,7 @@ button.animate-btn::after,
   position: relative;
   padding: 192px 0;
   overflow: hidden;
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
 }
 
 .section-tools>img {

@@ -67,17 +67,17 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
-                  padding: '60px',
+                  // padding: '60px',
                   border: '1px solid #f1f1f1',
                   borderRadius: '24px',
                   // height:'400px',
                   maxHeight: '400px',
-                  minHeight:'280px',
+                  minHeight:'180px',
                   position: 'relative'
                 }}>
                   <img src={product.logo} alt={product.title} style={{ 
                     // maxWidth: '180px', 
-                    maxHeight: '40px',
+                    maxHeight: '30px',
                     // width: 'auto',
                     // height: 'auto', 
                     objectFit: 'contain',

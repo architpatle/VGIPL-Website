@@ -3,6 +3,7 @@ import imgBlog from '../assets/Resource-img/Blog.png';
 import imgPress from '../assets/Resource-img/press.png';
 import imgMedia from '../assets/Resource-img/media.png';
 import imgVideo from '../assets/Resource-img/video.png';
+import heroImg from '../assets/home/hero-bg-img.jpg'
 
 export const RESOURCE_DATA = [
   {

@@ -92,7 +92,7 @@ function TransactCore() {
               <img
                 src={transactCoreImg}
                 alt={`${product.title} Logo`}
-                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '8px' }}
+                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain',  marginBottom: '8px' }}
               />
             </div>
             <div className="title text-display-2 effectFade fadeRotateX prod-hero-title">

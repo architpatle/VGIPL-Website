@@ -19,7 +19,7 @@
 .navContainer {
   pointer-events: auto; /* Re-enable pointer events for the pill */
   width: 100%;
-  max-width: 70%;
+  max-width: 63%;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
