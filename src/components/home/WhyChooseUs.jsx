@@ -2,16 +2,21 @@ import React from 'react';
 import cyberLogo from '../../assets/home/cyber-logo.png';
 import styles from "./WhyChooseUs.module.css";
 
+import img1 from '../../assets/home/Why-Choose-Us/design-led-ai-1.png'
+import img2 from '../../assets/home/Why-Choose-Us/design-led-ai-3.png'
+import img3 from '../../assets/home/Why-Choose-Us/ai-bot-img.png'
+
+
 function WhyChooseUs() {
     return (
-        <div className="section-benefits section-spacing-grouped">
+        <div className="section-benefits section-spacing-grouped mt-20">
             <div className="container">
                 <div className="heading-section center mb-70">
                     <div className="heading-sub fw-semibold effectFade fadeUp">Benefits</div>
                     <div className="heading-title text-gradient-3 effectFade fadeRotateX">Why Choose Us</div>
                 </div>
                 <div className="row mb-24">
-                    <div className="col-lg-7">
+                    <div className="col-lg-7 ">
                         <div className="benefits-box benefits-progress">
                             <div className={styles.performanceGrid}>
                                 {[
@@ -66,7 +71,7 @@ function WhyChooseUs() {
                         </div>
                     </div>
                     <div className="col-lg-5">
-                        <div className="benefits-box benefits-step effectFade fadeUp">
+                        <div className="benefits-box benefits-step  effectFade fadeUp">
                             <div className="benefits-step-inner">
                                 <div className="line-step"></div>
                                 <div className="step-item">
@@ -80,8 +85,8 @@ function WhyChooseUs() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h6 className="fw-semibold title">From Testing to Trustworthy Intelligence</h6>
-                                <p className="text text-secondary">From day one, we optimize for what matters most — accuracy, speed, security and cost efficiency. Every system is continuously monitored, tested and improved to ensure reliable, real-world performance. </p>
+                                <h6 className="fw-semibold title">Intelligence Built on Trust</h6>
+                                <p className="text text-secondary">We optimize for accuracy, speed, security and cost efficiency, delivering reliable real-world performance. </p>
                             </div>
                         </div>
                     </div>
@@ -89,7 +94,7 @@ function WhyChooseUs() {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="benefits-box benefits-secure ">
-                            <div className="benefits-secure-inner text-center">
+                            <div className="benefits-secure-inner text-center ">
                                 <img src={cyberLogo} alt="Cyber Security Logo" />
                             </div>
                             <div className="content">
@@ -101,9 +106,9 @@ function WhyChooseUs() {
                     <div className="col-lg-7">
                         <div className="benefits-box benefits-design">
                             <div className="benefits-design-inner">
-                                <img className="item-img-1" src="/assets/images/item/benefits-2.svg" alt="" />
-                                <img className="item-img-2 rightleft" src="/assets/images/item/benefits-3.png" alt="" />
-                                <img className="item-img-3 updown" src="/assets/images/item/benefits-4.png" alt="" />
+                                <img className="item-img-1" src={img1} alt="" />
+                                <img className="item-img-2 rightleft" src={img2} alt="" />
+                                <img className="item-img-3 updown" src={img3} alt="" />
                             </div>
                             <div className="content">
                                 <h6 className="fw-semibold title">Design-Led AI Experiences</h6>

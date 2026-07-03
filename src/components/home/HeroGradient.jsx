@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import homeBgImg from '../../assets/home/• Homepage Background video size (896_678)px_@2x.jpg';
+import homeBgImg from '../../assets/home/hero-bg-img.jpg';
 
 import eAutopsyImg from '../../assets/home/e-autopsy.png';
 import digitalIdentityImg from '../../assets/home/digital-identity.png';
@@ -51,7 +51,7 @@ function HeroGradient() {
                 </linearGradient>
               </defs>
             </svg>
-            AIPowered Solutions
+            AI-Powered Solutions
           </div>
           <div className="title text-display-2 effectFade fadeRotateX">
             <span className="title1 fw-semibold text-gradient-1">Your-Complete </span>

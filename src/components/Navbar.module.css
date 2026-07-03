@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -12,13 +12,14 @@
 }
 
 .headerScrolled {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  top:0px;
 }
 
 .navContainer {
   pointer-events: auto; /* Re-enable pointer events for the pill */
   width: 100%;
-  max-width: 100%;
+  max-width: 70%;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -32,12 +33,12 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.headerScrolled .navContainer {
+/* .headerScrolled .navContainer {
   max-width: 1220px;
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Logo */
 .logoSection {
@@ -318,7 +319,7 @@
 }
 
 .contactBtn {
-  background: #e10600;
+  /* background: #e10600;
   color: #ffffff;
   padding: 6px 8px 6px 18px;
   border-radius: 100px;
@@ -329,13 +330,13 @@
   align-items: center;
   gap: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2); */
 }
 
 .contactBtn:hover {
-  background: #c00500;
+  /* background: #c00500;
   box-shadow: 0 6px 20px rgba(225, 6, 0, 0.3);
-  transform: translateY(-1px);
+  transform: translateY(-1px); */
 }
 
 .arrowCircle {
@@ -377,5 +378,8 @@
 @media (max-width: 500px) {
   .contactBtn {
     display: none;
+  }
+  .navContainer{
+    max-width: 100%;
   }
 }

@@ -1134,7 +1134,7 @@
 
 /* Why Choose Us / Benefits Section Overrides */
 .benefits-box {
-  padding: 15px !important;
+  /* padding: 15px !important; */
   /* Uniform padding on all sides for identical padding height */
   border-radius: 32px !important;
   box-sizing: border-box !important;
@@ -1151,7 +1151,7 @@
 /* Desktop & Large Screens */
 @media (min-width: 992px) {
   .benefits-box {
-    height: 340px !important;
+    /* height: 340px !important; */
     /* Height increased to 340px to completely prevent text overflow */
   }
 
@@ -1165,11 +1165,11 @@
     /* Flexbox handles spacing */
   }
 
-  .benefits-step .benefits-step-inner {
+  /* .benefits-step .benefits-step-inner {
     margin-top: 15px !important;
     margin-bottom: 0px !important;
     height: 80px !important;
-  }
+  } */
 
   .benefits-step-inner .step-item {
     width: 80px !important;
@@ -1209,21 +1209,21 @@
   }
 
   .benefits-design .benefits-design-inner .item-img-1 {
-    max-height: 90px !important;
+    max-height: 350px !important;
     width: auto !important;
   }
 
   .benefits-design .benefits-design-inner .item-img-2 {
-    top: 15px !important;
-    right: 180px !important;
-    max-height: 60px !important;
+    /* top: 15px !important; */
+    /* right: 180px !important; */
+    max-height: 160px !important;
     width: auto !important;
   }
 
   .benefits-design .benefits-design-inner .item-img-3 {
-    bottom: -15px !important;
-    right: -30px !important;
-    max-height: 60px !important;
+    /* bottom: -150px !important; */
+    right: -40px !important;
+    max-height: 100px !important;
     width: auto !important;
   }
 }
@@ -1242,6 +1242,18 @@
   .benefits-secure-inner {
     margin-bottom: 20px !important;
   }
+
+  .benefits-design .benefits-design-inner .item-img-1{
+    max-height: 250px !important;
+  }
+  .benefits-design .benefits-design-inner .item-img-3{
+    max-height: 100px !important;
+    right: -30px;
+  }
+  .benefits-design .benefits-design-inner .item-img-2 {
+    max-height: 170px;
+  }
+  
 }
 
 /* ==========================================================================
@@ -1847,18 +1859,18 @@
 
 /* Cream theme for all other cards and collapsed state */
 .accordion-faq_item.theme-cream {
-  background-color: #F8F5EF !important;
+  background-color: var(--neutral) !important;
   box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.03), 0px 3px 3px 0px rgba(0, 0, 0, 0.05), 0px -8px 0px 0px rgba(0, 0, 0, 0.03) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.8) inset !important;
 }
 
 .accordion-faq_item.theme-cream .accordion-action::before {
-  background: #F8F5EF !important;
+  background: var(--neutral) !important;
   box-shadow: 0px -8px 0px 0px rgba(0, 0, 0, 0.02) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.8) inset, 0px 7.77px 2.21px 0px rgba(0, 0, 0, 0.01), 0px 3px 3px 0px rgba(0, 0, 0, 0.02) !important;
 }
 
 /* Typography styles for theme-cream */
 .accordion-faq_item.theme-cream .accordion-title {
-  color: #18181B !important;
+  color: var(--secondary) !important;
 }
 
 .accordion-faq_item.theme-cream .accordion-action:not(.collapsed) .accordion-title {
@@ -1938,26 +1950,26 @@
 
   .section-featured-works .featured-works-item .content .bot .heading {
     font-size: 20px !important;
-    margin-bottom: 0 !important;
+    /* margin-bottom: 0 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: space-between !important; */
   }
 
   /* Add toggle plus/minus symbol indicator next to the heading on mobile */
-  .section-featured-works .featured-works-item .content .bot .heading::after {
+  /* .section-featured-works .featured-works-item .content .bot .heading::after {
     content: '+' !important;
     font-size: 22px !important;
     color: #e10600 !important;
     font-weight: 400 !important;
     transition: transform 0.3s ease !important;
     display: inline-block !important;
-  }
+  } */
 
-  .section-featured-works .featured-works-item.expanded-card .content .bot .heading::after {
+  /* .section-featured-works .featured-works-item.expanded-card .content .bot .heading::after {
     content: '−' !important;
     transform: rotate(180deg) !important;
-  }
+  } */
 
   /* Style for mobile product link inside the expanded area */
   .section-featured-works .mobile-view-product-btn-wrap {

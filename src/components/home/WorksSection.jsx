@@ -48,7 +48,7 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
 
   return (
     <div id="works" className={className}>
-      <div className="container">
+      <div className="mx-auto" style={{maxWidth:'1040px'}}>
         <div className="heading-section mb-0">
           <div className="heading-sub fw-semibold mx-auto effectFade fadeUp">Our Products</div>
         </div>
@@ -70,14 +70,16 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
                   padding: '60px',
                   border: '1px solid #f1f1f1',
                   borderRadius: '24px',
-                  height: '400px',
+                  // height:'400px',
+                  maxHeight: '400px',
+                  minHeight:'280px',
                   position: 'relative'
                 }}>
                   <img src={product.logo} alt={product.title} style={{ 
-                    maxWidth: '180px', 
-                    maxHeight: '180px',
-                    width: 'auto',
-                    height: 'auto', 
+                    // maxWidth: '180px', 
+                    maxHeight: '40px',
+                    // width: 'auto',
+                    // height: 'auto', 
                     objectFit: 'contain',
                     filter: 'drop-shadow(0 10px 15px rgba(0,0,0,0.05))',
                     zIndex: 2
@@ -88,13 +90,23 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
                   </Link>
                 </div>
                 <div className="content">
-                  <div className="pagi-dot">
+                  {/* <div className="pagi-dot">
                     {[0, 1, 2, 3].map(dot => (
                       <span key={dot} className={dot === index ? 'active' : ''}></span>
                     ))}
-                  </div>
+                  </div> */}
                   <div className="bot">
-                    <h4 className="heading fw-semibold">{product.title}</h4>
+                    <h4 className="heading fw-semibold text-center" style={{fontSize:'28px'}}>{product.title}</h4>
+                    <div className="desktop-view-product-btn-wrap">
+    <Link
+      to={`/products/${product.slug}`}
+      className="desktop-view-product-btn tf-btn"
+      onClick={(e) => e.stopPropagation()}
+    >
+      View Product
+      {/* <i className="icon icon-arrow-top-right"></i> */}
+    </Link>
+  </div>
                     <div
   className={`expanded-details-container ${
     window.innerWidth > 767

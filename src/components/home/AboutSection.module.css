@@ -11,7 +11,7 @@
   gap: 14px;
   width: max-content;
 
-  animation: marqueeScroll 20s linear infinite;
+  /* animation: marqueeScroll 20s linear infinite; */
 }
 
 .locationTrack span {

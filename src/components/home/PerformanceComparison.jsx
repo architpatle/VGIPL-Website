@@ -27,7 +27,7 @@ function PerformanceComparison() {
   ];
 
   return (
-    <div className="section-performance-comparison section-spacing-grouped" id="performance" style={{ background: '#fcfcfc', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6' }}>
+    <div className="section-performance-comparison section-spacing-grouped" id="performance" style={{ background: '#fcfcfc' }}>
       <div className="container">
         <div className="heading-section center mb-60">
           <div className="heading-sub fw-semibold effectFade fadeUp">Performance</div>
@@ -36,14 +36,16 @@ function PerformanceComparison() {
 
         <div className="row justify-content-center gap-24">
           {/* Without Virtual Galaxy */}
-          <div className="col-lg-5 col-md-6 ">
+          <div className="col-lg-5 col-md-6" >
             <div className="performance-card-v" style={{
-              background: '#fff',
-              border: '1px solid rgba(239, 68, 68, 0.15)',
+              // background: 'var(--body)',
+              // border: '1px solid rgba(239, 68, 68, 0.15)',
               borderRadius: '24px',
               padding: '40px 30px',
               height: '100%',
-              boxShadow: '0 10px 30px rgba(239, 68, 68, 0.02)',
+              // boxShadow: '0 10px 30px rgba(239, 68, 68, 0.02)',
+              backgroundColor: 'var(--neutral-100)',
+  boxShadow: '0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease'
             }}>
               <div className="d-flex align-items-center gap-12 mb-30 pb-20 border-bottom" style={{ borderColor: 'rgba(239, 68, 68, 0.1)' }}>
@@ -67,12 +69,14 @@ function PerformanceComparison() {
           {/* With Virtual Galaxy */}
           <div className="col-lg-5 col-md-6 ">
             <div className="performance-card-v" style={{
-              background: '#fff',
-              border: '2px solid rgba(34, 197, 94, 0.3)',
+              // background: '#fff',
+              // border: '2px solid rgba(34, 197, 94, 0.3)',
               borderRadius: '24px',
               padding: '40px 30px',
               height: '100%',
-              boxShadow: '0 15px 35px rgba(34, 197, 94, 0.08)',
+              // boxShadow: '0 15px 35px rgba(34, 197, 94, 0.08)',
+              backgroundColor: 'var(--neutral-100)',
+  boxShadow: '0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease'
             }}>
               <div className="d-flex align-items-center gap-12 mb-30 pb-20 border-bottom" style={{ borderColor: 'rgba(34, 197, 94, 0.1)' }}>

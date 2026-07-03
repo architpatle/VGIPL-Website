@@ -49,7 +49,9 @@
   --neutral-800: #27272A;
   --neutral-900: #18181B;
   --neutral-950: #09090B;
-  --body: #ffffff;
+  /* --body: #ffffff; */
+    --body: #EDECEC;
+
 }
 
 [data-color-primary=color-primary-1] {
@@ -5153,7 +5155,7 @@ button.animate-btn::after,
   position: absolute;
   inset: 16px 16px 0 16px;
   border-radius: 40px;
-  background-image: url(./../images/section/hero-1.jpg);
+  /* background-image: url(./../images/section/hero-1.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9702,7 +9704,7 @@ button.animate-btn::after,
 }
 
 .benefits-step {
-  height: 100%;
+  height: 100% ;
 }
 
 .benefits-step .benefits-step-inner {
@@ -9782,7 +9784,7 @@ button.animate-btn::after,
 
 .benefits-design .benefits-design-inner {
   text-align: end;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   margin-top: -12px;
   position: relative;
 }
@@ -9807,7 +9809,7 @@ button.animate-btn::after,
 
 @media (max-width: 767px) {
   .benefits-design .benefits-design-inner {
-    margin-right: 30px;
+    /* margin-right: 30px; */
   }
 
   .benefits-design .content {
@@ -9819,9 +9821,10 @@ button.animate-btn::after,
 @media (max-width: 575px) {
   .benefits-design .benefits-design-inner {
     text-align: center;
+    
   }
 
-  .benefits-design .benefits-design-inner .item-img-2 {
+  .benefits-design .benefits-design-inner .item-img-2, .benefits-design .benefits-design-inner .item-img-3 {
     display: none;
   }
 
@@ -11264,19 +11267,19 @@ footer .footer-bottom::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45); */
   border-radius: 40px;
   pointer-events: none;
 }
 
 .section-hero .content-wrap .title span {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  background: none !important;
+  /* color: #ffffff !important; */
+  -webkit-text-fill-color: transparent;
+  /* background: none !important; */
 }
 
 .section-hero .content-wrap .text {
-  color: rgba(255, 255, 255, 0.9) !important;
+  /* color: rgba(255, 255, 255, 0.9) !important; */
 }
 
 

@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+import service1Img from "../../assets//home/Why-Choose-Us/globe.png";
+import service2Img from "../../assets/home/Why-Choose-Us/bank.png";
+import service3Img from "../../assets/home/Why-Choose-Us/engineer.png";
+import service4Img from "../../assets/home/Why-Choose-Us/ai.png";
+
 function ServicesSection() {
-  const [activeImage, setActiveImage] = useState("/assets/images/section/service-1.jpg");
+  const [activeImage, setActiveImage] = useState(service1Img);
   const [activeCard, setActiveCard] = useState("faq-1");
   const [isFading, setIsFading] = useState(false);
   const hoverTimeout = useRef(null);
@@ -10,11 +15,11 @@ function ServicesSection() {
   // Preload images
   useEffect(() => {
     const images = [
-      "/assets/images/section/service-1.jpg",
-      "/assets/images/section/service-2.jpg",
-      "/assets/images/section/service-3.jpg",
-      "/assets/images/section/service-4.jpg"
-    ];
+  service1Img,
+  service2Img,
+  service3Img,
+  service4Img,
+];
     images.forEach(src => {
       const img = new Image();
       img.src = src;
@@ -55,18 +60,19 @@ function ServicesSection() {
   };
 
   return (
-    <div id="services" className="section-services section-spacing-grouped mb-6" >
+    <div id="services" className="section-services section-spacing-lg mb-6 " >
       <div className="container">
-        <div className="row justify-content-between">
+        <div className="row justify-content-between ">
           <div className="col-xxl-4 col-lg-6">
-            <div className="d-flex flex-column justify-content-between h-100">
-              <div className="col-left">
-                <div className="heading-section mb-48">
-                  <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us</div>
-                  <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
+            <div className="d-flex flex-column justify-content-between h-100 ">
+              <div className="col-left d-flex flex-column justify-content-between h-100">
+                <div>
+                  <div className="heading-section ">
+                    <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us</div>
+                    <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
+                  </div>
+                  <p className="effectFade fadeUp mb-48" >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
                 </div>
-                <p className="effectFade fadeUp mb-48">Serving Clients With Apt
-                  Solutions Since 1997.</p>
 
                 {/* Dynamic Image Container */}
                 <div className="dynamic-image-container effectFade fadeUp">
@@ -80,7 +86,8 @@ function ServicesSection() {
                       transform: isFading ? 'scale(0.98)' : 'scale(1)',
                       transition: 'opacity 0.2s ease-out, transform 0.2s ease-out',
                       objectFit: 'cover',
-                      borderRadius: '24px'
+                      borderRadius: '24px',
+                      backgroundColor:'var(--secondary)'
                     }}
                   />
                 </div>
@@ -91,7 +98,7 @@ function ServicesSection() {
             {/* Parent container no longer needs a hardcoded min-height because a card is always open */}
             <div className="accordion-faq_list" id="accordion-services" onMouseLeave={handleMouseLeaveContainer}>
 
-              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-1' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-1', '/assets/images/section/service-1.jpg')}>
+              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-1' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-1', service1Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-1' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-1'}>
                   <div className="accordion-title">
                     Domain Expertise <br />
@@ -112,7 +119,7 @@ function ServicesSection() {
                 </div>
               </div>
 
-              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-2' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-2', '/assets/images/section/service-2.jpg')}>
+              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-2' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-2', service2Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-2' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-2'}>
                   <div className="accordion-title">
                     Trusted by 500+ Enterprises <br />
@@ -133,7 +140,7 @@ function ServicesSection() {
                 </div>
               </div>
 
-              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', '/assets/images/section/service-3.jpg')}>
+              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', service3Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
                   <div className="accordion-title">
                     400+ Engineers <br />
@@ -156,7 +163,7 @@ function ServicesSection() {
                 </div>
               </div>
 
-              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-4' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-4', '/assets/images/section/service-4.jpg')}>
+              <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-4' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-4', service4Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-4' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-4'}>
                   <div className="accordion-title">
                     Future Ready Solutions <br />

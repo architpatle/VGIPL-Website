@@ -2,6 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+
 import partner1 from '../../assets/Government Projects/gmc_nagpur.png';
 import partner2 from '../../assets/Government Projects/high_court.png';
 import partner3 from '../../assets/Government Projects/igmc_nagpur.png';
@@ -36,7 +37,6 @@ import partner31 from '../../assets/National-bank/sanmitra_mahil_agri_sahakari_b
 import partner32 from '../../assets/National-bank/wardha_dcc_bank_Ltd.png';
 import partner33 from '../../assets/National-bank/yavatmal_dcc_bank.png';
 
-
 function PartnerSection() {
   const logoStyle = {
     height: '130px',
@@ -47,69 +47,158 @@ function PartnerSection() {
     display: 'block'
   };
 
+  const logos = [
+    partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8,
+    partner9, partner10, partner11, partner12, partner13, partner14, partner15,
+    partner16, partner17, partner18, partner19, partner20, partner21, partner22,
+    partner23, partner24, partner25, partner26,
+    partner27, partner28, partner29, partner30,
+    partner31, partner32, partner33
+  ];
+
   return (
-    <div className="section-partner section-spacing-sm" >
+    <div className="section-partner section-spacing-sm mt-20">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="partner-wrap d-flex flex-wrap" style={{ alignItems: 'center', justifyContent: 'center', gap: '20px' }}>
-              <p className="text-secondary text fw-semibold mb-0" style={{ minWidth: '150px', textAlign: 'center', flex: '1 1 100%' }}>
+
+            <div
+              className="partner-wrap d-flex flex-wrap"
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '20px'
+              }}
+            >
+              <p
+                className="text-secondary fw-semibold mb-0"
+                style={{
+                  minWidth: '150px',
+                  textAlign: 'center',
+                  flex: '1 1 100%'
+                }}
+              >
                 Trusted by 100+ top-tier brands
               </p>
 
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    .partner-wrap .swiper-wrapper {
+                      transition-timing-function: linear !important;
+                    }
 
-              <style dangerouslySetInnerHTML={{
-                __html: `
-                .partner-wrap .swiper-wrapper {
-                  transition-timing-function: linear !important;
-                }
-                .partner-wrap .swiper {
-                  width: 100%;
-                }
-                @media (max-width: 767px) {
-                  .partner-wrap .swiper {
-                    max-width: 290px;
-                    margin: 0 auto;
-                  }
-                  .partner-wrap img {
-                    height: 80px !important;
-                  }
-                  .section-partner {
-                    padding-top: 10px !important;
-                    padding-bottom: 10px !important;
-                  }
-                }
-              `}} />
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={40}
-                slidesPerView={6}
-                loop={true}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
+                    .partner-slider-wrapper {
+                      position: relative;
+                      width: 100%;
+                      overflow: hidden;
+                    }
+
+                    .partner-slider-wrapper::before,
+                    .partner-slider-wrapper::after {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      width: 100px;
+                      height: 100%;
+                      z-index: 10;
+                      pointer-events: none;
+                    }
+
+                    .partner-slider-wrapper::before {
+                      left: 0;
+                      background: linear-gradient(
+                        to right,
+                        var(--body) 0%,
+                        rgba(255,255,255,0) 100%
+                      );
+                    }
+
+                    .partner-slider-wrapper::after {
+                      right: 0;
+                      background: linear-gradient(
+                        to left,
+                         var(--body)  0%,
+                        rgba(255,255,255,0) 100%
+                      );
+                    }
+
+                    .partner-wrap .swiper {
+                      width: 100%;
+                    }
+
+                    @media (max-width: 767px) {
+
+                      .partner-slider-wrapper::before,
+                      .partner-slider-wrapper::after {
+                        width: 40px;
+                      }
+
+                      .partner-wrap .swiper {
+                        max-width: 290px;
+                        margin: 0 auto;
+                      }
+
+                      .partner-wrap img {
+                        height: 80px !important;
+                      }
+
+                      .section-partner {
+                        padding-top: 10px !important;
+                        padding-bottom: 10px !important;
+                      }
+                    }
+                  `
                 }}
-                speed={3000}
-                breakpoints={{
-                  320: { slidesPerView: 2, spaceBetween: 20 },
-                  640: { slidesPerView: 3, spaceBetween: 30 },
-                  1024: { slidesPerView: 6, spaceBetween: 40 },
-                }}
-              >
-                {[
-                  partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8,
-                  partner9, partner10, partner11, partner12, partner13, partner14, partner15,
-                  partner16, partner17, partner18, partner19, partner20, partner21, partner22,
-                  partner23, partner24, partner25, partner26,
-                  partner27, partner28, partner29, partner30,
-                  partner31, partner32, partner33
-                ].map((logo, index) => (
-                  <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <img src={logo} alt={`partner-${index}`} style={logoStyle} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              />
+
+              <div className="partner-slider-wrapper">
+                <Swiper
+                  modules={[Autoplay]}
+                  spaceBetween={40}
+                  slidesPerView={6}
+                  loop={true}
+                  speed={4000}
+                  autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false
+                  }}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 2,
+                      spaceBetween: 20
+                    },
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 30
+                    },
+                    1024: {
+                      slidesPerView: 6,
+                      spaceBetween: 40
+                    }
+                  }}
+                >
+                  {logos.map((logo, index) => (
+                    <SwiperSlide
+                      key={index}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                      }}
+                    >
+                      <img
+                        src={logo}
+                        alt={`partner-${index}`}
+                        style={logoStyle}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+
             </div>
+
           </div>
         </div>
       </div>

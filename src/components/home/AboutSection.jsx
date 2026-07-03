@@ -5,33 +5,33 @@ import styles from "./AboutSection.module.css";
 
 function AboutSection() {
   const locations = [
-  "📍 Headquartered in Nagpur, India",
-  "PAN-India presence across 18+ states",
-  "Active projects in Indonesia, Africa & more",
-];
+    "Headquartered in Nagpur, India",
+    // "PAN-India presence across 18+ states",
+    // "Active projects in Indonesia, Africa & more",
+  ];
   return (
-    <div className="section-about-us section-spacing-lg" id="about">
+    <div className="section-about-us section-spacing-lg" id="about" style={{backgroundColor: "var(--body) !important"}}>
       <div className="container">
         <div className="row align-items-stretch">
-          <div className="col-12">
+          <div className="col-12 ">
             <div className="heading-section" style={{ marginBottom: '15px' }}>
               <div className="heading-sub fw-semibold effectFade fadeUp" style={{ display: 'inline-block', marginBottom: '15px' }}>About Us</div>
               <div className="heading-title text-gradient-2 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building  <br className="d-none d-md-block" /> Reliable IT Foundations!</div>
             </div>
           </div>
-          <div className="col-lg-6 lg-mb-24 d-flex">
+          <div className="col-lg-7 lg-mb-24 d-flex">
             <div className="col-left w-100 h-100 d-flex flex-column justify-content-between" style={{ minHeight: '100%' }}>
               <div className="position-relative z-5">
                 <div className='${styles.locationMarquee} sub'>
-  <div className={styles.locationTrack}>
-    {[...locations, ...locations, ...locations].map((item, index) => (
-      <React.Fragment key={index}>
-        <span>{item}</span>
-        <span className={styles.dot}></span>
-      </React.Fragment>
-    ))}
-  </div>
-</div>
+                  <div className={styles.locationTrack}>
+                    {[...locations].map((item, index) => (
+                      <React.Fragment key={index}>
+                        <span className={styles.dot}></span>
+                        <span>{item}</span>
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
                 <h5 className="title fw-semibold text-white">Global Software <span className="text-brand">Solution since 1997</span></h5>
                 <Link to="/contact" className="tf-btn">
                   Start a Project
@@ -40,7 +40,7 @@ function AboutSection() {
               <img className="effectFade fadeRotateX mt-auto" src={earthImg} alt="Earth" style={{ alignSelf: 'center', maxWidth: '100%' }} />
             </div>
           </div>
-          <div className="col-lg-6 d-flex flex-column">
+          <div className="col-lg-5 d-flex flex-column">
             <div className="review-box mb-24 flex-grow-1 d-flex flex-column justify-content-center">
               <div className="fw-bold mb-12 text-brand" style={{ fontSize: '0.95rem', letterSpacing: '1.2px', textTransform: 'uppercase' }}>
                 The Numbers Behind Our Impact

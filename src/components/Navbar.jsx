@@ -164,7 +164,7 @@ function Navbar() {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
-      <nav className={styles.navContainer}>
+      <nav className={`${styles.navContainer} `}>
         {/* Left: Logo */}
         <div className={styles.logoSection}>
           <Link to="/" className={styles.logoLink}>
@@ -251,7 +251,7 @@ function Navbar() {
 
         {/* Right: Actions */}
         <div className={styles.actionSection}>
-          <div className={styles.socialList}>
+          {/* <div className={styles.socialList}>
             {[
               { icon: 'linkedin-in', link: 'https://linkedin.com' },
               { icon: 'instagram', link: 'https://instagram.com' },
@@ -263,13 +263,13 @@ function Navbar() {
                 <i className={`icon icon-${s.icon}`}></i>
               </a>
             ))}
-          </div>
+          </div> */}
 
-          <Link to="/contact" className={styles.contactBtn}>
+          <Link to="/contact" className={`${styles.contactBtn} tf-btn`}>
             Contact Us
-            <div className={styles.arrowCircle}>
+            {/* <div className={styles.arrowCircle}>
               <i className="icon icon-long-arrow-alt-up-solid" style={{ transform: 'rotate(45deg)' }}></i>
-            </div>
+            </div> */}
           </Link>
 
           {/* Mobile Toggle */}
