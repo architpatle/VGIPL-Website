@@ -7180,6 +7180,7 @@ button.animate-btn::after,
   position: relative;
   padding: 192px 0;
   overflow: hidden;
+  background-color: #FAFAFA;
 }
 
 .section-tools>img {

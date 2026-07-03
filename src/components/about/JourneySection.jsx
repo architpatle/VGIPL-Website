@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -167,11 +167,19 @@ function JourneySection() {
 
         <div className="journey-slider-wrap effectFade fadeUp">
           <Swiper
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             centeredSlides={false}
             initialSlide={0}
+            loop={true}
+            speed={8000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              reverseDirection: false
+            }}
             navigation={{
               prevEl: '.journey-prev',
               nextEl: '.journey-next',
@@ -224,51 +232,84 @@ function JourneySection() {
 
         {/* Dynamic Stats Footer Bar */}
         <div className="journey-stats-bar effectFade fadeUp">
-          <div className="journey-stat-item">
-            <div className="stat-icon-wrapper">
-              <i className="icon icon-crown-solid"></i>
-            </div>
-            <div className="stat-info">
-              <span className="stat-number">29+</span>
-              <span className="stat-label">Years of Legacy</span>
-            </div>
-          </div>
-          <div className="journey-stat-item">
-            <div className="stat-icon-wrapper">
-              <i className="icon icon-global"></i>
-            </div>
-            <div className="stat-info">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">Countries Served</span>
-            </div>
-          </div>
-          <div className="journey-stat-item">
-            <div className="stat-icon-wrapper">
-              <i className="icon icon-user-friends-solid"></i>
-            </div>
-            <div className="stat-info">
-              <span className="stat-number">5000+</span>
-              <span className="stat-label">Happy Clients</span>
-            </div>
-          </div>
-          <div className="journey-stat-item">
-            <div className="stat-icon-wrapper">
-              <i className="icon icon-check-solid"></i>
-            </div>
-            <div className="stat-info">
-              <span className="stat-number">100%</span>
-              <span className="stat-label">Commitment</span>
-            </div>
-          </div>
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            breakpoints={{
+              576: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 }
+            }}
+            className="stats-swiper-container"
+            style={{ width: '100%' }}
+          >
+            <SwiperSlide>
+              <div className="journey-stat-item">
+                <div className="stat-icon-wrapper">
+                  <i className="icon icon-crown-solid"></i>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-number">29+</span>
+                  <span className="stat-label">Years of Legacy</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="journey-stat-item">
+                <div className="stat-icon-wrapper">
+                  <i className="icon icon-global"></i>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-number">10+</span>
+                  <span className="stat-label">Countries Served</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="journey-stat-item">
+                <div className="stat-icon-wrapper">
+                  <i className="icon icon-user-friends-solid"></i>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-number">5000+</span>
+                  <span className="stat-label">Happy Clients</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="journey-stat-item">
+                <div className="stat-icon-wrapper">
+                  <i className="icon icon-check-solid"></i>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-number">100%</span>
+                  <span className="stat-label">Commitment</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 
       <style>{`
         .journey-section {
-          background: #f8fafc;
+          background: #EDECEC;
           padding: 100px 0;
           position: relative;
           overflow: hidden;
+        }
+
+        .journey-section .heading-sub.style-1 {
+          background: #ffffff !important;
+          color: #e10600 !important;
+          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05), 0px -3px 0px 0px #e2e8f0 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.6) inset !important;
+        }
+
+        .journey-section .heading-sub.style-1::before {
+          background-color: #e10600 !important;
         }
 
         .journey-slider-wrap {
@@ -279,6 +320,10 @@ function JourneySection() {
         .journey-swiper {
           overflow: visible !important;
           padding-bottom: 20px !important;
+        }
+
+        .journey-swiper .swiper-wrapper {
+          transition-timing-function: linear !important;
         }
 
         .journey-swiper::before {
@@ -470,14 +515,16 @@ function JourneySection() {
         .journey-stats-bar {
           background: #ffffff;
           border-radius: 24px;
-          padding: 30px;
+          padding: 30px 20px;
           box-shadow: 0 10px 40px rgba(15, 23, 42, 0.04);
           border: 1px solid #e2e8f0;
           margin-top: 60px;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-          align-items: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .stats-swiper-container {
+          width: 100%;
         }
 
         .journey-stat-item {
@@ -485,17 +532,6 @@ function JourneySection() {
           align-items: center;
           justify-content: center;
           gap: 16px;
-          position: relative;
-        }
-
-        .journey-stat-item:not(:last-child)::after {
-          content: '';
-          position: absolute;
-          right: -10px;
-          top: 15%;
-          height: 70%;
-          width: 1px;
-          background: #e2e8f0;
         }
 
         .stat-icon-wrapper {
@@ -542,25 +578,18 @@ function JourneySection() {
 
         @media (max-width: 1024px) {
           .journey-stats-bar {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px 20px;
             margin-top: 30px;
-          }
-          .journey-stat-item:nth-child(2)::after {
-            display: none;
           }
         }
 
         @media (max-width: 640px) {
           .journey-stats-bar {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px 12px;
             padding: 20px 15px;
             margin-top: 20px;
           }
           .journey-stat-item {
             justify-content: flex-start;
-            padding-left: 10px;
+            padding-left: 20px;
             gap: 10px;
           }
           .stat-icon-wrapper {
@@ -574,9 +603,6 @@ function JourneySection() {
           }
           .stat-label {
             font-size: 11px;
-          }
-          .journey-stat-item::after {
-            display: none !important;
           }
         }
       `}</style>

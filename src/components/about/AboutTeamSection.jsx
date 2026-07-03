@@ -395,6 +395,15 @@ function AboutTeamSection() {
         </div>
 
         <style>{`
+          .section-team .heading-sub.style-1 {
+            background: #ffffff !important;
+            color: #e10600 !important;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05), 0px -3px 0px 0px #e2e8f0 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.6) inset !important;
+          }
+          .section-team .heading-sub.style-1::before {
+            background-color: #e10600 !important;
+          }
+
           /* ====== SCROLL ANIMATION SYSTEM ====== */
           .anim-on-scroll {
             opacity: 0;

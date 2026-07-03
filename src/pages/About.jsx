@@ -18,7 +18,7 @@ function About() {
       <AboutHero />
       <MissionSection />
       <PartnerSection />
-      
+
       <div className="box-white">
         <ValuesSection />
       </div>
@@ -29,7 +29,7 @@ function About() {
         <div className="light-box"></div>
         <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
         <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
-        
+
         <AboutTeamSection />
         <StatisticSection />
         <AwardsSection />
@@ -39,7 +39,7 @@ function About() {
       <JourneySection />
 
       <FaqsSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }

@@ -215,7 +215,7 @@ function AIPage() {
       <style>
         {`
           .vgil-ai-page {
-            background-color: #ffffff;
+            background-color: #EDECEC;
             color: #1f2937;
             font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             padding: 40px 0 20px;
