@@ -1243,17 +1243,19 @@
     margin-bottom: 20px !important;
   }
 
-  .benefits-design .benefits-design-inner .item-img-1{
+  .benefits-design .benefits-design-inner .item-img-1 {
     max-height: 250px !important;
   }
-  .benefits-design .benefits-design-inner .item-img-3{
+
+  .benefits-design .benefits-design-inner .item-img-3 {
     max-height: 100px !important;
     right: -30px;
   }
+
   .benefits-design .benefits-design-inner .item-img-2 {
     max-height: 170px;
   }
-  
+
 }
 
 /* ==========================================================================
@@ -1374,6 +1376,10 @@
   line-height: 1.45 !important;
   margin-bottom: 16px !important;
   min-height: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
   /* Keep aligned layout heights */
 }
 
@@ -1387,7 +1393,7 @@
 .leader-desc {
   font-size: clamp(13px, 1.5vw, 14.5px) !important;
   color: #4b5563 !important;
-  line-height: 1.6 !important;
+  /* line-height: 1.6 !important; */
   margin: 0 !important;
 }
 
@@ -1758,6 +1764,75 @@
   }
 }
 
+/* Core Values Section - Desktop Card Height Reduced by 30% */
+.flat-spacing .features-item.style-2 {
+  padding: 14px !important;
+}
+
+.flat-spacing .features-item.style-2 .icon {
+  margin-bottom: 14px !important;
+}
+
+/* Core Values Section - Desktop Icon Box Styling */
+.flat-spacing .features-item.style-2 .icon {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.10), 0px 1px 0px 0px rgba(255, 255, 255, 0.8) inset;
+}
+
+.flat-spacing .features-item.style-2 .icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Core Values Icons - Orange Color Override */
+.flat-spacing .features-item.style-2 .icon svg path,
+.flat-spacing .features-item.style-2 .icon svg circle,
+.flat-spacing .features-item.style-2 .icon svg rect,
+.flat-spacing .features-item.style-2 .icon svg line,
+.flat-spacing .features-item.style-2 .icon svg polyline,
+.flat-spacing .features-item.style-2 .icon svg polygon {
+  stroke: #FF5A1F !important;
+  stroke-width: 2.2 !important;
+  fill: none !important;
+}
+
+/* Restore SVG mask definition paths to white so masking works correctly */
+.flat-spacing .features-item.style-2 .icon svg mask path,
+.flat-spacing .features-item.style-2 .icon svg mask rect,
+.flat-spacing .features-item.style-2 .icon svg mask circle {
+  fill: white !important;
+  stroke: none !important;
+  stroke-width: unset !important;
+}
+
+/* Mobile icon orange color */
+@media (max-width: 768px) {
+
+  .flat-spacing .features-item.style-2 .icon svg path,
+  .flat-spacing .features-item.style-2 .icon svg circle,
+  .flat-spacing .features-item.style-2 .icon svg rect,
+  .flat-spacing .features-item.style-2 .icon svg line,
+  .flat-spacing .features-item.style-2 .icon svg polyline,
+  .flat-spacing .features-item.style-2 .icon svg polygon {
+    stroke: #FF5A1F !important;
+    stroke-width: 2.2 !important;
+    fill: none !important;
+  }
+
+  /* Restore SVG mask definition paths to white */
+  .flat-spacing .features-item.style-2 .icon svg mask path,
+  .flat-spacing .features-item.style-2 .icon svg mask rect,
+  .flat-spacing .features-item.style-2 .icon svg mask circle {
+    fill: white !important;
+    stroke: none !important;
+    stroke-width: unset !important;
+  }
+}
+
 /* Core Values Section Mobile Redesign (max-width: 768px) */
 @media (max-width: 768px) {
   .section-features.flat-spacing .row>div {
@@ -1802,8 +1877,8 @@
     width: 32px !important;
     height: 32px !important;
     border-radius: 8px !important;
-    background: #272727 !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;

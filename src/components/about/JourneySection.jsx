@@ -222,12 +222,7 @@ function JourneySection() {
             ))}
           </Swiper>
 
-          <div className="journey-prev">
-            <i className="icon icon-angle-left-solid"></i>
-          </div>
-          <div className="journey-next">
-            <i className="icon icon-angle-right-solid"></i>
-          </div>
+          
         </div>
 
         {/* Dynamic Stats Footer Bar */}
@@ -297,7 +292,7 @@ function JourneySection() {
       <style>{`
         .journey-section {
           background: #EDECEC;
-          padding: 100px 0;
+          padding: 10px 0;
           position: relative;
           overflow: hidden;
         }

@@ -160,9 +160,13 @@ function ValuesSection() {
       )}
 
       <style>{`
-        /* Desktop features-header-wrap should be default block to match original layout */
+        /* Desktop features-header-wrap: icon left, title right */
         .features-header-wrap {
-          display: block;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 12px;
         }
 
         /* Value Modal Overlay Styles */
@@ -229,12 +233,13 @@ function ValuesSection() {
           width: 70px;
           height: 70px;
           border-radius: 18px;
-          background-color: #272727;
+          background-color: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
           margin-bottom: 20px;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+          border: 1px solid #f0f0f0;
         }
 
         .value-modal-icon svg {

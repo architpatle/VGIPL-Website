@@ -136,7 +136,7 @@ function AboutTeamSection() {
   const rightColumnMembers = [boardMembers[1], boardMembers[3], boardMembers[5]];
 
   return (
-    <div ref={sectionRef} className="section-team flat-spacing" style={{ backgroundColor: '#ffffff', padding: '100px 0' }}>
+    <div ref={sectionRef} className="section-team flat-spacing" style={{ backgroundColor: '#ffffff', padding: '30px 0 100px 0' }}>
       <div className="container">
         {/* Founders Section */}
         <div className="heading-section center mb-64">
@@ -149,11 +149,11 @@ function AboutTeamSection() {
         <div className="founders-container mb-120">
 
           {/* Left Side - Avinash Shende */}
-          <div className="founder-item anim-on-scroll anim-slide-left" style={{ display: 'flex' }}>
-            <div className="leader-card-item card-left tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
+          <div className="founder-item anim-on-scroll anim-slide-left" >
+            <div className="leader-card-item card-left tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
-                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '280px' }}>
+                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -164,9 +164,9 @@ function AboutTeamSection() {
               </div>
               <div className="leader-info-wrap">
                 <h3 className="leader-name">Mr. Avinash Shende</h3>
-                <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" />
+                <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" style={{ width: '100%', marginBottom: '0px', display: 'flex', alignItems: 'center' }} />
                 <div className="leader-position">Founder & CEO</div>
-                <div className="leader-divider"></div>
+                {/* <div className="leader-divider"></div> */}
                 <p className="leader-desc">
                   Avinash oversees operations and finances at Virtual Galaxy Infotech, balancing market needs with cost efficiency. He's also a gardening enthusiast with a love for all things green.
                 </p>
@@ -183,10 +183,10 @@ function AboutTeamSection() {
 
           {/* Right Side - Sachin Pande */}
           <div className="founder-item anim-on-scroll anim-slide-right" style={{ display: 'flex' }}>
-            <div className="leader-card-item card-right tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
+            <div className="leader-card-item card-right tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
-                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '280px' }}>
+                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -196,10 +196,10 @@ function AboutTeamSection() {
                 </div>
               </div>
               <div className="leader-info-wrap">
-                <h3 className="leader-name">Mr. Sachin Pande</h3>
-                <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" />
-                <div className="leader-position">Co-Founder & CTO</div>
-                <div className="leader-divider"></div>
+                <h3 className="leader-name">Mr. Sachin Pande ji</h3>
+                <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" style={{ width: '100%', marginBottom: '0px', display: 'flex', alignItems: 'center' }} />
+                <div className="leader-position" >Co-Founder & CTO </div>
+                {/* <div className="leader-divider"></div> */}
                 <p className="leader-desc">
                   Sachin drives technology and business development at Virtual Galaxy Infotech, leveraging the latest advancements. Off duty, he enjoys music with a cup of tea in hand.
                 </p>
@@ -209,7 +209,7 @@ function AboutTeamSection() {
         </div>
 
         {/* Board of Directors Section */}
-        <div className="board-section-wrap" style={{ marginTop: '160px', marginBottom: '160px' }}>
+        <div className="board-section-wrap" style={{ marginTop: '32px', marginBottom: '32px' }}>
           <div className="heading-section center mb-64">
             <div className="heading-sub fw-semibold style-1 effectFade fadeUp" style={{ color: '#e10600' }}>
               LEADERSHIP THAT INSPIRES
@@ -225,8 +225,8 @@ function AboutTeamSection() {
           <div className="board-layout">
             <div className="board-col-left">
               {leftColumnMembers.map((member, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`board-card anim-on-scroll anim-slide-left`}
                   style={{ transitionDelay: `${i * 150}ms` }}
                   onClick={() => handleCardClick(member)}
@@ -234,9 +234,9 @@ function AboutTeamSection() {
                   onMouseLeave={handleTiltReset}
                 >
                   <div className="board-card-img-wrapper shine-effect" style={{ backgroundColor: member.bg }}>
-                    <img 
-                      src={member.img} 
-                      alt={member.name} 
+                    <img
+                      src={member.img}
+                      alt={member.name}
                       style={{ objectFit: member.fit }}
                     />
                   </div>
@@ -245,10 +245,10 @@ function AboutTeamSection() {
                     <h4 className="board-card-name">{member.name}</h4>
                     <p className="board-card-desc">{member.desc}</p>
                   </div>
-                  <a 
-                    href={member.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="board-linkedin-link"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -260,7 +260,7 @@ function AboutTeamSection() {
 
             <div className="board-col-center">
               <div className="board-center-line"></div>
-              
+
               {/* Connector lines and dots */}
               <div className="board-connector-left board-connector-left-top"></div>
               <div className="board-connector-right board-connector-right-top"></div>
@@ -301,8 +301,8 @@ function AboutTeamSection() {
 
             <div className="board-col-right">
               {rightColumnMembers.map((member, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`board-card anim-on-scroll anim-slide-right`}
                   style={{ transitionDelay: `${i * 150}ms` }}
                   onClick={() => handleCardClick(member)}
@@ -310,9 +310,9 @@ function AboutTeamSection() {
                   onMouseLeave={handleTiltReset}
                 >
                   <div className="board-card-img-wrapper shine-effect" style={{ backgroundColor: member.bg }}>
-                    <img 
-                      src={member.img} 
-                      alt={member.name} 
+                    <img
+                      src={member.img}
+                      alt={member.name}
                       style={{ objectFit: member.fit }}
                     />
                   </div>
@@ -321,10 +321,10 @@ function AboutTeamSection() {
                     <h4 className="board-card-name">{member.name}</h4>
                     <p className="board-card-desc">{member.desc}</p>
                   </div>
-                  <a 
-                    href={member.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="board-linkedin-link"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -1232,9 +1232,9 @@ function AboutTeamSection() {
                 &times;
               </button>
               <div className="board-modal-img-wrapper" style={{ backgroundColor: activeDirector.bg }}>
-                <img 
-                  src={activeDirector.img} 
-                  alt={activeDirector.name} 
+                <img
+                  src={activeDirector.img}
+                  alt={activeDirector.name}
                   style={{ objectFit: activeDirector.fit }}
                 />
               </div>
@@ -1242,10 +1242,10 @@ function AboutTeamSection() {
                 <span className="board-modal-role">{activeDirector.role}</span>
                 <h3 className="board-modal-name">{activeDirector.name}</h3>
                 <p className="board-modal-desc">{activeDirector.desc}</p>
-                <a 
-                  href={activeDirector.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={activeDirector.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="board-modal-linkedin"
                 >
                   <i className="icon icon-linkedin-in"></i> Connect on LinkedIn

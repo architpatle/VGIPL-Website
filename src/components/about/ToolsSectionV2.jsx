@@ -22,39 +22,39 @@ function ToolsSectionV2() {
           <img className="img-item img-item-5" src="/assets/images/about/tools-img/Data Center Enterprice.jpg.jpeg" alt="Data Center Enterprise" />
           <img className="img-item img-item-6" src="/assets/images/about/tools-img/ERP.jpg.jpeg" alt="ERP" />
           <div className="side-line">
-            <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-1" width="300" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="line-path" d="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" stroke="white" strokeWidth="2" fill="none" />
-              <circle r="4" fill="#FD3A25">
+            <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-1" width="300" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path id="line-path" d="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
                 <animateMotion dur="2.5s" repeatCount="indefinite" path="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" />
               </circle>
             </svg>
-            <svg data-viewbox-desktop="0 0 260 2" data-viewbox-mobile="0 0 250 2" className="line-2" width="260" height="2" viewBox="0 0 260 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M260 1H0" stroke="white" strokeWidth="2" fill="none" />
-              <circle r="4" fill="#FD3A25">
-                <animateMotion dur="2.5s" repeatCount="indefinite" path="M260 1H0" />
+            <svg data-viewbox-desktop="0 0 302 14" data-viewbox-mobile="0 0 250 14" className="line-2" width="302" height="14" viewBox="0 -6 302 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path d="M302 1H0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
+                <animateMotion dur="2.5s" repeatCount="indefinite" path="M302 1H0" />
               </circle>
             </svg>
-            <svg data-viewbox-desktop="0 0 302 159" data-viewbox-mobile="0 0 300 100" className="line-3" width="302" height="159" viewBox="0 0 302 159" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M301 0V29 C301 37.2843 294.284 44 286 44 H16 C7.71572 44 0.999992 50.7157 0.999992 59 V159" stroke="white" strokeWidth="2" fill="none" />
-              <circle r="4" fill="#FD3A25">
+            <svg data-viewbox-desktop="0 0 302 159" data-viewbox-mobile="0 0 300 100" className="line-3" width="302" height="159" viewBox="0 0 302 159" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path d="M301 0V29 C301 37.2843 294.284 44 286 44 H16 C7.71572 44 0.999992 50.7157 0.999992 59 V159" stroke="#FFC5A3" strokeWidth="2" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
                 <animateMotion dur="2.5s" repeatCount="indefinite" path="M301 0V29 C301 37.2843 294.284 44 286 44 H16 C7.71572 44 0.999992 50.7157 0.999992 59 V159" />
               </circle>
             </svg>
-            <svg data-viewbox-desktop="0 0 302 156" data-viewbox-mobile="0 0 300 100" className="line-4" width="302" height="156" viewBox="0 0 302 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 156V130 C1 121.716 7.71573 115 16 115 H286 C294.284 115 301 108.284 301 100 V0" stroke="white" strokeWidth="2" fill="none" />
-              <circle r="4" fill="#FD3A25">
+            <svg data-viewbox-desktop="0 0 302 156" data-viewbox-mobile="0 0 300 100" className="line-4" width="302" height="156" viewBox="0 0 302 156" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path d="M1 156V130 C1 121.716 7.71573 115 16 115 H286 C294.284 115 301 108.284 301 100 V0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
                 <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 156V130 C1 121.716 7.71573 115 16 115 H286 C294.284 115 301 108.284 301 100 V0" />
               </circle>
             </svg>
-            <svg data-viewbox-desktop="0 0 260 3" data-viewbox-mobile="0 0 260 3" className="line-5" width="260" height="3" viewBox="0 0 260 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 1.05908H260" stroke="white" strokeWidth="2.11844" fill="none" />
-              <circle r="3" fill="#FD3A25">
-                <animateMotion dur="2.5s" repeatCount="indefinite" path="M0 1.05908H260" />
+            <svg data-viewbox-desktop="0 0 302 14" data-viewbox-mobile="0 0 260 14" className="line-5" width="302" height="14" viewBox="0 -6 302 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path d="M0 1.05908H302" stroke="#FFC5A3" strokeWidth="2.11844" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
+                <animateMotion dur="2.5s" repeatCount="indefinite" path="M0 1.05908H302" />
               </circle>
             </svg>
-            <svg data-viewbox-desktop="0 0 302 155" data-viewbox-mobile="0 0 300 100" className="line-6" width="302" height="155" viewBox="0 0 302 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 0V25 C1 33.2843 7.71573 40 16 40 H286 C294.284 40 301 46.7157 301 55 V155" stroke="white" strokeWidth="2" fill="none" />
-              <circle r="4" fill="#FD3A25">
+            <svg data-viewbox-desktop="0 0 302 155" data-viewbox-mobile="0 0 300 100" className="line-6" width="302" height="155" viewBox="0 0 302 155" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <path d="M1 0V25 C1 33.2843 7.71573 40 16 40 H286 C294.284 40 301 46.7157 301 55 V155" stroke="#FFC5A3" strokeWidth="2" fill="none" />
+              <circle r="5.2" fill="#FD3A25">
                 <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 0V25 C1 33.2843 7.71573 40 16 40 H286 C294.284 40 301 46.7157 301 55 V155" />
               </circle>
             </svg>
