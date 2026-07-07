@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function ToolsSectionV2() {
   return (
     <div className="section-tools v2 flat-spacing">

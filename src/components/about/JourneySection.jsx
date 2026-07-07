@@ -175,7 +175,7 @@ function JourneySection() {
             loop={true}
             speed={8000}
             autoplay={{
-              delay: 0,
+              delay: 1000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
               reverseDirection: false
@@ -222,7 +222,7 @@ function JourneySection() {
             ))}
           </Swiper>
 
-          
+
         </div>
 
         {/* Dynamic Stats Footer Bar */}
@@ -309,7 +309,7 @@ function JourneySection() {
 
         .journey-slider-wrap {
           position: relative;
-          padding: 40px 0 60px 0;
+          padding: 40px 0 12px 0;
         }
 
         .journey-swiper {

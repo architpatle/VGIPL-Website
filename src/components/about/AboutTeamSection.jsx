@@ -152,8 +152,8 @@ function AboutTeamSection() {
           <div className="founder-item anim-on-scroll anim-slide-left" >
             <div className="leader-card-item card-left tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '280px' }}>
-                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
+                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -185,8 +185,8 @@ function AboutTeamSection() {
           <div className="founder-item anim-on-scroll anim-slide-right" style={{ display: 'flex' }}>
             <div className="leader-card-item card-right tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '280px' }}>
-                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
+                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
