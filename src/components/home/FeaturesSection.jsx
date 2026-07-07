@@ -12,27 +12,39 @@ function FeaturesSection() {
       <div className="position-relative">
         <div className="container z-5">
           <div className="features-wrap justify-content-between">
-            <div className="features-col col-left lg-mb-24">
-              <div className="features-item effectFade fadeUp" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-robot-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Autonomous AI Operations</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Automate routine tasks end-to-end — AI plans, executes, and reports with safety checks, logs, and smooth human handover.
-                </p>
+            <div className="features-col col-left lg-mb-24" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div className="features-item effectFade fadeUp" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-robot-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Autonomous AI Operations</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Automate routine tasks end-to-end — AI plans, executes, and reports with safety checks, logs, and smooth human handover.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="features-item effectFade fadeUp" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-clipboard-check-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Quality-First Validation</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Track accuracy, latency, safety, and spend from day zero. Our evals + dashboards ensure models stay dependable and costs stay controlled.
-                </p>
+              <div className="features-item effectFade fadeUp" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-clipboard-check-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Quality-First Validation</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Track accuracy, latency, safety, and spend from day zero. Our evals + dashboards ensure models stay dependable and costs stay controlled.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="features-item effectFade fadeUp" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-book-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Private Data Intelligence</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Unlock docs, tickets, and wikis with secure RAG — delivers fresh, cited, and explainable responses from your own knowledge base.
-                </p>
+              <div className="features-item effectFade fadeUp" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-book-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Private Data Intelligence</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Unlock docs, tickets, and wikis with secure RAG — delivers fresh, cited, and explainable responses from your own knowledge base.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -40,27 +52,39 @@ function FeaturesSection() {
               <img src={vgLogo} alt="Virtual Galaxy Logo" style={{ maxWidth: '180px', width: '100%', height: 'auto' }} />
             </div>
             
-            <div className="features-col col-right">
-              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-user-check-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Intuitive AI Experience</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Interfaces, prompts, and errors built for real people — so the smartest option is also the simplest one to use.
-                </p>
+            <div className="features-col col-right" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-user-check-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Intuitive AI Experience</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Interfaces, prompts, and errors built for real people — so the smartest option is also the simplest one to use.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-shield-alt-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Built-in Enterprise Security</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Hardened from day one — SSO, role-based access, secret management, and full compliance baked into the architecture.
-                </p>
+              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-shield-alt-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Built-in Enterprise Security</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Hardened from day one — SSO, role-based access, secret management, and full compliance baked into the architecture.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '24px 20px', marginBottom: '20px' }}>
-                <i className="icon icon-plug-solid" style={{ fontSize: '32px' }}></i>
-                <h6 className="title fw-semibold" style={{ fontSize: '18px', marginTop: '15px' }}>Universal Tool Connectivity</h6>
-                <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  Connect to your current stack — CRM, helpdesk, ERP, data warehouse — via webhooks and APIs to convert data into action instantly.
-                </p>
+              <div className="features-item effectFade fadeUp" data-delay="0.1" style={{ padding: '20px', flex: 1, display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
+                  <i className="icon icon-plug-solid" style={{ fontSize: '28px', flexShrink: 0, marginTop: '3px' }}></i>
+                  <div>
+                    <h6 className="title fw-semibold" style={{ fontSize: '16px', marginBottom: '8px', marginTop: '0' }}>Universal Tool Connectivity</h6>
+                    <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      Connect to your current stack — CRM, helpdesk, ERP, data warehouse — via webhooks and APIs to convert data into action instantly.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

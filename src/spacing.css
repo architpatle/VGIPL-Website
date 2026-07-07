@@ -718,6 +718,66 @@
   line-height: 1.4;
 }
 
+/* 4D Framework / Process Section responsive layout */
+.process-heading {
+  display: block !important;
+}
+
+@media (min-width: 992px) {
+  .process-heading {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .process-heading {
+    margin-bottom: 24px !important;
+    text-align: left !important;
+  }
+  .process-heading .heading-section {
+    margin-bottom: 16px !important;
+    text-align: left !important;
+  }
+  .process-heading .heading-title {
+    text-align: left !important;
+  }
+}
+
+/* Swiper Slide Match Height for 4D Framework */
+.section-process .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.section-process .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.section-process .process-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+
+/* Features Section - Horizontal Icon+Text row layout (desktop > 990px) */
+@media (min-width: 991px) {
+  /* Remove the bottom margin on the icon since it's in a flex row now */
+  .features-item i.icon {
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 26px !important;
+  }
+}
+
 /* Features Section desktop-like sync overrides under 990px viewport widths */
 @media (max-width: 990px) {
   :root {

@@ -1,7 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Search, Paintbrush, Settings, BarChart } from 'lucide-react';
+import vgLogo from '../../assets/home/ownwer-img/vg-logo-2.png';
 
 function ProcessSection() {
+  const swiperRef = useRef(null);
+  const swiperInstanceRef = useRef(null);
+
+  useEffect(() => {
+    if (!window.Swiper) return;
+
+    // Initialize Swiper manually to avoid race conditions and ensure 2s autoplay works
+    swiperInstanceRef.current = new window.Swiper(swiperRef.current, {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 600,
+      navigation: {
+        nextEl: '.section-process .nav-next-swiper',
+        prevEl: '.section-process .nav-prev-swiper',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        992: {
+          slidesPerView: 1.78,
+          spaceBetween: 24,
+        }
+      }
+    });
+
+    return () => {
+      if (swiperInstanceRef.current) {
+        swiperInstanceRef.current.destroy(true, true);
+      }
+    };
+  }, []);
+
   const steps = [
     {
       number: '01',
@@ -30,14 +75,14 @@ function ProcessSection() {
   ];
 
   return (
-    <div className="section-process section-spacing-grouped mb-20" id="process">
+    <div className="section-process section-spacing-grouped mb-20 animate-swiper" id="process">
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
-            <div className="process-heading h-100 d-flex flex-column justify-content-between">
+            <div className="process-heading">
               <div className="heading-section mb-40">
-                <div className="heading-sub fw-semibold effectFade fadeUp">4D Framework</div>
-                <div className="heading-title text-gradient-3 effectFade fadeRotateX">From Insight <br /> to Impact</div>
+                <div className="heading-sub fw-semibold">4D Framework</div>
+                <div className="heading-title text-gradient-3">From Insight <br /> to Impact</div>
               </div>
               <div className="group-btn-slider d-none d-lg-flex mb-40">
                 <div className="nav-prev-swiper">
@@ -51,13 +96,12 @@ function ProcessSection() {
           </div>
           <div className="col-lg-7">
             <div className="process-slide">
-              <div dir="ltr" className="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="2" data-mobile-sm="1" data-mobile="1"
-                data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
+              <div ref={swiperRef} className="swiper swiper-box-shadow">
                 <div className="swiper-wrapper">
                   {steps.map((step, index) => (
-                    <div className="swiper-slide " key={index}>
-                      <div className="process-card d-flex flex-column justify-content-between h-100 " style={{ minHeight: '380px', padding: '30px' }}>
-                        <div className=''>
+                    <div className="swiper-slide" key={index}>
+                      <div className="process-card d-flex flex-column justify-content-between h-100" style={{ minHeight: '380px', height: '100%', padding: '30px' }}>
+                        <div>
                           <div className="mb-10" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(239, 68, 68, 0.08)' }}>
                             {step.icon}
                           </div>
