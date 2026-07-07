@@ -653,10 +653,12 @@ function AIPage() {
             {/* Layer 1: Infrastructure */}
             <div className="col-lg-4 col-md-6 text-start">
               <div className="layer-card">
-                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
-                  <Server className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                <div className="d-flex align-items-center gap-12 mb-8">
+                  <div style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)', flexShrink: 0 }}>
+                    <Server className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                  </div>
+                  <h4 className="fw-bold text-dark mb-0" style={{ fontSize: '1.2rem', lineHeight: '1.3' }}>AI Infrastructure Layer</h4>
                 </div>
-                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Infrastructure Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   The foundation that powers scalable, secure, and high-performance AI systems. It enables organizations to manage compute efficiently while maintaining cost visibility and operational control. With cloud-flexible architecture and optimized resource utilization, it ensures consistent performance across workloads. Built-in governance, monitoring, and security frameworks provide reliability and compliance, allowing businesses to scale AI initiatives confidently without compromising on efficiency or control.
                 </p>
@@ -666,10 +668,12 @@ function AIPage() {
             {/* Layer 2: Orchestration */}
             <div className="col-lg-4 col-md-6 text-start">
               <div className="layer-card">
-                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
-                  <Workflow className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                <div className="d-flex align-items-center gap-12 mb-8">
+                  <div style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)', flexShrink: 0 }}>
+                    <Workflow className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                  </div>
+                  <h4 className="fw-bold text-dark mb-0" style={{ fontSize: '1.2rem', lineHeight: '1.3' }}>AI Orchestration Layer</h4>
                 </div>
-                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Orchestration Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   The layer that brings together agents, workflows, and systems into a unified, intelligent ecosystem. It streamlines operations by enabling seamless coordination across teams and technologies. Automated workflows enhance scalability while reducing manual effort, ensuring faster execution. With real-time synchronization and centralized visibility, organizations can manage complex processes effortlessly, improving efficiency, collaboration, and decision-making across the entire AI lifecycle.
                 </p>
@@ -679,10 +683,12 @@ function AIPage() {
             {/* Layer 3: Insight */}
             <div className="col-lg-4 col-md-12 text-start">
               <div className="layer-card">
-                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
-                  <Layers className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                <div className="d-flex align-items-center gap-12 mb-8">
+                  <div style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)', flexShrink: 0 }}>
+                    <Layers className="text-orange" size={24} style={{ color: '#fd3a25' }} />
+                  </div>
+                  <h4 className="fw-bold text-dark mb-0" style={{ fontSize: '1.2rem', lineHeight: '1.3' }}>AI Insight Layer</h4>
                 </div>
-                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Insight Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   Where raw data evolves into meaningful, business-aware intelligence. This layer unifies data from multiple sources, creating a consistent and reliable foundation for insights. By centralizing knowledge and eliminating silos, it enables systems to understand business context more effectively. The result is adaptive, context-driven intelligence that aligns with business goals, empowering smarter decisions and delivering deeper, more relevant insights across operations.
                 </p>
@@ -706,7 +712,7 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="d-flex align-items-start gap-12 mb-20">
+                    <div className="d-flex align-items-start gap-12 mb-16">
                       <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>01</div>
                       <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.5rem', lineHeight: '1.3' }}>Transforming Core Banking Solution for Digital Finance</h5>
                     </div>
@@ -723,7 +729,7 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="d-flex align-items-start gap-12 mb-20">
+                    <div className="d-flex align-items-start gap-12 mb-16">
                       <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>02</div>
                       <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.4rem', lineHeight: '1.3' }}>Re(AI)powering Hi-Tech with End-to-End Cybersecurity</h5>
                     </div>
@@ -740,7 +746,7 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="d-flex align-items-start gap-12 mb-20">
+                    <div className="d-flex align-items-start gap-12 mb-16">
                       <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>03</div>
                       <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.35rem', lineHeight: '1.3' }}>Conversational AI Companion for Smarter Experiences</h5>
                     </div>
