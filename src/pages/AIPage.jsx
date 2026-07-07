@@ -547,7 +547,7 @@ function AIPage() {
       <div className="container relative z-10">
 
         {/* SECTION 1: HERO CAROUSEL */}
-        <section className="py-24 position-relative overflow-hidden mb-24" style={{ borderBottom: '1px solid rgba(229, 231, 235, 0.5)', paddingBottom: '30px' }}>
+        <section className="py-12 position-relative overflow-hidden mb-12" style={{ borderBottom: '1px solid rgba(229, 231, 235, 0.5)', paddingBottom: '30px' }}>
           <div className="row align-items-center" style={{ minHeight: '400px' }}>
             <div className="col-lg-7 text-start">
               <AnimatePresence mode="wait">
@@ -564,10 +564,10 @@ function AIPage() {
                       Virtual Galaxy AI
                     </span>
                   </div>
-                  <h1 className="fw-bold text-dark mb-16 gradient-text-orange" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.6rem)', lineHeight: '1.15', letterSpacing: '-0.02em' }}>
+                  <h1 className="fw-bold text-dark mb-6 gradient-text-orange" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.6rem)', lineHeight: '1.15', letterSpacing: '-0.02em' }}>
                     {slides[activeSlide].title}
                   </h1>
-                  <p className="mb-32 text-secondary font-weight-500" style={{ fontSize: '1.15rem', lineHeight: '1.6', maxWidth: '580px' }}>
+                  <p className="mb-8 text-secondary font-weight-500" style={{ fontSize: '1.15rem', lineHeight: '1.6', maxWidth: '580px' }}>
                     {slides[activeSlide].desc}
                   </p>
                   <div className="d-flex gap-16 align-items-center">
@@ -615,15 +615,15 @@ function AIPage() {
         </section>
 
         {/* SECTION 2: BEYOND AI HYPE */}
-        <section className="py-24 mb-16" id="hype">
+        <section className="py-12 mb-12" id="hype">
           <div className="glass-panel" style={{ borderLeft: '4px solid #fd3a25' }}>
             <div className="row align-items-center">
               <div className="col-lg-8 text-start">
-                <div className="fw-bold mb-8 text-orange uppercase tracking-[1px]" style={{ color: '#fd3a25', fontSize: '0.82rem' }}>Quantum Flow Engine</div>
-                <h2 className="fw-bold text-dark mb-16" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>
+                <div className="fw-bold mb-3 text-orange uppercase tracking-[1px]" style={{ color: '#fd3a25', fontSize: '0.82rem' }}>Quantum Flow Engine</div>
+                <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>
                   Beyond AI Hype: Software That Actually Ships
                 </h2>
-                <h5 className="fw-semibold text-secondary mb-16" style={{ lineHeight: '1.5' }}>
+                <h5 className="fw-semibold text-secondary mb-4" style={{ lineHeight: '1.5' }}>
                   AI is trending. Impact is missing. We bridge the gap—turning ideas into intelligent, scalable systems.
                 </h5>
                 <p className="text-secondary mb-0" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
@@ -640,10 +640,10 @@ function AIPage() {
         </section>
 
         {/* SECTION 3: THREE LAYERS OF AI */}
-        <section className="py-24" id="layers">
-          <div className="text-center mb-28">
+        <section className="py-12" id="layers">
+          <div className="text-center mb-12">
             <span className="ai-badge">The Architecture</span>
-            <h2 className="fw-bold text-dark mb-8" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>The AI Quantum Flow Engine Layers</h2>
+            <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>The AI Quantum Flow Engine Layers</h2>
             <p className="mx-auto text-secondary" style={{ maxWidth: '600px', fontSize: '1.02rem', lineHeight: '1.5' }}>
               We orchestrate AI solutions through three discrete layers to ensure security, high performance, and domain alignment.
             </p>
@@ -653,10 +653,10 @@ function AIPage() {
             {/* Layer 1: Infrastructure */}
             <div className="col-lg-4 col-md-6 text-start">
               <div className="layer-card">
-                <div className="mb-20" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
+                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
                   <Server className="text-orange" size={24} style={{ color: '#fd3a25' }} />
                 </div>
-                <h4 className="fw-bold text-dark mb-12" style={{ fontSize: '1.2rem' }}>AI Infrastructure Layer</h4>
+                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Infrastructure Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   The foundation that powers scalable, secure, and high-performance AI systems. It enables organizations to manage compute efficiently while maintaining cost visibility and operational control. With cloud-flexible architecture and optimized resource utilization, it ensures consistent performance across workloads. Built-in governance, monitoring, and security frameworks provide reliability and compliance, allowing businesses to scale AI initiatives confidently without compromising on efficiency or control.
                 </p>
@@ -666,10 +666,10 @@ function AIPage() {
             {/* Layer 2: Orchestration */}
             <div className="col-lg-4 col-md-6 text-start">
               <div className="layer-card">
-                <div className="mb-20" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
+                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
                   <Workflow className="text-orange" size={24} style={{ color: '#fd3a25' }} />
                 </div>
-                <h4 className="fw-bold text-dark mb-12" style={{ fontSize: '1.2rem' }}>AI Orchestration Layer</h4>
+                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Orchestration Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   The layer that brings together agents, workflows, and systems into a unified, intelligent ecosystem. It streamlines operations by enabling seamless coordination across teams and technologies. Automated workflows enhance scalability while reducing manual effort, ensuring faster execution. With real-time synchronization and centralized visibility, organizations can manage complex processes effortlessly, improving efficiency, collaboration, and decision-making across the entire AI lifecycle.
                 </p>
@@ -679,10 +679,10 @@ function AIPage() {
             {/* Layer 3: Insight */}
             <div className="col-lg-4 col-md-12 text-start">
               <div className="layer-card">
-                <div className="mb-20" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
+                <div className="mb-6" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(253,58,37,0.06)' }}>
                   <Layers className="text-orange" size={24} style={{ color: '#fd3a25' }} />
                 </div>
-                <h4 className="fw-bold text-dark mb-12" style={{ fontSize: '1.2rem' }}>AI Insight Layer</h4>
+                <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>AI Insight Layer</h4>
                 <p className="text-secondary mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   Where raw data evolves into meaningful, business-aware intelligence. This layer unifies data from multiple sources, creating a consistent and reliable foundation for insights. By centralizing knowledge and eliminating silos, it enables systems to understand business context more effectively. The result is adaptive, context-driven intelligence that aligns with business goals, empowering smarter decisions and delivering deeper, more relevant insights across operations.
                 </p>
@@ -692,11 +692,11 @@ function AIPage() {
         </section>
 
         {/* SECTION 4: INDUSTRY EXPERIENCES */}
-        <section className="py-24" style={{ background: '#faf8f6', padding: '40px 0', borderTop: '1px solid #e5e7eb', borderBottom: '1px solid #e5e7eb', borderRadius: '24px', margin: '20px 0' }}>
+        <section style={{ background: '#faf8f6', padding: '40px 0', borderTop: '1px solid #e5e7eb', borderBottom: '1px solid #e5e7eb', borderRadius: '24px', margin: '20px 0' }}>
           <div className="container">
-            <div className="text-center mb-28">
+            <div className="text-center mb-12">
               <span className="ai-badge">Vertical Solutions</span>
-              <h2 className="fw-bold text-dark mb-8" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>Experience What VGIL AI Can Do for Your Industry</h2>
+              <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>Experience What VGIL AI Can Do for Your Industry</h2>
               <p className="mx-auto text-secondary" style={{ maxWidth: '600px', fontSize: '1.02rem' }}>
                 Discover how we create measurable business value through transformation and cutting-edge technology.
               </p>
@@ -706,13 +706,15 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="fw-bold mb-12" style={{ color: '#fd3a25', fontSize: '1.4rem', fontFamily: 'monospace' }}>01</div>
-                    <h5 className="fw-bold text-dark mb-12">Transforming Core Banking Solution for Digital Finance</h5>
-                    <p className="text-secondary" style={{ fontSize: '0.88rem', lineHeight: '1.5' }}>
+                    <div className="d-flex align-items-start gap-12 mb-20">
+                      <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>01</div>
+                      <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.5rem', lineHeight: '1.3' }}>Transforming Core Banking Solution for Digital Finance</h5>
+                    </div>
+                    <p className="text-secondary" style={{ fontSize: '0.82rem', lineHeight: '1.5', textAlign: 'justify' }}>
                       Seamless integration of automated compliance, real-time risk checks, and predictive transactional models into banking environments.
                     </p>
                   </div>
-                  <Link to="/products/transact-core" className="fw-semibold d-flex align-items-center gap-8 mt-20" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
+                  <Link to="/products/transact-core" className="fw-semibold d-flex align-items-center gap-8 mt-6" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
                     Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -721,13 +723,15 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="fw-bold mb-12" style={{ color: '#fd3a25', fontSize: '1.4rem', fontFamily: 'monospace' }}>02</div>
-                    <h5 className="fw-bold text-dark mb-12">Re(AI)powering Hi-Tech with End-to-End Cybersecurity</h5>
-                    <p className="text-secondary" style={{ fontSize: '0.88rem', lineHeight: '1.5' }}>
+                    <div className="d-flex align-items-start gap-12 mb-20">
+                      <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>02</div>
+                      <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.4rem', lineHeight: '1.3' }}>Re(AI)powering Hi-Tech with End-to-End Cybersecurity</h5>
+                    </div>
+                    <p className="text-secondary" style={{ fontSize: '0.82rem', lineHeight: '1.5', textAlign: 'justify' }}>
                       Intelligent anomaly warning networks, SSO/SAML integration, and robust defensive security protocols protecting enterprise networks.
                     </p>
                   </div>
-                  <Link to="/products/audit-flux" className="fw-semibold d-flex align-items-center gap-8 mt-20" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
+                  <Link to="/products/audit-flux" className="fw-semibold d-flex align-items-center gap-8 mt-6" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
                     Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -736,20 +740,22 @@ function AIPage() {
               <div className="col-lg-4 col-md-6 text-start">
                 <div className="industry-card d-flex flex-column justify-content-between h-100">
                   <div>
-                    <div className="fw-bold mb-12" style={{ color: '#fd3a25', fontSize: '1.4rem', fontFamily: 'monospace' }}>03</div>
-                    <h5 className="fw-bold text-dark mb-12">Conversational AI Companion for Smarter Experiences</h5>
-                    <p className="text-secondary" style={{ fontSize: '0.88rem', lineHeight: '1.5' }}>
+                    <div className="d-flex align-items-start gap-12 mb-20">
+                      <div className="fw-bold" style={{ color: '#fd3a25', fontSize: '1.2rem', fontFamily: 'monospace', flexShrink: 0, lineHeight: 1.2 }}>03</div>
+                      <h5 className="fw-bold text-dark mb-0" style={{ fontSize: '1.35rem', lineHeight: '1.3' }}>Conversational AI Companion for Smarter Experiences</h5>
+                    </div>
+                    <p className="text-secondary" style={{ fontSize: '0.82rem', lineHeight: '1.5', textAlign: 'justify' }}>
                       Contextual enterprise RAG chatbots delivering instant, cited answers from internal knowledge sources for support and internal teams.
                     </p>
                   </div>
-                  <Link to="/products/conversational-ai-companion" className="fw-semibold d-flex align-items-center gap-8 mt-20" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
+                  <Link to="/products/conversational-ai-companion" className="fw-semibold d-flex align-items-center gap-8 mt-6" style={{ color: '#fd3a25', textDecoration: 'none', fontSize: '0.88rem' }}>
                     Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="text-center mt-36">
+            <div className="text-center mt-8">
               <h5 className="text-secondary fw-semibold mb-0" style={{ letterSpacing: '0.01em' }}>
                 Take a closer look at how we’re redefining what’s possible with technology.
               </h5>
@@ -758,10 +764,10 @@ function AIPage() {
         </section>
 
         {/* SECTION 5: TRUSTED PARTNERS */}
-        <section className="py-24">
-          <div className="text-center mb-24">
+        <section className="py-12">
+          <div className="text-center mb-12">
             <span className="ai-badge">Partnerships</span>
-            <h2 className="fw-bold text-dark mb-8" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>Our Trusted Partners</h2>
+            <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>Our Trusted Partners</h2>
             <p className="mx-auto text-secondary" style={{ maxWidth: '680px', fontSize: '1.02rem', lineHeight: '1.6' }}>
               With a focused hyperscale team, we work closely with leading platform partners to deliver AI-driven solutions that accelerate innovation and create real business impact.
             </p>
@@ -771,31 +777,31 @@ function AIPage() {
           <div className="partner-marquee-wrapper">
             <div className="partner-marquee-track track-forward">
               {[
-                { name: 'Oracle',       logo: '/logos/oracle.svg' },
-                { name: 'Microsoft',    logo: '/logos/microsoft.svg' },
-                { name: 'Red Hat',      logo: '/logos/redhat.svg' },
-                { name: 'AWS',          logo: '/logos/aws.svg' },
-                { name: 'NVIDIA',       logo: '/logos/nvidia.svg' },
-                { name: 'Cisco',        logo: '/logos/cisco.svg' },
-                { name: 'Lenovo',       logo: '/logos/lenovo.svg' },
-                { name: 'HP Enterprise',logo: '/logos/hpe.svg' },
-                { name: 'Yotta',        logo: '/logos/yotta.svg' },
-                { name: 'NetMagic',     logo: '/logos/netmagic.svg' },
-                { name: 'Fortinet',     logo: '/logos/fortinet.svg' },
-                { name: 'Nxtra Data',   logo: '/logos/nxtra-data.svg' },
+                { name: 'Oracle', logo: '/logos/oracle.svg' },
+                { name: 'Microsoft', logo: '/logos/microsoft.svg' },
+                { name: 'Red Hat', logo: '/logos/redhat.svg' },
+                { name: 'AWS', logo: '/logos/aws.svg' },
+                { name: 'NVIDIA', logo: '/logos/nvidia.svg' },
+                { name: 'Cisco', logo: '/logos/cisco.svg' },
+                { name: 'Lenovo', logo: '/logos/lenovo.svg' },
+                { name: 'HP Enterprise', logo: '/logos/hpe.svg' },
+                { name: 'Yotta', logo: '/logos/yotta.svg' },
+                { name: 'NetMagic', logo: '/logos/netmagic.svg' },
+                { name: 'Fortinet', logo: '/logos/fortinet.svg' },
+                { name: 'Nxtra Data', logo: '/logos/nxtra-data.svg' },
               ].concat([
-                { name: 'Oracle',       logo: '/logos/oracle.svg' },
-                { name: 'Microsoft',    logo: '/logos/microsoft.svg' },
-                { name: 'Red Hat',      logo: '/logos/redhat.svg' },
-                { name: 'AWS',          logo: '/logos/aws.svg' },
-                { name: 'NVIDIA',       logo: '/logos/nvidia.svg' },
-                { name: 'Cisco',        logo: '/logos/cisco.svg' },
-                { name: 'Lenovo',       logo: '/logos/lenovo.svg' },
-                { name: 'HP Enterprise',logo: '/logos/hpe.svg' },
-                { name: 'Yotta',        logo: '/logos/yotta.svg' },
-                { name: 'NetMagic',     logo: '/logos/netmagic.svg' },
-                { name: 'Fortinet',     logo: '/logos/fortinet.svg' },
-                { name: 'Nxtra Data',   logo: '/logos/nxtra-data.svg' },
+                { name: 'Oracle', logo: '/logos/oracle.svg' },
+                { name: 'Microsoft', logo: '/logos/microsoft.svg' },
+                { name: 'Red Hat', logo: '/logos/redhat.svg' },
+                { name: 'AWS', logo: '/logos/aws.svg' },
+                { name: 'NVIDIA', logo: '/logos/nvidia.svg' },
+                { name: 'Cisco', logo: '/logos/cisco.svg' },
+                { name: 'Lenovo', logo: '/logos/lenovo.svg' },
+                { name: 'HP Enterprise', logo: '/logos/hpe.svg' },
+                { name: 'Yotta', logo: '/logos/yotta.svg' },
+                { name: 'NetMagic', logo: '/logos/netmagic.svg' },
+                { name: 'Fortinet', logo: '/logos/fortinet.svg' },
+                { name: 'Nxtra Data', logo: '/logos/nxtra-data.svg' },
               ]).map((partner, idx) => (
                 <div className="partner-card" key={idx}>
                   <img
@@ -812,30 +818,30 @@ function AIPage() {
           </div>
 
           {/* Infinite Marquee Carousel - Row 2 (right ← left, slower) */}
-          <div className="partner-marquee-wrapper mt-16">
+          <div className="partner-marquee-wrapper mt-8">
             <div className="partner-marquee-track track-reverse">
               {[
-                { name: 'IBM',         logo: '/logos/ibm.svg' },
-                { name: 'VMware',      logo: '/logos/vmware.svg' },
-                { name: 'Dell',        logo: '/logos/dell.svg' },
-                { name: 'Intel',       logo: '/logos/intel.svg' },
-                { name: 'Google Cloud',logo: '/logos/google-cloud.svg' },
-                { name: 'Akamai',      logo: '/logos/akamai.svg' },
-                { name: 'Palo Alto',   logo: '/logos/palo-alto.svg' },
-                { name: 'ServiceNow',  logo: '/logos/servicenow.svg' },
-                { name: 'Splunk',      logo: '/logos/splunk.svg' },
-                { name: 'Databricks',  logo: '/logos/databricks.svg' },
+                { name: 'IBM', logo: '/logos/ibm.svg' },
+                { name: 'VMware', logo: '/logos/vmware.svg' },
+                { name: 'Dell', logo: '/logos/dell.svg' },
+                { name: 'Intel', logo: '/logos/intel.svg' },
+                { name: 'Google Cloud', logo: '/logos/google-cloud.svg' },
+                { name: 'Akamai', logo: '/logos/akamai.svg' },
+                { name: 'Palo Alto', logo: '/logos/palo-alto.svg' },
+                { name: 'ServiceNow', logo: '/logos/servicenow.svg' },
+                { name: 'Splunk', logo: '/logos/splunk.svg' },
+                { name: 'Databricks', logo: '/logos/databricks.svg' },
               ].concat([
-                { name: 'IBM',         logo: '/logos/ibm.svg' },
-                { name: 'VMware',      logo: '/logos/vmware.svg' },
-                { name: 'Dell',        logo: '/logos/dell.svg' },
-                { name: 'Intel',       logo: '/logos/intel.svg' },
-                { name: 'Google Cloud',logo: '/logos/google-cloud.svg' },
-                { name: 'Akamai',      logo: '/logos/akamai.svg' },
-                { name: 'Palo Alto',   logo: '/logos/palo-alto.svg' },
-                { name: 'ServiceNow',  logo: '/logos/servicenow.svg' },
-                { name: 'Splunk',      logo: '/logos/splunk.svg' },
-                { name: 'Databricks',  logo: '/logos/databricks.svg' },
+                { name: 'IBM', logo: '/logos/ibm.svg' },
+                { name: 'VMware', logo: '/logos/vmware.svg' },
+                { name: 'Dell', logo: '/logos/dell.svg' },
+                { name: 'Intel', logo: '/logos/intel.svg' },
+                { name: 'Google Cloud', logo: '/logos/google-cloud.svg' },
+                { name: 'Akamai', logo: '/logos/akamai.svg' },
+                { name: 'Palo Alto', logo: '/logos/palo-alto.svg' },
+                { name: 'ServiceNow', logo: '/logos/servicenow.svg' },
+                { name: 'Splunk', logo: '/logos/splunk.svg' },
+                { name: 'Databricks', logo: '/logos/databricks.svg' },
               ]).map((partner, idx) => (
                 <div className="partner-card" key={idx}>
                   <img
@@ -853,17 +859,17 @@ function AIPage() {
         </section>
 
         {/* SECTION 6: INTERACTIVE NEURAL LAB */}
-        <section className="py-32" id="lab">
+        <section className="py-16" id="lab">
           <div className="container relative z-10">
 
-            <div className="text-center mb-24">
+            <div className="text-center mb-12">
               <div className="d-flex justify-content-center mb-2">
                 <span className="ai-badge" style={{ background: 'rgba(253,58,37,0.06)', borderColor: 'rgba(253,58,37,0.2)' }}>
                   <ShieldAlert size={14} className="me-2" />
                   SEO PROTECTED // SECURE ZONE
                 </span>
               </div>
-              <h2 className="fw-bold text-dark mb-8" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>
+              <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>
                 Virtual Galaxy <span style={{ color: '#fd3a25' }}>Neural Lab</span>
               </h2>
               <p className="mx-auto text-secondary" style={{ maxWidth: '600px', fontSize: '1.02rem' }}>
@@ -879,7 +885,7 @@ function AIPage() {
 
                 {/* HUD Diagnostic Stats */}
                 <div className="glass-panel">
-                  <h4 className="fw-bold text-dark mb-20 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
+                  <h4 className="fw-bold text-dark mb-4 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
                     <Activity size={18} style={{ color: '#fd3a25' }} />
                     Real-Time Health
                   </h4>
@@ -919,7 +925,7 @@ function AIPage() {
 
                 {/* Neural Parameters Tuning */}
                 <div className="glass-panel">
-                  <h4 className="fw-bold text-dark mb-20 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
+                  <h4 className="fw-bold text-dark mb-4 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
                     <Sliders size={18} style={{ color: '#fd3a25' }} />
                     Hyperparameter Tuning
                   </h4>
@@ -1016,7 +1022,7 @@ function AIPage() {
               {/* RIGHT COLUMN: Terminal Command Console */}
               <div className="col-lg-8 col-md-7">
                 <div className="glass-panel d-flex flex-column h-100" style={{ minHeight: '460px' }}>
-                  <h4 className="fw-bold text-dark mb-16 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
+                  <h4 className="fw-bold text-dark mb-4 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
                     <Server size={18} style={{ color: '#fd3a25' }} />
                     Mainframe Quantum Shell
                   </h4>
@@ -1086,8 +1092,8 @@ function AIPage() {
                   </div>
 
                   {/* Quick-Click Command Shortcuts for mobile/desktop UX */}
-                  <div className="mt-20">
-                    <div className="text-secondary mb-8" style={{ fontSize: '0.8rem', fontWeight: 600 }}>MAIN FRAME SHORTCUTS:</div>
+                  <div className="mt-6">
+                    <div className="text-secondary mb-2" style={{ fontSize: '0.8rem', fontWeight: 600 }}>MAIN FRAME SHORTCUTS:</div>
                     <div className="d-flex flex-wrap gap-8">
                       {['help', 'status', 'about', 'agents', 'neural', 'optimize', 'clear'].map((cmd) => (
                         <button
