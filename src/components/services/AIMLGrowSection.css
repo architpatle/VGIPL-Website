@@ -1,5 +1,5 @@
 .ai-grow-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 50%, #ffffff 100%);
   position: relative;
   overflow: hidden;
@@ -17,7 +17,7 @@
 
 .ai-grow-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .ai-grow-badge {
@@ -58,7 +58,7 @@
   border: 1px solid #f3f4f6;
   border-radius: 28px;
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   transition: all 0.5s ease;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
@@ -76,7 +76,7 @@
 
 .ai-grow-main-content {
   flex: 1;
-  padding: 50px;
+  padding: 40px;
 }
 
 .ai-grow-main-visual {
@@ -174,7 +174,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .ai-grow-usecase {
@@ -244,7 +244,7 @@
 .ai-grow-cta {
   background: linear-gradient(135deg, #ff3300 0%, #cc2900 40%, #ff5533 100%);
   border-radius: 28px;
-  padding: 60px 50px;
+  padding: 50px 40px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -449,11 +449,11 @@
 }
 
 @media (max-width: 767px) {
-  .ai-grow-section { padding: 60px 0; }
-  .ai-grow-main-content { padding: 30px 24px; }
+  .ai-grow-section { padding: 40px 0; }
+  .ai-grow-main-content { padding: 24px 20px; }
   .ai-grow-usecases { grid-template-columns: 1fr 1fr; gap: 14px; }
   .ai-grow-title { font-size: 1.8rem; }
   .ai-grow-cta-headline { font-size: 1.5rem; }
   .ai-grow-cta-buttons { flex-direction: column; align-items: center; }
-  .ai-grow-cta { padding: 30px 20px; border-radius: 20px; }
+  .ai-grow-cta { padding: 24px 16px; border-radius: 20px; }
 }

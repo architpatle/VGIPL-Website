@@ -1,5 +1,5 @@
 .ai-solve-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -164,7 +164,7 @@
 }
 
 @media (max-width: 767px) {
-  .ai-solve-section { padding: 60px 0; }
+  .ai-solve-section { padding: 40px 0; }
   .ai-solve-title { font-size: 1.8rem; }
-  .ai-solve-image-wrap { margin-bottom: 50px; }
+  .ai-solve-image-wrap { margin-bottom: 40px; }
 }

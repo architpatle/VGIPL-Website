@@ -104,7 +104,12 @@ function ServiceSingle() {
         </>
       )}
 
-      <CTABannerSection />
+      {slug !== 'ai-ml' && slug !== 'digital-solutions' && (
+        <CTABannerSection 
+          title={`Ready to Transform Your ${service.title}?`}
+          subtitle={`Schedule a free consultation with our ${service.slug === 'vgst' ? 'VGST' : service.title} experts and discover how smart technology can optimize your operations.`}
+        />
+      )}
     </>
   );
 }

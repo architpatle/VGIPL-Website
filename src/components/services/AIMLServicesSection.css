@@ -1,5 +1,5 @@
 .ai-services-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -40,7 +40,7 @@
 /* Header */
 .ai-services-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   z-index: 2;
 }
@@ -142,8 +142,8 @@
 /* Connector pulse */
 .ai-services-pulse {
   text-align: center;
-  margin-top: 40px;
-  padding-top: 30px;
+  margin-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 2;
@@ -165,8 +165,8 @@
 }
 
 @media (max-width: 767px) {
-  .ai-services-section { padding: 60px 0; }
+  .ai-services-section { padding: 40px 0; }
   .ai-services-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .ai-services-wrapper { padding: 30px 20px; border-radius: 20px; }
+  .ai-services-wrapper { padding: 24px 16px; border-radius: 20px; }
   .ai-services-title { font-size: 1.6rem; }
 }
