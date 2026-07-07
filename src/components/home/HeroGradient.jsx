@@ -90,7 +90,7 @@ function HeroGradient() {
             </div>
           </div>
           <p className="text effectFade fadeUp">
-            With AI powered execution, we transform ideas into scalable products that drive success in the tech world. <br /> into scalable products that drive success in the tech world.
+            With AI-powered execution, we transform ideas into scalable products that drive success in the Tech-world. <br />Built for performance, designed for long-term growth.
           </p>
           <div className="bot-btns effectFade fadeRotateX">
             <Link to="/services" className="tf-btn">

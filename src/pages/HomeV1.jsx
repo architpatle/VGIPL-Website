@@ -48,7 +48,7 @@ function HomeV1() {
         {/* <TestimonialsSection /> */}
       </div>
 
-      {/* <PricingSection /> */}
+      <PricingSection />
       {/* <FaqsSection /> */}
       <ContactSection />
     </>

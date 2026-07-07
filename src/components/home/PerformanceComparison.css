@@ -1,0 +1,41 @@
+.pricing-item .heading .price-number-pc {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 767px) {
+  .pricing-item .heading .price-number-pc {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+.pricing-item.style-black .heading .price-number-pc {
+  color: var(--white);
+}
+
+/* .comparison-active{
+
+    transform:scale(1);
+
+    opacity:1;
+
+    transition:
+
+        all .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+.comparison-inactive{
+
+    transform:scale(.95);
+
+    opacity:.45;
+
+    transition:
+
+        all .45s cubic-bezier(.22,1,.36,1);
+
+} */

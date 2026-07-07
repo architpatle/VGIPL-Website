@@ -11,90 +11,16 @@ import { RESOURCE_DATA } from '../data/resourceData';
 import { CAREERS_DATA } from '../data/careersData';
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   const [activeMega, setActiveMega] = useState(null); // 'products', 'services', etc.
   const [activeItem, setActiveItem] = useState(null);
   const location = useLocation();
 
-  const [isHidden, setIsHidden] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
-
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    const SCROLL_THRESHOLD = 8;
-    const TOP_OFFSET = 80;
-
-    const updateNavbar = () => {
-
-      const currentScrollY = window.scrollY;
-
-      setScrolled(currentScrollY > 20);
-
-      const diff = currentScrollY - lastScrollY;
-
-      // Ignore tiny wheel movements
-      if (Math.abs(diff) < SCROLL_THRESHOLD) {
-        ticking = false;
-        return;
-      }
-
-      // Always visible near top
-      if (currentScrollY <= TOP_OFFSET) {
-
-        setIsHidden(false);
-
-      }
-
-      // Hide while scrolling down
-      else if (diff > 0) {
-
-        // Don't hide while mega menu is open
-        if (!activeMega) {
-
-          setIsHidden(true);
-
-        }
-
-      }
-
-      // Show while scrolling up
-      else {
-
-        setIsHidden(false);
-
-      }
-
-      lastScrollY = currentScrollY;
-
-      ticking = false;
-
-    };
-
-    const onScroll = () => {
-
-      if (!ticking) {
-
-        window.requestAnimationFrame(updateNavbar);
-
-        ticking = true;
-
-      }
-
-    };
-
-    window.addEventListener("scroll", onScroll, {
-
-      passive: true,
-
-    });
-
-    return () =>
-
-      window.removeEventListener("scroll", onScroll);
-
-  }, [activeMega]);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mega menu on route change
   useEffect(() => {
@@ -177,7 +103,7 @@ function Navbar() {
 
     return (
       <div className={styles.megaMenuWrapper}>
-        <div className={styles.megaMenuContent} onMouseLeave={() => { }}>
+        <div className={styles.megaMenuContent} onMouseLeave={() => {}}>
           {/* Left Sidebar */}
           <div className={styles.megaSidebar}>
             <ul className={styles.categoryList}>
@@ -203,15 +129,15 @@ function Navbar() {
           <div className={styles.megaPreview}>
             {activeItem && (
               <Link to={activeItem.link} className={styles.previewCard} style={{ textDecoration: 'none' }}>
-                <div
-                  className={styles.previewImageWrapper}
+                <div 
+                  className={styles.previewImageWrapper} 
                   style={activeItem.imageFit === 'cover' ? { padding: '0px', background: 'transparent' } : {}}
                 >
                   {activeItem.image ? (
-                    <img
-                      src={activeItem.image}
-                      alt={activeItem.title}
-                      className={styles.previewImage}
+                    <img 
+                      src={activeItem.image} 
+                      alt={activeItem.title} 
+                      className={styles.previewImage} 
                       style={{ objectFit: activeItem.imageFit || 'contain' }}
                     />
                   ) : activeItem.logo ? (
@@ -237,13 +163,7 @@ function Navbar() {
   };
 
   return (
-    <header
-    className={`
-        ${styles.header}
-        ${scrolled ? styles.headerScrolled : ""}
-        ${isHidden ? styles.headerHidden : ""}
-    `}
->
+    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <nav className={`${styles.navContainer} `}>
         {/* Left: Logo */}
         <div className={styles.logoSection}>
@@ -258,8 +178,8 @@ function Navbar() {
             <li className={styles.menuItem}>
               <Link to="/about" className={styles.menuLink}>About Us</Link>
             </li>
-            <li
-              className={styles.menuItem}
+            <li 
+              className={styles.menuItem} 
               onMouseEnter={() => handleMenuHover('products')}
               onMouseLeave={() => setActiveMega(null)}
             >
@@ -271,7 +191,7 @@ function Navbar() {
               </span>
               {activeMega === 'products' && renderMegaMenu('products')}
             </li>
-            <li
+            <li 
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('services')}
               onMouseLeave={() => setActiveMega(null)}
@@ -284,7 +204,7 @@ function Navbar() {
               </span>
               {activeMega === 'services' && renderMegaMenu('services')}
             </li>
-            <li
+            <li 
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('investors')}
               onMouseLeave={() => setActiveMega(null)}
@@ -300,7 +220,7 @@ function Navbar() {
             <li className={styles.menuItem}>
               <Link to="/ipo" className={styles.menuLink}>IPO</Link>
             </li>
-            <li
+            <li 
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('resource')}
               onMouseLeave={() => setActiveMega(null)}
@@ -313,7 +233,7 @@ function Navbar() {
               </span>
               {activeMega === 'resource' && renderMegaMenu('resource')}
             </li>
-            <li
+            <li 
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('careers')}
               onMouseLeave={() => setActiveMega(null)}
@@ -353,14 +273,14 @@ function Navbar() {
           </Link>
 
           {/* Mobile Toggle */}
-          <div
-            className={`${styles.mobileToggle} open-mb-menu`}
+          <div 
+            className={`${styles.mobileToggle} open-mb-menu`} 
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
               const menu = document.querySelector('.offcanvas-menu');
               if (menu) menu.classList.add('show');
               document.body.style.overflow = "hidden";
-              document.documentElement.style.overflow = "hidden";
+document.documentElement.style.overflow = "hidden";
             }}
           >
             <i className="icon icon-grip-lines-solid"></i>

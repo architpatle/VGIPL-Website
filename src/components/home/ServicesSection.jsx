@@ -65,13 +65,13 @@ function ServicesSection() {
         <div className="row justify-content-between ">
           <div className="col-xxl-4 col-lg-6">
             <div className="d-flex flex-column justify-content-between h-100 ">
-              <div className="col-left d-flex flex-column justify-content-between h-100">
+              <div className="col-left d-flex flex-column justify-content-start gap-30 h-100">
                 <div>
                   <div className="heading-section ">
                     <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us</div>
                     <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
                   </div>
-                  <p className="effectFade fadeUp mb-48" >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
+                  <p className="effectFade fadeUp " >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
                 </div>
 
                 {/* Dynamic Image Container */}
@@ -102,7 +102,7 @@ function ServicesSection() {
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-1' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-1'}>
                   <div className="accordion-title">
                     Domain Expertise <br />
-                    <div className="text-body-1 num">(01)</div>
+                    {/* <div className="text-body-1 num">(01)</div> */}
                   </div>
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-1' ? 'open' : ''}`}>
@@ -123,7 +123,7 @@ function ServicesSection() {
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-2' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-2'}>
                   <div className="accordion-title">
                     Trusted by 500+ Enterprises <br />
-                    <div className="text-body-1 num">(02)</div>
+                    {/* <div className="text-body-1 num">(02)</div> */}
                   </div>
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-2' ? 'open' : ''}`}>
@@ -144,7 +144,7 @@ function ServicesSection() {
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
                   <div className="accordion-title">
                     400+ Engineers <br />
-                    <div className="text-body-1 num">(03)</div>
+                    {/* <div className="text-body-1 num">(03)</div> */}
                   </div>
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-3' ? 'open' : ''}`}>
@@ -167,7 +167,7 @@ function ServicesSection() {
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-4' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-4'}>
                   <div className="accordion-title">
                     Future Ready Solutions <br />
-                    <div className="text-body-1 num">(04)</div>
+                    {/* <div className="text-body-1 num">(04)</div> */}
                   </div>
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-4' ? 'open' : ''}`}>

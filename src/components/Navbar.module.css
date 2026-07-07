@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -8,16 +8,31 @@
   justify-content: center;
   padding: 20px;
   transition: all 0.3s ease;
-  pointer-events: none; /* Allow clicks through the header padding */
+  pointer-events: none;
+  /* Allow clicks through the header padding */
+
+  transition:
+        transform 1s cubic-bezier(.22,1,.36,1),
+        top .5s ease,
+        padding .25s ease;
+
+    will-change:transform;
+}
+
+.headerHidden{
+
+    transform:translate3d(0,-140%,0);
+
 }
 
 .headerScrolled {
-  /* padding: 10px 20px; */
-  top:0px;
+  /* padding: 12px 20px; */
+  top: 10px;
 }
 
 .navContainer {
-  pointer-events: auto; /* Re-enable pointer events for the pill */
+  pointer-events: auto;
+  /* Re-enable pointer events for the pill */
   width: 100%;
   max-width: 63%;
   background: rgba(255, 255, 255, 0.85);
@@ -146,6 +161,7 @@
 .megaSidebar::-webkit-scrollbar {
   width: 3px;
 }
+
 .megaSidebar::-webkit-scrollbar-thumb {
   background: #e10600;
   border-radius: 10px;
@@ -193,7 +209,7 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .categoryActive .categoryIcon {
@@ -211,8 +227,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateX(10px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .previewCard {
@@ -364,12 +387,15 @@
   .menuSection {
     display: none;
   }
+
   .socialList {
     display: none;
   }
+
   .mobileToggle {
     display: flex;
   }
+
   .navContainer {
     padding: 8px 12px 8px 18px;
   }
@@ -379,7 +405,8 @@
   .contactBtn {
     display: none;
   }
-  .navContainer{
+
+  .navContainer {
     max-width: 100%;
   }
 }
