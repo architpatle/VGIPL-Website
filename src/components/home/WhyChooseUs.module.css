@@ -78,7 +78,7 @@
 .bgCircle {
   fill: none;
 
-  stroke: rgba(255, 59, 48, 0.12);
+  stroke: rgba(48, 255, 79, 0.12);
 
   stroke-width: 8;
 }
@@ -86,7 +86,7 @@
 .progressRing {
   fill: none;
 
-  stroke: #ff3b30;
+  stroke: #83e671;
 
   stroke-width: 8;
 

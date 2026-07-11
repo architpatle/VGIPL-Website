@@ -163,7 +163,7 @@ function PerformanceComparison() {
 
                     <li key={index}>
 
-                      <i className="icon icon-close-circle text-danger"></i>
+                      <i className="icon icon-close-circle" style={{backgroundColor:"#ef4444"}}></i>
 
                       {item}
 
@@ -182,7 +182,7 @@ function PerformanceComparison() {
           <div className="col-lg-6">
 
             <div
-              className={`pricing-item h-100 style-black effectFade fadeRotateX ${withVG
+              className={`pricing-item h-100 style-blue effectFade fadeRotateX ${withVG
                   ? "comparison-active"
                   : "comparison-inactive"
                 }`}
@@ -271,7 +271,7 @@ function PerformanceComparison() {
 
                     <li key={index}>
 
-                      <i className="icon icon-check-solid"></i>
+                      <i className="icon icon-check-solid" style={{backgroundColor:"#83e671", color:"var(--primary)"}}></i>
 
                       {item}
 

@@ -143,7 +143,7 @@ function ServicesSection() {
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', service3Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
                   <div className="accordion-title">
-                    400+ Engineers <br />
+                    400+ Associates <br />
                     {/* <div className="text-body-1 num">(03)</div> */}
                   </div>
                 </div>
