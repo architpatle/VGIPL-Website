@@ -31,7 +31,7 @@ function Footer() {
         <div className="vg-footer-content">
 
           <h6 className="vg-footer-tagline">
-            Get connected <br /> with Virtual Galaxy on social
+            Get Connected <br /> with <span style={{ color: "var(--brand)" }}>Virtual Galaxy</span> on social
           </h6>
 
           <p className="vg-footer-sub">Don't miss our new updates!</p>

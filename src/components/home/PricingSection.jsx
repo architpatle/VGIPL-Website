@@ -9,9 +9,9 @@ function PricingSection() {
           <div className="heading-sub fw-semibold effectFade fadeUp">Pricing Plans</div>
           <div className="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
             From pilot to enterprise <br />
-            <div className="h-8 d-none d-lg-block"></div>
+            {/* <div className="h-8 d-none d-lg-block"></div> */}
             clear scope, transparent costs <br />
-            <div className="h-8 d-none d-lg-block"></div>
+            {/* <div className="h-8 d-none d-lg-block"></div> */}
             <input type="checkbox" id="pricingSwitch" className="tf-switch-check" defaultChecked />&nbsp;annually.
           </div>
         </div>
@@ -114,7 +114,7 @@ function PricingSection() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

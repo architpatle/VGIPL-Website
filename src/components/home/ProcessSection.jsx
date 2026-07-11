@@ -100,17 +100,19 @@ function ProcessSection() {
                 <div className="swiper-wrapper">
                   {steps.map((step, index) => (
                     <div className="swiper-slide" key={index}>
-                      <div className="process-card d-flex flex-column justify-content-between h-100" style={{ minHeight: '380px', height: '100%', padding: '30px' }}>
+                      <div className="process-card d-flex flex-column h-100" style={{ minHeight: '304px', height: '100%', padding: '24px' }}>
                         <div>
-                          <div className="mb-10" style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(239, 68, 68, 0.08)' }}>
-                            {step.icon}
+                          <div className="d-flex align-items-center gap-16 mb-16" style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                            <div style={{ display: 'inline-flex', padding: '12px', borderRadius: '12px', background: 'rgba(239, 68, 68, 0.08)' }}>
+                              {step.icon}
+                            </div>
+                            <h4 className="title fw-semibold" style={{ fontSize: '20px', margin: 0 }}>{step.title}</h4>
                           </div>
                           <div className="content">
-                            <h4 className="title fw-semibold mb-12" style={{ fontSize: '20px' }}>{step.title}</h4>
-                            <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', color: '#6b7280' }}>{step.text}</p>
+                            <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', color: '#6b7280', margin: 0 }}>{step.text}</p>
                           </div>
                         </div>
-                        <div className="bot d-flex justify-content-between align-items-center pt-15 border-top" style={{ borderColor: '#f3f4f6' }}>
+                        <div className="bot d-flex justify-content-between align-items-center border-top" style={{ borderColor: '#f3f4f6', marginTop: '8px', paddingTop: '8px' }}>
                           <div className="time fw-semibold text-brand" style={{ fontSize: '0.85rem', letterSpacing: '0.05em' }}>PHASE {step.number}</div>
                           <div className="number">
                             <span className="text-neutral-400 fw-bold">{step.number}</span>

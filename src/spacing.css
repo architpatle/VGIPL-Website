@@ -765,6 +765,10 @@
   justify-content: space-between !important;
 }
 
+.section-process .process-card .content {
+  margin-bottom: 16px !important; /* Reduced further by 30% */
+}
+
 
 /* Features Section - Horizontal Icon+Text row layout (desktop > 990px) */
 @media (min-width: 991px) {
@@ -1402,9 +1406,18 @@
 
 .section-team-premium {
   background-color: #ffffff !important;
-  padding: 80px 0 !important;
+  padding: 32px 0 80px 0 !important; /* Increased top padding slightly */
   position: relative !important;
   overflow: hidden !important;
+}
+
+.section-team-premium .heading-section {
+  margin-bottom: 0px !important;
+}
+
+/* Reduce gap between "Our Founder" badge and the main title */
+.section-team-premium .heading-section .heading-sub {
+  margin-bottom: 8px !important;
 }
 
 .leadership-grid-container {
@@ -1580,7 +1593,7 @@
 /* Breakpoint: Medium / Small Laptops (under 1200px) */
 @media (max-width: 1199px) {
   .section-team-premium {
-    padding: 60px 0 !important;
+    padding: 24px 0 60px 0 !important; /* Increased top padding slightly */
   }
 
   .leadership-grid-container {
@@ -1657,7 +1670,7 @@
 /* Mobile (≤ 599px): horizontal row — Avinash | Logo (center) | Sachin */
 @media (max-width: 599px) {
   .section-team-premium {
-    padding: 40px 0 !important;
+    padding: 8px 0 40px 0 !important; /* Reduced top padding by 80% */
   }
 
   .leadership-grid-container {

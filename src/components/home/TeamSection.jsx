@@ -11,29 +11,28 @@ import sachinSignature from '../../assets/home/sachin-signature.png';
 
 function TeamSection() {
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        document
-          .querySelectorAll('.founder-card')
-          .forEach((card) => card.classList.add('animate'));
-      }
-    },
-    { threshold: 0.25 }
-  );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          document
+            .querySelectorAll('.founder-card')
+            .forEach((card) => card.classList.add('animate'));
+        }
+      },
+      { threshold: 0.25 }
+    );
 
-  const section = document.querySelector('#leadership');
+    const section = document.querySelector('#leadership');
 
-  if (section) observer.observe(section);
+    if (section) observer.observe(section);
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <div className="section-team-premium" id="leadership">
-      <div className="container">
-        
+    <div className="section-team-premium" id="leadership" style={{ height: "850px" }}>
+      <div className="container" >
         {/* Section Heading */}
-        <div className="heading-section center mb-64">
+        <div className="heading-section center mb-0">
           <div className="heading-sub fw-semibold  effectFade fadeUp">Our Founder</div>
           <div className="heading-title text-dark effectFade fadeRotateX">
             The Minds Behind Virtual-Galaxy
@@ -41,8 +40,8 @@ function TeamSection() {
         </div>
 
         {/* Responsive Grid Wrapper */}
-        <div className="leadership-grid-container effectFade ">
-          
+        <div className="leadership-grid-container effectFade">
+
           {/* Left Card - Mr. Avinash Shende */}
           <div className="leader-card-item card-left founder-card founder-left">
             <div className="leader-image-wrap">
@@ -60,7 +59,7 @@ function TeamSection() {
               <h3 className="leader-name">Mr. Avinash Shende</h3>
               <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" />
               <div className="leader-position">Promoter, Chairman, Executive Director & Chief Financial Officer</div>
-              <div className="leader-divider"></div>
+              {/* <div className="leader-divider"></div> */}
               <p className="leader-desc">
                 Avinash oversees operations and finances at Virtual Galaxy Infotech, balancing market needs with cost efficiency. He’s also a gardening enthusiast with a love for all things green.
               </p>
@@ -91,7 +90,7 @@ function TeamSection() {
               <h3 className="leader-name">Mr. Sachin Pande</h3>
               <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" />
               <div className="leader-position">Promoter, Managing Director & Chief Technology Officer</div>
-              <div className="leader-divider"></div>
+              {/* <div className="leader-divider"></div> */}
               <p className="leader-desc">
                 Sachin drives technology and business development at Virtual Galaxy Infotech, leveraging the latest advancements. Off duty, he enjoys music with a cup of tea in hand.
               </p>
@@ -107,10 +106,11 @@ function TeamSection() {
           }
           .leader-signature {
             display: block !important;
-            height: 80px;
-            width: auto;
+            height: 70px;
+            width: 190px;
             object-fit: contain;
             margin: 5px 0 15px;
+            
           }
 
           /* Mobile View */

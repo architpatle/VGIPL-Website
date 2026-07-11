@@ -7670,12 +7670,12 @@ button.animate-btn::after,
 
 .tool-wrap .img-item-3 {
   bottom: 0;
-  left: 40px;
+  left: 32px;
 }
 
 .tool-wrap .img-item-4 {
-  top: 6px;
-  right: 38px;
+  top: 0;
+  right: 32px;
 }
 
 .tool-wrap .img-item-5 {
@@ -7685,8 +7685,8 @@ button.animate-btn::after,
 }
 
 .tool-wrap .img-item-6 {
-  bottom: -6px;
-  right: 33px;
+  bottom: 0;
+  right: 32px;
 }
 
 .tool-wrap .image-center {
@@ -7706,16 +7706,8 @@ button.animate-btn::after,
 
 .tool-wrap .line-1 {
   position: absolute;
-  top: 66px;
+  top: 63px;
   left: 66px;
-}
-
-@media (max-width: 767px) {
-  .tool-wrap .line-1 {
-    width: 25%;
-    top: -9px;
-    left: 59px;
-  }
 }
 
 .tool-wrap .line-2 {
@@ -7724,52 +7716,22 @@ button.animate-btn::after,
   left: 66px;
 }
 
-@media (max-width: 767px) {
-  .tool-wrap .line-2 {
-    width: 50%;
-    left: 0;
-  }
-}
-
 .tool-wrap .line-3 {
   position: absolute;
   bottom: 66px;
   left: 66px;
 }
 
-@media (max-width: 767px) {
-  .tool-wrap .line-3 {
-    width: 25%;
-    bottom: 0px;
-    left: 59px;
-  }
-}
-
 .tool-wrap .line-4 {
   position: absolute;
-  top: 66px;
+  top: 63px;
   right: 66px;
-}
-
-@media (max-width: 767px) {
-  .tool-wrap .line-4 {
-    width: 25%;
-    top: -9px;
-    right: 59px;
-  }
 }
 
 .tool-wrap .line-5 {
   position: absolute;
   top: 50%;
   right: 66px;
-}
-
-@media (max-width: 767px) {
-  .tool-wrap .line-5 {
-    width: 50%;
-    right: 0;
-  }
 }
 
 .tool-wrap .line-6 {
@@ -7779,44 +7741,24 @@ button.animate-btn::after,
 }
 
 @media (max-width: 767px) {
+  .tool-wrap .line-1 {
+    top: 63px;
+    left: 83px;
+  }
+  .tool-wrap .line-3 {
+    bottom: 63px;
+    left: 83px;
+  }
+  .tool-wrap .line-4 {
+    top: 63px;
+    right: 83px;
+  }
   .tool-wrap .line-6 {
-    width: 25%;
-    bottom: 0px;
-    right: 59px;
+    bottom: 63px;
+    right: 83px;
   }
 }
 
-@media (max-width: 1199px) {
-  .tool-wrap .tool-image-box {
-    margin: -70px 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .tool-wrap .tool-image-box {
-    margin: 0 0 50px;
-    height: 238px;
-  }
-
-  .tool-wrap .image-center {
-    width: 102px;
-  }
-
-  .tool-wrap .img-item-5,
-  .tool-wrap .img-item-2 {
-    width: 40px;
-  }
-
-  .tool-wrap .img-item-3,
-  .tool-wrap .img-item-4 {
-    width: 46px;
-  }
-
-  .tool-wrap .img-item-1,
-  .tool-wrap .img-item-6 {
-    width: 52px;
-  }
-}
 
 .side-line-main {
   position: absolute;
