@@ -6,13 +6,11 @@ function PricingSection() {
     <div id="pricing" className="section-pricing section-spacing">
       <div className="container">
         <div className="heading-section mb-80">
-          <div className="heading-sub fw-semibold effectFade fadeUp">Pricing Plans</div>
+          <div className="heading-sub fw-semibold effectFade fadeUp">AI-Powered System</div>
           <div className="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
-            From pilot to enterprise <br />
-            {/* <div className="h-8 d-none d-lg-block"></div> */}
-            clear scope, transparent costs <br />
-            {/* <div className="h-8 d-none d-lg-block"></div> */}
-            <input type="checkbox" id="pricingSwitch" className="tf-switch-check" defaultChecked />&nbsp;annually.
+            Switch from Disconnected Legacy Systems to  <br />
+            {/* <input type="checkbox" id="pricingSwitch" className="tf-switch-check" defaultChecked />&nbsp; */}
+             AI-Enabled Cybersecurity.
           </div>
         </div>
         <div className="row">
@@ -21,12 +19,12 @@ function PricingSection() {
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
                   <i className="icon icon-user-friends-solid fs-24"></i>
-                  <div className="fw-semibold text">Starter Plan</div>
+                  <div className="fw-semibold text">Security Without Intelligence <br /> Slows Everything Down</div>
                 </div>
-                <div className="line"></div>
-                <div className="fw-semibold text-secondary">For startups</div>
+                {/* <div className="line"></div>
+                <div className="fw-semibold text-secondary">For startups</div> */}
               </div>
-              <div className="heading">
+              {/* <div className="heading">
                 <div className="d-flex gap-14 align-items-end">
                   <div className="price-number fw-bold" data-month="1000" data-year="9900">$9,900</div>
                   <h6 className="price-per">/ year</h6>
@@ -34,47 +32,54 @@ function PricingSection() {
                 <Link to="/contact" className="tf-btn">
                   Get Started
                 </Link>
-              </div>
+              </div> */}
               <div className="line"></div>
               <div className="content">
                 <div>
-                  <div className="title fw-semibold mb-4">What’s included</div>
+                  {/* <div className="title fw-semibold mb-4">What’s included</div> */}
                   <div className="text fw-semibold">
-                    Prove value in two weeks with a clickable UX, tech spike, and a clear go/no-go roadmap.
+                    Without centralized
+                    detection, automation, or real-time
+                    visibility, traditional systems rely
+                    heavily on manual monitoring and
+                    delayed responses—making it easier
+                    for threats to go unnoticed and harder
+                    to prevent damage in time.
                   </div>
                 </div>
                 <ul className="list-text type-check">
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Discovery workshop
+                    No centralized threat detection
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Opportunity brief
+                    Manual monitoring and response
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Clickable UX
+                    No automated incident handling
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    1 data source & 1 integration
+                    Limited visibility across systems
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="pricing-item h-100 style-black effectFade fadeRotateX" data-delay="0.1">
+            <div className="pricing-item h-100 style-blue effectFade fadeRotateX" data-delay="0.1">
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
                   <i className="icon icon-building fs-24"></i>
-                  <div className="fw-semibold text">Enterprise Plan</div>
+                  <div className="fw-semibold text">Smarter Security Built for Modern
+                    Threats <br />(With AI-Enabled Cybersecurity)</div>
                 </div>
-                <div className="line"></div>
-                <div className="fw-semibold text-neutral-400">For organisations</div>
+                {/* <div className="line"></div>
+                <div className="fw-semibold text-neutral-400">For organisations</div> */}
               </div>
-              <div className="heading">
+              {/* <div className="heading">
                 <div className="d-flex gap-14 align-items-end">
                   <div className="price-number fw-bold" data-month="1700" data-year="19900">$19,900</div>
                   <h6 className="price-per">/ year</h6>
@@ -82,31 +87,36 @@ function PricingSection() {
                 <Link to="/contact" className="tf-btn">
                   Get Started
                 </Link>
-              </div>
+              </div> */}
               <div className="line"></div>
               <div className="content">
                 <div>
-                  <div className="title fw-semibold mb-4">What’s included</div>
+                  {/* <div className="title fw-semibold mb-4">What’s included</div> */}
                   <div className="text fw-semibold">
-                    Compliance-ready delivery for complex orgs—multi-env releases, canaries, and change management.
+                    AI-powered cybersecurity
+                    brings real-time threat detection,
+                    automated response, and complete system
+                    visibility— ensuring faster decisions,
+                    stronger protection, and a more resilient
+                    digital environment.
                   </div>
                 </div>
                 <ul className="list-text type-check">
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Everything in Starter
+                    AI-driven threat detection
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    CI/CD, tracing, alerts, guardrails
+                    Automated incident response
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Full eval dashboard
+                    Behaviour and anomaly analysis
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    3 data source & 3 integration
+                    Centralized security visibility 
                   </li>
                 </ul>
               </div>

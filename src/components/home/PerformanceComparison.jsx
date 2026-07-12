@@ -81,7 +81,7 @@ function PerformanceComparison() {
                 }`}
             >
 
-              <div className="top d-flex gap-12 align-items-center">
+              <div className="top d-flex gap-12 align-items-center" style={{"marginBottom": "27px"}}>
 
                 <div className="d-flex gap-8 align-items-center">
 
@@ -188,7 +188,7 @@ function PerformanceComparison() {
                 }`}
             >
 
-              <div className="top d-flex gap-12 align-items-center">
+              <div className="top d-flex gap-12 align-items-center" style={{"marginBottom": "27px"}}>
 
                 <div className="d-flex gap-8 align-items-center">
 
