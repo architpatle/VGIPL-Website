@@ -18,6 +18,7 @@ import ContactSection from '../components/home/ContactSection';
 
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import PerformanceComparison from '../components/home/PerformanceComparison';
+import HomeVideosSection from '../components/home/HomeVideosSection';
 
 function HomeV1() {
   return (
@@ -50,6 +51,7 @@ function HomeV1() {
 
       <PricingSection />
       {/* <FaqsSection /> */}
+      <HomeVideosSection />
       <ContactSection />
     </>
   );

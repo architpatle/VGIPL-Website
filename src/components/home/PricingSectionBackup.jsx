@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './PricingSection.css';
+import  './PricingSection.css';
 
 function PricingSection() {
-  const [isAIEnabled, setIsAIEnabled] = useState(false);
   return (
     <div id="pricing" className="section-pricing section-spacing">
       <div className="container">
@@ -11,16 +10,13 @@ function PricingSection() {
           <div className="heading-sub fw-semibold effectFade fadeUp">AI-Powered System</div>
           <div className="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
             Switch from Disconnected Legacy Systems to  <br />
-            <input type="checkbox" id="pricingSwitch" className="tf-switch-check" checked={isAIEnabled} onChange={() => setIsAIEnabled(!isAIEnabled)} />&nbsp;
-            AI-Enabled Cybersecurity.
+            <input type="checkbox" id="pricingSwitch" className="tf-switch-check" defaultChecked />&nbsp;
+             AI-Enabled Cybersecurity.
           </div>
         </div>
         <div className="row">
           <div className="col-lg-6 lg-mb-24">
-            <div
-              className={`pricing-item h-100 effectFade fadeRotateX ${isAIEnabled ? "inactive-card" : "active-card"
-                }`}
-            >
+            <div className="pricing-item h-100 effectFade fadeRotateX">
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
                   <i className="icon icon-user-friends-solid fs-24"></i>
@@ -74,11 +70,7 @@ function PricingSection() {
             </div>
           </div>
           <div className="col-lg-6">
-            <div
-              className={`pricing-item h-100 style-blue effectFade fadeRotateX ${isAIEnabled ? "active-card" : "inactive-card"
-                }`}
-              data-delay="0.1"
-            >
+            <div className="pricing-item h-100 style-blue effectFade fadeRotateX" data-delay="0.1">
               <div className="top d-flex gap-12 align-items-center">
                 <div className="d-flex gap-8 align-items-center">
                   <i className="icon icon-building fs-24"></i>
@@ -125,7 +117,7 @@ function PricingSection() {
                   </li>
                   <li>
                     <i className="icon icon-check-solid"></i>
-                    Centralized security visibility
+                    Centralized security visibility 
                   </li>
                 </ul>
               </div>
