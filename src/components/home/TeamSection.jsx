@@ -29,7 +29,7 @@ function TeamSection() {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="section-team-premium" id="leadership" style={{ height: "850px" }}>
+    <div className="section-team-premium" id="leadership">
       <div className="container" >
         {/* Section Heading */}
         <div className="heading-section center mb-0">
@@ -110,8 +110,11 @@ function TeamSection() {
             width: 190px;
             object-fit: contain;
             margin: 5px 0 15px;
-            
           }
+
+          #leadership{
+              height: 850px;
+            }
 
           /* Mobile View */
           @media (max-width: 768px) {
@@ -120,6 +123,10 @@ function TeamSection() {
             }
             .leader-signature {
               display: none !important;
+            }
+            #leadership{
+              height: auto;
+              // border : 2px solid black
             }
           }
         `}</style>

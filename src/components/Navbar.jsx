@@ -238,12 +238,12 @@ function Navbar() {
 
   return (
     <header
-    className={`
+      className={`
         ${styles.header}
         ${scrolled ? styles.headerScrolled : ""}
         ${isHidden ? styles.headerHidden : ""}
     `}
->
+    >
       <nav className={`${styles.navContainer} `}>
         {/* Left: Logo */}
         <div className={styles.logoSection}>
