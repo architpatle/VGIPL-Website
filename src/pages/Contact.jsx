@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import contactBg from '../assets/Contact-img/Contact@2x.png';
+import maharashtraLogo from '../assets/Contact-img/maharashtra.png';
 import './Contact.css';
 
 
@@ -146,7 +147,7 @@ function Contact() {
               }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
-                <img src="/src/assets/Contact-img/maharashtra.png" alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
+                <img src={maharashtraLogo} alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
                 <h3 className="fw-bold mb-16" style={{ fontSize: '32px' }}>Nagpur</h3>
                 <p className="text-body-1 mb-24" style={{ lineHeight: '1.7', color: '#4b5563', fontSize: '16px' }}>
                   Plot No. 26, The Nagpur Divisional Insurance Employees Co-operative Housing Society Limited, Vivekanand Nagar, Nagpur, Maharashtra, India - 440015
@@ -190,7 +191,7 @@ function Contact() {
               }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
-                <img src="/src/assets/Contact-img/maharashtra.png" alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
+                <img src={maharashtraLogo} alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
                 <h3 className="fw-bold mb-16" style={{ fontSize: '32px' }}>Pune</h3>
                 <p className="text-body-1 mb-24" style={{ lineHeight: '1.7', color: '#4b5563', fontSize: '16px' }}>
                   302, GT Arcade, B T Kawade Road, Uday Bagh, Ghorpadi, Pune - 411013

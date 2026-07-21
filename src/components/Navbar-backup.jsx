@@ -103,7 +103,7 @@ function Navbar() {
 
     return (
       <div className={styles.megaMenuWrapper}>
-        <div className={styles.megaMenuContent} onMouseLeave={() => {}}>
+        <div className={styles.megaMenuContent} onMouseLeave={() => { }}>
           {/* Left Sidebar */}
           <div className={styles.megaSidebar}>
             <ul className={styles.categoryList}>
@@ -129,15 +129,15 @@ function Navbar() {
           <div className={styles.megaPreview}>
             {activeItem && (
               <Link to={activeItem.link} className={styles.previewCard} style={{ textDecoration: 'none' }}>
-                <div 
-                  className={styles.previewImageWrapper} 
+                <div
+                  className={styles.previewImageWrapper}
                   style={activeItem.imageFit === 'cover' ? { padding: '0px', background: 'transparent' } : {}}
                 >
                   {activeItem.image ? (
-                    <img 
-                      src={activeItem.image} 
-                      alt={activeItem.title} 
-                      className={styles.previewImage} 
+                    <img
+                      src={activeItem.image}
+                      alt={activeItem.title}
+                      className={styles.previewImage}
                       style={{ objectFit: activeItem.imageFit || 'contain' }}
                     />
                   ) : activeItem.logo ? (
@@ -178,8 +178,8 @@ function Navbar() {
             <li className={styles.menuItem}>
               <Link to="/about" className={styles.menuLink}>About Us</Link>
             </li>
-            <li 
-              className={styles.menuItem} 
+            <li
+              className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('products')}
               onMouseLeave={() => setActiveMega(null)}
             >
@@ -191,7 +191,7 @@ function Navbar() {
               </span>
               {activeMega === 'products' && renderMegaMenu('products')}
             </li>
-            <li 
+            <li
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('services')}
               onMouseLeave={() => setActiveMega(null)}
@@ -204,7 +204,7 @@ function Navbar() {
               </span>
               {activeMega === 'services' && renderMegaMenu('services')}
             </li>
-            <li 
+            <li
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('investors')}
               onMouseLeave={() => setActiveMega(null)}
@@ -220,7 +220,7 @@ function Navbar() {
             <li className={styles.menuItem}>
               <Link to="/ipo" className={styles.menuLink}>IPO</Link>
             </li>
-            <li 
+            <li
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('resource')}
               onMouseLeave={() => setActiveMega(null)}
@@ -233,7 +233,7 @@ function Navbar() {
               </span>
               {activeMega === 'resource' && renderMegaMenu('resource')}
             </li>
-            <li 
+            <li
               className={styles.menuItem}
               onMouseEnter={() => handleMenuHover('careers')}
               onMouseLeave={() => setActiveMega(null)}
@@ -273,14 +273,14 @@ function Navbar() {
           </Link>
 
           {/* Mobile Toggle */}
-          <div 
-            className={`${styles.mobileToggle} open-mb-menu`} 
+          <div
+            className={`${styles.mobileToggle} open-mb-menu`}
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
               const menu = document.querySelector('.offcanvas-menu');
               if (menu) menu.classList.add('show');
               document.body.style.overflow = "hidden";
-document.documentElement.style.overflow = "hidden";
+              document.documentElement.style.overflow = "hidden";
             }}
           >
             <i className="icon icon-grip-lines-solid"></i>
