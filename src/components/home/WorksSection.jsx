@@ -30,7 +30,7 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
   // Select the 4 specific products requested by the user
   const selectedSlugs = [
     'core-banking-solution',
-    'post-mortem-mgmt',
+    'erp-solution',
     'end-to-end-cyber-security',
     'mis-solution'
   ];
@@ -41,7 +41,7 @@ function WorksSection({ className = "section-featured-works section-spacing-grou
 
   const bgImages = {
     'core-banking-solution': featuredWork1,
-    'post-mortem-mgmt': featuredWork2,
+    'erp-solution': featuredWork2,
     'end-to-end-cyber-security': featuredWork3,
     'mis-solution': featuredWork4
   };
