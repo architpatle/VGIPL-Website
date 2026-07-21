@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -149,11 +150,37 @@ const milestones = [
 ];
 
 function JourneySection() {
+  const sectionRef = useRef(null);
+const swiperRef = useRef(null);
+
+useEffect(() => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (!swiperRef.current) return;
+
+            if (entry.isIntersecting) {
+                swiperRef.current.autoplay.start();
+            } else {
+                swiperRef.current.autoplay.stop();
+            }
+        },
+        {
+            threshold: 0.4,
+        }
+    );
+
+    if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+}, []);
+
   return (
-    <section className="journey-section section-spacing">
+    <section ref={sectionRef} className="journey-section section-spacing">
       <div className="container">
-        <div className="heading-section text-center mb-60 effectFade fadeUp">
-          <div className="heading-sub fw-semibold style-1 mb-12">
+        <div className="heading-section text-center  mb-60 effectFade fadeUp">
+          <div className="heading-sub fw-semibold style-1 mb-12 mx-auto">
             Our Journey
           </div>
           <h2 className="heading-title text-dark mb-24">
@@ -173,9 +200,13 @@ function JourneySection() {
             centeredSlides={false}
             initialSlide={0}
             loop={true}
-            speed={8000}
+            speed={4000}
+             onSwiper={(swiper) => {
+        swiperRef.current = swiper;
+        swiper.autoplay.stop();
+    }}
             autoplay={{
-              delay: 1000,
+              delay: 200,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
               reverseDirection: false
@@ -381,7 +412,7 @@ function JourneySection() {
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          min-height: 330px;
+          height: 330px;
           display: flex;
           flex-direction: column;
         }
