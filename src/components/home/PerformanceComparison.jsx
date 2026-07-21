@@ -27,7 +27,7 @@ function PerformanceComparison() {
   return (
     <div
       id="performance"
-      className="section-pricing section-spacing"
+      className="section-pricing section-spacing-lg"
     >
       <div className="container">
 

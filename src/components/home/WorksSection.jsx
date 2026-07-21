@@ -10,7 +10,7 @@ import featuredWork4 from '../../assets/home/feature-work/4- Featured Work of be
 
 import './WorksSection.css'
 
-function WorksSection({ className = "section-featured-works section-spacing-grouped" }) {
+function WorksSection({ className = "section-featured-works section-spacing-lg" }) {
   const [expandedSlug, setExpandedSlug] = useState(null);
   const navigate = useNavigate();
 

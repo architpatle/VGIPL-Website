@@ -24,11 +24,11 @@ function HomeVideosSection() {
     return (
         <section
             id="videos"
-            className="homeVideosSection section-spacing"
+            className="homeVideosSection section-spacing-lg"
         >
             <div className="container">
 
-                <div className="heading-section center mb-80 effectFade fadeUp">
+                <div className="heading-section center  effectFade fadeUp">
 
                     <div className="heading-sub fw-semibold">
 

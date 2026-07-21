@@ -2,7 +2,7 @@ import vgLogo from '../../assets/home/ownwer-img/vg-logo-2.png';
 
 function FeaturesSection() {
   return (
-    <div className="section-features flat-spacing pt-0">
+    <div className="section-features section-spacing-lg">
       <div className="container">
         <div className="heading-section center mb-64">
           <div className="heading-sub fw-semibold effectFade fadeUp">Features</div>

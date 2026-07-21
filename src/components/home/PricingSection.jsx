@@ -5,7 +5,7 @@ import './PricingSection.css';
 function PricingSection() {
   const [isAIEnabled, setIsAIEnabled] = useState(false);
   return (
-    <div id="pricing" className="section-pricing section-spacing">
+    <div id="pricing" className="section-pricing section-spacing-lg">
       <div className="container">
         <div className="heading-section mb-80">
           <div className="heading-sub fw-semibold effectFade fadeUp">AI-Powered System</div>

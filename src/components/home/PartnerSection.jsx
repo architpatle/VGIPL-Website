@@ -57,7 +57,7 @@ function PartnerSection() {
   ];
 
   return (
-    <div className="section-partner section-spacing-sm mt-20">
+    <div className="section-partner  mt-4">
       <div className="container">
         <div className="row">
           <div className="col-12">

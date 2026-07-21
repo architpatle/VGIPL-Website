@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import earthImg from '../../assets/earth.png';
-import styles from "./AboutSection.module.css";
 
 function AboutSection() {
-  const locations = [
-    "Headquartered in Nagpur, India",
-    // "PAN-India presence across 18+ states",
-    // "Active projects in Indonesia, Africa & more",
-  ];
+  
   return (
     <div className="section-about-us section-spacing-lg" id="about" style={{backgroundColor: "var(--body) !important"}}>
       <div className="container">
@@ -22,15 +17,9 @@ function AboutSection() {
           <div className="col-lg-7 lg-mb-24 d-flex">
             <div className="col-left w-100 h-100 d-flex flex-column justify-content-between" style={{ minHeight: '100%' }}>
               <div className="position-relative z-5">
-                <div className='${styles.locationMarquee} sub'>
-                  <div className={styles.locationTrack}>
-                    {[...locations].map((item, index) => (
-                      <React.Fragment key={index}>
-                        <span className={styles.dot}></span>
-                        <span>{item}</span>
-                      </React.Fragment>
-                    ))}
-                  </div>
+                <div className="sub text-white">
+                  <span className="dot"></span>
+                  Available for worldwide project
                 </div>
                 <h5 className="title fw-semibold text-white">Global Software <span className="text-brand">Solution since 1997</span></h5>
                 <Link to="/contact" className="tf-btn">

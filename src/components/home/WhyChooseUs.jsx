@@ -9,11 +9,11 @@ import img3 from '../../assets/home/Why-Choose-Us/ai-bot-img.png'
 
 function WhyChooseUs() {
     return (
-        <div className="section-benefits section-spacing-grouped mt-20">
+        <div className="section-benefits section-spacing-lg">
             <div className="container">
-                <div className="heading-section center mb-70">
-                    <div className="heading-sub fw-semibold effectFade fadeUp">Benefits</div>
-                    <div className="heading-title text-gradient-3 effectFade fadeRotateX">Why Choose Us</div>
+                <div className={`heading-section ${styles.whyChooseUsHeading} mb-70 `}>
+                    <div className={`heading-sub ${styles.whyChooseUsHeadingSub} fw-semibold effectFade fadeUp`}>Benefits</div>
+                    <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Choose Us</div>
                 </div>
                 <div className="row mb-24">
                     <div className="col-lg-7 ">

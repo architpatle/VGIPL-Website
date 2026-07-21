@@ -29,11 +29,11 @@ function TeamSection() {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="section-team-premium" id="leadership">
+    <div className="section-team-premium section-spacing-lg" id="leadership">
       <div className="container" >
         {/* Section Heading */}
         <div className="heading-section center mb-0">
-          <div className="heading-sub fw-semibold  effectFade fadeUp">Our Founder</div>
+          <div className="heading-sub fw-semibold  effectFade fadeUp">Our Founders</div>
           <div className="heading-title text-dark effectFade fadeRotateX">
             The Minds Behind Virtual-Galaxy
           </div>

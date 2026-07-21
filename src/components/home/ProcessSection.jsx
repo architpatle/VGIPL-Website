@@ -75,7 +75,7 @@ function ProcessSection() {
   ];
 
   return (
-    <div className="section-process section-spacing-grouped mb-20 animate-swiper" id="process">
+    <div className="section-process section-spacing-lg animate-swiper" id="process">
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
