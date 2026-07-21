@@ -2221,3 +2221,41 @@
     box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2) !important;
   }
 }
+
+/* Reduce gap between "Board of Directors" heading/subtitle and the board layout */
+.board-section-wrap .heading-section.mb-64 {
+  margin-bottom: 6px !important;
+}
+
+/* Reduce gap between "LEADERSHIP THAT INSPIRES" badge and "Board of Directors" title */
+.board-section-wrap .heading-section .heading-sub {
+  margin-bottom: 3px !important;
+}
+
+/* Reduce gap between "Board of Directors" title and the subtitle paragraph */
+.board-section-wrap .heading-section .heading-title {
+  margin-bottom: 2px !important;
+}
+
+/* Override mt-16 on the subtitle p tag inside board heading section */
+.board-section-wrap .heading-section p.mt-16 {
+  margin-top: 2px !important;
+}
+
+/* Reduce gap between "VGIL is not just about co-founders" heading and team grid */
+.vgil-standalone-section .heading-section.mb-80 {
+  margin-bottom: 8px !important;
+}
+
+/* Reduce gap between "The Visionaries Behind Virtual Galaxy" heading and founders cards */
+.section-team .heading-section.mb-64 {
+  margin-bottom: 6px !important;
+}
+
+/* Reduce gap between "Our Leadership" badge and "The Visionaries Behind Virtual Galaxy" title */
+.section-team .heading-section .heading-sub {
+  margin-bottom: 6px !important;
+}
+
+
+

@@ -146,14 +146,14 @@ function AboutTeamSection() {
           </div>
         </div>
 
-        <div className="founders-container mb-120">
+        <div className="founders-container mb-80">
 
           {/* Left Side - Avinash Shende */}
           <div className="founder-item anim-on-scroll anim-slide-left" >
             <div className="leader-card-item card-left tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
-                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '238px' }}>
+                  <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -185,8 +185,8 @@ function AboutTeamSection() {
           <div className="founder-item anim-on-scroll anim-slide-right" style={{ display: 'flex' }}>
             <div className="leader-card-item card-right tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
-                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden' }}>
-                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" />
+                <div className="image-bg-box shine-effect" style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '24px', overflow: 'hidden', height: '238px' }}>
+                  <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" style={{ height: 'auto', display: 'block' }} />
                 </div>
                 <div className="profile-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -341,10 +341,10 @@ function AboutTeamSection() {
         </div>
 
         {/* VGIL Standalone Section */}
-        <div className="vgil-standalone-section" style={{ marginTop: '160px' }}>
+        <div className="vgil-standalone-section" style={{ marginTop: '16px' }}>
           <div className="heading-section center mb-80">
             <h4 className="text-dark effectFade fadeUp vgil-title-responsive">
-              VGIL is not about co-founders
+              VGIL is not just about co-founders
             </h4>
             <div style={{ width: '80px', height: '4px', background: '#ff4d00', margin: '20px auto 0', borderRadius: '2px' }}></div>
           </div>
@@ -552,12 +552,44 @@ function AboutTeamSection() {
             justify-content: center;
             align-items: stretch;
             flex-wrap: nowrap;
-            max-width: 1100px;
+            max-width: 935px;
             margin: 0 auto;
-            gap: 40px;
+            gap: 34px;
           }
           .founder-item {
-            flex: 0 0 420px;
+            flex: 0 0 357px;
+          }
+          .founders-container .leader-card-item {
+            padding: 27px !important;
+            border-radius: 27px !important;
+          }
+          .founders-container .leader-image-wrap {
+            margin-bottom: 24px !important;
+          }
+          .founders-container .leader-name {
+            font-size: 18px !important;
+            margin-bottom: 7px !important;
+          }
+          .founders-container .leader-position {
+            font-size: 11px !important;
+            margin-bottom: 14px !important;
+            min-height: unset !important;
+          }
+          .founders-container .leader-desc {
+            font-size: 12px !important;
+          }
+          .founders-container .leader-logo-center-wrap {
+            flex: 0 0 136px !important;
+          }
+          .founders-container .logo-circle-container {
+            width: 128px !important;
+            height: 128px !important;
+            padding: 20px !important;
+          }
+          .founders-container .leader-signature {
+            max-height: 50px !important;
+            width: auto !important;
+            margin: 0 auto !important;
           }
 
           
@@ -574,13 +606,13 @@ function AboutTeamSection() {
           .board-col-left {
             display: flex;
             flex-direction: column;
-            gap: 48px;
+            gap: 5px;
           }
 
           .board-col-right {
             display: flex;
             flex-direction: column;
-            gap: 48px;
+            gap: 5px;
           }
 
           .board-col-center {
@@ -782,7 +814,7 @@ function AboutTeamSection() {
           .team-grid-responsive {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 60px 30px;
+            gap: 12px 30px;
             max-width: 1300px;
             margin: 0 auto;
           }
@@ -803,7 +835,7 @@ function AboutTeamSection() {
               gap: 20px;
             }
             .founder-item {
-              flex: 0 0 380px;
+              flex: 0 0 323px;
             }
             .team-grid-responsive {
               grid-template-columns: repeat(3, 1fr);
@@ -818,7 +850,7 @@ function AboutTeamSection() {
             }
             .founder-item {
               flex: 0 0 100%;
-              max-width: 500px;
+              max-width: 425px;
             }
 
             .team-grid-responsive {
