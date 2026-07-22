@@ -233,8 +233,15 @@
 
 @media (max-width: 767px) {
 
+  .vg-footer-watermark {
+    opacity: 0.08;
+    width: 83%;
+    transform: translateX(-50%) scaleY(2.9);
+    transform-origin: top center;
+  }
+
   .vg-footer-content {
-    padding-bottom: 60px;
+    padding-bottom: 12px;
   }
 
   .vg-footer-sub {
@@ -243,14 +250,34 @@
 
   .vg-footer-social {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .vg-social-link {
-    gap: 10px;
+    gap: 8px;
     padding: 12px 14px;
-    justify-content: center;
+    justify-content: space-between;
+    font-size: 13px;
+    border-radius: 16px;
+  }
+
+  .vg-social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* 5th button (YouTube) centered below the 2x2 grid */
+  .vg-social-link:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: max-content;
+    min-width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .vg-footer-bottom {
@@ -258,6 +285,8 @@
     align-items: center;
     text-align: center;
     gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 24px;
   }
 
   .vg-footer-bottom>* {
@@ -278,7 +307,21 @@
 
 @media (max-width: 480px) {
   .vg-footer-social {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 8px;
+  }
+
+  .vg-social-link {
+    padding: 10px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .vg-social-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .vg-footer-tagline {

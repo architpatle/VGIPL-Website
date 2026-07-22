@@ -2257,5 +2257,13 @@
   margin-bottom: 6px !important;
 }
 
+/* Reduce 80% gap between "Tools" badge and "We work with powerful AI tools" heading on mobile */
+@media (max-width: 767px) {
+  .section-tools .heading-section.mb-48 {
+    margin-bottom: 4px !important;
+  }
 
-
+  .section-tools .heading-section .heading-sub {
+    margin-bottom: 4px !important;
+  }
+}
