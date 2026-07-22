@@ -245,39 +245,53 @@
   }
 
   .vg-footer-sub {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
+  /* Icon-only buttons in a single horizontal row */
   .vg-footer-social {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 10px;
-    max-width: 480px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin: 0 auto;
   }
 
+  /* Hide text label — icon only */
+  .vg-social-label {
+    display: none;
+  }
+
+  /* Make each button a compact icon-only circle */
   .vg-social-link {
-    gap: 8px;
-    padding: 12px 14px;
-    justify-content: space-between;
-    font-size: 13px;
-    border-radius: 16px;
+    padding: 0;
+    gap: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: unset;
+  }
+
+  /* Remove YouTube special centering — all in one row now */
+  .vg-social-link:nth-child(5) {
+    grid-column: unset;
+    justify-self: unset;
+    width: auto;
+    min-width: unset;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .vg-social-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-  }
-
-  /* 5th button (YouTube) centered below the 2x2 grid */
-  .vg-social-link:nth-child(5) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: max-content;
-    min-width: 160px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 50%;
   }
 
   .vg-footer-bottom {
@@ -307,21 +321,13 @@
 
 @media (max-width: 480px) {
   .vg-footer-social {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 8px;
+    gap: 8px;
   }
 
-  .vg-social-link {
-    padding: 10px 10px;
-    font-size: 12px;
-    gap: 6px;
-  }
-
-  .vg-social-label {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .vg-social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 
   .vg-footer-tagline {
