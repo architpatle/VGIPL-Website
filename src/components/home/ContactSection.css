@@ -260,35 +260,143 @@
 ================================================================ */
 
 @media (max-width: 1199px) {
+  .contact-container-custom {
+    max-width: 90%;
+  }
   .section-contact .form-contact {
     margin-left: 0;
     margin-right: 0;
-    padding: 40px;
+    padding: 36px 32px;
   }
 }
 
 @media (max-width: 991px) {
+  .contact-container-custom {
+    max-width: 100% !important;
+  }
   .section-contact {
-    padding: 60px 24px;
+    padding: 40px 20px;
   }
   .section-contact .col-left {
-    padding: 20px 0 40px;
+    padding: 12px 0 32px;
   }
 }
 
 @media (max-width: 767px) {
   .section-contact {
-    padding: 40px 16px;
+    padding: 24px 12px;
   }
   .section-contact .contact-image {
-    inset: 0 12px;
-    border-radius: 24px;
+    inset: 0;
+    border-radius: 20px;
   }
   .section-contact .contact-image img {
-    border-radius: 24px;
+    border-radius: 20px;
+  }
+
+  /* Heading left, Contact badge right — side by side on mobile */
+  .section-contact .heading-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  .section-contact .heading-section .heading-title {
+    order: 1;
+    flex: 1;
+    font-size: clamp(22px, 6vw, 32px);
+    margin-top: 0;
+  }
+
+  .section-contact .heading-section .contact-badge-pill {
+    order: 2;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  /* 2-column grid for email + phone items with 70% reduced gap */
+  .contact-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    margin-top: 10px;
+  }
+
+  .section-contact .contact-item {
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .contact-item-title {
+    font-size: 11px;
+  }
+
+  .contact-item-text {
+    font-size: 12px;
+  }
+
+  .section-contact .form-contact {
+    padding: 20px 18px !important;
+    border-radius: 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .section-contact .form-contact .heading {
+    font-size: 22px !important;
+    margin-bottom: 15px !important;
+  }
+  .form-contact fieldset {
+    margin-bottom: 12px !important;
+  }
+  .form-contact input,
+  .form-contact textarea {
+    font-size: 14px !important;
+    padding: 7px 0 !important;
+  }
+  .form-contact .attachment {
+    margin-bottom: 15px !important;
+  }
+  .form-contact .tf-btn {
+    padding: 11px 24px !important;
+    font-size: 14px !important;
+    border-radius: 999px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-contact {
+    padding: 16px 8px;
+  }
+  .contact-items-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 6px;
   }
   .section-contact .form-contact {
-    padding: 30px 20px;
-    border-radius: 24px;
+    padding: 20px 14px !important;
+    border-radius: 16px !important;
+  }
+  .contact-item-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+  .contact-badge-pill {
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+  }
+  .heading-section .heading-title {
+    font-size: 28px !important;
   }
 }

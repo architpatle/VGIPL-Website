@@ -34,8 +34,8 @@ function ToolsSectionV2() {
           We design, build, and evaluate with a modern AI stack—LLMs, vector <br /> search, orchestration, and observability—so your features are fast, <br /> reliable, and secure.
         </div>
         <div style={{
-          height: `${506 * scale}px`,
-          marginTop: scale < 1 ? '30px' : '-169px',
+          height: `${506 * (scale < 1 ? scale * 0.85 : scale)}px`,
+          marginTop: scale < 1 ? '0px' : '-169px',
           marginBottom: scale < 1 ? '40px' : '-162px',
           display: 'flex',
           alignItems: 'center',
@@ -43,7 +43,7 @@ function ToolsSectionV2() {
           overflow: 'visible'
         }}>
           <div className="position-relative tool-image-box" style={{
-            transform: `scale(${scale})`,
+            transform: `scale(${scale < 1 ? scale * 0.85 : scale})`,
             transformOrigin: 'center center',
             width: '856px',
             height: '506px',
@@ -67,25 +67,25 @@ function ToolsSectionV2() {
             <img className="img-item img-item-6" src="/assets/images/about/tools-img/ERP.jpg.jpeg" alt="ERP" />
 
             <div className="side-line">
-              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-1" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="-30 20 200 20 340 100" className="line-1" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
                 <path id="line-path" d="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
                 <circle r="5.2" fill="#FD3A25">
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M301 157V130C301 121.716 294.284 115 286 115H16C7.71572 115 0.999992 108.284 0.999992 100V0" />
                 </circle>
               </svg>
-              <svg data-viewbox-desktop="0 0 302 14" data-viewbox-mobile="0 0 250 14" className="line-2" width="302" height="14" viewBox="0 -6 302 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <svg data-viewbox-desktop="0 0 300 14" data-viewbox-mobile="0 0 260 13" className="line-2" width="302" height="14" viewBox="0 -6 302 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
                 <path d="M302 1H0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
                 <circle r="5.2" fill="#FD3A25">
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M302 1H0" />
                 </circle>
               </svg>
-              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-3" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="-30 20 200 20 340 100" className="line-3" width="310" height="150" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
                 <path d="M301 0V27C301 35.284 294.284 42 286 42H16C7.71572 42 0.999992 48.716 0.999992 57V157" stroke="#FFC5A3" strokeWidth="2" fill="none" />
                 <circle r="5.2" fill="#FD3A25">
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M301 0V27C301 35.284 294.284 42 286 42H16C7.71572 42 0.999992 48.716 0.999992 57V157" />
                 </circle>
               </svg>
-              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-4" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="-30 20 200 20 340 100" className="line-4" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
                 <path d="M1 157V130C1 121.716 7.71573 115 16 115H286C294.284 115 301 108.284 301 100V0" stroke="#FFC5A3" strokeWidth="2" fill="none" />
                 <circle r="5.2" fill="#FD3A25">
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 157V130C1 121.716 7.71573 115 16 115H286C294.284 115 301 108.284 301 100V0" />
@@ -97,7 +97,7 @@ function ToolsSectionV2() {
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M0 1.05908H302" />
                 </circle>
               </svg>
-              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="0 0 300 100" className="line-6" width="302" height="157" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+              <svg data-viewbox-desktop="0 0 302 157" data-viewbox-mobile="-30 20 200 20 340 100" className="line-6" width="310" height="150" viewBox="0 0 302 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
                 <path d="M1 0V27C1 35.284 7.71573 42 16 42H286C294.284 42 301 48.716 301 57V157" stroke="#FFC5A3" strokeWidth="2" fill="none" />
                 <circle r="5.2" fill="#FD3A25">
                   <animateMotion dur="2.5s" repeatCount="indefinite" path="M1 0V27C1 35.284 7.71573 42 16 42H286C294.284 42 301 48.716 301 57V157" />
