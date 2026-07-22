@@ -7,7 +7,7 @@ function PricingSection() {
   return (
     <div id="pricing" className="section-pricing section-spacing-lg">
       <div className="container">
-        <div className="heading-section mb-80">
+        <div className="heading-section mb-6">
           <div className="heading-sub fw-semibold effectFade fadeUp">AI-Powered System</div>
           <div className="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
             Switch from Disconnected Legacy Systems to  <br />
@@ -52,7 +52,7 @@ function PricingSection() {
                     to prevent damage in time.
                   </div>
                 </div>
-                <ul className="list-text type-check">
+                <ul className="list-text type-check ps-list">
                   <li>
                     <i className="icon icon-check-solid"></i>
                     No centralized threat detection
@@ -110,7 +110,7 @@ function PricingSection() {
                     digital environment.
                   </div>
                 </div>
-                <ul className="list-text type-check">
+                <ul className="list-text type-check  ps-list">
                   <li>
                     <i className="icon icon-check-solid"></i>
                     AI-driven threat detection

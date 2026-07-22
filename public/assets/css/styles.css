@@ -5055,7 +5055,7 @@ button.animate-btn::after,
   padding: 6px 16px 6px 30px;
   background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #F5F5F5, #F5F5F5);
   box-shadow: 0px -3px 0px 0px #E9E9E9 inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.6980392157) inset, 0px 3px 3px 0px rgba(0, 0, 0, 0.1411764706);
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .heading-section .heading-sub::before {
@@ -10205,18 +10205,18 @@ button.animate-btn::after,
 @media (max-width: 767px) {
   .tf-switch-check {
     width: 80px;
-    height: 40px;
+    height: 30px;
   }
 
   .tf-switch-check::before {
-    top: 4px;
+    top: 2px;
     left: 4px;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
 
   .tf-switch-check:checked::before {
-    left: 44px;
+    left: 52px;
   }
 }
 

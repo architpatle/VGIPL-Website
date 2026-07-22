@@ -31,7 +31,7 @@ function PerformanceComparison() {
     >
       <div className="container">
 
-        <div className="heading-section mb-40">
+        <div className="heading-section mb-4">
 
           <div className="heading-sub fw-semibold effectFade fadeUp">
             Business Transformation
@@ -81,13 +81,13 @@ function PerformanceComparison() {
                 }`}
             >
 
-              <div className="top d-flex gap-12 align-items-center" style={{"marginBottom": "27px"}}>
+              <div className="top d-flex gap-12 align-items-center pc-eyebrow-heading-section" >
 
                 <div className="d-flex gap-8 align-items-center">
 
                   <ShieldX size={24} color="#ef4444" />
 
-                  <div className="fw-semibold text">
+                  <div className="fw-semibold text pc-eyebrow-heading">
 
                     Without Virtual Galaxy
 
@@ -97,7 +97,7 @@ function PerformanceComparison() {
 
                 <div className="line"></div>
 
-                <div className="fw-semibold text-secondary">
+                <div className="fw-semibold text-secondary pc-eyebrow-heading">
 
                   Traditional Operations
 
@@ -112,7 +112,7 @@ function PerformanceComparison() {
                   <div
                     className="price-number-pc fw-bold"
                     style={{
-                      fontSize: "40px",
+                      fontSize: "28px",
                       lineHeight: 1.1,
                     }}
                   >
@@ -125,7 +125,7 @@ function PerformanceComparison() {
 
                 <Link
                   to="/contact"
-                  className="tf-btn"
+                  className="tf-btn pc-btn"
                 >
 
                   View Challenges
@@ -157,7 +157,7 @@ function PerformanceComparison() {
 
                 </div>
 
-                <ul className="list-text type-check">
+                <ul className="list-text type-check pc-list">
 
                   {withoutList.map((item, index) => (
 
@@ -188,13 +188,13 @@ function PerformanceComparison() {
                 }`}
             >
 
-              <div className="top d-flex gap-12 align-items-center" style={{"marginBottom": "27px"}}>
+              <div className="top d-flex gap-12 align-items-center  pc-eyebrow-heading-section" >
 
                 <div className="d-flex gap-8 align-items-center">
 
                   <Sparkles size={24} color="#f97316" />
 
-                  <div className="fw-semibold text">
+                  <div className="fw-semibold text pc-eyebrow-heading">
 
                     With Virtual Galaxy
 
@@ -204,7 +204,7 @@ function PerformanceComparison() {
 
                 <div className="line"></div>
 
-                <div className="fw-semibold text-neutral-400">
+                <div className="fw-semibold text-neutral-400 pc-eyebrow-heading">
 
                   AI-Powered Enterprise
 
@@ -219,7 +219,7 @@ function PerformanceComparison() {
                   <div
                     className="price-number-pc fw-bold"
                     style={{
-                      fontSize: "40px",
+                      fontSize: "28px",
                       lineHeight: 1.1,
                     }}
                   >
@@ -232,7 +232,7 @@ function PerformanceComparison() {
 
                 <Link
                   to="/contact"
-                  className="tf-btn"
+                  className="tf-btn pc-btn"
                 >
 
                   Explore Benefits
@@ -265,7 +265,7 @@ function PerformanceComparison() {
 
                 </div>
 
-                <ul className="list-text type-check">
+                <ul className="list-text type-check pc-list">
 
                   {withList.map((item, index) => (
 

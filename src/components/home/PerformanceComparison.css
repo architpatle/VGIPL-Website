@@ -12,6 +12,27 @@
   }
 }
 
+.pc-eyebrow-heading-section{
+  margin-bottom: 18px;
+}
+
+@media (max-width:480px) {
+  .pc-btn{
+    display: none;
+  }
+  
+.pc-eyebrow-heading-section{
+  margin-bottom: 10px;
+}
+  .pc-eyebrow-heading{
+    font-size: 12px !important;
+  }
+
+  .pc-list{
+    display: none !important;
+  }
+}
+
 .pricing-item.style-black .heading .price-number-pc {
   color: var(--white) ;
 }
