@@ -10,15 +10,17 @@
 
     top:40%;
 
-    transform:translateY(-50%);
+      transform:translateY(-50%) translateZ(0); 
 
     width:64px;
 
     height:64px;
 
-    z-index:9999;
+    z-index:999;
 
     pointer-events:none;
+
+    will-change: transform; 
 
 }
 

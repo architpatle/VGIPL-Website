@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';   // ← add this
 import { Link } from 'react-router-dom';
 import { MENU_DATA } from '../data/menuData';
 import { CAREERS_DATA } from '../data/careersData';
@@ -18,8 +17,7 @@ function MobileMenu() {
     setOpenDropdown(openDropdown === name ? null : name);
   };
 
-  return ReactDOM.createPortal(
-(
+  return (
     <div
       className="offcanvas-menu"
       onClick={closeMenu}
@@ -374,8 +372,6 @@ function MobileMenu() {
         </div>
       </div>
     </div>
-),
- document.body  
   );
 }
 

@@ -34,8 +34,7 @@
   pointer-events: auto;
   /* Re-enable pointer events for the pill */
   width: 100%;
-  max-width: min(1210px, 94vw);
-  position: relative;
+  max-width: 63%;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -89,6 +88,7 @@
 }
 
 .menuItem {
+  position: relative;
   padding: 6px 0;
 }
 
@@ -144,7 +144,6 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   border: 1px solid #f1f1f1;
   width: 750px;
-  max-width: calc(100vw - 48px);
   display: flex;
   overflow: hidden;
 }
@@ -384,17 +383,6 @@
 }
 
 /* Responsive */
-@media (max-width: 1300px) {
-  .menuList {
-    gap: 2px;
-  }
-
-  .menuLink {
-    padding: 8px 9px;
-    font-size: 13.5px;
-  }
-}
-
 @media (max-width: 1100px) {
   .menuSection {
     display: none;

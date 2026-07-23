@@ -89,3 +89,8 @@
     min-width: clamp(90px, 18vw, 160px);
   }
 }
+@media (max-width: 480px) {
+  .hero-rotating-title{
+    margin-bottom: 20px;
+  }
+}

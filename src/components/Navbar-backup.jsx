@@ -11,16 +11,90 @@ import { RESOURCE_DATA } from '../data/resourceData';
 import { CAREERS_DATA } from '../data/careersData';
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [activeMega, setActiveMega] = useState(null); // 'products', 'services', etc.
   const [activeItem, setActiveItem] = useState(null);
   const location = useLocation();
 
+  const [isHidden, setIsHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const SCROLL_THRESHOLD = 8;
+    const TOP_OFFSET = 80;
+
+    const updateNavbar = () => {
+
+      const currentScrollY = window.scrollY;
+
+      setScrolled(currentScrollY > 20);
+
+      const diff = currentScrollY - lastScrollY;
+
+      // Ignore tiny wheel movements
+      if (Math.abs(diff) < SCROLL_THRESHOLD) {
+        ticking = false;
+        return;
+      }
+
+      // Always visible near top
+      if (currentScrollY <= TOP_OFFSET) {
+
+        setIsHidden(false);
+
+      }
+
+      // Hide while scrolling down
+      else if (diff > 0) {
+
+        // Don't hide while mega menu is open
+        if (!activeMega) {
+
+          setIsHidden(true);
+
+        }
+
+      }
+
+      // Show while scrolling up
+      else {
+
+        setIsHidden(false);
+
+      }
+
+      lastScrollY = currentScrollY;
+
+      ticking = false;
+
+    };
+
+    const onScroll = () => {
+
+      if (!ticking) {
+
+        window.requestAnimationFrame(updateNavbar);
+
+        ticking = true;
+
+      }
+
+    };
+
+    window.addEventListener("scroll", onScroll, {
+
+      passive: true,
+
+    });
+
+    return () =>
+
+      window.removeEventListener("scroll", onScroll);
+
+  }, [activeMega]);
 
   // Close mega menu on route change
   useEffect(() => {
@@ -163,7 +237,13 @@ function Navbar() {
   };
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
+    <header
+      className={`
+        ${styles.header}
+        ${scrolled ? styles.headerScrolled : ""}
+        ${isHidden ? styles.headerHidden : ""}
+    `}
+    >
       <nav className={`${styles.navContainer} `}>
         {/* Left: Logo */}
         <div className={styles.logoSection}>

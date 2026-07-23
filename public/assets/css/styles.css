@@ -2195,7 +2195,7 @@ header.header-sticky {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5607843137);
-  z-index: 3000;
+  z-index: 99999;
 }
 
 .offcanvas-menu .offcanvas-content {
@@ -2277,7 +2277,7 @@ header.header-sticky {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  top: 100%;
+  /* top: 100%; */
 }
 
 .offcanvas-menu .canvas_head {
@@ -2319,7 +2319,7 @@ header.header-sticky {
 }
 
 .offcanvas-menu.show {
-  top: 0;
+  /* top: 0; */
 }
 
 .offcanvas-menu.show .canvas_head {

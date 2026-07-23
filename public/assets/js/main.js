@@ -188,17 +188,17 @@
     };
     /* Open Menu
     -------------------------------------------------------------------------*/
-    var openMbMenu = () => {
-        $(".open-mb-menu").on("click", function () {
-            $(".offcanvas-menu").addClass("show");
-            $("body").toggleClass("overflow-hidden");
-        });
+    // var openMbMenu = () => {
+    //     $(".open-mb-menu").on("click", function () {
+    //         $(".offcanvas-menu").addClass("show");
+    //         $("body").toggleClass("overflow-hidden");
+    //     });
 
-        $(".close-mb-menu").on("click", function () {
-            $(".offcanvas-menu").removeClass("show");
-            $("body").toggleClass("overflow-hidden");
-        });
-    };
+    //     $(".close-mb-menu").on("click", function () {
+    //         $(".offcanvas-menu").removeClass("show");
+    //         $("body").toggleClass("overflow-hidden");
+    //     });
+    // };
     /* switchprice
     -------------------------------------------------------------------------*/
     var switchPrice = () => {
@@ -341,7 +341,7 @@
         if (!window.__cursorInit) { cursorTrail(); window.__cursorInit = true; }
         if (!window.__goTopInit) { goTop(); window.__goTopInit = true; }
         if (!window.__settingColorInit) { settingColor(); window.__settingColorInit = true; }
-        if (!window.__openMbMenuInit) { openMbMenu(); window.__openMbMenuInit = true; }
+        // if (!window.__openMbMenuInit) { openMbMenu(); window.__openMbMenuInit = true; }
         
         // Re-bind click events using off/on to avoid duplicate
         $('#pricingSwitch').off('change');
