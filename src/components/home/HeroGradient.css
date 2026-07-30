@@ -21,13 +21,27 @@
   }
 }
 
-.hero-rotating-title {
+.hero-rotating-title,
+.hero-rotating-title-in {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 
   font-weight: 600;
+}
+
+.hero-rotating-title-in {
+  background: linear-gradient(135deg,
+      rgb(245, 68, 49),
+      #ff784e);
+
+  box-shadow:
+    0 15px 40px rgba(253, 58, 37, .35);
+
+    padding: 2px 16px;
+
+    border-radius: 24px;
 }
 
 .hero-rotating-word {
@@ -88,9 +102,16 @@
   .word-container {
     min-width: clamp(90px, 18vw, 160px);
   }
+  .hero-rotating-title-in{
+    border-radius: 12px;
+  }
 }
+
 @media (max-width: 480px) {
-  .hero-rotating-title{
+  .hero-rotating-title {
     margin-bottom: 20px;
+  }
+  .hero-rotating-title-in{
+    border-radius: 8px;
   }
 }

@@ -3,7 +3,7 @@ import './FaqsSection.css'
 
 function FaqsSection() {
   return (
-    <div className="section-faqs section-spacing">
+    <div className="section-faqs section-spacing-lg">
       <div className="container">
         <div className="heading-section center mb-64">
           <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>

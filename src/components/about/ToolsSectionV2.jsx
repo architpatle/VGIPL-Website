@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import logo from '../../assets/home/ownwer-img/vg-logo-2.png';
 
 
 function ToolsSectionV2() {
@@ -24,7 +25,7 @@ function ToolsSectionV2() {
   }, []);
 
   return (
-    <div className="section-tools v2 flat-spacing">
+    <div className="section-tools v2 section-spacing-lg">
       <div className="tool-wrap text-center" ref={containerRef}>
         <div className="heading-section center mb-48">
           <div className="heading-sub fw-semibold effectFade fadeUp">Tools</div>
@@ -57,7 +58,7 @@ function ToolsSectionV2() {
             <img className="img-item img-item-3" src="/assets/images/about/tools-img/Conversational AI.jpg.jpeg" alt="Conversational AI" />
 
             <div className="image-center flex-shrink">
-              <img src="/assets/images/about/tools-img/AI-Brain.png" alt="AI Brain" />
+              <img src={logo} alt="AI Brain" />
             </div>
 
             <img className="img-item img-item-4" src="/assets/images/about/tools-img/Cyber Security.jpg.jpeg" alt="Cyber Security" />

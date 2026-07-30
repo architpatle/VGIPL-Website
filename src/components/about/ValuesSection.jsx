@@ -113,7 +113,7 @@ function ValuesSection() {
   ];
 
   return (
-    <div className="section-features flat-spacing">
+    <div className="section-features flat-spacing section-spacing-lg">
       <div className="container">
         <div className="heading-section center mb-64">
           <div className="heading-sub fw-semibold effectFade fadeUp">Core Values</div>

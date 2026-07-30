@@ -3,7 +3,7 @@ import earthImg from '../../assets/earth.png';
 
 function MissionSection() {
   return (
-    <div className="section-about-us flat-spacing" id="about">
+    <div className="section-about-us section-spacing-lg" id="about">
       <div className="container">
         <div className="row align-items-stretch">
           <div className="col-12">
@@ -19,7 +19,7 @@ function MissionSection() {
                   <span className="dot"></span>
                   Available for worldwide project
                 </div>
-                <h5 className="title fw-semibold text-white">Based in <span className="text-brand">Nagpur & Pune, Maharashtra</span></h5>
+                <h5 className="title fw-semibold text-white">Based in <span className="text-brand">Nagpur, Mumbai & Pune</span></h5>
                 <a href="/contact" className="tf-btn">
                   Start a Project
                 </a>

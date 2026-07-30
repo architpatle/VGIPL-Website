@@ -144,8 +144,8 @@ function PartnerSection() {
                       }
 
                       .section-partner {
-                        padding-top: 10px !important;
-                        padding-bottom: 10px !important;
+                        // padding-top: 10px !important;
+                        // padding-bottom: 10px !important;
                       }
                     }
                   `

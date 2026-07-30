@@ -146,45 +146,55 @@ const milestones = [
     footer: "/assets/images/about/journey_growth.png",
     theme: "#e10600",
     shadow: "rgba(225, 6, 0, 0.15)"
-  }
+  },
+  {
+  year: "2026",
+  category: "Global Expansion",
+  title: "Expanding Global Footprint",
+  description: "Secured a USD 1.1 Million international contract with Botswana Development Corporation Limited, marking a significant milestone in the company's expansion into the African market.",
+  icon: "global",
+  footer: "/assets/images/about/journey_growth.png",
+  theme: "#16a34a",
+  shadow: "rgba(22, 163, 74, 0.15)"
+}
 ];
 
 function JourneySection() {
   const sectionRef = useRef(null);
-const swiperRef = useRef(null);
+  const swiperRef = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (!swiperRef.current) return;
+      ([entry]) => {
+        if (!swiperRef.current) return;
 
-            if (entry.isIntersecting) {
-                swiperRef.current.autoplay.start();
-            } else {
-                swiperRef.current.autoplay.stop();
-            }
-        },
-        {
-            threshold: 0.4,
+        if (entry.isIntersecting) {
+          swiperRef.current.autoplay.start();
+        } else {
+          swiperRef.current.autoplay.stop();
         }
+      },
+      {
+        threshold: 0.4,
+      }
     );
 
     if (sectionRef.current) {
-        observer.observe(sectionRef.current);
+      observer.observe(sectionRef.current);
     }
 
     return () => observer.disconnect();
-}, []);
+  }, []);
 
   return (
-    <section ref={sectionRef} className="journey-section section-spacing">
+    <section ref={sectionRef} className="journey-section section-spacing-lg">
       <div className="container">
-        <div className="heading-section text-center  mb-60 effectFade fadeUp">
-          <div className="heading-sub fw-semibold style-1 mb-12 mx-auto">
+        <div className="heading-section text-center effectFade fadeUp">
+          <div className="heading-sub fw-semibold mx-auto">
             Our Journey
           </div>
           <h2 className="heading-title text-dark mb-24">
-            Roadmap of VGIL for the last 27 years
+            Roadmap of VGIL for the last 29 years
           </h2>
           <p className="text-body-2 text-neutral-600 max-w-700 mx-auto">
             From a visionary startup in 1997 to a publicly listed technology company in 2025,
@@ -201,10 +211,10 @@ useEffect(() => {
             initialSlide={0}
             loop={true}
             speed={4000}
-             onSwiper={(swiper) => {
-        swiperRef.current = swiper;
-        swiper.autoplay.stop();
-    }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              swiper.autoplay.stop();
+            }}
             autoplay={{
               delay: 200,
               disableOnInteraction: false,
@@ -241,7 +251,7 @@ useEffect(() => {
                     <div className="card-year">{item.year}</div>
                     <div className="card-category">{item.category}</div>
                     <h4 className="card-title">{item.title}</h4>
-                    <div className="card-divider"></div>
+                    {/* <div className="card-divider"></div> */}
                     <p className="card-desc">{item.description}</p>
                     <div
                       className="card-footer-graphic"
@@ -300,7 +310,7 @@ useEffect(() => {
                   <i className="icon icon-user-friends-solid"></i>
                 </div>
                 <div className="stat-info">
-                  <span className="stat-number">5000+</span>
+                  <span className="stat-number">500+</span>
                   <span className="stat-label">Happy Clients</span>
                 </div>
               </div>
@@ -323,7 +333,7 @@ useEffect(() => {
       <style>{`
         .journey-section {
           background: #EDECEC;
-          padding: 10px 0;
+          // padding: 10px 0;
           position: relative;
           overflow: hidden;
         }

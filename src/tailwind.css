@@ -308,41 +308,44 @@
 }
 
 .tool-wrap .image-center img {
-  filter: hue-rotate(160deg) saturate(1.5) !important;
+  /* filter: hue-rotate(160deg) saturate(1.5) !important; */
 }
 
 .tool-wrap .image-center {
   overflow: hidden !important;
-  background: transparent !important;
+  background: #fff !important;
   border-radius: 12px !important;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25) !important;
+  padding: 16px 12px;
 }
 
 .tool-wrap .image-center img {
   width: 100% !important;
-  height: 100% !important;
+  /* height: 100% !important; */
   object-fit: contain !important;
-  transform: scale(3.1) !important;
+  /* transform: scale(3.1) !important; */
 }
 
 .tool-wrap .image-center {
-  width: 152px !important;
-  height: 75px !important;
+  width: 160px !important;
+  /* height: 75px !important; */
 }
 
 .tool-wrap .img-item-1,
 .tool-wrap .img-item-6,
 .tool-wrap .img-item-3,
-.tool-wrap .img-item-4 {
+.tool-wrap .img-item-4,
+.tool-wrap .img-item-2,
+.tool-wrap .img-item-5  {
   width: 103px !important;
   height: 103px !important;
 }
 
-.tool-wrap .img-item-2,
+/* .tool-wrap .img-item-2,
 .tool-wrap .img-item-5 {
   width: 80px !important;
   height: 80px !important;
-}
+} */
 
 /* Home Page Tools Section Images Override to prevent stretching */
 .section-tools>img {

@@ -57,23 +57,26 @@ function HeroGradient() {
             <span className="title1 fw-semibold text-gradient-1">Your-Complete </span>
             {/* <br /> */}
             <div className="title2 d-flex gap-20 justify-content-center  align-items-start flex-wrap" >
-              <div className="hero-rotating-title inline">
-                <span className="fw-semibold text-gradient-1" >AI-</span>
+              <div className="hero-rotating-title inline  ">
 
-                <span className="word-container" >
-                  <span
-                    key={words[currentWord]}
-                    className="hero-rotating-word fw-semibold text-gradient-1"
-                  >
-                    {words[currentWord]}
+                <div className="hero-rotating-title-in">
+                  <span className="fw-semibold text-gradient-1" >AI-</span>
+
+                  <span className="word-container " >
+                    <span
+                      key={words[currentWord]}
+                      className="hero-rotating-word fw-semibold text-gradient-1"
+                    >
+                      {words[currentWord]}
+                    </span>
                   </span>
-                </span>
+                  </div>
 
                 <span className="fw-semibold text-gradient-1">
                   &nbsp;Partner
                 </span>
               </div>
-              <div className="title-icon">
+              <div className="title-icon ">
                 <div className="box"></div>
                 <div className="title-icon-wrap">
                   <div className="img-1 img-transform-3" style={{ backgroundColor: '#fff', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', padding: '1px', width: 'clamp(50px, 8vw, 70px)', height: 'clamp(50px, 8vw, 70px)', display: 'flex', alignItems: 'center', justifyContent: 'center', transform: 'rotate(-25deg)' }}>

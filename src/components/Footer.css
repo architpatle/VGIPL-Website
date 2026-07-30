@@ -234,9 +234,9 @@
 @media (max-width: 767px) {
 
   .vg-footer-watermark {
-    opacity: 0.08;
+    opacity: 0.1;
     width: 83%;
-    transform: translateX(-50%) scaleY(2.9);
+    /* transform: translateX(-50%) scaleY(2.9); */
     transform-origin: top center;
   }
 

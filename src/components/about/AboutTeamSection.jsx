@@ -136,19 +136,18 @@ function AboutTeamSection() {
   const rightColumnMembers = [boardMembers[1], boardMembers[3], boardMembers[5]];
 
   return (
-    <div ref={sectionRef} className="section-team flat-spacing" style={{ backgroundColor: '#ffffff', padding: '30px 0 100px 0' }}>
+    <div ref={sectionRef} className="section-team section-spacing-lg" style={{ backgroundColor: '#ffffff'}}>
       <div className="container">
         {/* Founders Section */}
-        <div className="heading-section center mb-64">
+        {/* <div className="heading-section center mb-64">
           <div className="heading-sub fw-semibold style-1 effectFade fadeUp">Our Leadership</div>
           <div className="heading-title text-dark effectFade fadeRotateX">
             The Visionaries Behind <br /> Virtual Galaxy
           </div>
-        </div>
+        </div> */}
 
-        <div className="founders-container mb-80">
+        {/* <div className="founders-container mb-80">
 
-          {/* Left Side - Avinash Shende */}
           <div className="founder-item anim-on-scroll anim-slide-left" >
             <div className="leader-card-item card-left tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
@@ -166,7 +165,6 @@ function AboutTeamSection() {
                 <h3 className="leader-name">Mr. Avinash Shende</h3>
                 <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" style={{ width: '100%', marginBottom: '0px', display: 'flex', alignItems: 'center' }} />
                 <div className="leader-position">Founder & CEO</div>
-                {/* <div className="leader-divider"></div> */}
                 <p className="leader-desc">
                   Avinash oversees operations and finances at Virtual Galaxy Infotech, balancing market needs with cost efficiency. He's also a gardening enthusiast with a love for all things green.
                 </p>
@@ -174,14 +172,12 @@ function AboutTeamSection() {
             </div>
           </div>
 
-          {/* Center Circular Logo Container */}
           <div className="leader-logo-center-wrap anim-on-scroll anim-scale-in">
             <div className="logo-circle-container logo-float">
               <img src={logoImage} alt="Virtual Galaxy Logo" className="logo-center-img" />
             </div>
           </div>
 
-          {/* Right Side - Sachin Pande */}
           <div className="founder-item anim-on-scroll anim-slide-right" style={{ display: 'flex' }}>
             <div className="leader-card-item card-right tilt-card" style={{ width: '100%', background: '#ffffff', boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)', border: '1px solid #eef2f6', borderRadius: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseMove={handleTilt} onMouseLeave={handleTiltReset}>
               <div className="leader-image-wrap">
@@ -199,22 +195,20 @@ function AboutTeamSection() {
                 <h3 className="leader-name">Mr. Sachin Pande ji</h3>
                 <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" style={{ width: '100%', marginBottom: '0px', display: 'flex', alignItems: 'center' }} />
                 <div className="leader-position" >Co-Founder & CTO </div>
-                {/* <div className="leader-divider"></div> */}
                 <p className="leader-desc">
                   Sachin drives technology and business development at Virtual Galaxy Infotech, leveraging the latest advancements. Off duty, he enjoys music with a cup of tea in hand.
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Board of Directors Section */}
-        <div className="board-section-wrap" style={{ marginTop: '32px', marginBottom: '32px' }}>
-          <div className="heading-section center mb-64">
-            <div className="heading-sub fw-semibold style-1 effectFade fadeUp" style={{ color: '#e10600' }}>
-              LEADERSHIP THAT INSPIRES
+        <div className="board-section-wrap" >
+          <div className="heading-section center mb-0">
+            <div className="heading-sub fw-semibold effectFade fadeUp" >
+              Leadership That Inspires
             </div>
-            <h2 className="heading-title text-dark effectFade fadeRotateX" style={{ fontSize: '42px', fontWeight: '800' }}>
+            <h2 className="heading-title text-dark effectFade fadeRotateX" >
               Board of Directors
             </h2>
             <p className="text-body-2 text-neutral-600 max-w-700 mx-auto mt-16 effectFade fadeUp">
@@ -261,7 +255,6 @@ function AboutTeamSection() {
             <div className="board-col-center">
               <div className="board-center-line"></div>
 
-              {/* Connector lines and dots */}
               <div className="board-connector-left board-connector-left-top"></div>
               <div className="board-connector-right board-connector-right-top"></div>
               <div className="board-connector-dot board-dot-left-top"></div>
@@ -340,7 +333,6 @@ function AboutTeamSection() {
           </div>
         </div>
 
-        {/* VGIL Standalone Section */}
         <div className="vgil-standalone-section" style={{ marginTop: '16px' }}>
           <div className="heading-section center mb-80">
             <h4 className="text-dark effectFade fadeUp vgil-title-responsive">
@@ -975,7 +967,7 @@ function AboutTeamSection() {
 
             /* Mobile spacing overrides */
             .section-team {
-              padding: 45px 0 !important;
+              // padding: 45px 0 !important;
             }
             .mb-120 {
               margin-bottom: 30px !important;
@@ -987,8 +979,8 @@ function AboutTeamSection() {
               margin-bottom: 24px !important;
             }
             .board-section-wrap {
-              margin-top: 40px !important;
-              margin-bottom: 40px !important;
+              // margin-top: 40px !important;
+              // margin-bottom: 40px !important;
             }
             .vgil-standalone-section {
               margin-top: 40px !important;

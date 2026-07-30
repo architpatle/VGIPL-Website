@@ -67,7 +67,7 @@ function StatisticSection() {
   }, []);
 
   return (
-    <div className="section-statistic section-spacing-sm dark-section dark-section-top">
+    <div className="section-statistic section-spacing-lg dark-section dark-section-top">
       <div className="line"></div>
       <div className="container">
         <div className="row justify-content-between">

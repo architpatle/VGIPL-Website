@@ -39,7 +39,7 @@ function AwardsSection() {
   const [activeAward, setActiveAward] = useState(null);
 
   return (
-    <div className="section-awards section-spacing dark-section">
+    <div className="section-awards section-spacing-lg dark-section">
       <div className="container">
         <div className="heading-section center mb-48">
           <div className="heading-sub fw-semibold mb-0 effectFade fadeUp">Awards</div>

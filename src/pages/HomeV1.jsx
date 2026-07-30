@@ -19,6 +19,7 @@ import ContactSection from '../components/home/ContactSection';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import PerformanceComparison from '../components/home/PerformanceComparison';
 import HomeVideosSection from '../components/home/HomeVideosSection';
+import ToolsSectionV2 from '../components/about/ToolsSectionV2';
 
 function HomeV1() {
   return (
@@ -36,7 +37,8 @@ function HomeV1() {
         <FeaturesSection />
       </div>
 
-      <ToolsSection />
+      {/* <ToolsSection /> */}
+      {/* <ToolsSectionV2 /> */}
 
       <div className="box-black">
         <div className="light-box"></div>

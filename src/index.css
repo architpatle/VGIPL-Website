@@ -123,7 +123,7 @@ code {
 /* Team Section Perfection */
 .section-team {
   background-color: #ffffff;
-  padding: 100px 0;
+  /* padding: 100px 0; */
 }
 
 .team-item {

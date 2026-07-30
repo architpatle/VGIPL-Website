@@ -11,6 +11,7 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import JourneySection from '../components/about/JourneySection';
 import FaqsSection from '../components/home/FaqsSection';
 import ContactSection from '../components/home/ContactSection';
+import TeamSection from '../components/home/TeamSection';
 
 function About() {
   return (
@@ -29,7 +30,7 @@ function About() {
         <div className="light-box"></div>
         <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
         <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
-
+        <TeamSection />
         <AboutTeamSection />
         <StatisticSection />
         <AwardsSection />

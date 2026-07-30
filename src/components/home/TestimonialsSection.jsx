@@ -57,7 +57,7 @@ function TestimonialsSection() {
   };
 
   return (
-    <div className="section-testimonials section-spacing dark-section dark-section-bottom">
+    <div className="section-testimonials section-spacing-lg dark-section dark-section-bottom">
       <div className="container">
         <div className="row justify-content-between">
 
