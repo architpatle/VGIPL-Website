@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 import logo from '../../assets/home/ownwer-img/vg-logo-2.png';
 
 
@@ -107,9 +108,9 @@ function ToolsSectionV2() {
             </div>
           </div>
         </div>
-        <a href="/contact" className="tf-btn effectFade fadeRotateX">
+        <Link to="/contact" className="tf-btn effectFade fadeRotateX">
           Get Started
-        </a>
+        </Link>
       </div>
     </div>
   );
