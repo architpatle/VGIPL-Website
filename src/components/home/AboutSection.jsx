@@ -35,7 +35,7 @@ function AboutSection() {
                 The Numbers Behind Our Impact
               </div>
               <div className="desc fw-semibold text-body-1" style={{ marginTop: '0' }}>Empowering 5,000+ bank branches, manufacturers, and global businesses through cutting-edge automation, seamless customer experiences, enhanced service delivery, and real-time decision support systems.</div>
-              <div className="d-flex justify-content-between flex-wrap align-items-end gap-12 mt-20">
+              <div className="d-flex justify-content-between flex-wrap align-items-end gap-12">
                 <div>
                   <div className="d-flex gap-4 text mb-10">
                     <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">

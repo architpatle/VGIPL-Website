@@ -28,17 +28,17 @@ function MissionSection() {
             </div>
           </div>
           <div className="col-lg-6 d-flex flex-column">
-            <div className="mission-box mb-24 flex-grow-1 d-flex flex-column justify-content-center" style={{ background: '#f4f4f5', padding: '30px', borderRadius: '24px' }}>
-              <h4 className="title fw-semibold mb-10" style={{ color: '#ff4d00' }}>Our Mission</h4>
-              <div className="line" style={{ height: '1px', background: '#e4e4e7', margin: '15px 0' }}></div>
+            <div className="mission-box mb-24 flex-grow-1 d-flex flex-column justify-content-start" style={{ background: '#f4f4f5', padding: '30px', borderRadius: '24px' }}>
+              <h4 className="title fw-semibold" style={{ color: '#ff4d00' }}>Our Mission</h4>
+              <div className="line" style={{ height: '1px', background: '#e4e4e7', margin: '10px 0' }}></div>
               <p className="text" style={{ color: '#3f3f46', fontSize: '16px', lineHeight: '1.6' }}>
                 To deliver cutting-edge IT solutions that drive operational efficiency, enhance customer experience, and foster business growth. We are committed to providing reliable, tailored technology services that empower organizations to thrive in a fast-evolving digital landscape, while ensuring the highest levels of quality, security, and customer satisfaction.
               </p>
             </div>
 
-            <div className="mission-box flex-grow-1 d-flex flex-column justify-content-center" style={{ background: '#f4f4f5', padding: '30px', borderRadius: '24px' }}>
-              <h4 className="title fw-semibold mb-10" style={{ color: '#ff4d00' }}>Our Vision</h4>
-              <div className="line" style={{ height: '1px', background: '#e4e4e7', margin: '15px 0' }}></div>
+            <div className="mission-box flex-grow-1 d-flex flex-column justify-content-start" style={{ background: '#f4f4f5', padding: '30px', borderRadius: '24px' }}>
+              <h4 className="title fw-semibold " style={{ color: '#ff4d00' }}>Our Vision</h4>
+              <div className="line" style={{ height: '1px', background: '#e4e4e7', margin: '10px 0' }}></div>
               <p className="text" style={{ color: '#3f3f46', fontSize: '16px', lineHeight: '1.6' }}>
                 To empower businesses globally with innovative, scalable, and secure IT solutions, transforming the way they operate, and driving digital excellence for a smarter, more connected future.
               </p>
