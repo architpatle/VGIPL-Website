@@ -88,7 +88,7 @@
   color: #09090B;
   font-weight: 600;
   font-size: 15px;
-  transition: color 0.3s ease, transfgorm 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .vg-social-link:hover {

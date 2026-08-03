@@ -405,7 +405,7 @@ function ProductSingle() {
 
       {/* Metrics Section */}
       {product.metrics && product.metrics.length > 0 && (
-        <div id="next-section" className="metrics-section section-spacing" style={{ backgroundColor: '#ffffff', position: 'relative' }}>
+        <div id="next-section" className="metrics-section section-spacing" style={{ position: 'relative' }}>
           <style>
             {`
               .fintech-stat-card {
@@ -582,7 +582,7 @@ function ProductSingle() {
       )}
 
       {currentModules.length > 0 && (
-        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing" style={{ backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
+        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing" style={{  position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
           <style>
             {`
             .fintech-modules-wrapper {
