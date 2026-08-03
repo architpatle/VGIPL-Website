@@ -1927,9 +1927,9 @@
 }
 
 /* Core Values Section - Desktop Card Height Reduced by 30% */
-.flat-spacing .features-item.style-2 {
+/* .flat-spacing .features-item.style-2 {
   padding: 14px !important;
-}
+} */
 
 .flat-spacing .features-item.style-2 .icon {
   margin-bottom: 14px !important;
