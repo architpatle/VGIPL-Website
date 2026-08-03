@@ -78,7 +78,7 @@ function FinFlow() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -261,7 +261,7 @@ function FinFlow() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -292,7 +292,7 @@ function FinFlow() {
               overflow: hidden;
               z-index: 1;
               display: flex;
-              align-items: center;
+              align-items: start;
               gap: 25px;
             }
             
@@ -482,7 +482,7 @@ function FinFlow() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">
@@ -502,7 +502,7 @@ function FinFlow() {
       </section>
 
       {/* 3. Technology & Architecture Section (Replacing Designed For) */}
-      <section id="tech-architecture" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="tech-architecture" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .designed-grid {
@@ -751,7 +751,7 @@ function FinFlow() {
                 )
               }
             ].map((target, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <div className="designed-card">
                   <div className="designed-card-tab"></div>
                   <div className="designed-icon-container">
@@ -771,7 +771,7 @@ function FinFlow() {
       </section>
 
       {/* 4. Operational Benefits Section (Replacing Core Features) */}
-      <section id="operational-benefits" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="operational-benefits" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .benefits-grid {
@@ -913,7 +913,7 @@ function FinFlow() {
                 )
               }
             ].map((benefit, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
                 <div className="benefit-card">
                   <div className="benefit-icon-box">
                     {benefit.icon}
@@ -927,7 +927,7 @@ function FinFlow() {
       </section>
 
       {/* 5. Why Choose Fin Flow Section */}
-      <section id="why-choose" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1216,7 +1216,7 @@ function FinFlow() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <div className="why-choose-card">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
@@ -1230,7 +1230,7 @@ function FinFlow() {
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp" style={{ transitionDelay: '0.5s' }}>
+            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
               <div className="why-choose-cta-card">
                 <div className="why-choose-cta-glow"></div>
                 <svg className="why-choose-cta-waves" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -1262,7 +1262,7 @@ function FinFlow() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {

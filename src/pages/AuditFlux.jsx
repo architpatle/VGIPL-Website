@@ -78,7 +78,7 @@ function AuditFlux() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -262,7 +262,7 @@ function AuditFlux() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -486,7 +486,7 @@ function AuditFlux() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">
@@ -798,7 +798,7 @@ function AuditFlux() {
       </section>
 
       {/* 4. Core Features Section */}
-      <section id="features" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="features" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .features-columns-wrapper {
@@ -913,7 +913,7 @@ function AuditFlux() {
 
           <div className="features-columns-wrapper">
             {/* Left Card: Technology & Architecture */}
-            <div className="effectFade fadeUp">
+            <div className="effectFade fadeUp h-100">
               <div className="feature-section-card">
                 <div className="feature-header-row">
                   <div className="feature-card-icon-box">
@@ -937,7 +937,7 @@ function AuditFlux() {
             </div>
 
             {/* Right Card: Operational Benefits */}
-            <div className="effectFade fadeUp" style={{ transitionDelay: '0.1s' }}>
+            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.1s' }}>
               <div className="feature-section-card">
                 <div className="feature-header-row">
                   <div className="feature-card-icon-box">
@@ -965,7 +965,7 @@ function AuditFlux() {
       </section>
 
       {/* 5. Why Choose Audit Flux Section */}
-      <section id="why-choose" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1261,7 +1261,7 @@ function AuditFlux() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <div className="why-choose-card">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
@@ -1275,7 +1275,7 @@ function AuditFlux() {
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp" style={{ transitionDelay: '0.5s' }}>
+            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
               <div className="why-choose-cta-card">
                 <div className="why-choose-cta-glow"></div>
                 
@@ -1309,7 +1309,7 @@ function AuditFlux() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {

@@ -395,7 +395,7 @@ function ConversationalAI() {
 
       {/* Fintech Interactive Modules Section */}
       {currentModules.length > 0 && (
-      <div id="next-section" className="modules-fintech-section section-spacing" style={{ backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
+      <div id="next-section" className="modules-fintech-section section-spacing" style={{ position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
         <style>
           {`
             .fintech-modules-wrapper {
@@ -757,7 +757,7 @@ function ConversationalAI() {
       )}
 
       {/* Proposed Conversational AI Solution Section */}
-      <div className="conversational-solution-wrapper" style={{ padding: '80px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="conversational-solution-wrapper" style={{ padding: '80px 20px 120px', position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left"></div>
         <div className="bg-glow-orb orb-right"></div>
@@ -889,20 +889,20 @@ function ConversationalAI() {
             /* Section Wrapper Styling */
             .conversational-solution-wrapper {
               position: relative;
-              background-color: #ffffff;
+             
               z-index: 1;
             }
 
             .conversational-premium-container {
               position: relative;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-              backdrop-filter: blur(24px);
-              -webkit-backdrop-filter: blur(24px);
-              border: 1px solid rgba(255, 255, 255, 0.85);
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+              // backdrop-filter: blur(24px);
+              // -webkit-backdrop-filter: blur(24px);
+              // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
+                          // inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
               transition: all 0.5s ease;
             }
@@ -913,10 +913,10 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
-              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-              -webkit-mask-composite: xor;
-              mask-composite: exclude;
+              // background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
+              // -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              // -webkit-mask-composite: xor;
+              // mask-composite: exclude;
               pointer-events: none;
               z-index: 0;
             }
@@ -1286,7 +1286,7 @@ function ConversationalAI() {
       </div>
 
       {/* NLP Capabilities Section */}
-      <div className="nlp-capabilities-wrapper" style={{ padding: '0px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="nlp-capabilities-wrapper" style={{ padding: '0px 20px 120px',position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-nlp"></div>
         <div className="bg-glow-orb orb-right-nlp"></div>
@@ -1410,20 +1410,19 @@ function ConversationalAI() {
             /* NLP Section Styling */
             .nlp-capabilities-wrapper {
               position: relative;
-              background-color: #ffffff;
               z-index: 1;
             }
 
             .nlp-premium-container {
               position: relative;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-              backdrop-filter: blur(24px);
-              -webkit-backdrop-filter: blur(24px);
-              border: 1px solid rgba(255, 255, 255, 0.85);
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+              // backdrop-filter: blur(24px);
+              // -webkit-backdrop-filter: blur(24px);
+              // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
+              //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
               transition: all 0.5s ease;
             }
@@ -1434,10 +1433,10 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
-              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-              -webkit-mask-composite: xor;
-              mask-composite: exclude;
+              // background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
+              // -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              // -webkit-mask-composite: xor;
+              // mask-composite: exclude;
               pointer-events: none;
               z-index: 0;
             }
@@ -1699,7 +1698,7 @@ function ConversationalAI() {
       </div>
 
       {/* Real-Time Integration Section */}
-      <div className="realtime-integration-wrapper" style={{ padding: '0px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="realtime-integration-wrapper" style={{ padding: '0px 20px 120px', position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-rti"></div>
         <div className="bg-glow-orb orb-right-rti"></div>
@@ -1809,20 +1808,19 @@ function ConversationalAI() {
             /* RTI Section Styling */
             .realtime-integration-wrapper {
               position: relative;
-              background-color: #ffffff;
               z-index: 1;
             }
 
             .rti-premium-container {
               position: relative;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-              backdrop-filter: blur(24px);
-              -webkit-backdrop-filter: blur(24px);
-              border: 1px solid rgba(255, 255, 255, 0.85);
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+              // backdrop-filter: blur(24px);
+              // -webkit-backdrop-filter: blur(24px);
+              // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
+              //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
               transition: all 0.5s ease;
             }
@@ -1833,10 +1831,10 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
-              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-              -webkit-mask-composite: xor;
-              mask-composite: exclude;
+              // background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
+              // -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              // -webkit-mask-composite: xor;
+              // mask-composite: exclude;
               pointer-events: none;
               z-index: 0;
             }
@@ -2047,7 +2045,7 @@ function ConversationalAI() {
       </div>
 
       {/* Comprehensive Analytics Dashboard Section */}
-      <div className="comprehensive-analytics-wrapper" style={{ padding: '0px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="comprehensive-analytics-wrapper" style={{ padding: '0px 20px 120px',  position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-cad"></div>
         <div className="bg-glow-orb orb-right-cad"></div>
@@ -2216,20 +2214,19 @@ function ConversationalAI() {
             /* CAD Section Styling */
             .comprehensive-analytics-wrapper {
               position: relative;
-              background-color: #ffffff;
               z-index: 1;
             }
 
             .cad-premium-container {
               position: relative;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-              backdrop-filter: blur(24px);
-              -webkit-backdrop-filter: blur(24px);
-              border: 1px solid rgba(255, 255, 255, 0.85);
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+              // backdrop-filter: blur(24px);
+              // -webkit-backdrop-filter: blur(24px);
+              // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
+              //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
               transition: all 0.5s ease;
             }
@@ -2240,10 +2237,10 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
-              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-              -webkit-mask-composite: xor;
-              mask-composite: exclude;
+              // background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
+              // -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              // -webkit-mask-composite: xor;
+              // mask-composite: exclude;
               pointer-events: none;
               z-index: 0;
             }
@@ -2483,7 +2480,7 @@ function ConversationalAI() {
       </div>
 
       {/* Solution Overview Section */}
-      <div className="solution-overview-wrapper" style={{ padding: '0px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="solution-overview-wrapper" style={{ padding: '0px 20px 120px',  position: 'relative', overflow: 'hidden' }}>
         <div className="container so-premium-container">
           <div className="row g-5 align-items-center">
             
@@ -2817,7 +2814,7 @@ function ConversationalAI() {
       </div>
 
       {/* Conversational AI Use-Cases Section */}
-      <div className="use-cases-wrapper" style={{ padding: '0px 20px 120px', backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
+      <div className="use-cases-wrapper" style={{ padding: '0px 20px 120px', position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-uc"></div>
         <div className="bg-glow-orb orb-right-uc"></div>
@@ -3041,20 +3038,19 @@ function ConversationalAI() {
             /* Use Cases Section Styling */
             .use-cases-wrapper {
               position: relative;
-              background-color: #ffffff;
               z-index: 1;
             }
 
             .uc-premium-container {
               position: relative;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-              backdrop-filter: blur(24px);
-              -webkit-backdrop-filter: blur(24px);
-              border: 1px solid rgba(255, 255, 255, 0.85);
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+              // backdrop-filter: blur(24px);
+              // -webkit-backdrop-filter: blur(24px);
+              // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
+              //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
               transition: all 0.5s ease;
             }
@@ -3065,10 +3061,10 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
-              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-              -webkit-mask-composite: xor;
-              mask-composite: exclude;
+              // background: linear-gradient(135deg, rgba(255, 45, 21, 0.15), rgba(255, 255, 255, 0.9), rgba(255, 45, 21, 0.05));
+              // -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              // -webkit-mask-composite: xor;
+              // mask-composite: exclude;
               pointer-events: none;
               z-index: 0;
             }

@@ -119,7 +119,7 @@ function TransactCore() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing section-spacing-responsive" style={{ backgroundColor: '#ffffff', padding: '100px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing section-spacing-responsive" style={{ padding: '100px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -309,7 +309,7 @@ function TransactCore() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing section-spacing-responsive" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing section-spacing-responsive" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -845,7 +845,7 @@ function TransactCore() {
       </section>
 
       {/* 4. Core Features Section */}
-      <section id="features" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="features" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .features-grid {
@@ -870,6 +870,7 @@ function TransactCore() {
               box-shadow: 0 10px 40px rgba(0, 0, 0, 0.015);
               transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
               height: 100%;
+              
             }
             
             .feature-section-card:hover {
@@ -964,7 +965,7 @@ function TransactCore() {
           {/* Features Cards Grid */}
           <div className="features-grid">
             {/* Left Card: Technology & Architecture */}
-            <div className="effectFade fadeUp">
+            <div className="effectFade fadeUp h-100">
               <div className="feature-section-card">
                 <div className="feature-header-row">
                   <div className="feature-card-icon-box">
@@ -991,7 +992,7 @@ function TransactCore() {
             </div>
 
             {/* Right Card: Operational Benefits */}
-            <div className="effectFade fadeUp" style={{ transitionDelay: '0.1s' }}>
+            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.1s' }}>
               <div className="feature-section-card">
                 <div className="feature-header-row">
                   <div className="feature-card-icon-box">
@@ -1020,7 +1021,7 @@ function TransactCore() {
       </section>
 
       {/* 5. Why Choose Transact Core 360 Section */}
-      <section id="why-choose" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1319,7 +1320,7 @@ function TransactCore() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <div className="why-choose-card">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
@@ -1333,8 +1334,8 @@ function TransactCore() {
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp" style={{ transitionDelay: '0.5s' }}>
-              <div className="why-choose-cta-card">
+            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
+              <div className="why-choose-cta-card ">
                 <div className="why-choose-cta-glow"></div>
                 
                 {/* Modern Wave SVG Accent */}
@@ -1348,9 +1349,9 @@ function TransactCore() {
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
                   <h4 className="why-choose-cta-title">Ready to Switch?</h4>
-                  <p className="why-choose-cta-desc">
+                  {/* <p className="why-choose-cta-desc">
                     Get started with Transact Core 360 today and power your business with next-gen transaction switching.
-                  </p>
+                  </p> */}
                 </div>
 
                 <a href="#contact-section" className="why-choose-cta-btn">
@@ -1367,7 +1368,7 @@ function TransactCore() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
