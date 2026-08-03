@@ -3,27 +3,39 @@ import { Link } from 'react-router-dom';
 import contactBg from '../assets/Contact-img/Contact@2x.png';
 import maharashtraLogo from '../assets/Contact-img/maharashtra.png';
 import './Contact.css';
+import contactHeroBg from '../assets/home/hero-bg-img.jpg';
 
 
 function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="contact-hero" style={{ 
-        paddingTop: '160px', 
-        paddingBottom: '100px', 
-        backgroundImage: `url(${contactBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        color: '#ffffff', 
-        textAlign: 'center' 
-      }}>
+      <section className="section-hero mb-10 "
+      // style={{ 
+      //   paddingTop: '160px', 
+      //   paddingBottom: '100px', 
+      //   backgroundImage: `url(${contactHeroBg})`,
+      //   backgroundSize: 'cover',  
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      //   color: '#ffffff', 
+      //   textAlign: 'center' 
+      // }} 
+      >
+        <div className="hero-image" style={{ backgroundImage: `url("${contactHeroBg}")` }}>
+        </div>
         <div className="container">
-          <h1 style={{ fontSize: '4rem', fontWeight: '800', marginBottom: '20px', color: '#ffffff' }}>Contact Us</h1>
-          <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: 0.9 }}>
-            Have a project in mind, need technical support, or want to explore our digital and AI solutions? Reach out to our experts.
-          </p>
+          <div className="content-wrap text-center">
+
+            <h1 className='title text-display-2 title1 fw-semibold text-gradient-1 effectFade fadeRotateX"'
+            // style={{ fontSize: '4rem', fontWeight: '800', marginBottom: '20px', color: '#000' }}
+            >Contact Us</h1>
+            <p className='text effectFade fadeUp'
+            // style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: 0.9 }}
+            >
+              Have a project in mind, need technical support, or want to explore our digital and AI solutions? <br /> Reach out to our experts.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -58,8 +70,8 @@ function Contact() {
                     <div className="contact-item effectFade fadeRotateX">
                       <div className="contact-item-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="2" y="4" width="20" height="16" rx="2"/>
-                          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                          <rect x="2" y="4" width="20" height="16" rx="2" />
+                          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                         </svg>
                       </div>
                       <div className="contact-item-content">
@@ -72,8 +84,8 @@ function Contact() {
                     <div className="contact-item effectFade fadeRotateX">
                       <div className="contact-item-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-                          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                          <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
                         </svg>
                       </div>
                       <div className="contact-item-content">
@@ -113,7 +125,7 @@ function Contact() {
 
                   <div className="attachment d-flex gap-8 align-items-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="attachment-icon">
-                      <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                      <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
                     </svg>
                     <div className="attachment-text fw-semibold">Add an Attachment</div>
                   </div>
@@ -133,20 +145,20 @@ function Contact() {
           {/* Nagpur Branch */}
           <div className="row mb-40 align-items-center effectFade fadeUp">
             <div className="col-lg-5 lg-mb-24">
-              <div className="box-address" style={{ 
-                backgroundColor: '#fff5f5', 
-                borderRadius: '32px', 
-                height: '420px', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'center', 
-                padding: '60px', 
+              <div className="box-address" style={{
+                backgroundColor: '#fff5f5',
+                borderRadius: '32px',
+                height: '420px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '60px',
                 border: '1.5px solid #000000',
                 transition: 'all 0.3s ease-in-out',
                 cursor: 'pointer'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
                 <img src={maharashtraLogo} alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
                 <h3 className="fw-bold mb-16" style={{ fontSize: '32px' }}>Nagpur</h3>
                 <p className="text-body-1 mb-24" style={{ lineHeight: '1.7', color: '#4b5563', fontSize: '16px' }}>
@@ -177,20 +189,20 @@ function Contact() {
               </div>
             </div>
             <div className="col-lg-5 order-lg-2 order-1 lg-mb-24">
-              <div className="box-address" style={{ 
-                backgroundColor: '#fff5f5', 
-                borderRadius: '32px', 
-                height: '420px', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'center', 
-                padding: '60px', 
+              <div className="box-address" style={{
+                backgroundColor: '#fff5f5',
+                borderRadius: '32px',
+                height: '420px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '60px',
                 border: '1.5px solid #000000',
                 transition: 'all 0.3s ease-in-out',
                 cursor: 'pointer'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
                 <img src={maharashtraLogo} alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
                 <h3 className="fw-bold mb-16" style={{ fontSize: '32px' }}>Pune</h3>
                 <p className="text-body-1 mb-24" style={{ lineHeight: '1.7', color: '#4b5563', fontSize: '16px' }}>

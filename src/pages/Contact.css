@@ -2,6 +2,13 @@
    CONTACT PAGE  —  Aigocy Style (Match Screenshot Exactly)
 ================================================================ */
 
+
+.contact-hero {
+  padding: 16px 16px 0;
+  /* min-height: fit-content; */
+  position: relative;
+}
+
 /* ---- Section Contact ---- */
 .section-contact {
   position: relative;
@@ -20,7 +27,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.6); /* Lighten background */
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Lighten background */
   z-index: 1;
 }
 
@@ -108,9 +116,9 @@
   border-radius: 16px;
   color: #09090B;
   background-color: #FFFFFF;
-  box-shadow: 
-    0px 10px 20px rgba(0,0,0,0.02),
-    0px 2px 6px rgba(0,0,0,0.03);
+  box-shadow:
+    0px 10px 20px rgba(0, 0, 0, 0.02),
+    0px 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .contact-item-content {
@@ -143,10 +151,11 @@
   margin-right: -12px;
   padding: 40px 48px;
   border-radius: 40px;
-  background-color: #FFFFFF; /* Pure white as in screenshot */
-  box-shadow: 
-    0px 30px 60px rgba(0,0,0,0.04),
-    0px 4px 20px rgba(0,0,0,0.02);
+  background-color: #FFFFFF;
+  /* Pure white as in screenshot */
+  box-shadow:
+    0px 30px 60px rgba(0, 0, 0, 0.04),
+    0px 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .section-contact .form-contact .heading {
@@ -263,6 +272,7 @@
   .contact-container-custom {
     max-width: 90%;
   }
+
   .section-contact .form-contact {
     margin-left: 0;
     margin-right: 0;
@@ -274,9 +284,11 @@
   .contact-container-custom {
     max-width: 100% !important;
   }
+
   .section-contact {
     padding: 40px 20px;
   }
+
   .section-contact .col-left {
     padding: 12px 0 32px;
   }
@@ -286,10 +298,12 @@
   .section-contact {
     padding: 24px 12px;
   }
+
   .section-contact .contact-image {
     inset: 0;
     border-radius: 20px;
   }
+
   .section-contact .contact-image img {
     border-radius: 20px;
   }
@@ -353,21 +367,26 @@
     margin: 0 !important;
     width: 100% !important;
   }
+
   .section-contact .form-contact .heading {
     font-size: 22px !important;
     margin-bottom: 15px !important;
   }
+
   .form-contact fieldset {
     margin-bottom: 12px !important;
   }
+
   .form-contact input,
   .form-contact textarea {
     font-size: 14px !important;
     padding: 7px 0 !important;
   }
+
   .form-contact .attachment {
     margin-bottom: 15px !important;
   }
+
   /* .form-contact .tf-btn {
     padding: 11px 24px !important;
     font-size: 14px !important;
@@ -379,19 +398,23 @@
   .section-contact {
     padding: 16px 8px;
   }
+
   .contact-items-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 4px 6px;
   }
+
   .section-contact .form-contact {
     padding: 20px 14px !important;
     border-radius: 16px !important;
   }
+
   .contact-item-icon {
     width: 36px !important;
     height: 36px !important;
     border-radius: 10px !important;
   }
+
   /* .contact-badge-pill {
     padding: 6px 14px !important;
     font-size: 12px !important;
