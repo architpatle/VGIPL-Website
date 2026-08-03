@@ -44,8 +44,8 @@ function Contact() {
                 <div className="col-left">
 
                   <div className="heading-section mb-24">
-                    <div className="contact-badge-pill effectFade fadeUp mb-12">
-                      <span className="dot"></span>
+                    <div className="contact-badge-pill effectFade fadeUp mb-12 heading-sub fw-semibold">
+                      {/* <span className="dot"></span> */}
                       Contact
                     </div>
                     <h2 className="heading-title effectFade fadeRotateX">
