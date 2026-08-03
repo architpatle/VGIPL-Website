@@ -17,8 +17,8 @@ function WhyChooseUs() {
                 </div>
                 <div className="row mb-24">
                     <div className="col-lg-7 ">
-                        <div className="benefits-box benefits-progress">
-                            <div className={styles.performanceGrid}>
+                        <div className="benefits-box benefits-progress ">
+                            <div className={`${styles.performanceGrid} wcuPerformance`}>
                                 {[
                                     { value: 95, label: "Accuracy", icon: "" },
                                     { value: 90, label: "Rapid", icon: "" },

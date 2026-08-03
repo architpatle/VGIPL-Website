@@ -9683,13 +9683,16 @@ button.animate-btn::after,
 .benefits-step .benefits-step-inner {
   height: 100px;
   margin-top: 44px;
-  margin-bottom: 92px;
+  margin-bottom: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .benefits-step .benefits-step-inner {
     margin-top: 24px;
     margin-bottom: 44px;
+  }
+  .wcuPerformance{
+    margin-bottom: 44px; 
   }
 }
 
