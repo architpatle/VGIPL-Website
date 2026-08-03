@@ -5250,6 +5250,12 @@ button.animate-btn::after,
   margin-bottom: 24px;
 }
 
+@media (max-width:768px) {
+  .section-hero .content-wrap .text {
+  margin-bottom: 16px;
+}
+}
+
 .section-hero .content-wrap .bot-btns {
   display: flex;
   gap: 11px;

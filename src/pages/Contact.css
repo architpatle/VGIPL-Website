@@ -423,3 +423,12 @@
     font-size: 28px !important;
   }
 }
+
+@media (max-width:786px) {
+  .content-wrap-cp{
+    padding-bottom: 0 !important;
+  }
+  .text-cp{
+    margin-bottom: 0 !important;
+  }
+}

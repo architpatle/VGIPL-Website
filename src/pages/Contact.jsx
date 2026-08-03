@@ -4,6 +4,7 @@ import contactBg from '../assets/Contact-img/Contact@2x.png';
 import maharashtraLogo from '../assets/Contact-img/maharashtra.png';
 import './Contact.css';
 import contactHeroBg from '../assets/home/hero-bg-img.jpg';
+import './Contact.css'
 
 
 function Contact() {
@@ -25,12 +26,12 @@ function Contact() {
         <div className="hero-image" style={{ backgroundImage: `url("${contactHeroBg}")` }}>
         </div>
         <div className="container">
-          <div className="content-wrap text-center">
+          <div className="content-wrap content-wrap-cp text-center">
 
             <h1 className='title text-display-2 title1 fw-semibold text-gradient-1 effectFade fadeRotateX"'
             // style={{ fontSize: '4rem', fontWeight: '800', marginBottom: '20px', color: '#000' }}
             >Contact Us</h1>
-            <p className='text effectFade fadeUp'
+            <p className='text effectFade fadeUp text-cp'
             // style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', opacity: 0.9 }}
             >
               Have a project in mind, need technical support, or want to explore our digital and AI solutions? <br /> Reach out to our experts.
