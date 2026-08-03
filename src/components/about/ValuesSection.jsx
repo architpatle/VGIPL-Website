@@ -233,13 +233,14 @@ function ValuesSection() {
           width: 70px;
           height: 70px;
           border-radius: 18px;
-          background-color: #ffffff;
+          background-color: var(--brand);
           display: flex;
           align-items: center;
           justify-content: center;
           margin-bottom: 20px;
           box-shadow: 0 8px 20px rgba(0,0,0,0.08);
           border: 1px solid #f0f0f0;
+          color: black !important;
         }
 
         .value-modal-icon svg {
