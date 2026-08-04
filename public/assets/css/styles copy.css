@@ -5767,7 +5767,7 @@ button.animate-btn::after,
 }
 
 .featured-works-item .content {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   padding: 8px 20px 8px;
 }
 

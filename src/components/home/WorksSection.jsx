@@ -35,7 +35,7 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
     'mis-solution'
   ];
 
-  const displayProducts = selectedSlugs.map(slug => 
+  const displayProducts = selectedSlugs.map(slug =>
     PRODUCTS_DATA.find(p => p.slug === slug)
   ).filter(Boolean);
 
@@ -48,34 +48,34 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
 
   return (
     <div id="works" className={className}>
-      <div className="mx-auto" style={{maxWidth:'1040px'}}>
+      <div className="mx-auto" style={{ maxWidth: '1040px' }}>
         <div className="heading-section mb-0">
           <div className="heading-sub fw-semibold mx-auto effectFade fadeUp">Our Products</div>
         </div>
         <div className="featured-works-list position-relative">
           {displayProducts.map((product, index) => (
-            <div key={product.slug} className="">
-              <div 
-                className={`featured-works-item effectFade fadeUp ${index === 0 ? 'no-div' : ''} ${expandedSlug === product.slug ? 'expanded-card' : ''}`}
+            <div key={product.slug} className="" >
+              <div
+                className={`featured-works-item effectFade fadeUp  ${index === 0 ? 'no-div' : ''} ${expandedSlug === product.slug ? 'expanded-card' : ''}`}
+
                 onClick={(e) => handleCardClick(e, product.slug)}
               >
-                <div className="image main-mouse-hover" style={{ 
+                <div className="image main-mouse-hover h" style={{
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)), url("${bgImages[product.slug]}")`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center', 
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   // padding: '60px',
                   border: '1px solid #f1f1f1',
                   borderRadius: '24px',
                   // height:'400px',
                   maxHeight: '400px',
-                  minHeight:'180px',
                   position: 'relative'
                 }}>
-                  <img src={product.logo} alt={product.title} style={{ 
+                  <img src={product.logo} alt={product.title} style={{
                     // maxWidth: '180px', 
                     maxHeight: '30px',
                     // width: 'auto',
@@ -96,26 +96,25 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
                     ))}
                   </div> */}
                   <div className="bot">
-                    <h4 className="heading fw-semibold text-center" style={{fontSize:'28px'}}>{product.title}</h4>
+                    <h4 className="heading fw-semibold  " style={{ fontSize: '28px' }}>{product.title}</h4>
                     <div className="desktop-view-product-btn-wrap">
-    <Link
-      to={`/products/${product.slug}`}
-      className="desktop-view-product-btn tf-btn"
-      onClick={(e) => e.stopPropagation()}
-    >
-      View Product
-      {/* <i className="icon icon-arrow-top-right"></i> */}
-    </Link>
-  </div>
+                      <Link
+                        to={`/products/${product.slug}`}
+                        className="desktop-view-product-btn tf-btn"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        View Product
+                        {/* <i className="icon icon-arrow-top-right"></i> */}
+                      </Link>
+                    </div>
                     <div
-  className={`expanded-details-container ${
-    window.innerWidth > 767
-      ? 'expanded'
-      : expandedSlug === product.slug
-      ? 'expanded'
-      : 'collapsed'
-  }`}
->
+                      className={`expanded-details-container ${window.innerWidth > 767
+                          ? 'expanded'
+                          : expandedSlug === product.slug
+                            ? 'expanded'
+                            : 'collapsed'
+                        }`}
+                    >
                       <div className="grid-text">
                         <div className="item">
                           <div className="title text-secondary">DESCRIPTION</div>
@@ -130,15 +129,15 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
                         <div className="item">
                           <div className="title text-secondary">INDUSTRY</div>
                           <div className="fw-semibold text-body-3">
-                            {product.slug === 'core-banking-solution' ? 'Banking' : 
-                             product.slug === 'post-mortem-mgmt' ? 'Healthcare' : 
-                             product.slug === 'end-to-end-cyber-security' ? 'Security' : 'Enterprise'}
+                            {product.slug === 'core-banking-solution' ? 'Banking' :
+                              product.slug === 'post-mortem-mgmt' ? 'Healthcare' :
+                                product.slug === 'end-to-end-cyber-security' ? 'Security' : 'Enterprise'}
                           </div>
                         </div>
                       </div>
                       <div className="mobile-view-product-btn-wrap">
-                        <Link 
-                          to={`/products/${product.slug}`} 
+                        <Link
+                          to={`/products/${product.slug}`}
                           className="mobile-view-product-btn"
                           onClick={(e) => e.stopPropagation()}
                         >
