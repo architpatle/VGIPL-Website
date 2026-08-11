@@ -16,29 +16,25 @@ import styles from "./FloatingSocial.module.css";
 const socials = [
     {
         icon: FaLinkedinIn,
-        href: "https://linkedin.com",
+        href: "https://www.linkedin.com/company/virtualgalaxy/",
         color: "#0A66C2",
     },
     {
         icon: FaInstagram,
-        href: "https://instagram.com",
+        href: "https://www.instagram.com/virtualgalaxyinfotech",
         color: "#E1306C",
     },
     {
         icon: FaFacebookF,
-        href: "https://facebook.com",
+        href: "https://www.facebook.com/VirtualGalaxyInfotechLtd",
         color: "#1877F2",
     },
     {
         icon: FaYoutube,
-        href: "https://youtube.com",
+        href: "https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg",
         color: "#FF0000",
     },
-    {
-        icon: FaXTwitter,
-        href: "https://x.com",
-        color: "#111111",
-    },
+   
 ];
 
 const containerVariants = {
