@@ -11,7 +11,7 @@ function WhyChooseUs() {
     return (
         <div className="section-benefits section-spacing-lg">
             <div className="container">
-                <div className={`heading-section ${styles.whyChooseUsHeading} mb-70 `}>
+                <div className={`heading-section ${styles.whyChooseUsHeading}`}>
                     <div className={`heading-sub ${styles.whyChooseUsHeadingSub} fw-semibold effectFade fadeUp`}>Benefits</div>
                     <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Choose Us</div>
                 </div>

@@ -1092,7 +1092,7 @@ function AboutTeamSection() {
             height: 80px;
             width: auto;
             object-fit: contain;
-            margin: 5px 0 15px;
+          
           }
 
           /* Modal Overlay Styles */

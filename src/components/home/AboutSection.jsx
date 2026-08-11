@@ -26,7 +26,7 @@ function AboutSection() {
                   Start a Project
                 </Link>
               </div>
-              <img className="effectFade fadeRotateX mt-auto" src={earthImg} alt="Earth" style={{ alignSelf: 'center', maxWidth: '100%' }} />
+              <img className="effectFade fadeRotateX " src={earthImg} alt="Earth" style={{ alignSelf: 'center', maxWidth: '100%', marginTop:'-14px' }} />
             </div>
           </div>
           <div className="col-lg-5 d-flex flex-column">
@@ -59,7 +59,7 @@ function AboutSection() {
             </div>
 
             <div className="review-box flex-grow-1 d-flex flex-column justify-content-center">
-              <div className="d-flex justify-content-between flex-wrap align-items-end gap-12 border-bottom pb-4 mb-20" style={{ borderColor: 'var(--neutral-300)' }}>
+              <div className="d-flex justify-content-between flex-wrap align-items-end gap-12 border-bottom pb-4" style={{ borderColor: 'var(--neutral-300)' }}>
                 <div className="desc fw-semibold text-body-1 mb-0">Happy Clients</div>
                 <div className="counter text-neutral-400">
                   <span className="number" data-speed="1500" data-to="200" data-inviewport="yes">200</span><span>+</span>

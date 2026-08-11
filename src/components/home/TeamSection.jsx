@@ -10,31 +10,59 @@ import avinashSignature from '../../assets/home/signature.png';
 import sachinSignature from '../../assets/home/sachin-signature.png';
 
 function TeamSection() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          document
-            .querySelectorAll('.founder-card')
-            .forEach((card) => card.classList.add('animate'));
-        }
-      },
-      { threshold: 0.25 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         document
+  //           .querySelectorAll('.founder-card')
+  //           .forEach((card) => card.classList.add('animate'));
+  //       }
+  //     },
+  //     { threshold: 0.25 }
+  //   );
 
-    const section = document.querySelector('#leadership');
+  //   const section = document.querySelector('#leadership');
 
-    if (section) observer.observe(section);
+  //   if (section) observer.observe(section);
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
+useEffect(() => {
+  const section = document.querySelector('#leadership');
+
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        section
+          .querySelectorAll('.founder-card')
+          .forEach((card) => {
+            card.classList.add('animate');
+          });
+
+        observer.unobserve(section);
+      }
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '-100px 0px -100px 0px',
+    }
+  );
+
+  observer.observe(section);
+
+  return () => observer.disconnect();
+}, []);
+
   return (
     <div className="section-team-premium section-spacing-lg" id="leadership">
       <div className="container" >
         {/* Section Heading */}
         <div className="heading-section center mb-0">
           <div className="heading-sub fw-semibold  effectFade fadeUp">Our Founders</div>
-          <div className="heading-title text-dark effectFade fadeRotateX">
+          <div className="heading-title text-gradient-3 effectFade fadeRotateX">
             The Minds Behind Virtual-Galaxy
           </div>
         </div>
@@ -109,7 +137,7 @@ function TeamSection() {
             height: 70px;
             width: 190px;
             object-fit: contain;
-            margin: 5px 0 15px;
+         
           }
 
           #leadership{

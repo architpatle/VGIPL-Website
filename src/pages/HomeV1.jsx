@@ -35,6 +35,8 @@ function HomeV1() {
         <WorksSection />
         <ProcessSection />
         <FeaturesSection />
+        <TeamSection />
+
       </div>
 
       {/* <ToolsSection /> */}
@@ -45,7 +47,6 @@ function HomeV1() {
         <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
         <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
         
-        <TeamSection />
         {/* <StatisticSection /> */}
         {/* <AwardsSection /> */}
         {/* <TestimonialsSection /> */}

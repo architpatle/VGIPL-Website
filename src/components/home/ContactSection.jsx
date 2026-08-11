@@ -1,8 +1,26 @@
 import React from 'react';
+import { useRef, useState } from 'react';
 import contactBg from '../../assets/Contact-img/Contact@2x.png';
 import './ContactSection.css';
 
+
+
 function ContactSection() {
+  const fileInputRef = useRef(null);
+const [selectedFile, setSelectedFile] = useState(null);
+
+const handleAttachmentClick = () => {
+  fileInputRef.current?.click();
+};
+
+const handleFileChange = (e) => {
+  const file = e.target.files?.[0];
+
+  if (!file) return;
+
+  setSelectedFile(file);
+};
+
   return (
     <div id="contact" className="container-fluid w-100 p-0 section-spacing-lg">
       <div className="section-contact">
@@ -85,12 +103,38 @@ function ContactSection() {
                   <textarea name="text"></textarea>
                 </fieldset>
 
-                <div className="attachment d-flex gap-8 align-items-center">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="attachment-icon">
-                    <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
-                  </svg>
-                  <div className="attachment-text fw-semibold">Add an Attachment</div>
-                </div>
+               <div
+  className="attachment d-flex gap-8 align-items-center"
+  onClick={handleAttachmentClick}
+  role="button"
+  tabIndex={0}
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="attachment-icon"
+  >
+    <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+  </svg>
+
+  <div className="attachment-text fw-semibold">
+    {selectedFile ? selectedFile.name : 'Add an Attachment'}
+  </div>
+</div>
+
+<input
+  ref={fileInputRef}
+  type="file"
+  accept="image/*,.pdf,application/pdf"
+  onChange={handleFileChange}
+  style={{ display: 'none' }}
+/>
 
                 <button type="submit" className="tf-btn w-100">Submit Message</button>
               </form>
