@@ -68,7 +68,7 @@ useEffect(() => {
         </div>
 
         {/* Responsive Grid Wrapper */}
-        <div className="leadership-grid-container effectFade">
+        <div className="leadership-grid-container">
 
           {/* Left Card - Mr. Avinash Shende */}
           <div className="leader-card-item card-left founder-card founder-left">

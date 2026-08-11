@@ -1,7 +1,7 @@
 .dr-hero-section {
   position: relative;
   padding: 120px 0 80px;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   overflow: hidden;
   min-height: 85vh;
   display: flex;

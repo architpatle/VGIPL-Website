@@ -6,11 +6,11 @@ import './DRDCHero.css';
 const DRDCHero = () => {
   return (
     <section className="dr-hero-section">
-      <div className="dr-hero-bg">
+      {/* <div className="dr-hero-bg">
         <div className="dr-grid-pattern"></div>
         <div className="dr-glow-circle dr-glow-1"></div>
         <div className="dr-glow-circle dr-glow-2"></div>
-      </div>
+      </div> */}
       
       <div className="container position-relative z-2">
         <div className="row align-items-center min-vh-75">

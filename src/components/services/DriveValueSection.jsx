@@ -58,7 +58,7 @@ const DriveValueSection = () => {
   ];
 
   return (
-    <div className="section-drive-value overflow-hidden" style={{ backgroundColor: '#f5f3f0' }}>
+    <div className="section-drive-value overflow-hidden" >
       <div className="container" style={{ maxWidth: '1280px' }}>
         <motion.div
           variants={containerVariants}

@@ -98,9 +98,7 @@ function ServiceSingle() {
           <DriveValueSection />
           <ServiceSingleDetails service={service} />
 
-          <div className="box-white">
             <OptimizeInvestmentsSection />
-          </div>
         </>
       )}
 

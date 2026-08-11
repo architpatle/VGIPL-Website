@@ -9,7 +9,7 @@
 
 .section-hero-premium {
   position: relative;
-  background: #ffffff;
+  /* background: #ffffff; */
   padding: 120px 0;
   z-index: 10;
   overflow: hidden;

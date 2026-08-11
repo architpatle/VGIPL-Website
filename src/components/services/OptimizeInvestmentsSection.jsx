@@ -52,10 +52,10 @@ const OptimizeInvestmentsSection = () => {
 
   return (
     <section className="optimize-investments-section">
-      <div className="oi-bg-elements">
+      {/* <div className="oi-bg-elements">
         <div className="oi-gradient-mesh"></div>
         <div className="oi-dotted-pattern"></div>
-      </div>
+      </div> */}
 
       <div className="container position-relative z-2">
         <motion.div 

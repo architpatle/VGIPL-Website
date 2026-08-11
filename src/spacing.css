@@ -1931,7 +1931,7 @@
 } */
 
 .flat-spacing .features-item.style-2 .icon {
-  margin-bottom: 14px !important;
+  margin-bottom: 0px !important;
 }
 
 /* Core Values Section - Desktop Icon Box Styling */
@@ -1945,8 +1945,8 @@
 }
 
 .flat-spacing .features-item.style-2 .icon svg {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Core Values Icons - Orange Color Override */

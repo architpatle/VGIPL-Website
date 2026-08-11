@@ -2,8 +2,8 @@
 .section-hero-premium {
   position: relative;
   overflow: hidden;
-  background-color: #ffffff;
-  min-height: 100vh;
+  /* background-color: #ffffff; */
+  /* min-height: 100vh; */
   padding: 9rem 4rem 5rem;
 }
 

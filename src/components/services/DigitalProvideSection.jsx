@@ -39,7 +39,7 @@ const DigitalProvideSection = () => {
     <section className="ds-provide-section" id="services">
       <div className="container">
         <motion.div
-          className="ds-provide-wrapper"
+          className="ds-provide-wrapper style-blue"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

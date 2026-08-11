@@ -15,14 +15,14 @@ const DigitalSolutionsHero = () => {
   return (
     <section className="ds-hero-section">
       {/* Background Elements */}
-      <div className="ds-hero-bg-mesh"></div>
+      {/* <div className="ds-hero-bg-mesh"></div>
       <div className="ds-hero-grid"></div>
       <div className="ds-hero-orb ds-hero-orb-1"></div>
       <div className="ds-hero-orb ds-hero-orb-2"></div>
-      <div className="ds-hero-orb ds-hero-orb-3"></div>
+      <div className="ds-hero-orb ds-hero-orb-3"></div> */}
 
       {/* Floating Particles */}
-      <div className="ds-hero-particles">
+      {/* <div className="ds-hero-particles">
         {particles.map(p => (
           <div
             key={p.id}
@@ -36,29 +36,29 @@ const DigitalSolutionsHero = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
-      <div className="container position-relative z-2">
+      <div className="container position-relative z-2 text-center">
         <div className="row align-items-center">
-          <div className="col-lg-7 ds-hero-content">
+          <div className="col-lg-12 ds-hero-content">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="ds-hero-badge">
+              <div className="ds-hero-badge mx-auto">
                 <Megaphone size={16} /> Digital Marketing Solutions
               </div>
 
-              <h1 className="ds-hero-title">
+              <h1 className="ds-hero-title ">
                 Get the <span className="ds-text-gradient">Digital Marketing</span> Solution You Need
               </h1>
 
-              <p className="ds-hero-desc">
+              <p className="ds-hero-desc mx-auto">
                 Get the digital marketing solution and Online marketing Services you need. We offer online solutions for all your digital channels including Social Media, SEO and More.
               </p>
 
-              <div className="ds-hero-actions">
+              <div className="ds-hero-actions mx-auto">
                 <a href="#get-in-touch" className="ds-btn-primary">
                   Get In Touch <ArrowRight size={18} />
                 </a>
@@ -99,7 +99,7 @@ const DigitalSolutionsHero = () => {
             </motion.div>
           </div>
 
-          <div className="col-lg-5">
+          {/* <div className="col-lg-5">
             <motion.div
               className="ds-hero-visual-wrapper"
               initial={{ opacity: 0, scale: 0.85 }}
@@ -180,15 +180,15 @@ const DigitalSolutionsHero = () => {
                 </motion.div>
               </div>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="ds-scroll-indicator">
+      {/* <div className="ds-scroll-indicator">
         <div className="ds-scroll-line"></div>
         <span className="ds-scroll-text">Scroll</span>
-      </div>
+      </div> */}
     </section>
   );
 };

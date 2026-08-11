@@ -6,10 +6,10 @@ import './MobileComputingHero.css';
 const MobileComputingHero = () => {
   return (
     <section className="mc-hero-section">
-      <div className="mc-hero-bg">
+      {/* <div className="mc-hero-bg">
         <div className="mc-circle mc-circle-1"></div>
         <div className="mc-circle mc-circle-2"></div>
-      </div>
+      </div> */}
       
       <div className="container position-relative z-2">
         <div className="row align-items-center min-vh-75">
