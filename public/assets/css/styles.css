@@ -8024,9 +8024,9 @@ button.animate-btn::after,
   }
 }
 
-.section-services-single {
+/* .section-services-single {
   margin-top: -100px;
-}
+} */
 
 .section-services-single .heading {
   font-size: 48px;
@@ -8062,9 +8062,9 @@ button.animate-btn::after,
 }
 
 @media (min-width: 768px) {
-  .section-services-single {
+  /* .section-services-single {
     margin-top: -371px;
-  }
+  } */
 
   .section-services-single .bot-image {
     margin-left: -11px;

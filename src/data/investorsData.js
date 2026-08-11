@@ -72,7 +72,7 @@ export const INVESTORS_DATA = [
   {
     slug: 'preferential-allotment-warrants',
     title: 'Preferential Allotment of Warrants',
-    icon: 'box',
+    icon: 'clipboard-check-solid',
     logo: imgPreferentialAllotmentofWarrants,
     desc: 'Information on the preferential allotment of warrants and related disclosures.',
     gridItems: []

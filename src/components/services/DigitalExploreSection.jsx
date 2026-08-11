@@ -38,7 +38,7 @@ const DigitalExploreSection = () => {
       description:
         'E-mail marketing is effective and the most popular way to reach a large number of targeted audiences. E-mail campaign offers personalized marketing for the customers. An effective email strategy will surely result in adding revenues for your needs at the start of a business. Our designers create designs that clearly explain your marketing objectives and increase the chances of customers clicking on your call to action.',
       image:
-        'https://images.unsplash.com/photo-1563986768609-322da13575f2?q=80&w=2000&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZW1haWx8ZW58MHx8MHx8fDA%3D',
       icon: Mail,
     },
     {

@@ -79,7 +79,7 @@ const DriveValueSection = () => {
             </div>
 
             {/* Custom SVG Graphic */}
-            <div className="position-relative w-100 d-flex flex-column justify-content-center" style={{ flexGrow: 1, minHeight: '300px', transform: 'translateX(-3rem)' }}>
+            {/* <div className="position-relative w-100 d-flex flex-column justify-content-center" style={{ flexGrow: 1, minHeight: '300px', transform: 'translateX(-3rem)' }}>
               <svg viewBox="0 0 500 300" className="w-100 h-100" style={{ filter: 'drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08))', maxHeight: '250px' }} preserveAspectRatio="xMidYMid meet">
                 <defs>
                   <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -96,30 +96,24 @@ const DriveValueSection = () => {
                   </filter>
                 </defs>
 
-                {/* Background glow lines */}
                 <path d="M 0,50 Q 200,50 400,150" fill="none" stroke="url(#glow)" strokeWidth="8" filter="url(#blur)" />
                 <path d="M 0,250 Q 200,250 400,150" fill="none" stroke="url(#glow)" strokeWidth="8" filter="url(#blur)" />
                 <path d="M 0,150 Q 200,150 400,150" fill="none" stroke="url(#glow)" strokeWidth="8" filter="url(#blur)" />
 
-                {/* Animated Lines */}
                 <g stroke="url(#lineGrad1)" fill="none" strokeLinecap="round">
-                  {/* Top curves */}
                   <path d="M -50,20 Q 200,30 400,150" strokeWidth="1.5" className="data-flow-path" />
                   <path d="M -20,60 Q 220,70 400,150" strokeWidth="2" className="data-flow-path-fast" />
                   <path d="M -80,90 Q 240,110 400,150" strokeWidth="1" className="data-flow-path-slow" />
 
-                  {/* Middle curves */}
                   <path d="M -100,130 Q 150,140 400,150" strokeWidth="1.5" className="data-flow-path" />
                   <path d="M -40,150 Q 200,150 400,150" strokeWidth="2.5" className="data-flow-path-fast" />
                   <path d="M -90,170 Q 180,160 400,150" strokeWidth="1" className="data-flow-path-slow" />
 
-                  {/* Bottom curves */}
                   <path d="M -30,200 Q 210,190 400,150" strokeWidth="1.5" className="data-flow-path" />
                   <path d="M -60,240 Q 230,230 400,150" strokeWidth="2" className="data-flow-path-fast" />
                   <path d="M -10,280 Q 200,270 400,150" strokeWidth="1" className="data-flow-path-slow" />
                 </g>
 
-                {/* Particles scattered */}
                 <g fill="#475569" opacity="0.6">
                   <circle cx="50" cy="80" r="2" />
                   <circle cx="120" cy="40" r="3" />
@@ -133,7 +127,7 @@ const DriveValueSection = () => {
                 </g>
 
               </svg>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Column: Glassmorphism Card and Icons */}

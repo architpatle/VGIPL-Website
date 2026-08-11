@@ -48,7 +48,7 @@ function IPO() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 reveal-up active">
-              <div className="mb-24 d-inline-flex align-items-center gap-10 p-12" style={{ background: '#fff', borderRadius: '100px', border: '1px solid #fee2e2' }}>
+              <div className="mb-24 d-inline-flex align-items-center gap-10 px-4 py-2r" style={{ background: '#fff', borderRadius: '100px', border: '1px solid #fee2e2' }}>
                 <div style={{ width: '10px', height: '10px', background: '#ff2d15', borderRadius: '50%' }}></div>
                 <span style={{ fontSize: '12px', fontWeight: '800', color: '#ff2d15', textTransform: 'uppercase', letterSpacing: '1px' }}>
                   Investor Relations

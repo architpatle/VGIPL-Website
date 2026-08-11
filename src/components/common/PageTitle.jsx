@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import homeBgImg from '../../assets/home/hero-bg-img.jpg'
 
 function PageTitle({ title, breadcrumbs, bgImage }) {
   const headerStyle = bgImage ? { backgroundImage: `url(${bgImage})` } : {};
   return (
-    <div className="section-page-title" style={headerStyle}>
-      <div className="container text-center">
-        <h1 className="page-title fw-semibold effectFade fadeZoom" style={{ color: '#ffffff' }}>{title}</h1>
-        <div className="breadcrumbs effectFade fadeUp" style={{ color: '#ffffff', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}>
+    <div className="section-hero" >
+      <div className="hero-image" style={{ backgroundImage: `url("${homeBgImg}")` }}>
+            </div>
+      <div className="container">
+        <div className="content-wrap text-center">
+                        <div className="title text-display-2 effectFade fadeRotateX">
+
+        <h1 className="title1 fw-semibold text-gradient-1 py-2" >{title}</h1>
+        </div>
+        <div className="title1 fw-semibold text-gradient-1 effectFade fadeUp" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}>
           {breadcrumbs.map((crumb, index) => (
             <React.Fragment key={index}>
               {crumb.path ? (
@@ -20,6 +27,8 @@ function PageTitle({ title, breadcrumbs, bgImage }) {
           ))}
         </div>
       </div>
+      </div>
+
     </div>
   );
 }

@@ -70,7 +70,7 @@ function HeroGradient() {
                       {words[currentWord]}
                     </span>
                   </span>
-                  </div>
+                </div>
 
                 <span className="fw-semibold text-gradient-1">
                   &nbsp;Partner

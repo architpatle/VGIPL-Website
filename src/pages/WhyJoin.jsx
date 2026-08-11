@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import careersBg from '../assets/careers-bg-img/Careers@2x.png';
+import careersBg from '../assets/home/hero-bg-img.jpg';
 
 const WhyJoin = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const WhyJoin = () => {
 
   return (
     <>
-      <section style={{ 
+      {/* <section style={{ 
         paddingTop: '160px', 
         paddingBottom: '100px', 
         backgroundImage: `url(${careersBg})`,
@@ -25,9 +25,26 @@ const WhyJoin = () => {
             Join a fast-growing, innovative tech leader dedicated to empowering businesses with human-centered AI and next-generation core banking solutions.
           </p>
         </div>
+      </section> */}
+
+      <section className='section-hero'>
+        <div className="hero-image" style={{ backgroundImage: `url("${careersBg}")` }}>
+        </div>
+        <div className="container">
+          <div className="content-wrap text-center">
+            <div className="title text-display-2 effectFade fadeRotateX">
+              <h1 className='title1 fw-semibold text-gradient-1'>Why Join Virtual Galaxy?</h1>
+              
+            </div>
+            <p className='text effectFade fadeUp' >
+                Join a fast-growing, innovative tech leader dedicated to empowering businesses with human-centered AI and next-generation core banking solutions.
+              </p>
+          </div>
+        </div>
+
       </section>
 
-      <section style={{ padding: '100px 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '100px 0'}}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
@@ -38,7 +55,7 @@ const WhyJoin = () => {
               <p style={{ fontSize: '1.1rem', color: '#555', marginBottom: '30px', lineHeight: '1.6' }}>
                 We empower our teams with cutting-edge tools, comprehensive mentorship, and an inclusive culture where every voice is heard. Whether you're developing advanced AI or transforming financial workflows, you'll find the support you need to innovate and succeed.
               </p>
-              
+
               <div style={{ display: 'flex', gap: '15px', marginTop: '20px' }}>
                 <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
                   <i className="icon icon-linkedin-in"></i>
@@ -48,7 +65,7 @@ const WhyJoin = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="col-lg-6">
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" alt="Team collaborating" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '16px', gridRow: 'span 2' }} />
@@ -59,7 +76,7 @@ const WhyJoin = () => {
           </div>
         </div>
       </section>
-      
+
       <section style={{ padding: '80px 0', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '40px', color: '#1a1a1a' }}>Ready to shape your path?</h2>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import careersBg from '../assets/careers-bg-img/Careers@2x.png';
+import careersBg from '../assets/home/hero-bg-img.jpg';
 
 const CareerPath = () => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const CareerPath = () => {
 
   return (
     <>
-      <section style={{ 
+      {/* <section style={{ 
         paddingTop: '160px', 
         paddingBottom: '100px', 
         backgroundImage: `url(${careersBg})`,
@@ -34,7 +34,26 @@ const CareerPath = () => {
             Explore open opportunities and start your journey with Virtual Galaxy. We offer competitive benefits and a clear path for professional growth.
           </p>
         </div>
-      </section>
+      </section> */}
+
+       <section className='section-hero'>
+                    <div className="hero-image" style={{ backgroundImage: `url("${careersBg}")` }}>
+                    </div>
+                    <div className="container">
+                      <div className="content-wrap text-center">
+                        <div className="title text-display-2 effectFade fadeRotateX">
+                          <h1 className='title1 fw-semibold text-gradient-1'>Your Career Path</h1>
+                          
+                        </div>
+                        <p className='text effectFade fadeUp' >
+                           Explore open opportunities and start your journey with Virtual Galaxy. 
+                           <br />
+                           We offer competitive benefits and a clear path for professional growth.
+                          </p>
+                      </div>
+                    </div>
+            
+                  </section>
 
       <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
         <div className="container">

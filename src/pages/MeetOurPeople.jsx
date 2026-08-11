@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import careersBg from '../assets/careers-bg-img/Careers@2x.png';
+import careersBg from '../assets/home/hero-bg-img.jpg';
+
 
 // Import VGIL Group Images
 import team6 from '../assets/group-img-vgil-team/vgiplteam-6.jpg';
@@ -38,7 +39,7 @@ const MeetOurPeople = () => {
 
   return (
     <>
-      <section style={{ 
+      {/* <section style={{ 
         paddingTop: '160px', 
         paddingBottom: '100px', 
         backgroundImage: `url(${careersBg})`,
@@ -54,7 +55,25 @@ const MeetOurPeople = () => {
             We are a diverse, dynamic group of innovators united by a shared passion for technology. Discover the faces behind the magic at Virtual Galaxy.
           </p>
         </div>
-      </section>
+      </section> */}
+
+       <section className='section-hero'>
+              <div className="hero-image" style={{ backgroundImage: `url("${careersBg}")` }}>
+              </div>
+              <div className="container">
+                <div className="content-wrap text-center">
+                  <div className="title text-display-2 effectFade fadeRotateX">
+                    <h1 className='title1 fw-semibold text-gradient-1'>Meet Our People</h1>
+                    
+                  </div>
+                  <p className='text effectFade fadeUp' >
+                      We are a diverse, dynamic group of innovators united by a shared passion for technology.
+                      <br /> Discover the faces behind the magic at Virtual Galaxy.
+                    </p>
+                </div>
+              </div>
+      
+            </section>
 
       <section style={{ padding: '100px 0', backgroundColor: '#ffffff' }}>
         <div className="container">

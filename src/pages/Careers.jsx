@@ -39,7 +39,7 @@ const Careers = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Hero Section */}
       <section className="careers-hero" style={{ 

@@ -4,7 +4,7 @@ import PageTitle from '../components/common/PageTitle';
 import ContactSection from '../components/home/ContactSection';
 import { RESOURCE_DATA } from '../data/resourceData';
 import VideoSection from '../components/common/VideoSection';
-import resourceBgImg from '../assets/Resource-img/Resource@2x.png';
+import resourceBgImg from '../assets/home/hero-bg-img.jpg';
 import InstagramFeed from '../components/common/InstagramFeed';
 
 
@@ -24,7 +24,7 @@ function ResourceSingle() {
 
   return (
     <>
-      <PageTitle title={resourceData.title} breadcrumbs={breadcrumbs} bgImage={resourceBgImg} />
+      <PageTitle title={resourceData.title} breadcrumbs={breadcrumbs} />
       {slug === 'video' ? (
         <VideoSection />
       ) : (
@@ -467,7 +467,7 @@ function ResourceSingle() {
         }
       `}</style>
 
-      <div className="box-white">
+      <div>
         <ContactSection />
       </div>
     </>
