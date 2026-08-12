@@ -119,7 +119,7 @@ function TransactCore() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing section-spacing-responsive" style={{ padding: '100px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -181,7 +181,7 @@ function TransactCore() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className="section-heading-responsive" style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
@@ -309,7 +309,7 @@ function TransactCore() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing section-spacing-responsive" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{  borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -428,7 +428,7 @@ function TransactCore() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className="section-heading-responsive" style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
@@ -528,7 +528,7 @@ function TransactCore() {
       </section>
 
       {/* 3. Designed For Section */}
-      <section id="designed-for" className="section-spacing section-spacing-responsive" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="designed-for" className="section-spacing-lg" style={{ backgroundColor: '#ffffff', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .designed-grid {
@@ -743,7 +743,7 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -845,7 +845,7 @@ function TransactCore() {
       </section>
 
       {/* 4. Core Features Section */}
-      <section id="features" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="features" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .features-grid {
@@ -955,8 +955,8 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Core Features
             </h2>
             <div style={{ height: '3px', width: '60px', backgroundColor: '#ff2b2b', margin: '0 auto', borderRadius: '10px' }}></div>
@@ -1021,7 +1021,7 @@ function TransactCore() {
       </section>
 
       {/* 5. Why Choose Transact Core 360 Section */}
-      <section id="why-choose" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1235,7 +1235,7 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Small premium top label with divider lines */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
@@ -1244,7 +1244,7 @@ function TransactCore() {
             </div>
 
             {/* Main heading */}
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Why <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Transact Core 360</span>?
             </h2>
 
@@ -1321,7 +1321,7 @@ function TransactCore() {
               }
             ].map((card, idx) => (
               <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
-                <div className="why-choose-card">
+                <div className="why-choose-card h-100">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
                     <div className="why-choose-icon-glow"></div>
@@ -1368,7 +1368,7 @@ function TransactCore() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
@@ -1590,7 +1590,7 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -1601,7 +1601,7 @@ function TransactCore() {
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
             </div>
 
-            <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
             </h2>
             
