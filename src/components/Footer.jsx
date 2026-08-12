@@ -88,7 +88,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://www.youtube.com/@virtualgalaxyinfotechpvtlt9340"
+              href="https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg"
               target="_blank"
               rel="noreferrer"
               className="vg-social-link"

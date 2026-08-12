@@ -1686,7 +1686,7 @@
     justify-content: center !important;
     align-items: stretch !important;
     gap: 8px !important;
-    padding: 0 12px !important;
+    /* padding: 0 12px !important; */
   }
 
   /* Equal width for both cards */
@@ -1694,7 +1694,7 @@
     flex: 1 1 0 !important;
     min-width: 0 !important;
     max-width: none !important;
-    padding: 12px !important;
+    padding: 10px !important;
     border-radius: 16px !important;
     text-align: center !important;
   }
@@ -1703,10 +1703,11 @@
   .leader-logo-center-wrap {
     flex: 0 0 72px !important;
     max-width: 72px !important;
-    display: flex !important;
+    /* display: flex !important; */
     align-items: center !important;
     justify-content: center !important;
     order: 2 !important;   /* always in the middle */
+    display: none !important;
   }
 
   /* Ensure Avinash left, Sachin right */
@@ -1732,13 +1733,13 @@
   }
 
   .leader-name {
-    font-size: 11px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     margin-bottom: 4px !important;
   }
 
   .leader-position {
-    font-size: 9px !important;
+    font-size: 12px !important;
     line-height: 1.3 !important;
     margin-bottom: 0 !important;
     min-height: unset !important;

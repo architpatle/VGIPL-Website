@@ -34,6 +34,11 @@ const socials = [
         href: "https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg",
         color: "#FF0000",
     },
+     {
+        icon: FaXTwitter,
+        href: "https://x.com/Virtualvgipl",
+        color: "#1a1d1e",
+    },
    
 ];
 

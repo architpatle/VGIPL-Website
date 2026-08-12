@@ -140,9 +140,7 @@ useEffect(() => {
          
           }
 
-          #leadership{
-              height: 850px;
-            }
+        
 
           /* Mobile View */
           @media (max-width: 768px) {
@@ -154,7 +152,6 @@ useEffect(() => {
             }
             #leadership{
               height: auto;
-              // border : 2px solid black
             }
           }
         `}</style>
