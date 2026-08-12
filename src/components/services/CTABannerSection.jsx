@@ -8,10 +8,10 @@ const CTABannerSection = ({ title, subtitle }) => {
   const displaySubtitle = subtitle || "Schedule a free consultation with our VGST experts and discover how smart technology can streamline your compliance journey.";
 
   return (
-    <section className="cta-banner-wrapper">
+    <section className="cta-banner-wrapper section-spacing-lg">
       <div className="cta-banner-container">
         <motion.div 
-          className="cta-banner-card"
+          className="cta-banner-card section-spacing-lg"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

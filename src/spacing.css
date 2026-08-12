@@ -472,7 +472,7 @@
 
   /* 10. Contact Form Card */
   .section-contact .col-lg-6>div {
-    padding: 20px !important;
+    /* padding: 20px !important; */
     border-radius: 20px !important;
   }
 

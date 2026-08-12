@@ -125,7 +125,7 @@ function Contact() {
 
       <div className="section-faqs flat-spacing">
         <div className="container">
-          <div className="heading-section center mb-64">
+          <div className="heading-section center ">
             <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
             <div className="heading-title text-gradient-3 effectFade fadeRotateX">
               Frequently Asked <br />Questions

@@ -135,8 +135,8 @@ const handleFileChange = (e) => {
   onChange={handleFileChange}
   style={{ display: 'none' }}
 />
-
-                <button type="submit" className="tf-btn w-100">Submit Message</button>
+<div className=" d-flex">
+                <button type="submit" className="tf-btn w-100 ">Submit Message</button></div>
               </form>
             </div>
 

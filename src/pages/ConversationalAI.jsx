@@ -335,7 +335,7 @@ function ConversationalAI() {
 
   // Find the product by slug
   const product = PRODUCTS_DATA.find((p) => p.slug === slug);
-  
+
   if (!product) {
     return <NotFound />;
   }
@@ -395,9 +395,9 @@ function ConversationalAI() {
 
       {/* Fintech Interactive Modules Section */}
       {currentModules.length > 0 && (
-      <div id="next-section" className="modules-fintech-section section-spacing" style={{ position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
-        <style>
-          {`
+        <div id="next-section" className="modules-fintech-section section-spacing" style={{ position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
+          <style>
+            {`
             .fintech-modules-wrapper {
               padding-top: 60px;
               padding-bottom: 20px;
@@ -657,113 +657,113 @@ function ConversationalAI() {
               to { opacity: 0.5; transform: scale(1); }
             }
           `}
-        </style>
-        <div className="container fintech-modules-wrapper">
-          <div className="row mb-5 justify-content-center text-center effectFade fadeUp">
-            <div className="col-12">
-              <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#1a1a1a', marginBottom: '10px' }}>{mainHeading}</h2>
-              <p style={{ color: '#666', fontSize: '1.15rem', maxWidth: '800px', margin: '0 auto' }}>{mainSubheading}</p>
-            </div>
-          </div>
-          <div className="row g-5">
-            {/* LEFT SIDE */}
-            <div className="col-lg-6">
-              <div className="showcase-container effectFade fadeUp" style={{ position: 'sticky', top: '120px' }}>
-                {/* Premium Image Card */}
-                <div className="premium-image-card">
-                  <img 
-                    key={activeModule}
-                    src={currentModules[activeModule]?.image} 
-                    alt={currentModules[activeModule]?.title} 
-                    className="premium-image-bg" 
-                    style={{ animation: 'fadeIn 0.6s ease-out forwards' }}
-                  />
-                  <div className="premium-glow-particles"></div>
-                  
-                  <div className="animated-icon-badge">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Enterprise Ready
-                  </div>
-
-                  <div className="premium-image-overlay">
-                    <h3 style={{ color: '#fff', fontSize: '2.2rem', fontWeight: 'bold', marginBottom: '10px' }}>{currentModules[activeModule]?.title}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', margin: 0 }}>
-                      {currentModules[activeModule]?.subtitle.substring(0, 75)}{currentModules[activeModule]?.subtitle.length > 75 ? '...' : ''}
-                    </p>
-                    <div className="slider-indicators">
-                      {currentModules.map((_, idx) => (
-                        <div 
-                          key={idx} 
-                          className={`slider-dot ${activeModule === idx ? 'active' : ''}`}
-                          onClick={() => setActiveModule(idx)}
-                          style={{ cursor: 'pointer' }}
-                        ></div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Dynamic Content Block to fill white space */}
-                <div className="dynamic-content-card mt-4 p-4" style={{ backgroundColor: '#ffffff', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
-                  <h3 key={`title-${activeModule}`} style={{ fontSize: '1.6rem', fontWeight: 'bold', color: '#1a1a1a', marginBottom: '12px', animation: 'fadeIn 0.5s ease-out forwards' }}>
-                    {currentModules[activeModule]?.title}
-                  </h3>
-                  <p key={`desc-${activeModule}`} style={{ color: '#666', fontSize: '1.05rem', lineHeight: '1.6', margin: 0, animation: 'fadeIn 0.5s ease-out forwards' }}>
-                    {currentModules[activeModule]?.subtitle}
-                  </p>
-                </div>
+          </style>
+          <div className="container fintech-modules-wrapper">
+            <div className="row mb-5 justify-content-center text-center effectFade fadeUp">
+              <div className="col-12">
+                <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#1a1a1a', marginBottom: '10px' }}>{mainHeading}</h2>
+                <p style={{ color: '#666', fontSize: '1.15rem', maxWidth: '800px', margin: '0 auto' }}>{mainSubheading}</p>
               </div>
             </div>
-            
-            {/* RIGHT SIDE */}
-            <div className="col-lg-6">
-              <div className="timeline-modules-container effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
-                <div className="timeline-line"></div>
-                
-                {currentModules.map((mod, idx) => (
-                  <div key={idx} className={`timeline-card-wrap ${activeModule === idx ? 'active' : ''}`}>
-                    <div className="timeline-dot"></div>
-                    <div 
-                      className={`timeline-card ${activeModule === idx ? 'active' : ''}`}
-                      onClick={() => setActiveModule(idx)}
-                    >
-                      <div className="timeline-icon-circle">
-                        {mod.icon}
-                      </div>
-                      <div className="timeline-content">
-                        <h4 className="timeline-title">{mod.title}</h4>
-                        <div 
-                          className="timeline-subtitle-wrap"
-                          style={{
-                            maxHeight: activeModule === idx ? '250px' : '0px',
-                            opacity: activeModule === idx ? 1 : 0,
-                            marginTop: activeModule === idx ? '12px' : '0'
-                          }}
-                        >
-                          <p className="timeline-subtitle">{mod.subtitle}</p>
-                        </div>
-                      </div>
-                      <div className="timeline-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <div className="row g-5">
+              {/* LEFT SIDE */}
+              <div className="col-lg-6">
+                <div className="showcase-container effectFade fadeUp" style={{ position: 'sticky', top: '120px' }}>
+                  {/* Premium Image Card */}
+                  <div className="premium-image-card">
+                    <img
+                      key={activeModule}
+                      src={currentModules[activeModule]?.image}
+                      alt={currentModules[activeModule]?.title}
+                      className="premium-image-bg"
+                      style={{ animation: 'fadeIn 0.6s ease-out forwards' }}
+                    />
+                    <div className="premium-glow-particles"></div>
+
+                    <div className="animated-icon-badge">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                      Enterprise Ready
+                    </div>
+
+                    <div className="premium-image-overlay">
+                      <h3 style={{ color: '#fff', fontSize: '2.2rem', fontWeight: 'bold', marginBottom: '10px' }}>{currentModules[activeModule]?.title}</h3>
+                      <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', margin: 0 }}>
+                        {currentModules[activeModule]?.subtitle.substring(0, 75)}{currentModules[activeModule]?.subtitle.length > 75 ? '...' : ''}
+                      </p>
+                      <div className="slider-indicators">
+                        {currentModules.map((_, idx) => (
+                          <div
+                            key={idx}
+                            className={`slider-dot ${activeModule === idx ? 'active' : ''}`}
+                            onClick={() => setActiveModule(idx)}
+                            style={{ cursor: 'pointer' }}
+                          ></div>
+                        ))}
                       </div>
                     </div>
                   </div>
-                ))}
+
+                  {/* Dynamic Content Block to fill white space */}
+                  <div className="dynamic-content-card mt-4 p-4" style={{ backgroundColor: '#ffffff', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+                    <h3 key={`title-${activeModule}`} style={{ fontSize: '1.6rem', fontWeight: 'bold', color: '#1a1a1a', marginBottom: '12px', animation: 'fadeIn 0.5s ease-out forwards' }}>
+                      {currentModules[activeModule]?.title}
+                    </h3>
+                    <p key={`desc-${activeModule}`} style={{ color: '#666', fontSize: '1.05rem', lineHeight: '1.6', margin: 0, animation: 'fadeIn 0.5s ease-out forwards' }}>
+                      {currentModules[activeModule]?.subtitle}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT SIDE */}
+              <div className="col-lg-6">
+                <div className="timeline-modules-container effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+                  <div className="timeline-line"></div>
+
+                  {currentModules.map((mod, idx) => (
+                    <div key={idx} className={`timeline-card-wrap ${activeModule === idx ? 'active' : ''}`}>
+                      <div className="timeline-dot"></div>
+                      <div
+                        className={`timeline-card ${activeModule === idx ? 'active' : ''}`}
+                        onClick={() => setActiveModule(idx)}
+                      >
+                        <div className="timeline-icon-circle">
+                          {mod.icon}
+                        </div>
+                        <div className="timeline-content">
+                          <h4 className="timeline-title">{mod.title}</h4>
+                          <div
+                            className="timeline-subtitle-wrap"
+                            style={{
+                              maxHeight: activeModule === idx ? '250px' : '0px',
+                              opacity: activeModule === idx ? 1 : 0,
+                              marginTop: activeModule === idx ? '12px' : '0'
+                            }}
+                          >
+                            <p className="timeline-subtitle">{mod.subtitle}</p>
+                          </div>
+                        </div>
+                        <div className="timeline-arrow">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       )}
 
       {/* Proposed Conversational AI Solution Section */}
-      <div className="conversational-solution-wrapper" style={{ padding: '80px 20px 120px', position: 'relative', overflow: 'hidden' }}>
+      <div className="conversational-solution-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left"></div>
         <div className="bg-glow-orb orb-right"></div>
-        
+
         <div className="container conversational-premium-container">
-          
+
           {/* Top Header */}
           <div className="solution-header d-flex align-items-center mb-5 effectFade fadeUp">
             <div className="red-accent-line"></div>
@@ -771,7 +771,7 @@ function ConversationalAI() {
           </div>
 
           <div className="row g-5 align-items-center">
-            
+
             {/* LEFT SIDE - Robot + Mobile Phone Illustration */}
             <div className="col-lg-6">
               <div className="illustration-area effectFade fadeUp">
@@ -782,16 +782,16 @@ function ConversationalAI() {
                   <div className="orbit-line orbit-2"></div>
                   <div className="orbit-line orbit-3"></div>
                 </div>
-                
+
                 {/* Floating dots & particles */}
                 <div className="floating-dot dot-1"></div>
                 <div className="floating-dot dot-2"></div>
                 <div className="floating-dot dot-3"></div>
                 <div className="floating-dot dot-4"></div>
-                
-                <img 
-                  src={multiProcesserImg} 
-                  alt="Conversational AI Solution Illustration" 
+
+                <img
+                  src={multiProcesserImg}
+                  alt="Conversational AI Solution Illustration"
                   className="solution-illustration"
                 />
               </div>
@@ -800,7 +800,7 @@ function ConversationalAI() {
             {/* RIGHT SIDE - Content & Feature Cards */}
             <div className="col-lg-6">
               <div className="solution-content effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
-                
+
                 <h3 className="platform-heading">
                   <span className="text-red-gradient">Multi-Channel</span>
                   <br />
@@ -815,16 +815,16 @@ function ConversationalAI() {
 
                 {/* Feature Cards Stack */}
                 <div className="feature-cards-stack">
-                  
+
                   {/* Card 1 */}
                   <div className="premium-glass-card">
                     <div className="icon-box-wrapper">
                       <div className="icon-box-glow"></div>
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="card-icon">
-                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                          <path d="M14.05 2A9 9 0 0 1 22 9.94" strokeWidth="2" strokeDasharray="2,2"/>
-                          <path d="M14.05 5.5A5.5 5.5 0 0 1 18.5 9.95" strokeWidth="2"/>
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                          <path d="M14.05 2A9 9 0 0 1 22 9.94" strokeWidth="2" strokeDasharray="2,2" />
+                          <path d="M14.05 5.5A5.5 5.5 0 0 1 18.5 9.95" strokeWidth="2" />
                         </svg>
                       </div>
                     </div>
@@ -841,10 +841,10 @@ function ConversationalAI() {
                       <div className="icon-box-glow"></div>
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="card-icon">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                          <circle cx="9" cy="7" r="4"/>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                         </svg>
                       </div>
                     </div>
@@ -900,7 +900,7 @@ function ConversationalAI() {
               // -webkit-backdrop-filter: blur(24px);
               // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
-              padding: 50px 35px;
+              // padding: 50px 35px;
               // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
                           // inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
@@ -1072,7 +1072,7 @@ function ConversationalAI() {
               align-items: center;
               position: relative;
               width: 100%;
-              height: 20px;
+              // height: 20px;
               margin-bottom: 40px;
             }
 
@@ -1239,7 +1239,7 @@ function ConversationalAI() {
             /* Responsive Adjustments */
             @media (max-width: 991px) {
               .conversational-premium-container {
-                padding: 40px 25px;
+                // padding: 40px 25px;
                 border-radius: 24px;
               }
 
@@ -1262,7 +1262,8 @@ function ConversationalAI() {
 
             @media (max-width: 575px) {
               .conversational-premium-container {
-                padding: 30px 15px;
+                // padding: 30px 15px;
+                
                 border-radius: 20px;
               }
 
@@ -1286,18 +1287,18 @@ function ConversationalAI() {
       </div>
 
       {/* NLP Capabilities Section */}
-      <div className="nlp-capabilities-wrapper" style={{ padding: '0px 20px 120px',position: 'relative', overflow: 'hidden' }}>
+      <div className="nlp-capabilities-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-nlp"></div>
         <div className="bg-glow-orb orb-right-nlp"></div>
 
         <div className="container nlp-premium-container">
           <div className="row g-5 align-items-center">
-            
+
             {/* LEFT SIDE - Content and List Items */}
             <div className="col-lg-6">
               <div className="nlp-content effectFade fadeUp">
-                
+
                 <h3 className="nlp-heading">
                   Advanced <span className="text-red-gradient">Natural Language Processing</span> (NLP) Capabilities
                 </h3>
@@ -1314,15 +1315,15 @@ function ConversationalAI() {
 
                 {/* List items stack */}
                 <div className="nlp-list-stack">
-                  
+
                   {/* Item 1 */}
                   <div className="nlp-list-item d-flex align-items-start gap-4">
                     <div className="nlp-icon-outer flex-shrink-0">
                       <div className="nlp-icon-inner">
                         {/* Translation Icon */}
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="nlp-svg-icon">
-                          <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z"/>
-                          <path d="M12 8l-2.5 5h5z" strokeWidth="2"/>
+                          <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z" />
+                          <path d="M12 8l-2.5 5h5z" strokeWidth="2" />
                         </svg>
                       </div>
                     </div>
@@ -1358,10 +1359,10 @@ function ConversationalAI() {
                       <div className="nlp-icon-inner">
                         {/* User Group Icon */}
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="nlp-svg-icon">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                          <circle cx="9" cy="7" r="4"/>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                         </svg>
                       </div>
                     </div>
@@ -1382,10 +1383,10 @@ function ConversationalAI() {
             <div className="col-lg-6">
               <div className="nlp-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
                 <div className="nlp-image-bg-glow"></div>
-                
-                <img 
-                  src={neuralLanImg} 
-                  alt="Advanced NLP Capabilities Illustration" 
+
+                <img
+                  src={neuralLanImg}
+                  alt="Advanced NLP Capabilities Illustration"
                   className="nlp-illustration"
                 />
 
@@ -1393,8 +1394,8 @@ function ConversationalAI() {
                 <div className="supporting-languages-badge">
                   <div className="globe-icon-box">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="globe-icon">
-                      <circle cx="12" cy="12" r="10"/>
-                      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                     </svg>
                   </div>
                   <span className="badge-label-text">Supporting <strong className="text-red">12+</strong> Indian Languages</span>
@@ -1420,7 +1421,7 @@ function ConversationalAI() {
               // -webkit-backdrop-filter: blur(24px);
               // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
-              padding: 50px 35px;
+              // padding: 50px 35px;
               // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
               //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
@@ -1698,22 +1699,22 @@ function ConversationalAI() {
       </div>
 
       {/* Real-Time Integration Section */}
-      <div className="realtime-integration-wrapper" style={{ padding: '0px 20px 120px', position: 'relative', overflow: 'hidden' }}>
+      <div className="realtime-integration-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-rti"></div>
         <div className="bg-glow-orb orb-right-rti"></div>
 
         <div className="container rti-premium-container">
           <div className="row g-5 align-items-center">
-            
+
             {/* LEFT SIDE - Robot Computer Illustration */}
             <div className="col-lg-6">
               <div className="rti-image-area effectFade fadeUp">
                 <div className="rti-image-bg-glow"></div>
-                
-                <img 
-                  src={realtimeIntegrationImg} 
-                  alt="Real-Time Integration Illustration" 
+
+                <img
+                  src={realtimeIntegrationImg}
+                  alt="Real-Time Integration Illustration"
                   className="rti-illustration"
                 />
               </div>
@@ -1722,7 +1723,7 @@ function ConversationalAI() {
             {/* RIGHT SIDE - Content and Feature Cards */}
             <div className="col-lg-6">
               <div className="rti-content effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
-                
+
                 <h3 className="rti-heading">
                   <span className="text-red-gradient">Real-Time Integration</span> with existing Billing Systems and Payment Gateways
                 </h3>
@@ -1739,14 +1740,14 @@ function ConversationalAI() {
 
                 {/* Vertical feature cards stack */}
                 <div className="rti-cards-stack">
-                  
+
                   {/* Card 1 */}
                   <div className="rti-premium-card d-flex align-items-center gap-4">
                     <div className="rti-icon-box flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rti-svg-icon">
-                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
                       </svg>
                     </div>
                     <div className="rti-card-text-area">
@@ -1763,8 +1764,8 @@ function ConversationalAI() {
                   <div className="rti-premium-card d-flex align-items-center gap-4">
                     <div className="rti-icon-box flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rti-svg-icon">
-                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                       </svg>
                     </div>
                     <div className="rti-card-text-area">
@@ -1781,8 +1782,8 @@ function ConversationalAI() {
                   <div className="rti-premium-card d-flex align-items-center gap-4">
                     <div className="rti-icon-box flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rti-svg-icon">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        <path d="M9 11l2 2 4-4" strokeWidth="2.5"/>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 11l2 2 4-4" strokeWidth="2.5" />
                       </svg>
                     </div>
                     <div className="rti-card-text-area">
@@ -1818,7 +1819,7 @@ function ConversationalAI() {
               // -webkit-backdrop-filter: blur(24px);
               // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
-              padding: 50px 35px;
+              // padding: 50px 35px;
               // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
               //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
@@ -2006,7 +2007,7 @@ function ConversationalAI() {
             /* Responsive Adjustments */
             @media (max-width: 991px) {
               .rti-premium-container {
-                padding: 40px 25px;
+                // padding: 40px 25px;
                 border-radius: 24px;
               }
 
@@ -2017,7 +2018,7 @@ function ConversationalAI() {
 
             @media (max-width: 575px) {
               .rti-premium-container {
-                padding: 30px 15px;
+                // padding: 30px 15px;
                 border-radius: 20px;
               }
 
@@ -2045,18 +2046,18 @@ function ConversationalAI() {
       </div>
 
       {/* Comprehensive Analytics Dashboard Section */}
-      <div className="comprehensive-analytics-wrapper" style={{ padding: '0px 20px 120px',  position: 'relative', overflow: 'hidden' }}>
+      <div className="comprehensive-analytics-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-cad"></div>
         <div className="bg-glow-orb orb-right-cad"></div>
 
         <div className="container cad-premium-container">
           <div className="row g-5 align-items-center">
-            
+
             {/* LEFT SIDE - Content and Sub-Cards */}
             <div className="col-lg-6">
               <div className="cad-content effectFade fadeUp">
-                
+
                 <h3 className="cad-heading">
                   Comprehensive <span className="text-red-gradient">Analytics Dashboard</span>
                 </h3>
@@ -2073,7 +2074,7 @@ function ConversationalAI() {
 
                 {/* Bullets & sub-cards */}
                 <div className="cad-bullets-stack">
-                  
+
                   {/* Bullet 1 */}
                   <div className="cad-bullet-item">
                     <div className="cad-bullet-header d-flex align-items-start gap-2">
@@ -2085,7 +2086,7 @@ function ConversationalAI() {
 
                     {/* Sub-cards stack */}
                     <div className="cad-subcards-list">
-                      
+
                       {/* Sub-card 1 */}
                       <div className="cad-sub-card d-flex align-items-center gap-3">
                         <div className="cad-sub-icon-box flex-shrink-0">
@@ -2104,10 +2105,10 @@ function ConversationalAI() {
                         <div className="cad-sub-icon-box flex-shrink-0">
                           {/* Engagement metrics */}
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-sub-svg-icon">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                           </svg>
                         </div>
                         <p className="cad-sub-card-text">Engagement metrics (call success, drop off, refusal rates)</p>
@@ -2118,8 +2119,8 @@ function ConversationalAI() {
                         <div className="cad-sub-icon-box flex-shrink-0">
                           {/* Real-time escalation data */}
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-sub-svg-icon">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
                           </svg>
                         </div>
                         <p className="cad-sub-card-text">Real-time escalation data (e.g., citizen requesting call-back, dispute resolution)</p>
@@ -2142,13 +2143,13 @@ function ConversationalAI() {
 
                 {/* Bottom row: 4 mini cards */}
                 <div className="cad-bottom-mini-grid">
-                  
+
                   {/* Mini Card 1 */}
                   <div className="cad-mini-card">
                     <div className="cad-mini-icon-outer">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-mini-svg-icon">
-                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                        <polyline points="16 7 22 7 22 13"/>
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                        <polyline points="16 7 22 7 22 13" />
                       </svg>
                     </div>
                     <span className="cad-mini-title">Real-Time Insights</span>
@@ -2158,8 +2159,8 @@ function ConversationalAI() {
                   <div className="cad-mini-card">
                     <div className="cad-mini-icon-outer">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-mini-svg-icon">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 2v10l8 4"/>
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2v10l8 4" />
                       </svg>
                     </div>
                     <span className="cad-mini-title">Advanced Reporting</span>
@@ -2169,9 +2170,9 @@ function ConversationalAI() {
                   <div className="cad-mini-card">
                     <div className="cad-mini-icon-outer">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-mini-svg-icon">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="6"/>
-                        <circle cx="12" cy="12" r="2"/>
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="6" />
+                        <circle cx="12" cy="12" r="2" />
                       </svg>
                     </div>
                     <span className="cad-mini-title">Smarter Decisions</span>
@@ -2181,8 +2182,8 @@ function ConversationalAI() {
                   <div className="cad-mini-card">
                     <div className="cad-mini-icon-outer">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="cad-mini-svg-icon">
-                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-                        <polyline points="17 6 23 6 23 12"/>
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
                       </svg>
                     </div>
                     <span className="cad-mini-title">Better Outcomes</span>
@@ -2197,10 +2198,10 @@ function ConversationalAI() {
             <div className="col-lg-6">
               <div className="cad-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
                 <div className="cad-image-bg-glow"></div>
-                
-                <img 
-                  src={comprehensiveAnalyticsImg} 
-                  alt="Comprehensive Analytics Dashboard Illustration" 
+
+                <img
+                  src={comprehensiveAnalyticsImg}
+                  alt="Comprehensive Analytics Dashboard Illustration"
                   className="cad-illustration"
                 />
               </div>
@@ -2224,7 +2225,7 @@ function ConversationalAI() {
               // -webkit-backdrop-filter: blur(24px);
               // border: 1px solid rgba(255, 255, 255, 0.85);
               border-radius: 32px;
-              padding: 50px 35px;
+              // padding: 50px 35px;
               // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.02), 
               //             inset 0 1px 0 rgba(255, 255, 255, 0.8);
               overflow: hidden;
@@ -2439,7 +2440,7 @@ function ConversationalAI() {
             /* Responsive Adjustments */
             @media (max-width: 991px) {
               .cad-premium-container {
-                padding: 40px 25px;
+                // padding: 40px 25px;
                 border-radius: 24px;
               }
 
@@ -2454,7 +2455,7 @@ function ConversationalAI() {
 
             @media (max-width: 575px) {
               .cad-premium-container {
-                padding: 30px 15px;
+                // padding: 30px 15px;
                 border-radius: 20px;
               }
 
@@ -2480,14 +2481,14 @@ function ConversationalAI() {
       </div>
 
       {/* Solution Overview Section */}
-      <div className="solution-overview-wrapper" style={{ padding: '0px 20px 120px',  position: 'relative', overflow: 'hidden' }}>
+      <div className="solution-overview-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="container so-premium-container">
           <div className="row g-5 align-items-center">
-            
+
             {/* LEFT COLUMN - Title & List Stack */}
             <div className="col-lg-6">
               <div className="so-content effectFade fadeUp">
-                
+
                 <h3 className="so-heading">
                   Solution <span className="so-highlight">Overview</span>
                 </h3>
@@ -2504,12 +2505,12 @@ function ConversationalAI() {
 
                 {/* List items stack */}
                 <div className="so-list-stack">
-                  
+
                   {/* Item 1: Shield */}
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2520,7 +2521,7 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2531,8 +2532,8 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-                        <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2543,7 +2544,7 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2554,10 +2555,10 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        <circle cx="8" cy="10" r="1" fill="currentColor"/>
-                        <circle cx="12" cy="10" r="1" fill="currentColor"/>
-                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        <circle cx="8" cy="10" r="1" fill="currentColor" />
+                        <circle cx="12" cy="10" r="1" fill="currentColor" />
+                        <circle cx="16" cy="10" r="1" fill="currentColor" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2577,8 +2578,8 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z"/>
-                        <path d="M12 8l-2.5 5h5z" strokeWidth="2"/>
+                        <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z" />
+                        <path d="M12 8l-2.5 5h5z" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2589,8 +2590,8 @@ function ConversationalAI() {
                   <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
-                        <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z"/>
-                        <path d="M12 8l-2.5 5h5z" strokeWidth="2"/>
+                        <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z" />
+                        <path d="M12 8l-2.5 5h5z" strokeWidth="2" />
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
@@ -2606,10 +2607,10 @@ function ConversationalAI() {
             <div className="col-lg-6">
               <div className="so-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
                 <div className="so-image-bg-glow"></div>
-                
-                <img 
-                  src={solutionOverviewImg} 
-                  alt="Solution Overview Illustration" 
+
+                <img
+                  src={solutionOverviewImg}
+                  alt="Solution Overview Illustration"
                   className="so-illustration"
                 />
               </div>
@@ -2621,16 +2622,33 @@ function ConversationalAI() {
         <style>
           {`
             /* Solution Overview Section styling */
+            .solution-overview-wrapper{
+          
+            padding-left: 20px;
+            padding-right: 20px;
+
+            }
             .so-premium-container {
               position: relative;
-              background: linear-gradient(135deg, #9a0d0d 0%, #4a0000 100%);
-              border: 1px solid rgba(255, 255, 255, 0.15);
+              // background: linear-gradient(135deg, #9a0d0d 0%, #4a0000 100%);
+              // border: 1px solid rgba(255, 255, 255, 0.15);
               border-radius: 32px;
               padding: 50px 35px;
-              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 
-                          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+              // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 
+              //             inset 0 1px 0 rgba(255, 255, 255, 0.1);
               overflow: hidden;
               transition: all 0.5s ease;
+
+              background:
+    radial-gradient(circle at 12% 20%, rgba(94, 180, 255, .32), transparent 42%),
+    radial-gradient(circle at 40% 55%, rgba(30, 90, 200, .16), transparent 48%),
+    radial-gradient(circle at 88% 15%, rgba(139, 92, 246, .30), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(99, 60, 220, .22), transparent 50%),
+    linear-gradient(140deg, #0E3FB8, #0A2E80 32%, #1A2C6E 58%, #1C1F52 78%, #191A3E 100%);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, .08),
+    inset 0 -6px rgba(0, 0, 0, .30),
+    0 30px 70px rgba(0, 0, 0, .45);
             }
 
             .so-premium-container::before {
@@ -2639,7 +2657,7 @@ function ConversationalAI() {
               top: 0; left: 0; right: 0; bottom: 0;
               border-radius: 32px;
               padding: 1px;
-              background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+              // background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
               -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
               -webkit-mask-composite: xor;
               mask-composite: exclude;
@@ -2654,7 +2672,7 @@ function ConversationalAI() {
               width: 100%;
               height: 100%;
               top: 0; left: 0;
-              box-shadow: inset 0 0 100px rgba(255, 45, 21, 0.3);
+              // box-shadow: inset 0 0 100px rgba(255, 45, 21, 0.3);
               pointer-events: none;
               z-index: -1;
             }
@@ -2814,20 +2832,20 @@ function ConversationalAI() {
       </div>
 
       {/* Conversational AI Use-Cases Section */}
-      <div className="use-cases-wrapper" style={{ padding: '0px 20px 120px', position: 'relative', overflow: 'hidden' }}>
+      <div className="use-cases-wrapper section-spacing-lg" style={{  position: 'relative', overflow: 'hidden', height:'100%' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-uc"></div>
         <div className="bg-glow-orb orb-right-uc"></div>
 
         <div className="container uc-premium-container">
-          
+
           {/* Top Header inside container */}
           <div className="uc-header effectFade fadeUp">
             <span className="red-vertical-bar">|</span>
             <h2 className="uc-main-heading">
               Conversational <span className="text-red-gradient">AI Use-Cases</span>
             </h2>
-            
+
             {/* Divider */}
             <div className="glowing-divider uc-divider">
               <div className="divider-line"></div>
@@ -2840,38 +2858,38 @@ function ConversationalAI() {
           </div>
 
           <div className="row g-5 align-items-center mt-3">
-            
+
             {/* LEFT COLUMN - Illustration */}
             <div className="col-lg-5 col-md-12 text-center">
               <div className="uc-image-area effectFade fadeUp">
                 <div className="uc-image-bg-glow"></div>
-                
-                <img 
-                  src={conversationalAIImg} 
-                  alt="Conversational AI Use-Cases Illustration" 
+
+                <img
+                  src={conversationalAIImg}
+                  alt="Conversational AI Use-Cases Illustration"
                   className="uc-illustration"
                 />
               </div>
             </div>
 
             {/* RIGHT COLUMN - Use Cases Grid */}
-            <div className="col-lg-7 col-md-12">
+            <div className="col-lg-7 col-md-12 mt-0">
               <div className="uc-grid">
-                
+
                 {/* Card 1: Banking & Financial Services */}
                 <div className="uc-card effectFade fadeUp">
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Bank building icon */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <path d="M3 22v-6h18v6M6 16v-6M10 16v-6M14 16v-6M18 16v-6M2 10L12 2l10 8"/>
+                        <path d="M3 22v-6h18v6M6 16v-6M10 16v-6M14 16v-6M18 16v-6M2 10L12 2l10 8" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Banking & Financial Services</h4>
                   </div>
-                  
+
                   {/* Subtle divider inside card */}
-                  <div className="uc-card-divider-wrap">
+                  <div className="uc-card-divider-wrap h-100">
                     <div className="uc-card-divider-line"></div>
                     <div className="uc-card-divider-dots">
                       <span className="c-dot"></span>
@@ -2892,8 +2910,8 @@ function ConversationalAI() {
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Car icon */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <rect x="1" y="3" width="22" height="13" rx="2" ry="2"/>
-                        <path d="M7 16H3a2 2 0 0 0-2 2v3h2v-3h16v3h2v-3a2 2 0 0 0-2-2h-4M5 8h14M8 12h8"/>
+                        <rect x="1" y="3" width="22" height="13" rx="2" ry="2" />
+                        <path d="M7 16H3a2 2 0 0 0-2 2v3h2v-3h16v3h2v-3a2 2 0 0 0-2-2h-4M5 8h14M8 12h8" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Traffic & Transport</h4>
@@ -2921,9 +2939,9 @@ function ConversationalAI() {
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Mobile phone / wifi icon */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                        <line x1="12" y1="18" x2="12.01" y2="18"/>
-                        <path d="M12 6a3 3 0 0 1 3 3M12 3a6 6 0 0 1 6 6"/>
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                        <path d="M12 6a3 3 0 0 1 3 3M12 3a6 6 0 0 1 6 6" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Telecom & Internet Services</h4>
@@ -2951,7 +2969,7 @@ function ConversationalAI() {
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Shield icon */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Insurance Sector</h4>
@@ -2967,7 +2985,8 @@ function ConversationalAI() {
                   </div>
 
                   <ul className="uc-bullets-list">
-                    <li>Premium payment reminders & processing</li>
+                    <li>Premium payment </li>
+                    <li>reminders & processing</li>
                     <li>Policy renewal payments</li>
                   </ul>
                 </div>
@@ -2978,8 +2997,8 @@ function ConversationalAI() {
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Government / Utility building with flag */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18"/>
-                        <path d="M10 6h4M10 10h4M10 14h4M6 18h12"/>
+                        <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18" />
+                        <path d="M10 6h4M10 10h4M10 14h4M6 18h12" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Utilities & Government Services</h4>
@@ -3006,7 +3025,7 @@ function ConversationalAI() {
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Heartbeat EKG icon */}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="uc-card-svg-icon">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
                     <h4 className="uc-card-title">Healthcare</h4>
@@ -3098,7 +3117,7 @@ function ConversationalAI() {
               display: flex;
               align-items: center;
               gap: 15px;
-              margin-bottom: 35px;
+              // margin-bottom: 35px;
               flex-wrap: wrap;
             }
 
@@ -3302,7 +3321,7 @@ function ConversationalAI() {
 
       {/* Final Call To Action */}
       <div id="contact-section">
-        <CTABannerSection 
+        <CTABannerSection
           title={`Ready to Transform Customer Experience with ${product.title}?`}
           subtitle={`Schedule a free consultation with our Conversational AI experts and discover how smart assistants can streamline customer interactions.`}
         />
@@ -3312,14 +3331,14 @@ function ConversationalAI() {
       {showBrochureModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, backdropFilter: 'blur(4px)' }}>
           <div style={{ background: '#fff', borderRadius: '8px', padding: '40px', width: '100%', maxWidth: '600px', margin: '20px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)', position: 'relative', animation: 'modalFadeIn 0.3s ease-out forwards' }}>
-            
-            <button 
+
+            <button
               onClick={() => setShowBrochureModal(false)}
               style={{ position: 'absolute', top: '15px', right: '15px', background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#888' }}
             >
               &times;
             </button>
-            
+
             <form onSubmit={(e) => { e.preventDefault(); setShowBrochureModal(false); alert('Brochure download started!'); }}>
               <div className="row g-3">
                 <div className="col-md-6">
@@ -3341,10 +3360,10 @@ function ConversationalAI() {
                   <input type="text" placeholder="City" style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', borderRadius: '4px', outline: 'none', color: '#333' }} />
                 </div>
               </div>
-              
+
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '15px', marginTop: '30px' }}>
-                <button type="button" onClick={() => setShowBrochureModal(false)} style={{ padding: '10px 24px', background: '#fff', border: '1px solid #e0e0e0', borderRadius: '4px', color: '#555', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e=>e.currentTarget.style.background='#f0f0f0'} onMouseOut={e=>e.currentTarget.style.background='#fff'}>Cancel</button>
-                <button type="submit" style={{ padding: '10px 24px', background: '#8a8d91', border: 'none', borderRadius: '4px', color: '#fff', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e=>e.currentTarget.style.background='#6c757d'} onMouseOut={e=>e.currentTarget.style.background='#8a8d91'}>Submit</button>
+                <button type="button" onClick={() => setShowBrochureModal(false)} style={{ padding: '10px 24px', background: '#fff', border: '1px solid #e0e0e0', borderRadius: '4px', color: '#555', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e => e.currentTarget.style.background = '#f0f0f0'} onMouseOut={e => e.currentTarget.style.background = '#fff'}>Cancel</button>
+                <button type="submit" style={{ padding: '10px 24px', background: '#8a8d91', border: 'none', borderRadius: '4px', color: '#fff', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e => e.currentTarget.style.background = '#6c757d'} onMouseOut={e => e.currentTarget.style.background = '#8a8d91'}>Submit</button>
               </div>
             </form>
 

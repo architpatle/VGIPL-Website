@@ -1,6 +1,6 @@
 .cta-banner-wrapper {
   /* background-color: #f3f3f3; */
-  padding: 80px 20px 100px;
+  padding: auto 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
 .cta-banner-card {
   background: #E8380D;
   border-radius: 32px;
-  padding: 80px 40px;
+  /* padding: 80px 40px; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 40px 80px -20px rgba(232, 56, 13, 0.4), 0 20px 40px -10px rgba(232, 56, 13, 0.2);
@@ -254,9 +254,9 @@
 }
 
 @media (max-width: 768px) {
-  .cta-banner-wrapper { padding: 30px 15px 50px; }
+  .cta-banner-wrapper { padding-left: 15px; padding-right: 15px;  }
   .cta-buttons-wrapper { flex-direction: column; }
   .cta-btn { justify-content: center; }
   .cta-headline { font-size: 32px; }
-  .cta-banner-card { padding: 60px 30px; }
+  .cta-banner-card { padding-left:30px; padding-right:30px;}
 }

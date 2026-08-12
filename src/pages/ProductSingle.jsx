@@ -333,10 +333,10 @@ function ProductSingle() {
       <style>
         {`
           .metrics-section {
-            padding-bottom: 0px !important;
+            // padding-bottom: 0px !important;
           }
           .metrics-section + .modules-fintech-section {
-            padding-top: 0px !important;
+            // padding-top: 0px !important;
           }
           @media (max-width: 768px) {
             .prod-hero-title {
@@ -346,14 +346,14 @@ function ProductSingle() {
               font-size: 1rem !important;
             }
             .metrics-section {
-              padding-top: 60px !important;
-              padding-bottom: 0px !important;
+              // padding-top: 60px !important;
+              // padding-bottom: 0px !important;
             }
             .metrics-section + .modules-fintech-section {
-              padding-top: 0px !important;
+              // padding-top: 0px !important;
             }
             .fintech-modules-wrapper {
-              padding-top: 30px !important;
+              // padding-top: 30px !important;
             }
             .fintech-stat-value {
               font-size: 2rem !important;
@@ -405,7 +405,7 @@ function ProductSingle() {
 
       {/* Metrics Section */}
       {product.metrics && product.metrics.length > 0 && (
-        <div id="next-section" className="metrics-section section-spacing" style={{ position: 'relative' }}>
+        <div id="next-section" className="metrics-section section-spacing-lg" style={{ position: 'relative' }}>
           <style>
             {`
               .fintech-stat-card {
@@ -582,12 +582,12 @@ function ProductSingle() {
       )}
 
       {currentModules.length > 0 && (
-        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing" style={{  position: 'relative', overflow: 'hidden', paddingBottom: '20px' }}>
+        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing-lg" style={{  position: 'relative', overflow: 'hidden'}}>
           <style>
             {`
             .fintech-modules-wrapper {
-              padding-top: 60px;
-              padding-bottom: 20px;
+              // padding-top: 60px;
+              // padding-bottom: 20px;
             }
             .premium-image-card {
               position: relative;
@@ -944,7 +944,7 @@ function ProductSingle() {
       )}
 
       {/* Core Platform Features & Benefits Section */}
-      <div className="features-benefits-section" style={{ position: 'relative', backgroundColor: '#ffffff', paddingTop: '40px', paddingBottom: '120px', overflow: 'hidden' }}>
+      <div className="features-benefits-section section-spacing-lg" style={{ position: 'relative', backgroundColor: '#ffffff', overflow: 'hidden' }}>
         {/* Background Image */}
         <div
           className="features-bg-image"
