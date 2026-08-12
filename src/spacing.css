@@ -253,9 +253,9 @@
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 16px 12px !important;
+    padding: 4px 12px !important;
     height: 100% !important;
-    min-height: 280px !important;
+    min-height: 257px !important;
     /* Force equal height for all cards on mobile */
     justify-content: flex-start !important;
     gap: 8px !important;
@@ -270,10 +270,10 @@
   }
 
   .section-awards .awards-item .award-photo-wrapper {
-    flex: 0 0 70px !important;
-    width: 70px !important;
+    flex: 0 0 90px !important;
+    /* width: 70px !important; */
     max-width: 100% !important;
-    height: 70px !important;
+    /* height: 70px !important; */
     margin-bottom: 4px !important;
   }
 

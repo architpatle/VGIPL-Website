@@ -84,7 +84,7 @@ useEffect(() => {
               </div>
             </div>
             <div className="leader-info-wrap">
-              <h3 className="leader-name">Mr. Avinash Shende</h3>
+              {/* <h3 className="leader-name">Mr. Avinash Shende</h3> */}
               <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" />
               <div className="leader-position">Promoter, Chairman, Executive Director & Chief Financial Officer</div>
               {/* <div className="leader-divider"></div> */}
@@ -115,7 +115,7 @@ useEffect(() => {
               </div>
             </div>
             <div className="leader-info-wrap">
-              <h3 className="leader-name">Mr. Sachin Pande</h3>
+              {/* <h3 className="leader-name">Mr. Sachin Pande</h3> */}
               <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" />
               <div className="leader-position">Promoter, Managing Director & Chief Technology Officer</div>
               {/* <div className="leader-divider"></div> */}
@@ -147,9 +147,9 @@ useEffect(() => {
             .leader-name {
               display: block !important;
             }
-            .leader-signature {
-              display: none !important;
-            }
+            // .leader-signature {
+            //   display: none !important;
+            // }
             #leadership{
               height: auto;
             }

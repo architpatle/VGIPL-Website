@@ -1009,8 +1009,8 @@ function AboutTeamSection() {
               flex-direction: column !important;
               align-items: center !important;
               text-align: center !important;
-              padding: 20px 10px 16px !important;
-              min-height: 180px !important;
+              padding: 12px 4px !important;
+              // min-height: 180px !important;
               height: 100% !important;
               cursor: pointer !important;
               border-radius: 16px !important;
@@ -1019,8 +1019,8 @@ function AboutTeamSection() {
               border: 1px solid #eef2f6 !important;
             }
             .board-card-img-wrapper {
-              width: 70px !important;
-              height: 70px !important;
+              // width: 70px !important;
+              // height: 70px !important;
               border-radius: 12px !important;
             }
             .board-card-info {
@@ -1035,6 +1035,7 @@ function AboutTeamSection() {
             .board-card-role {
               font-size: 9px !important;
               margin-bottom: 2px !important;
+              line-height:1.4;
             }
             .board-card-name {
               font-size: 13px !important;
@@ -1067,7 +1068,7 @@ function AboutTeamSection() {
               border-radius: 18px !important;
             }
             .vgil-card-unique img {
-              padding: 14px !important;
+              padding: 14px 14px 0px 14px !important;
             }
             .card-overlay {
               display: none !important;
@@ -1246,7 +1247,14 @@ function AboutTeamSection() {
           .vgil-standalone-section .effectFade {
             animation-duration: 1s;
           }
-        `}</style>
+
+           @media (max-width: 399px){
+           .board-card{
+           min-height: 228px}
+           }
+        `}
+        
+        </style>
 
         {/* Detail Modal for Mobile */}
         {activeDirector && (
