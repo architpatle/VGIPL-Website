@@ -28,7 +28,7 @@ function MissionSection() {
             </div>
           </div>
           <div className="col-lg-6 d-flex flex-column">
-            <div className="mission-box mb-24 flex-grow-1 d-flex flex-column justify-content-start" style={{ background: '#f4f4f5', padding: '30px', borderRadius: '24px' }}>
+            <div className="mission-box mb-24 flex-grow-1 d-flex flex-column justify-content-start" style={{ background: '#f4f4f5', padding: '28px', borderRadius: '24px' }}>
               <h4 className="title fw-semibold" style={{ color: '#ff4d00' }}>Our Mission</h4>
               <div className="line" style={{ height: '1px', background: '#e4e4e7', margin: '10px 0' }}></div>
               <p className="text" style={{ color: '#3f3f46', fontSize: '16px', lineHeight: '1.6' }}>

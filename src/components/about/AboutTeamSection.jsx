@@ -333,12 +333,12 @@ function AboutTeamSection() {
           </div>
         </div>
 
-        <div className="vgil-standalone-section" style={{ marginTop: '16px' }}>
+        <div className="vgil-standalone-section" >
           <div className="heading-section center mb-80">
             <h4 className="text-dark effectFade fadeUp vgil-title-responsive">
               VGIL is not just about co-founders
             </h4>
-            <div style={{ width: '80px', height: '4px', background: '#ff4d00', margin: '20px auto 0', borderRadius: '2px' }}></div>
+            <div style={{ width: '80px', height: '4px', background: '#ff4d00', margin: '4px auto 16px auto', borderRadius: '2px' }}></div>
           </div>
 
           <div className="team-grid-responsive">
@@ -352,7 +352,7 @@ function AboutTeamSection() {
                       width: '100%',
                       height: '100%',
                       objectFit: 'contain',
-                      padding: '20px',
+                      padding: '20px 20px 0px 20px',
                       transition: 'all 0.6s ease'
                     }}
                   />
@@ -378,8 +378,8 @@ function AboutTeamSection() {
                 </div>
                 {/* Default Visible Name & Role */}
                 <div className="member-info-static">
-                  <h6 style={{ color: '#111827', fontSize: '18px', fontWeight: '700', marginBottom: '5px' }}>{member.name}</h6>
-                  <p style={{ color: '#4b5563', fontSize: '13px', fontWeight: '500', maxWidth: '240px', margin: '0 auto', marginBottom: '10px' }}>{member.role}</p>
+                  <h6 style={{ color: '#111827', fontSize: '18px', fontWeight: '700', }}>{member.name}</h6>
+                  <p style={{ color: '#4b5563', fontSize: '13px', fontWeight: '500', maxWidth: '240px', margin: '0 auto', lineHeight:'1.4'}}>{member.role}</p>
                 </div>
               </div>
             ))}
@@ -816,7 +816,7 @@ function AboutTeamSection() {
             border-radius: 30px;
             height: 280px;
             width: 280px;
-            margin: 0 auto 25px;
+            margin: 0 auto 8px;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
