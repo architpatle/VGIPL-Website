@@ -39,6 +39,12 @@ function FinFlow() {
             .prod-hero-text {
               font-size: 1rem !important;
             }
+               .section-heading-responsive {
+              font-size: 2.2rem !important;
+            }
+              .overview-card {
+              padding: 30px 20px !important;
+            }
           }
         `}
       </style>
@@ -78,7 +84,7 @@ function FinFlow() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -140,8 +146,8 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
             
@@ -261,7 +267,7 @@ function FinFlow() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -384,8 +390,8 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
@@ -502,7 +508,7 @@ function FinFlow() {
       </section>
 
       {/* 3. Technology & Architecture Section (Replacing Designed For) */}
-      <section id="tech-architecture" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="tech-architecture" className="section-spacing=lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .designed-grid {
@@ -667,7 +673,7 @@ function FinFlow() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ display: 'flex', gap: '4px' }}>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -682,7 +688,7 @@ function FinFlow() {
               </div>
             </div>
 
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Technology & <span style={{ color: '#ff2b2b' }}>Architecture</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
@@ -771,7 +777,7 @@ function FinFlow() {
       </section>
 
       {/* 4. Operational Benefits Section (Replacing Core Features) */}
-      <section id="operational-benefits" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="operational-benefits" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .benefits-grid {
@@ -835,8 +841,8 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '70px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Operational <span style={{ color: '#ff2b2b' }}>Benefits</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
@@ -927,7 +933,7 @@ function FinFlow() {
       </section>
 
       {/* 5. Why Choose Fin Flow Section */}
-      <section id="why-choose" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing-lg" style={{position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1137,14 +1143,14 @@ function FinFlow() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <span style={{ color: '#ff2b2b', fontSize: '0.85rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase' }}>WHY CHOOSE US</span>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
             </div>
 
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Fin Flow</span>?
             </h2>
 
@@ -1262,7 +1268,7 @@ function FinFlow() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing-lg" style={{position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
@@ -1419,7 +1425,7 @@ function FinFlow() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -1430,7 +1436,7 @@ function FinFlow() {
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
             </div>
 
-            <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
             </h2>
             
