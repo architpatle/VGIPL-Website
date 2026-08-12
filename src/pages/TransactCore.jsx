@@ -51,7 +51,7 @@ function TransactCore() {
               padding: 60px 0 !important;
             }
             .overview-card {
-              padding: 30px 20px !important;
+              padding: 30px 0px !important;
             }
             .capability-card {
               padding: 25px 20px !important;

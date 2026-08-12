@@ -39,6 +39,12 @@ function AuditFlux() {
             .prod-hero-text {
               font-size: 1rem !important;
             }
+             .section-heading-responsive {
+              font-size: 2.2rem !important;
+            }
+              .overview-card {
+              padding: 30px 20px !important;
+            }
           }
         `}
       </style>
@@ -51,7 +57,7 @@ function AuditFlux() {
               <img
                 src={auditFluxImg}
                 alt={`${product.title} Logo`}
-                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain',  marginBottom: '8px' }}
+                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', marginBottom: '8px' }}
               />
             </div>
             <div className="title text-display-2 effectFade fadeRotateX prod-hero-title">
@@ -78,7 +84,7 @@ function AuditFlux() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -140,11 +146,11 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2px', position: 'relative', width: '200px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, #ff2b2b, transparent)', borderRadius: '10px' }}></div>
@@ -262,7 +268,7 @@ function AuditFlux() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -388,14 +394,14 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
               Deep regulatory oversight and operational control
             </p>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3), transparent)' }}></div>
@@ -506,7 +512,7 @@ function AuditFlux() {
       </section>
 
       {/* 3. Designed For Section */}
-      <section id="designed-for" className="section-spacing" style={{ backgroundColor: '#ffffff', padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="designed-for" className="section-spacing-lg" style={{ backgroundColor: '#ffffff',  position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .designed-grid {
@@ -689,7 +695,7 @@ function AuditFlux() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Header Badge */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ display: 'flex', gap: '4px' }}>
@@ -706,7 +712,7 @@ function AuditFlux() {
             </div>
 
             {/* Main title */}
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Designed <span style={{ color: '#ff2b2b' }}>For</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
@@ -798,7 +804,7 @@ function AuditFlux() {
       </section>
 
       {/* 4. Core Features Section */}
-      <section id="features" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="features" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .features-columns-wrapper {
@@ -899,11 +905,11 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '70px' }}>
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Core <span style={{ color: '#ff2b2b' }}>Components</span>
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3), transparent)' }}></div>
@@ -965,7 +971,7 @@ function AuditFlux() {
       </section>
 
       {/* 5. Why Choose Audit Flux Section */}
-      <section id="why-choose" className="section-spacing" style={{  padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1162,15 +1168,15 @@ function AuditFlux() {
 
         {/* Background Map & Glows */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${abstractWorldMapImg})`, backgroundSize: 'cover', opacity: 0.03, zIndex: 0, pointerEvents: 'none' }}></div>
-        
+
         {/* Ambient gradient lighting */}
         <div style={{ position: 'absolute', top: '-10%', left: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
         <div style={{ position: 'absolute', bottom: '-10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
-        
+
         {/* Abstract dotted patterns */}
         <div style={{ position: 'absolute', top: '20%', right: '5%', width: '100px', height: '100px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.7, zIndex: 0, pointerEvents: 'none' }}></div>
         <div style={{ position: 'absolute', bottom: '20%', left: '5%', width: '100px', height: '100px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.7, zIndex: 0, pointerEvents: 'none' }}></div>
-        
+
         {/* Curved connection lines */}
         <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, opacity: 0.12 }} viewBox="0 0 1440 800" fill="none">
           <path d="M-100,200 C300,100 500,600 900,400 C1100,300 1300,700 1600,500" stroke="#ff2b2b" strokeWidth="1.5" strokeDasharray="5 5" />
@@ -1179,7 +1185,7 @@ function AuditFlux() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Small premium top label with divider lines */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
@@ -1188,7 +1194,7 @@ function AuditFlux() {
             </div>
 
             {/* Main heading */}
-            <h2 style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Audit Flux</span>?
             </h2>
 
@@ -1278,7 +1284,7 @@ function AuditFlux() {
             <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
               <div className="why-choose-cta-card">
                 <div className="why-choose-cta-glow"></div>
-                
+
                 {/* Modern Wave SVG Accent */}
                 <svg className="why-choose-cta-waves" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <path d="M0,50 C30,40 70,60 100,50 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)" />
@@ -1309,7 +1315,7 @@ function AuditFlux() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing" style={{ padding: '120px 0', borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
@@ -1531,7 +1537,7 @@ function AuditFlux() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -1542,10 +1548,10 @@ function AuditFlux() {
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
             </div>
 
-            <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
+            <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '3px', width: '100%', backgroundColor: '#ff2b2b', borderRadius: '2px' }}></div>
@@ -1559,7 +1565,7 @@ function AuditFlux() {
             <div className="outcome-main-card">
               <div className="outcome-corner-bracket-tl"></div>
               <div className="outcome-corner-bracket-br"></div>
-              
+
               {/* Center Checkmark with Orbits */}
               <div className="outcome-icon-outer">
                 <div className="outcome-icon-middle"></div>
@@ -1606,7 +1612,7 @@ function AuditFlux() {
 
       {/* 7. Contact Us Section */}
       <div id="contact-section">
-        <CTABannerSection 
+        <CTABannerSection
           title={`Ready to Automate Compliance with ${product.title}?`}
           subtitle={`Schedule a free consultation with our GRC auditing experts and discover how ${product.title} can streamline compliance tracking.`}
         />
