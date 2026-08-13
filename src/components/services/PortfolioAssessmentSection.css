@@ -2,7 +2,8 @@
   position: relative;
   background-color: #f8fafc;
   border-radius: 56px;
-  padding: 80px 40px;
+  padding-left: 45px;
+  padding-right: 45px;
   overflow: hidden;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .portfolio-heading {
-  font-size: 42px;
+  /* font-size: 42px; */
   font-weight: 700;
   color: #0f172a;
   text-align: center;
@@ -286,9 +287,10 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .portfolio-assessment-section {
-    padding: 40px 20px;
+    padding-left: 32px;
+    padding-right: 32px;
     border-radius: 28px;
   }
   .portfolio-subtitle {

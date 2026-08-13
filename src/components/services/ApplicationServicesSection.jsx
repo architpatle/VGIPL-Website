@@ -36,7 +36,7 @@ const ApplicationServicesSection = () => {
     <section className="app-services-section">
       <div className="ambient-particles"></div>
       
-      <div className="container position-relative z-2">
+      <div className="position-relative z-2">
         <div className="text-center">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}

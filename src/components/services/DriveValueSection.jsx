@@ -58,7 +58,8 @@ const DriveValueSection = () => {
   ];
 
   return (
-    <div className="section-drive-value overflow-hidden" >
+    
+    <div className="section-drive-value overflow-hidden section-spacing-lg" >
       <div className="container" style={{ maxWidth: '1280px' }}>
         <motion.div
           variants={containerVariants}
@@ -70,10 +71,10 @@ const DriveValueSection = () => {
           {/* Left Column: Graphic and Heading */}
           <motion.div variants={leftVariants} className="col-12 col-lg-5 d-flex flex-column position-relative z-1">
             <div>
-              <h2 className="fw-bold mb-2" style={{ fontSize: '3.5rem', lineHeight: '1.1', color: '#0f172a' }}>
+              <h2 className="section-heading-responsive fw-bold mb-2" style={{  lineHeight: '1.1', color: '#0f172a' }}>
                 Drive Value
               </h2>
-              <h2 className="fw-bold mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.1', color: '#E8380D' }}>
+              <h2 className=" section-heading-responsive fw-bold mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.1', color: '#E8380D' }}>
                 From Your Applications
               </h2>
             </div>

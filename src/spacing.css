@@ -239,7 +239,7 @@
   .award-photo-wrapper {
     flex: 0 0 120px !important;
     max-width: 120px !important;
-    height: 85px !important;
+    height: 140px !important;
   }
 }
 
@@ -265,12 +265,12 @@
   .section-awards .awards-item>div:not(.award-photo-wrapper) {
     flex: 0 0 auto !important;
     width: 100% !important;
-    min-height: unset !important;
+    /* min-height: unset !important; */
     padding: 0 !important;
   }
 
   .section-awards .awards-item .award-photo-wrapper {
-    flex: 0 0 90px !important;
+    flex: 0 0 180px !important;
     /* width: 70px !important; */
     max-width: 100% !important;
     /* height: 70px !important; */
@@ -598,6 +598,14 @@
     padding-bottom: 1px !important;
     cursor: pointer !important;
   }
+}
+
+@media (max-width:480px) {
+  .section-awards .awards-item .award-photo-wrapper {
+    flex: 0 0 90px !important;
+
+  }
+
 }
 
 /* Testimonial modal popup styling */

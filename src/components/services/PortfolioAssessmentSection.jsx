@@ -31,7 +31,7 @@ const PortfolioAssessmentSection = () => {
   };
 
   return (
-    <div className="portfolio-assessment-section mb-120 effectFade fadeUp">
+    <div className="portfolio-assessment-section section-spacing-lg effectFade fadeUp">
       <div className="portfolio-bg-particles"></div>
       
       <div className="position-relative z-1">
@@ -47,7 +47,7 @@ const PortfolioAssessmentSection = () => {
                 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
               </svg>
             </div>
-            <h2 className="portfolio-heading mb-0">
+            <h2 className="portfolio-heading section-heading-responsive mb-0">
               <span>Save With</span> Application Portfolio Assessment
             </h2>
           </div>

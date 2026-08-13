@@ -6,7 +6,7 @@ function ServiceSingleDetails({ service }) {
   if (!service) return null;
 
   return (
-    <div id="services" className="section-services-single" style={{  color: '#111827', paddingBottom: '100px' }}>
+    <div id="services" className="section-services-single" style={{  color: '#111827'}}>
       <div className="container">
         
         {/* Portfolio Assessment Section */}

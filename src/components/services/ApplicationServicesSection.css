@@ -1,7 +1,7 @@
 .app-services-section {
   position: relative;
   /* background: #fafcff; */
-  padding: 90px 0;
+  padding: 45px 0;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
 }
@@ -67,7 +67,7 @@
   font-weight: 700;
   color: #0f172a;
   max-width: 700px;
-  margin: 0 auto 80px;
+  margin: 0 auto 40px;
   line-height: 1.2;
 }
 
@@ -284,10 +284,10 @@
 
 @media (max-width: 768px) {
   .app-services-section {
-    padding: 40px 0;
+    padding: 32px 0;
   }
   .section-subtitle-app {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 28px;
   }
 }

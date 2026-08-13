@@ -51,7 +51,7 @@ const OptimizeInvestmentsSection = () => {
   const ActiveIcon = TABS_DATA.find(t => t.id === activeTab)?.icon || Code2;
 
   return (
-    <section className="optimize-investments-section">
+    <section className="optimize-investments-section section-spacing-lg">
       {/* <div className="oi-bg-elements">
         <div className="oi-gradient-mesh"></div>
         <div className="oi-dotted-pattern"></div>

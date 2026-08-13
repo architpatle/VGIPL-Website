@@ -4,7 +4,7 @@
   overflow: hidden;
   /* background-color: #ffffff; */
   /* min-height: 100vh; */
-  padding: 9rem 4rem 5rem;
+  /* padding: 9rem 4rem 5rem; */
 }
 
 .hero-vgst-specific {
@@ -286,7 +286,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .section-hero-premium {
-    padding: 6rem 1.5rem 2.5rem;
+    /* padding: 6rem 1.5rem 2.5rem; */
   }
   .section-hero-premium .row {
     display: flex;
