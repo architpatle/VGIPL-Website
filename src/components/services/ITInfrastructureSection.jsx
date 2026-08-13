@@ -42,7 +42,7 @@ const ITInfrastructureSection = () => {
   };
 
   return (
-    <section className="it-infra-section">
+    <section className=" section-spacing-lg it-infra-section pb-0 ">
       <div className="it-bg-elements">
         <div className="it-bg-blob it-bg-blob-1"></div>
         <div className="it-bg-blob it-bg-blob-2"></div>
@@ -86,7 +86,7 @@ const ITInfrastructureSection = () => {
         </motion.div>
 
         {/* SECTION 2 - COST EFFECTIVE CARDS */}
-        <div className="it-cost-wrapper">
+        <div className="it-cost-wrapper section-spacing-lg">
           <motion.div 
             className="it-cost-header"
             initial={{ opacity: 0, y: 20 }}

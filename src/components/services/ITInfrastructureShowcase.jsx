@@ -90,7 +90,7 @@ const ITInfrastructureShowcase = () => {
   };
 
   return (
-    <div className="it-showcase-wrapper">
+    <div className="it-showcase-wrapper section-spacing-lg mb-0">
       <div className="container position-relative z-10">
         
         {/* Header */}

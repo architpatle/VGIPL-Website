@@ -1,7 +1,7 @@
 .it-showcase-wrapper {
   position: relative;
-  margin-top: 100px;
-  padding-bottom: 80px;
+  /* margin-top: 100px; */
+  /* padding-bottom: 80px; */
   z-index: 10;
 }
 
@@ -11,7 +11,7 @@
   font-weight: 800;
   color: #0f172a;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .it-showcase-highlight {
@@ -43,7 +43,7 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
@@ -102,7 +102,7 @@
   backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 32px;
-  padding: 60px;
+  padding: 45px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03), inset 0 0 20px rgba(255,255,255,0.5);
   position: relative;
   overflow: hidden;
@@ -123,7 +123,7 @@
   grid-template-columns: 1fr 1.5fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 /* Left Icon Area */
@@ -306,5 +306,5 @@
 }
 
 @media (max-width: 768px) {
-  .it-showcase-card { padding: 40px 20px; }
+  .it-showcase-card { padding: 32px; }
 }
