@@ -1,5 +1,5 @@
 .ds-about-section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -174,7 +174,7 @@
 
 @media (max-width: 767px) {
   .ds-about-section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
   }
   .ds-about-title {
     font-size: 1.8rem;

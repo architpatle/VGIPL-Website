@@ -1,5 +1,5 @@
 .ds-strategy-section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
@@ -19,7 +19,7 @@
 
 .ds-strategy-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .ds-strategy-badge {
@@ -193,7 +193,7 @@
 
 @media (max-width: 767px) {
   .ds-strategy-section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
   }
   .ds-strategy-grid {
     grid-template-columns: 1fr;

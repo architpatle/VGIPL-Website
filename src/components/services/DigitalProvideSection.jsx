@@ -36,7 +36,7 @@ const DigitalProvideSection = () => {
   };
 
   return (
-    <section className="ds-provide-section" id="services">
+    <section className="ds-provide-section section-spacing-lg" id="services">
       <div className="container">
         <motion.div
           className="ds-provide-wrapper style-blue"

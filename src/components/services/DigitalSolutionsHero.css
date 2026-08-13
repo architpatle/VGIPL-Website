@@ -1,11 +1,11 @@
 .ds-hero-section {
   position: relative;
-  min-height: 92vh;
+  /* min-height: 92vh; */
   display: flex;
   align-items: center;
   /* background: linear-gradient(135deg, #0f0a1a 0%, #1a0f2e 30%, #0d1117 70%, #0a0a0a 100%); */
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 120px 0 45px;
 }
 
 .ds-hero-bg-mesh {

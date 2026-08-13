@@ -46,7 +46,7 @@ const DigitalStrategySection = () => {
   };
 
   return (
-    <section className="ds-strategy-section">
+    <section className="ds-strategy-section section-spacing-lg">
       <div className="ds-strategy-bg-line"></div>
       <div className="ds-strategy-bg-line"></div>
       <div className="ds-strategy-bg-line"></div>

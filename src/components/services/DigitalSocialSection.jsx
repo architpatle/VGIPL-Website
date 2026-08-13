@@ -74,7 +74,7 @@ const DigitalSocialSection = () => {
   };
 
   return (
-    <section className="ds-social-section">
+    <section className="ds-social-section section-spacing-lg">
       <div className="container">
         <motion.div
           className="ds-social-header"

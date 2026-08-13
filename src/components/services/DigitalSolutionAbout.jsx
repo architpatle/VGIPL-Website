@@ -5,7 +5,7 @@ import './DigitalSolutionAbout.css';
 
 const DigitalSolutionAbout = () => {
   return (
-    <section className="ds-about-section">
+    <section className="ds-about-section section-spacing-lg">
       <div className="ds-about-decoration ds-about-deco-1"></div>
       <div className="ds-about-decoration ds-about-deco-2"></div>
 

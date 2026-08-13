@@ -1,5 +1,5 @@
 .ds-explore-section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
   /* background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%); */
   position: relative;
   overflow: hidden;
@@ -17,7 +17,7 @@
 
 .ds-explore-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .ds-explore-badge {
@@ -231,7 +231,7 @@
 
 @media (max-width: 767px) {
   .ds-explore-section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
   }
   .ds-explore-card-content {
     padding: 24px;

@@ -54,7 +54,7 @@ const DigitalExploreSection = () => {
   ];
 
   return (
-    <section className="ds-explore-section">
+    <section className="ds-explore-section section-spacing-lg">
       <div className="container">
         <motion.div
           className="ds-explore-header"
