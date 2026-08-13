@@ -28,10 +28,11 @@ const DRDCBenefitsSection = () => {
   ];
 
   return (
-    <section className="dr-benefits-section py-5">
+    <section className="dr-benefits-section section-spacing-lg">
       <div className="container">
-        <motion.div 
-          className="text-center mb-5"
+        <motion.div
+          className="text-center"
+          style={{ marginBottom: '40px' }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -45,12 +46,12 @@ const DRDCBenefitsSection = () => {
           </p>
         </motion.div>
 
-        <div className="row g-4 mt-2">
+        <div className="row g-4">
           {benefits.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div className="col-md-6 col-lg-3" key={idx}>
-                <motion.div 
+                <motion.div
                   className="dr-benefit-card h-100"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

@@ -5,10 +5,11 @@ import './DRDCOptimizeSection.css';
 
 const DRDCOptimizeSection = () => {
   return (
-    <section className="dr-optimize-section py-5">
+    <section className="dr-optimize-section section-spacing-lg">
       <div className="container position-relative z-2">
-        <motion.div 
-          className="text-center mb-5"
+        <motion.div
+          className="text-center"
+          style={{ marginBottom: '40px' }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -24,7 +25,7 @@ const DRDCOptimizeSection = () => {
 
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <motion.div 
+            <motion.div
               className="dr-optimize-card"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -44,7 +45,7 @@ const DRDCOptimizeSection = () => {
                   <p className="dr-opt-desc">
                     VGIL's offers Data Centre with all-in-one solution, an automated system is designed to manage various aspects of data centre easily, efficiently and quickly.
                   </p>
-                  
+
                   <div className="dr-opt-features">
                     <div className="dr-opt-feature-item">
                       <div className="dr-opt-f-icon"><Zap size={20} /></div>

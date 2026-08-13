@@ -5,7 +5,7 @@ import './DRDCSolveSection.css';
 
 const DRDCSolveSection = () => {
   return (
-    <section className="dr-solve-section py-5">
+    <section className="dr-solve-section section-spacing-lg">
       <div className="container">
         <div className="row align-items-center g-5">
           <div className="col-lg-6">

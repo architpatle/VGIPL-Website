@@ -33,7 +33,7 @@ const DRDCServicesProvideSection = () => {
   };
 
   return (
-    <section className="dr-sp-section py-5">
+    <section className="dr-sp-section section-spacing-lg">
       <div className="container">
         <motion.div 
           className="dr-sp-wrapper"
