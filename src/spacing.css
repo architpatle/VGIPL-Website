@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   :root {
     --spacing-section-lg: 32px;
     --spacing-section-md: 28px;
@@ -332,7 +332,7 @@
 }
 
 /* Mobile Spacing Optimizations (320px–768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   /* 1. Global / Hero Spacing Rules */
   .section-hero .content-wrap {
@@ -412,7 +412,7 @@
   }
 
   .featured-works-item .content {
-    padding: 16px 12px !important;
+    padding: 8px 0px !important;
   }
 
   .featured-works-item .content .pagi-dot {
@@ -1099,7 +1099,7 @@
   } */
 
   .section-services .col-left {
-    margin-bottom: 0px !important;
+    /* margin-bottom: 0px !important; */
   }
 
   /* .section-benefits {
@@ -1156,7 +1156,7 @@
   } */
 
   .section-services .col-left {
-    margin-bottom: 0px !important;
+    /* margin-bottom: 0px !important; */
   }
 
   /* .section-benefits {
@@ -1195,7 +1195,7 @@
   } */
 
   .section-services .col-left {
-    margin-bottom: 0px !important;
+    /* margin-bottom: 0px !important; */
   }
 
   /* .section-benefits {
@@ -1294,7 +1294,7 @@
 
   .benefits-design .benefits-design-inner .item-img-3 {
     /* bottom: -150px !important; */
-    right: -40px !important;
+    right: -30px !important;
     max-height: 100px !important;
     width: auto !important;
   }

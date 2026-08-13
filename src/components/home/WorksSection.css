@@ -11,7 +11,7 @@
   }
   
 
-@media (max-width: 480px) {
+@media (max-width: 599px) {
   .featured-works-list {
     grid-template-columns: repeat(1, 1fr);
     
