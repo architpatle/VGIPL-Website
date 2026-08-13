@@ -7,7 +7,7 @@
   position: relative;
   border: 2px solid #ff3300;
   border-radius: 16px;
-  padding: 60px 50px;
+  padding: 45px;
   background: #ffffff;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
@@ -110,7 +110,7 @@
 
 @media (max-width: 576px) {
   .mc-sp-wrapper {
-    padding: 40px 20px;
+    padding: 32px;
   }
   .mc-sp-grid {
     grid-template-columns: 1fr;

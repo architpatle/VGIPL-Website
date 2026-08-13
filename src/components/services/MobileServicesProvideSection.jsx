@@ -33,7 +33,7 @@ const MobileServicesProvideSection = () => {
   };
 
   return (
-    <section className="mc-sp-section py-5">
+    <section className="mc-sp-section section-spacing-lg">
       <div className="container">
         <motion.div 
           className="mc-sp-wrapper"

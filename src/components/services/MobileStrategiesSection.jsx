@@ -23,10 +23,11 @@ const MobileStrategiesSection = () => {
   ];
 
   return (
-    <section className="mc-strategies-section py-5">
+    <section className="mc-strategies-section section-spacing-lg">
       <div className="container">
         <motion.div 
-          className="text-center mb-5"
+        style={{marginBottom:'40px'}}
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -40,11 +41,11 @@ const MobileStrategiesSection = () => {
           </p>
         </motion.div>
 
-        <div className="row g-4 mt-4">
+        <div className="row g-4">
           {features.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div className="col-md-4" key={idx}>
+              <div className="col-md-4 " key={idx}>
                 <motion.div 
                   className="mc-strategy-card h-100"
                   initial={{ opacity: 0, y: 30 }}

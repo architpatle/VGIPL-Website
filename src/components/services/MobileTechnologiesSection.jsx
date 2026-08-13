@@ -13,7 +13,7 @@ const MobileTechnologiesSection = () => {
   ];
 
   return (
-    <section className="mc-tech-section py-5">
+    <section className="mc-tech-section section-spacing-lg">
       <div className="container position-relative z-2">
         <div className="row g-5 align-items-center">
           

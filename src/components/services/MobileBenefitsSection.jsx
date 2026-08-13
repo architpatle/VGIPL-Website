@@ -29,10 +29,11 @@ const MobileBenefitsSection = () => {
   ];
 
   return (
-    <section className="mc-benefits-section py-5">
+    <section className="mc-benefits-section section-spacing-lg">
       <div className="container">
         <motion.div 
-          className="text-center mb-5"
+        style={{marginBottom:'40px'}}
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,7 +47,7 @@ const MobileBenefitsSection = () => {
           </p>
         </motion.div>
 
-        <div className="row g-4 mt-2">
+        <div className="row g-4">
           {benefits.map((item, idx) => {
             const Icon = item.icon;
             return (
