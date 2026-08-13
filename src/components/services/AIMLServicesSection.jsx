@@ -36,7 +36,7 @@ const AIMLServicesSection = () => {
   };
 
   return (
-    <section className="ai-services-section" id="ai-services">
+    <section className="ai-services-section section-spacing-lg" id="ai-services">
       <div className="container">
         <motion.div
           className="ai-services-wrapper"

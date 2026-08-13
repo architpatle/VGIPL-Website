@@ -49,7 +49,7 @@ const AIMLDeploySection = () => {
   };
 
   return (
-    <section className="ai-deploy-section">
+    <section className="ai-deploy-section section-spacing-lg">
       <div className="ai-deploy-bg-line"></div>
       <div className="ai-deploy-bg-line"></div>
 

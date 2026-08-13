@@ -1,6 +1,6 @@
 .ai-deploy-section {
-  padding: 60px 0;
-  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  /* padding: 60px 0; */
+  /* background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%); */
   position: relative;
   overflow: hidden;
 }
@@ -192,7 +192,7 @@
 }
 
 @media (max-width: 767px) {
-  .ai-deploy-section { padding: 40px 0; }
+  /* .ai-deploy-section { padding: 40px 0; } */
   .ai-deploy-grid { grid-template-columns: 1fr; }
   .ai-deploy-title { font-size: 1.8rem; }
 }

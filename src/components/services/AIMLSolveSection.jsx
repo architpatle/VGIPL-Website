@@ -5,7 +5,7 @@ import './AIMLSolveSection.css';
 
 const AIMLSolveSection = () => {
   return (
-    <section className="ai-solve-section">
+    <section className="ai-solve-section section-spacing-lg">
       <div className="ai-solve-deco ai-solve-deco-1"></div>
       <div className="ai-solve-deco ai-solve-deco-2"></div>
 

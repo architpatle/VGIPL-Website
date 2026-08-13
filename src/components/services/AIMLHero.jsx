@@ -25,13 +25,13 @@ const AIMLHero = () => {
   return (
     <section className="ai-hero-section">
       {/* Background */}
-      <div className="ai-hero-grid"></div>
+      {/* <div className="ai-hero-grid"></div>
       <div className="ai-hero-orb ai-hero-orb-1"></div>
       <div className="ai-hero-orb ai-hero-orb-2"></div>
-      <div className="ai-hero-orb ai-hero-orb-3"></div>
+      <div className="ai-hero-orb ai-hero-orb-3"></div> */}
 
       {/* Neural network */}
-      <div className="ai-hero-neural-bg">
+      {/* <div className="ai-hero-neural-bg">
         {nodes.map(n => (
           <div
             key={n.id}
@@ -57,11 +57,11 @@ const AIMLHero = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="container position-relative z-2">
         <div className="row align-items-center">
-          <div className="col-lg-7 ai-hero-content">
+          <div className="col-lg-12 ai-hero-content text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,11 +75,11 @@ const AIMLHero = () => {
                 <span className="ai-gradient-text">Artificial Intelligence</span> Solutions
               </h1>
 
-              <p className="ai-hero-desc">
+              <p className="ai-hero-desc mx-auto">
                 Automating & augmenting operations with AI to enhance performance and transform your business.
               </p>
 
-              <p className="ai-hero-sub-desc">
+              <p className="ai-hero-sub-desc mx-auto">
                 Transforming businesses through intelligent automation and data-driven insights.
               </p>
 
@@ -172,10 +172,10 @@ const AIMLHero = () => {
         </div>
       </div>
 
-      <div className="ai-scroll-indicator">
+      {/* <div className="ai-scroll-indicator">
         <div className="ai-scroll-line"></div>
         <span className="ai-scroll-text">Scroll</span>
-      </div>
+      </div> */}
     </section>
   );
 };

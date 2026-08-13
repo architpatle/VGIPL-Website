@@ -1,11 +1,11 @@
 .ai-hero-section {
   position: relative;
-  min-height: 92vh;
+  /* min-height: 92vh; */
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #030712 0%, #0a0f1e 25%, #0d1b2a 50%, #111827 100%);
+  /* background: linear-gradient(135deg, #030712 0%, #0a0f1e 25%, #0d1b2a 50%, #111827 100%); */
   overflow: hidden;
-  padding: 120px 0 60px;
+  padding: 120px 0 45px;
 }
 
 /* Neural network background */
@@ -118,7 +118,7 @@
 .ai-hero-title {
   font-size: 3.8rem;
   font-weight: 800;
-  color: #ffffff;
+  color: rgb(17, 24, 39);
   line-height: 1.12;
   margin-bottom: 24px;
   letter-spacing: -1.5px;
@@ -133,7 +133,7 @@
 
 .ai-hero-desc {
   font-size: 1.18rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(17, 24, 39, 0.65);
   line-height: 1.75;
   max-width: 520px;
   margin-bottom: 16px;
@@ -141,7 +141,8 @@
 
 .ai-hero-sub-desc {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.45);
+   color: rgba(17, 24, 39, 0.65);
+
   line-height: 1.6;
   max-width: 480px;
   margin-bottom: 36px;
@@ -151,6 +152,7 @@
 .ai-hero-actions {
   display: flex;
   gap: 16px;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -199,8 +201,8 @@
   gap: 10px;
   padding: 16px 36px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(17, 24, 39, 0.65);
+  border: 1px solid rgba(17, 24, 39, 0.65);
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
@@ -223,6 +225,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .ai-brain-container {

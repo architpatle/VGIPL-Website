@@ -45,7 +45,7 @@ const AIMLGrowSection = () => {
   };
 
   return (
-    <section className="ai-grow-section">
+    <section className="ai-grow-section section-spacing-lg">
       <div className="container">
         {/* Header */}
         <motion.div
