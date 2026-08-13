@@ -8,7 +8,7 @@ import './ASPProgramSection.css';
 
 const ASPProgramSection = () => {
   return (
-    <section className="asp-program-section">
+    <section className="asp-program-section section-spacing-lg">
       <div className="container">
         <motion.div 
           className="text-center mb-5"

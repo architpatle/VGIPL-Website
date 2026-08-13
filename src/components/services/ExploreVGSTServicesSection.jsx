@@ -73,7 +73,7 @@ const ExploreVGSTServicesSection = () => {
   };
 
   return (
-    <section className="explore-vgst-section">
+    <section className="explore-vgst-section section-spacing-lg">
       <div className="container position-relative z-2">
         <motion.div 
           className="text-center mb-5"

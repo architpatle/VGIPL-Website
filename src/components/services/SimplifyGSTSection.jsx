@@ -60,7 +60,7 @@ function SimplifyGSTSection() {
   ];
 
   return (
-    <section className="simplify-gst-section">
+    <section className="simplify-gst-section section-spacing-lg">
       <div className="container">
         <motion.div 
           className="text-center section-header"
