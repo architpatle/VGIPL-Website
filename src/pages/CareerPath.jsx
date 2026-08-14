@@ -55,7 +55,7 @@ const CareerPath = () => {
             
                   </section>
 
-      <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
+      <section className='section-spacing-lg'>
         <div className="container">
           <div className="row">
             <div className="col-lg-4 mb-5 mb-lg-0">

@@ -75,10 +75,10 @@ const MeetOurPeople = () => {
       
             </section>
 
-      <section style={{ padding: '100px 0', backgroundColor: '#ffffff' }}>
+      <section className='section-spacing-lg'>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '20px' }}>Our Teams in Action</h2>
+            <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '20px' }}>Our Team in Action</h2>
             <p style={{ fontSize: '1.1rem', color: '#555', maxWidth: '700px', margin: '0 auto' }}>
               Explore how we collaborate, innovate, and grow together. Our culture is built on a foundation of teamwork and a relentless drive for excellence.
             </p>

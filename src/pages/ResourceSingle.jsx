@@ -28,7 +28,7 @@ function ResourceSingle() {
       {slug === 'video' ? (
         <VideoSection />
       ) : (
-        <div className="section-spacing" style={{ paddingTop: '10px' }}>
+        <div className="section-spacing-lg" >
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10 text-center">
@@ -42,7 +42,7 @@ function ResourceSingle() {
 
             {/* Specialized News/Blog/Press Layouts */}
             {slug === 'media' ? (<InstagramFeed />) : slug === 'news' || slug === 'blog' ?  (
-              <div className="news-grid mt-24">
+              <div className="news-grid mt-4">
                 {resourceData.gridItems.map((item, index) => (
                   <div className="news-grid-item effectFade fadeUp" data-delay={0.1 + (index * 0.05)} key={index}>
                     {slug === 'news' ? (
@@ -111,7 +111,7 @@ function ResourceSingle() {
               </div>
             ) : slug === 'press' ? (
               /* Press Coverage Categorized List */
-              <div className="press-coverage-container mt-24">
+              <div className="press-coverage-container mt-4">
                 {resourceData.categories.map((category, catIndex) => (
                   <div className="press-category mb-60" key={catIndex}>
                     <h3 className="press-category-title mb-30">{category.name}</h3>

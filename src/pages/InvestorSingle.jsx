@@ -2451,7 +2451,7 @@ function InvestorSingle() {
       </section>
 
       {/* Main Grid / Disclosures Section */}
-      <section className="explore-section">
+      <section className="explore-section section-spacing-lg">
         <div className="container">
           <div className="explore-divider"></div>
           
@@ -2562,7 +2562,7 @@ function InvestorSingle() {
               </div>
 
               {/* Annual Returns Section */}
-              <div className="policies-section-block mt-5">
+              <div className="policies-section-block">
                 <h3 className="explore-label text-left mb-3">Annual Returns</h3>
                 <div className="annual-returns-list">
                   {ANNUAL_RETURNS_DATA.map((item, idx) => (
@@ -2710,13 +2710,13 @@ function InvestorSingle() {
             <div>
               <div className="explore-label">Governance Disclosures</div>
               <h2 className="explore-title">
-                Official corporate reports, statutory filings, and compliance disclosures <br />
+                Official corporate reports, statutory filings, and compliance disclosures
                 for Virtual Galaxy Infotech Limited.
               </h2>
               
               <div className="row justify-content-center effect-fade-up">
                 <div className="col-lg-8">
-                  <div className="p-5 bg-light border border-slate-100 text-center" style={{ borderRadius: '20px' }}>
+                  <div className="p-4 mt-4 bg-light border border-slate-100 text-center" style={{ borderRadius: '20px' }}>
                     <p className="text-secondary mb-0" style={{ fontSize: '14.5px', lineHeight: '1.6' }}>
                       There are currently no active document files listed in this category. For archival records, statutory copies, or specific queries, please contact our Compliance Officer at the Investor Relations office.
                     </p>

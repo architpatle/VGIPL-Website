@@ -175,9 +175,9 @@ const getDocIcon = (iconName) => {
 
 function MaterialDocuments() {
   return (
-    <div className="board-mgmt-wrapper bg-[#f8fafc] pb-12 min-h-screen flex flex-col justify-start">
+    <div className="board-mgmt-wrapper  pb-12 min-h-screen flex flex-col justify-start">
       {/* Hero / Header Section */}
-      <section className="hero-section relative overflow-hidden bg-gradient-to-br from-[#fffcfb] to-[#ffffff] border-b border-[#f8fafc] pt-[105px] pb-[50px]">
+      <section className="hero-section relative overflow-hidden border-b border-[#f8fafc] ">
         {/* Decorative Wavy Lines SVG */}
         <svg className="absolute left-0 top-0 w-[280px] h-[280px] opacity-20 pointer-events-none animate-[pulse_6s_ease-in-out_infinite]" viewBox="0 0 200 200" fill="none">
           <path d="M-50,30 C30,70 70,-10 130,30 C190,70 230,-10 290,30" stroke="#ff4d00" strokeWidth="0.8" strokeDasharray="1.5 1.5" />

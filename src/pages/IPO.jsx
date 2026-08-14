@@ -41,8 +41,7 @@ function IPO() {
     <div className="ipo-page-wrapper">
       {/* Hero Section */}
       <section className="tf-section ipo-hero" style={{ 
-        padding: '160px 0 100px', 
-        background: 'linear-gradient(135deg, #fff5f4 0%, #ffffff 100%)',
+        padding: '120px 0 45px', 
         textAlign: 'center'
       }}>
         <div className="container">
@@ -66,7 +65,7 @@ function IPO() {
       </section>
 
       {/* Documents Section */}
-      <section className="tf-section documents-list" style={{ padding: '80px 0', background: '#fff' }}>
+      <section className="tf-section documents-list section-spacing-lg" >
         <div className="container">
           <div className="row g-4">
             {ipoDocuments.map((doc, idx) => (

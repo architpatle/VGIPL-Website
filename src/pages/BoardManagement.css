@@ -1,17 +1,17 @@
 /* Board & Management Page Mockup Styles */
 
 .board-mgmt-wrapper {
-  background-color: #ffffff;
-  min-height: 100vh;
+  /* background-color: #ffffff; */
+  /* min-height: 100vh; */
 }
 
 /* Hero Section */
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: 105px 0 50px;
-  background: linear-gradient(135deg, #fffcfb 0%, #ffffff 100%);
-  border-bottom: 1px solid #f8fafc;
+  padding: 120px 0 45px;
+  /* background: linear-gradient(135deg, #fffcfb 0%, #ffffff 100%); */
+  /* border-bottom: 1px solid #f8fafc; */
 }
 
 .tag-badge {
@@ -136,8 +136,8 @@
 
 /* Explore Leadership Section */
 .explore-section {
-  padding: 60px 0;
-  background-color: #ffffff;
+  /* padding: 60px 0; */
+  /* background-color: #ffffff; */
 }
 
 .mgmt-card {
@@ -891,7 +891,7 @@
 
 .group-companies-container {
   max-width: 1140px;
-  margin: 40px auto 0;
+  margin: 0px auto ;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1194,7 +1194,7 @@
 
 .policies-page-container {
   max-width: 1040px;
-  margin: 40px auto 0;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   gap: 40px;

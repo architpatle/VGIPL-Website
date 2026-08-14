@@ -293,12 +293,12 @@ function BoardManagement() {
       </section>
 
       {/* Main Content Area */}
-      <section className="explore-section">
+      <section className="explore-section section-spacing-lg">
         <div className="container">
           <AnimatePresence mode="wait">
             {!subpage ? (
               /* CARDS OVERVIEW DASHBOARD */
-              <div style={{ marginTop: '40px' }}>
+              <div>
                 
                 <motion.div
                   key="dashboard"

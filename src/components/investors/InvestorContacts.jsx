@@ -69,7 +69,9 @@ const ContactDetailBox = ({ label, value, type }) => {
 
 function InvestorContacts() {
   return (
-    <div className="board-mgmt-wrapper bg-[#f8fafc] pt-[92px] pb-4 min-h-[calc(100vh-100px)] box-sizing-border-box flex flex-col justify-start">
+    <div className="board-mgmt-wrapper min-h-[calc(100vh-100px)] box-sizing-border-box flex flex-col justify-start">
+
+      <div className="hero-section">
       
       {/* Standard Container for Breadcrumbs (matches other pages exactly) */}
       <div className="container">
@@ -91,7 +93,7 @@ function InvestorContacts() {
           </div>
         </div>
       </div>
-
+</div>
       {/* Cards Container */}
       <div className="container max-w-[1100px] mx-auto px-4 flex-grow flex flex-col justify-center">
         {/* Heading Section - Compact spacing */}
