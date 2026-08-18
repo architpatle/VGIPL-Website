@@ -11246,6 +11246,10 @@ footer .footer-bottom::before {
     font-size: 30px !important;
     line-height: 38px !important;
   }
+  .tf-btn-short{
+    padding: 8px 16px !important;
+    font-size: 12px;
+  }
 }
 
 /* Homepage Hero Overlay & Text Readability Styles */
