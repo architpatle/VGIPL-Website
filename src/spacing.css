@@ -353,7 +353,7 @@
 
   /* 2. Statistics / Metrics Card (About Us Section) */
   .section-about-us .review-box {
-    padding: 20px 16px !important;
+    padding: 16px 16px !important;
     border-radius: 20px !important;
   }
 
@@ -363,7 +363,7 @@
 
   .section-about-us .review-box .border-bottom {
     /* margin-bottom: 12px !important; */
-    padding-bottom: 8px !important;
+    padding-bottom: 0px !important;
   }
 
   .section-about-us .review-box .mt-20 {
@@ -1185,12 +1185,20 @@
 
   }
 
+  .section-about-us .col-left .title{
+    font-size: 18px ;
+  }
+
+   .section-about-us .review-box .desc-none{
+    display: none;
+
+   }
   .section-about-us .review-box .desc span{
     display: none;
   }
 
   .section-about-us .review-box .counter {
-    font-size: 60px !important;
+    font-size: 40px !important;
     line-height: 60px !important;
     margin-bottom: -6px !important;
   }

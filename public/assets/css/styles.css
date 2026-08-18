@@ -5404,6 +5404,7 @@ button.animate-btn::after,
   height: 6px;
   border-radius: 99px;
   background-color: var(--brand);
+  
 }
 
 .section-about-us .col-left .sub .dot::before {
@@ -5419,8 +5420,10 @@ button.animate-btn::after,
   animation: rippleFade 1.8s ease-out infinite;
 }
 
+
+
 .section-about-us .col-left .title {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   letter-spacing: 0;
 }
 
@@ -5541,6 +5544,25 @@ button.animate-btn::after,
 
 @media (max-width: 767px) {
 
+  .section-about-us .col-left .sub {
+  padding: 2px 15px ;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.section-about-us .col-left .sub .dot {
+  width: 4px;
+  height: 4px;
+  
+}
+
+.section-about-us .col-left .sub .dot::before {
+  width: 10px;
+  height: 10px;
+}
+
+
+
   .section-about-us .mission-box,
   .section-about-us .review-box {
     padding-left: 24px;
@@ -5552,6 +5574,8 @@ button.animate-btn::after,
     padding-right: 24px;
     flex-direction: column;
   }
+
+
 }
 
 @keyframes rippleFade {
@@ -11247,7 +11271,7 @@ footer .footer-bottom::before {
     line-height: 38px !important;
   }
   .tf-btn-short{
-    padding: 8px 16px !important;
+    padding: 6px 16px !important;
     font-size: 12px;
   }
 }
