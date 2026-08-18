@@ -8011,7 +8011,7 @@ button.animate-btn::after,
 }
 
 .section-services .col-left {
-  margin-bottom: 260px;
+  /* margin-bottom: 260px; */
 }
 
 .section-services .top {
@@ -9697,7 +9697,7 @@ button.animate-btn::after,
 
 .benefits-step .benefits-step-inner {
   height: 100px;
-  margin-top: 44px;
+  /* margin-top: 44px; */
   margin-bottom: 40px;
 }
 

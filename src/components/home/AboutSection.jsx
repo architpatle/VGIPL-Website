@@ -11,7 +11,9 @@ function AboutSection() {
           <div className="col-12 ">
             <div className="heading-section" style={{ marginBottom: '15px' }}>
               <div className="heading-sub fw-semibold effectFade fadeUp" style={{ display: 'inline-block', marginBottom: '15px' }}>About Us</div>
-              <div className="heading-title text-gradient-2 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building  <br className="d-none d-md-block" /> Reliable IT Foundations!</div>
+              <div className="heading-title text-gradient-2 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building 
+                 {/* <br className="d-none d-md-block" /> */}
+                 <span> Reliable IT Foundations!</span> </div>
             </div>
           </div>
           <div className="col-lg-7 lg-mb-24 d-flex">

@@ -37,7 +37,7 @@
 
   border-radius: 12px;
 
-  padding: 16px;
+  padding: 8px;
 
   display: flex;
   flex-direction: column;
@@ -76,10 +76,10 @@
 .progressCircle {
   position: relative;
 
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
 
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 
   flex-shrink: 0;
 }
@@ -128,7 +128,7 @@
 }
 
 .metricValue {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
 
@@ -190,7 +190,7 @@
 @media (max-width: 575px) {
   .performanceGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 20px;
   }
 
   .metricCard {
