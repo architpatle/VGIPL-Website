@@ -819,8 +819,15 @@ h6,
 }
 
 .text-body-1 {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 480px) {
+  .text-body-1 {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .text-body-2 {
@@ -5251,8 +5258,8 @@ button.animate-btn::after,
 
 @media (max-width:768px) {
   .section-hero .content-wrap .text {
-  margin-bottom: 16px;
-}
+    margin-bottom: 16px;
+  }
 }
 
 .section-hero .content-wrap .bot-btns {
@@ -5413,7 +5420,7 @@ button.animate-btn::after,
 }
 
 .section-about-us .col-left .title {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   letter-spacing: 0;
 }
 
@@ -7273,9 +7280,10 @@ button.animate-btn::after,
 }  */
 
 @media (max-width: 1200px) {
-  .section-tools>img{
+  .section-tools>img {
     width: 70px;
   }
+
   .section-tools .img-1 {
     top: 10%;
     left: 10%;
@@ -7740,8 +7748,8 @@ button.animate-btn::after,
 }
 
 .tool-wrap .image-center img {
-  width: 100%;  
-  object-fit:cover;
+  width: 100%;
+  object-fit: cover;
   /* filter: hue-rotate(160deg) saturate(1.5); */
 }
 
@@ -8743,7 +8751,7 @@ button.animate-btn::after,
 
 .swiper-testimonial_wrap .group-slider {
   position: relative;
-  padding-top: 24px ;
+  padding-top: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9706,8 +9714,9 @@ button.animate-btn::after,
     margin-top: 24px;
     margin-bottom: 44px;
   }
-  .wcuPerformance{
-    margin-bottom: 44px; 
+
+  .wcuPerformance {
+    margin-bottom: 44px;
   }
 }
 

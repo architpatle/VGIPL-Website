@@ -1180,7 +1180,9 @@
   }
 
   .section-about-us .col-left {
-    padding: 30px 0 0px !important;
+    padding: 14px 0 0px !important;
+    max-height: 300px;
+
   }
 
   .section-about-us .review-box .counter {

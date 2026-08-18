@@ -36,7 +36,7 @@ function AboutSection() {
               <div className="fw-bold mb-12 text-brand" style={{ fontSize: '0.95rem', letterSpacing: '1.2px', textTransform: 'uppercase' }}>
                 The Numbers Behind Our Impact
               </div>
-              <div className="desc fw-semibold text-body-1" style={{ marginTop: '0' }}>Empowering 5,000+ bank branches, manufacturers, and global businesses through cutting-edge automation, seamless customer experiences, enhanced service delivery, and real-time decision support systems.</div>
+              <div className="desc text-body-1" style={{ marginTop: '0' }}>Empowering 5,000+ bank branches, manufacturers, and global businesses through cutting-edge automation, seamless customer experiences, enhanced service delivery, and real-time decision support systems.</div>
               <div className="d-flex justify-content-between flex-wrap align-items-end gap-12">
                 <div>
                   <div className="d-flex gap-4 text mb-10">
