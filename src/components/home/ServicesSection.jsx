@@ -100,7 +100,7 @@ function ServicesSection() {
 
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-1' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-1', service1Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-1' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-1'}>
-                  <div className="accordion-title">
+                  <div className="accordion-title services-section-accordian-title">
                     Domain Expertise <br />
                     {/* <div className="text-body-1 num">(01)</div> */}
                   </div>
@@ -121,7 +121,7 @@ function ServicesSection() {
 
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-2' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-2', service2Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-2' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-2'}>
-                  <div className="accordion-title">
+                  <div className="accordion-title services-section-accordian-title">
                     Trusted by 500+ Enterprises <br />
                     {/* <div className="text-body-1 num">(02)</div> */}
                   </div>
@@ -142,7 +142,7 @@ function ServicesSection() {
 
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', service3Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
-                  <div className="accordion-title">
+                  <div className="accordion-title services-section-accordian-title">
                     400+ Associates <br />
                     {/* <div className="text-body-1 num">(03)</div> */}
                   </div>
@@ -165,7 +165,7 @@ function ServicesSection() {
 
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-4' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-4', service4Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-4' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-4'}>
-                  <div className="accordion-title">
+                  <div className="accordion-title services-section-accordian-title">
                     Future Ready Solutions <br />
                     {/* <div className="text-body-1 num">(04)</div> */}
                   </div>

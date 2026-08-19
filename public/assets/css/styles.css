@@ -10875,7 +10875,7 @@ button.animate-btn::after,
 
 @media (max-width: 575px) {
   .accordion-faq_item {
-    padding: 24px;
+    padding: 20px;
   }
 }
 

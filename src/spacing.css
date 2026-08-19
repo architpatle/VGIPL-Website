@@ -1239,6 +1239,9 @@
   .services-section-accordion-content{
     padding: 0 !important; 
   }
+  .services-section-accordian-title{
+    font-size: 24px !important;
+  }
   .services-section-accordian-text{
     padding-bottom: 0 !important;
     padding-top: 6px !important;
