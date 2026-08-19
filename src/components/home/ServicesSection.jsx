@@ -65,13 +65,13 @@ function ServicesSection() {
         <div className="row justify-content-between ">
           <div className="col-xxl-4 col-lg-6">
             <div className="d-flex flex-column justify-content-between h-100 ">
-              <div className="col-left d-flex flex-column justify-content-start gap-30 h-100">
+              <div className="col-left d-flex flex-column justify-content-start gap-30 h-100 services-section-col-left">
                 <div>
                   <div className="heading-section ">
                     <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us</div>
                     <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
                   </div>
-                  <p className="effectFade fadeUp " >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
+                  <p className="effectFade fadeUp services-section-p-none " >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
                 </div>
 
                 {/* Dynamic Image Container */}
@@ -107,9 +107,9 @@ function ServicesSection() {
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-1' ? 'open' : ''}`}>
                   <div className="react-accordion-inner">
-                    <div className="accordion-content pt-3 mt-0">
-                      <div className="text-body-3 text-neutral-300 text">VGIL has been a pioneer in the ever-evolving technology space in the verticals of Banking & Finance, eGovernance, ERP & DC / DR Solutions.</div>
-                      <div className="list-tags">
+                    <div className="accordion-content services-section-accordion-content pt-3 mt-0">
+                      <div className="text-body-3 text-neutral-300 text services-section-accordian-text">VGIL has been a pioneer in the ever-evolving technology space in the verticals of Banking & Finance, eGovernance, ERP & DC / DR Solutions.</div>
+                      <div className="list-tags services-section-accordian-list-tags">
                         <a href="#" className="tags-item fw-semibold">Pioneers in Technology Innovation</a>
                         <a href="#" className="tags-item fw-semibold">Reliable & Scalable Systems</a>
                         <a href="#" className="tags-item fw-semibold">Expertise Across Key Verticals </a>
@@ -128,9 +128,9 @@ function ServicesSection() {
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-2' ? 'open' : ''}`}>
                   <div className="react-accordion-inner">
-                    <div className="accordion-content pt-3 mt-0">
-                      <div className="text-body-3 text-neutral-300 text">Support multiple types of organizations, including Bank Branches, Manufacturing Setups, and Business Houses.</div>
-                      <div className="list-tags">
+                    <div className="accordion-content pt-3 mt-0 services-section-accordion-content">
+                      <div className="text-body-3 text-neutral-300 text services-section-accordian-text">Support multiple types of organizations, including Bank Branches, Manufacturing Setups, and Business Houses.</div>
+                      <div className="list-tags services-section-accordian-list-tags">
                         <a href="#" className="tags-item fw-semibold">Banking Solutions</a>
                         <a href="#" className="tags-item fw-semibold">Manufacturing Support</a>
                         <a href="#" className="tags-item fw-semibold">Business-Focused Solutionss</a>
@@ -149,11 +149,11 @@ function ServicesSection() {
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-3' ? 'open' : ''}`}>
                   <div className="react-accordion-inner">
-                    <div className="accordion-content pt-3 mt-0">
-                      <div className="text-body-3 text-neutral-300 text">Certified experts managing India's critical infrastructure.<br />
+                    <div className="accordion-content pt-3 mt-0 services-section-accordion-content">
+                      <div className="text-body-3 text-neutral-300 text services-section-accordian-text">Certified experts managing India's critical infrastructure.<br />
                         PAN-India presence with 8+ years avg experience
                       </div>
-                      <div className="list-tags">
+                      <div className="list-tags services-section-accordian-list-tags">
                         <a href="#" className="tags-item fw-semibold">Dynamic & Skilled Team</a>
                         <a href="#" className="tags-item fw-semibold">Maintaining a Competitive Edge</a>
                         <a href="#" className="tags-item fw-semibold">Continuously Upgraded Knowledge</a>
@@ -172,11 +172,11 @@ function ServicesSection() {
                 </div>
                 <div className={`react-accordion-content ${activeCard === 'faq-4' ? 'open' : ''}`}>
                   <div className="react-accordion-inner">
-                    <div className="accordion-content pt-3 mt-0">
-                      <div className="text-body-3 text-neutral-300 text">End-to-end lifecycle management for critical IT infrastructure:<br />
+                    <div className="accordion-content pt-3 mt-0 services-section-accordion-content">
+                      <div className="text-body-3 text-neutral-300 text services-section-accordian-text">End-to-end lifecycle management for critical IT infrastructure:<br />
                         Consulting & Design → Implementation → 24x7 Operations → AMC Support
                       </div>
-                      <div className="list-tags">
+                      <div className="list-tags services-section-accordian-list-tags">
                         <a href="#" className="tags-item fw-semibold">Automate Transactions Seamlessly</a>
                         <a href="#" className="tags-item fw-semibold">Intelligent Insights</a>
                         <a href="#" className="tags-item fw-semibold">Deliver Exceptional Customer Experience</a>

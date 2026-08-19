@@ -1226,6 +1226,27 @@
   } */
 }
 
+@media (max-width: 480px) {
+  .services-section-col-left{
+    gap:0 !important;
+  }
+  .services-section-p-none{
+    display: none ;
+  }
+  .dynamic-image-container{
+    margin-bottom: 0 !important;
+  }
+  .services-section-accordion-content{
+    padding: 0 !important; 
+  }
+  .services-section-accordian-text{
+    padding-bottom: 0 !important;
+    padding-top: 6px !important;
+  }
+  .services-section-accordian-list-tags{
+    display: none;
+  }
+}
 /* Why Choose Us / Benefits Section Overrides */
 .benefits-box {
   /* padding: 15px !important; */
