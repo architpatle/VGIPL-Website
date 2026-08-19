@@ -9682,6 +9682,13 @@ button.animate-btn::after,
   }
 }
 
+@media (max-width: 480px) {
+  .benefits-box{
+    padding: 20px 16px;
+    margin-bottom: 12px !important;
+  }
+}
+
 .benefits-secure-inner {
   margin-top: -15px;
   margin-bottom: -26px;
@@ -9741,6 +9748,13 @@ button.animate-btn::after,
 
   .wcuPerformance {
     margin-bottom: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-step .benefits-step-inner {
+    margin-top: 0px;
+    margin-bottom: 18px;
   }
 }
 

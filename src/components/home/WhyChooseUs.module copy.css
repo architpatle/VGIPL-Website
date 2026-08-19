@@ -4,8 +4,8 @@
   align-items: center;
 }
 .whyChooseUsHeadingSub{
-  /* margin: 0 !important; */
-  /* padding: 0 ; */
+  margin: 0 !important;
+  padding: 0 ;
 }
 .whyChooseUsHeadingTitle{
   margin: 0 !important;
@@ -188,9 +188,6 @@
 
 /* Mobile */
 @media (max-width: 575px) {
-  .wcuCard{
-    display: none !important;
-  }
   .performanceGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
@@ -227,10 +224,5 @@
     margin-bottom: 12px !important;
   }
 
-  .wcuRow{
-    margin-bottom: 0px !important;
-  }
-  .wcuPara{
-    /* display: none !important; */
-  }
+  
 }

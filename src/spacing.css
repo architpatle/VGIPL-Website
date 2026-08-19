@@ -1376,6 +1376,17 @@
 
 }
 
+@media (max-width: 480px) {
+  .benefits-box{
+    margin-bottom: 12px !important;
+  }
+}
+
+/* @media (max-width:480px) {
+  .benefits-secure-inner img{
+    max-width: 100px !important;
+  }
+} */
 /* ==========================================================================
    Founders Container Layout
    ========================================================================== */
