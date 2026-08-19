@@ -34,7 +34,7 @@ function ProcessSection() {
           spaceBetween: 24,
         },
         992: {
-          slidesPerView: 1.78,
+          slidesPerView: 2,
           spaceBetween: 24,
         }
       }
@@ -114,10 +114,10 @@ function ProcessSection() {
                         </div>
                         <div className="bot d-flex justify-content-between align-items-center border-top" style={{ borderColor: '#f3f4f6', marginTop: '8px', paddingTop: '8px' }}>
                           <div className="time fw-semibold text-brand" style={{ fontSize: '0.85rem', letterSpacing: '0.05em' }}>PHASE {step.number}</div>
-                          <div className="number">
+                          {/* <div className="number">
                             <span className="text-neutral-400 fw-bold">{step.number}</span>
                             <span className="text-neutral-200">/04</span>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
