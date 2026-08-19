@@ -100,7 +100,7 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
                     <div className="desktop-view-product-btn-wrap">
                       <Link
                         to={`/products/${product.slug}`}
-                        className="desktop-view-product-btn tf-btn"
+                        className="desktop-view-product-btn tf-btn tf-btn-short"
                         onClick={(e) => e.stopPropagation()}
                       >
                         View Product
