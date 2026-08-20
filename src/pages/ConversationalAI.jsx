@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCTS_DATA } from '../data/productsData';
+import './ConversationalAI.css'
 import NotFound from './NotFound';
 import CTABannerSection from '../components/services/CTABannerSection';
 
@@ -799,12 +800,12 @@ function ConversationalAI() {
 
             {/* RIGHT SIDE - Content & Feature Cards */}
             <div className="col-lg-6">
-              <div className="solution-content effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+              <div className="solution-content effectFade fadeUp">
 
                 <h3 className="platform-heading">
-                  <span className="text-red-gradient">Multi-Channel</span>
+                  <span className="text-red-gradient">Multi-Channel </span>
                   <br />
-                  <span className="text-navy">Conversational AI Platform</span>
+                  <span className="text-navy"> Conversational AI Platform</span>
                 </h3>
 
                 {/* Glowing red divider line with dot */}
@@ -971,7 +972,7 @@ function ConversationalAI() {
             }
 
             .header-title {
-              font-size: 2.2rem !important;
+              font-size: 2.2rem;
               font-weight: 750 !important;
               color: #0b132b !important;
               margin: 0 !important;
@@ -1244,7 +1245,7 @@ function ConversationalAI() {
               }
 
               .header-title {
-                font-size: 1.8rem !important;
+                font-size: 1.8rem;
               }
 
               .platform-heading {
@@ -1268,7 +1269,7 @@ function ConversationalAI() {
               }
 
               .header-title {
-                font-size: 1.5rem !important;
+                font-size: 1.5rem;
               }
 
               .platform-heading {
@@ -1300,7 +1301,9 @@ function ConversationalAI() {
               <div className="nlp-content effectFade fadeUp">
 
                 <h3 className="nlp-heading">
-                  Advanced <span className="text-red-gradient">Natural Language Processing</span> (NLP) Capabilities
+                  {/* Advanced <span className="text-red-gradient">Natural Language Processing</span> (NLP) Capabilities */}
+                  Advanced Natural Language Processing (NLP) Capabilities
+
                 </h3>
 
                 {/* Glowing red divider line with dots */}
@@ -1381,7 +1384,7 @@ function ConversationalAI() {
 
             {/* RIGHT SIDE - Image Area with floating Supporting Badge */}
             <div className="col-lg-6">
-              <div className="nlp-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+              <div className="nlp-image-area effectFade fadeUp" >
                 <div className="nlp-image-bg-glow"></div>
 
                 <img
@@ -1708,7 +1711,7 @@ function ConversationalAI() {
           <div className="row g-5 align-items-center">
 
             {/* LEFT SIDE - Robot Computer Illustration */}
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-2 order-lg-1">
               <div className="rti-image-area effectFade fadeUp">
                 <div className="rti-image-bg-glow"></div>
 
@@ -1721,8 +1724,8 @@ function ConversationalAI() {
             </div>
 
             {/* RIGHT SIDE - Content and Feature Cards */}
-            <div className="col-lg-6">
-              <div className="rti-content effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+            <div className="col-lg-6 order-1 order-lg-2">
+              <div className="rti-content effectFade fadeUp" >
 
                 <h3 className="rti-heading">
                   <span className="text-red-gradient">Real-Time Integration</span> with existing Billing Systems and Payment Gateways
@@ -2027,8 +2030,8 @@ function ConversationalAI() {
               }
 
               .rti-premium-card {
-                padding: 16px 20px;
-                gap: 15px;
+                padding: 12px;
+                gap: 15px ;
               }
 
               .rti-icon-box {
@@ -2196,7 +2199,7 @@ function ConversationalAI() {
 
             {/* RIGHT SIDE - Laptop Analytics Illustration */}
             <div className="col-lg-6">
-              <div className="cad-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+              <div className="cad-image-area effectFade fadeUp" >
                 <div className="cad-image-bg-glow"></div>
 
                 <img
@@ -2287,7 +2290,7 @@ function ConversationalAI() {
             }
 
             .cad-bullet-title-text {
-              font-size: 1.05rem !important;
+              font-size: 1.05rem;
               line-height: 1.5 !important;
               color: #2d3748 !important;
               margin: 0 !important;
@@ -2295,7 +2298,7 @@ function ConversationalAI() {
             }
 
             .cad-bullet-desc-text {
-              font-size: 1rem !important;
+              font-size: 1rem ;
               line-height: 1.5 !important;
               color: #4a5568 !important;
               margin: 0 !important;
@@ -2344,7 +2347,7 @@ function ConversationalAI() {
             }
 
             .cad-sub-card-text {
-              font-size: 0.92rem !important;
+              font-size: 0.92rem ;
               line-height: 1.5 !important;
               color: #4a5568 !important;
               margin: 0 !important;
@@ -2604,8 +2607,8 @@ function ConversationalAI() {
             </div>
 
             {/* RIGHT COLUMN - Laptop Robot Illustration */}
-            <div className="col-lg-6">
-              <div className="so-image-area effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+            <div className="col-lg-6 so-image-area-col">
+              <div className="so-image-area effectFade fadeUp" >
                 <div className="so-image-bg-glow"></div>
 
                 <img
@@ -2760,7 +2763,7 @@ function ConversationalAI() {
             }
 
             .so-text {
-              font-size: 0.95rem !important;
+              font-size: 0.95rem;
               line-height: 1.5 !important;
               color: rgba(255, 255, 255, 0.9) !important;
               margin: 0 !important;
@@ -2809,7 +2812,7 @@ function ConversationalAI() {
 
             @media (max-width: 575px) {
               .so-premium-container {
-                padding: 30px 15px;
+                padding: 4px auto;
                 border-radius: 20px;
               }
 
@@ -2819,12 +2822,12 @@ function ConversationalAI() {
 
               .so-list-item {
                 border-radius: 20px;
-                padding: 12px 16px;
+                padding: 12px;
                 align-items: flex-start !important;
               }
 
               .so-text {
-                font-size: 0.95rem !important;
+                font-size: 0.95rem ;
               }
             }
           `}
@@ -2832,7 +2835,7 @@ function ConversationalAI() {
       </div>
 
       {/* Conversational AI Use-Cases Section */}
-      <div className="use-cases-wrapper section-spacing-lg" style={{  position: 'relative', overflow: 'hidden', height:'100%' }}>
+      <div className="use-cases-wrapper section-spacing-lg" style={{ position: 'relative', overflow: 'hidden', height: '100%' }}>
         {/* Ambient background glows */}
         <div className="bg-glow-orb orb-left-uc"></div>
         <div className="bg-glow-orb orb-right-uc"></div>
@@ -2841,11 +2844,12 @@ function ConversationalAI() {
 
           {/* Top Header inside container */}
           <div className="uc-header effectFade fadeUp">
-            <span className="red-vertical-bar">|</span>
-            <h2 className="uc-main-heading">
-              Conversational <span className="text-red-gradient">AI Use-Cases</span>
-            </h2>
-
+            <div className="uc-header-inner">
+              <span className="red-vertical-bar">|</span>
+              <h2 className="uc-main-heading">
+                Conversational <span className="text-red-gradient">AI Use-Cases</span>
+              </h2>
+            </div>
             {/* Divider */}
             <div className="glowing-divider uc-divider">
               <div className="divider-line"></div>
@@ -2857,10 +2861,10 @@ function ConversationalAI() {
             </div>
           </div>
 
-          <div className="row g-5 align-items-center mt-3">
+          <div className="row g-5 align-items-center mt-3 uc-section">
 
             {/* LEFT COLUMN - Illustration */}
-            <div className="col-lg-5 col-md-12 text-center">
+            <div className="col-lg-5 col-md-12 text-center mt-0">
               <div className="uc-image-area effectFade fadeUp">
                 <div className="uc-image-bg-glow"></div>
 
@@ -2905,7 +2909,7 @@ function ConversationalAI() {
                 </div>
 
                 {/* Card 2: Traffic & Transport */}
-                <div className="uc-card effectFade fadeUp" style={{ transitionDelay: '0.1s' }}>
+                <div className="uc-card effectFade fadeUp" >
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Car icon */}
@@ -2934,7 +2938,7 @@ function ConversationalAI() {
                 </div>
 
                 {/* Card 3: Telecom & Internet Services */}
-                <div className="uc-card effectFade fadeUp" style={{ transitionDelay: '0.15s' }}>
+                <div className="uc-card effectFade fadeUp" >
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Mobile phone / wifi icon */}
@@ -2964,7 +2968,7 @@ function ConversationalAI() {
                 </div>
 
                 {/* Card 4: Insurance Sector */}
-                <div className="uc-card effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+                <div className="uc-card effectFade fadeUp">
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Shield icon */}
@@ -2992,7 +2996,7 @@ function ConversationalAI() {
                 </div>
 
                 {/* Card 5: Utilities & Government Services */}
-                <div className="uc-card effectFade fadeUp" style={{ transitionDelay: '0.25s' }}>
+                <div className="uc-card effectFade fadeUp" >
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Government / Utility building with flag */}
@@ -3020,7 +3024,7 @@ function ConversationalAI() {
                 </div>
 
                 {/* Card 6: Healthcare */}
-                <div className="uc-card effectFade fadeUp" style={{ transitionDelay: '0.3s' }}>
+                <div className="uc-card effectFade fadeUp" >
                   <div className="uc-card-header d-flex align-items-center gap-3">
                     <div className="uc-card-icon-box flex-shrink-0">
                       {/* Heartbeat EKG icon */}
@@ -3278,20 +3282,57 @@ function ConversationalAI() {
             }
 
             /* Responsive Adjustments */
-            @media (max-width: 991px) {
-              .uc-premium-container {
-                padding: 40px 25px;
-                border-radius: 24px;
-              }
+           @media (max-width: 991px) {
 
-              .uc-main-heading {
-                font-size: 2.2rem;
-              }
+  .uc-premium-container {
+    padding: 40px 25px;
+    border-radius: 24px;
+  }
 
-              .uc-grid {
-                grid-template-columns: 1fr;
-              }
-            }
+  .uc-main-heading {
+    font-size: 2.2rem;
+  }
+
+  /* Mobile viewport */
+  .col-lg-7:has(.uc-grid) {
+    overflow: hidden;
+  }
+
+  .uc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 16px;
+
+    width: 100%;
+
+    animation: ucMobileSlider 8s ease-in-out infinite;
+  }
+
+  .uc-grid .uc-card {
+    width: 100%;
+  }
+}
+  @keyframes ucMobileSlider {
+
+  /* Show cards 1, 2, 3 */
+  0%,
+  40% {
+    transform: translateX(0);
+  }
+
+  /* Move to cards 4, 5, 6 */
+  50%,
+  90% {
+    transform: translateX(calc(-100% - 16px));
+  }
+
+  /* Return to first group */
+  100% {
+    transform: translateX(0);
+  }
+}
 
             @media (max-width: 575px) {
               .uc-premium-container {
@@ -3308,7 +3349,7 @@ function ConversationalAI() {
               }
 
               .uc-card {
-                padding: 20px;
+                padding: 12px;
               }
 
               .uc-card-title {
