@@ -96,7 +96,7 @@ function HeroGradient() {
             With AI-powered execution, we transform ideas into scalable products that drive success in the Tech-world. <br />Built for performance, designed for long-term growth.
           </p>
           <div className="bot-btns effectFade fadeRotateX">
-            <Link to="/services" className="tf-btn">
+            <Link to="/services/application-development" className="tf-btn">
               Explore Services
             </Link>
             <a href="#pricing" className="tf-btn-2">

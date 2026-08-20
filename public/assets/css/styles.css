@@ -5569,6 +5569,17 @@ button.animate-btn::after,
     padding-right: 24px;
   }
 
+  .section-about-us .mission-box{
+    padding: 16px !important;
+  }
+
+  .section-about-us .mission-box .line{
+    margin:  0 0 4px 0 !important;
+  }
+
+
+
+
   .section-about-us .box-quotes {
     padding-left: 24px;
     padding-right: 24px;
