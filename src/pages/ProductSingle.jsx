@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import './ProductSingle.css';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCTS_DATA } from '../data/productsData';
 import NotFound from './NotFound';
@@ -291,7 +292,7 @@ function ProductSingle() {
   let mainHeading = "";
   let mainSubheading = "";
 
-  if (slug === 'core-banking-solution') {     
+  if (slug === 'core-banking-solution') {
     currentModules = ebankerModules;
     mainHeading = "E-Banker Modules";
     mainSubheading = "Streamlines customer onboarding with eKYC";
@@ -320,6 +321,28 @@ function ProductSingle() {
     mainHeading = "IBS Modules";
     mainSubheading = "Integrated Business Suite (IBS) is a comprehensive ERP software designed to unify all core business functions.";
   }
+
+
+  // =========================================
+  // MOBILE AUTOPLAY
+  // =========================================
+
+  useEffect(() => {
+    // Autoplay only on mobile/tablet
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
+
+    if (!mediaQuery.matches || currentModules.length <= 1) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setActiveModule((prev) => {
+        return (prev + 1) % currentModules.length;
+      });
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [slug, currentModules.length]);
 
   // Find the product by slug
   const product = PRODUCTS_DATA.find((p) => p.slug === slug);
@@ -355,11 +378,12 @@ function ProductSingle() {
             .fintech-modules-wrapper {
               // padding-top: 30px !important;
             }
+              
             .fintech-stat-value {
-              font-size: 2rem !important;
+              font-size: 24px !important;
             }
             .fintech-inner-panel {
-              padding: 25px 20px !important;
+              padding: 12px !important;
             }
           }
         `}
@@ -427,7 +451,7 @@ function ProductSingle() {
               .fintech-inner-panel {
                 background: #ffffff;
                 border-radius: 18px;
-                padding: 40px 30px;
+                padding: 24px;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
@@ -444,7 +468,7 @@ function ProductSingle() {
                 top: 0; left: 0; right: 0; bottom: 0;
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%23ff2b2b' stroke-width='0.2' stroke-opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3Ccircle cx='10' cy='10' r='0.8' fill='%23ff2b2b' fill-opacity='0.25'/%3E%3Ccircle cx='50' cy='30' r='0.8' fill='%23ff2b2b' fill-opacity='0.25'/%3E%3Ccircle cx='80' cy='70' r='0.8' fill='%23ff2b2b' fill-opacity='0.25'/%3E%3Cpath d='M 10 10 L 30 10 L 50 30 L 80 30 L 80 70' fill='none' stroke='%23ff2b2b' stroke-width='0.2' stroke-opacity='0.15'/%3E%3C/svg%3E");
                 background-size: cover;
-                opacity: 0.12;
+                opacity: 0.8;
                 z-index: 0;
                 pointer-events: none;
                 transition: all 0.5s ease;
@@ -496,7 +520,7 @@ function ProductSingle() {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: 28px;
+                // margin-bottom: 28px;
                 position: relative;
                 z-index: 1;
                 transition: all 0.5s ease;
@@ -519,7 +543,7 @@ function ProductSingle() {
                 font-size: 2.8rem;
                 font-weight: 700;
                 line-height: 1.1;
-                margin-bottom: 8px;
+                // margin-bottom: 8px;
                 position: relative;
                 z-index: 1;
                 letter-spacing: -1px;
@@ -561,15 +585,17 @@ function ProductSingle() {
                 ];
 
                 return (
-                  <div key={index} className="col-lg-4 col-md-6 col-sm-12">
+                  <div key={index} className="col-lg-4 col-md-6 col-sm-12 card-top-m">
                     <div className="fintech-stat-card effectFade fadeUp">
                       <div className="fintech-inner-panel">
                         <div className="fintech-inner-bg"></div>
                         <div className="fintech-card-glow" style={{ ...glowPositions[index % 6] }}></div>
-                        <div className="fintech-icon-wrap">
-                          {icons[index % 6]}
+                        <div className="fintech-card-heading">
+                          <div className="fintech-icon-wrap">
+                            {icons[index % 6]}
+                          </div>
+                          <h2 className="fintech-stat-value">{metric.value}</h2>
                         </div>
-                        <h2 className="fintech-stat-value">{metric.value}</h2>
                         <p className="fintech-stat-label">{metric.label}</p>
                       </div>
                     </div>
@@ -582,7 +608,7 @@ function ProductSingle() {
       )}
 
       {currentModules.length > 0 && (
-        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing-lg" style={{  position: 'relative', overflow: 'hidden'}}>
+        <div id={!(product.metrics && product.metrics.length > 0) ? "next-section" : undefined} className="modules-fintech-section section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
           <style>
             {`
             .fintech-modules-wrapper {
@@ -720,7 +746,7 @@ function ProductSingle() {
             .timeline-card {
               background: #ffffff;
               border-radius: 20px;
-              padding: 24px 30px;
+              padding: 12px 16px;
               box-shadow: 0 4px 20px rgba(0,0,0,0.02);
               border: 1px solid rgba(0,0,0,0.04);
               display: flex;
@@ -843,6 +869,9 @@ function ProductSingle() {
               from { opacity: 0; transform: scale(1.05); }
               to { opacity: 1; transform: scale(1); }
             }
+
+            
+             
           `}
           </style>
           <div className="container fintech-modules-wrapper">
@@ -875,7 +904,7 @@ function ProductSingle() {
                     <div className="premium-image-overlay">
                       <h3 style={{ color: '#fff', fontSize: '2.2rem', fontWeight: 'bold', marginBottom: '10px' }}>{currentModules[activeModule]?.title}</h3>
                       <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', margin: 0 }}>
-                        {currentModules[activeModule]?.subtitle.substring(0, 75)}{currentModules[activeModule]?.subtitle.length > 75 ? '...' : ''}
+                        {currentModules[activeModule]?.subtitle}{currentModules[activeModule]?.subtitle.length > 75 ? '' : ''}
                       </p>
                       <div className="slider-indicators">
                         {currentModules.map((_, idx) => (
@@ -891,14 +920,14 @@ function ProductSingle() {
                   </div>
 
                   {/* Dynamic Content Block to fill white space */}
-                  <div className="dynamic-content-card mt-4 p-4" style={{ backgroundColor: '#ffffff', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+                  {/* <div className="dynamic-content-card mt-4 p-4" style={{ backgroundColor: '#ffffff', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
                     <h3 key={`title-${activeModule}`} style={{ fontSize: '1.6rem', fontWeight: 'bold', color: '#1a1a1a', marginBottom: '12px', animation: 'fadeIn 0.5s ease-out forwards' }}>
                       {currentModules[activeModule]?.title}
                     </h3>
                     <p key={`desc-${activeModule}`} style={{ color: '#666', fontSize: '1.05rem', lineHeight: '1.6', margin: 0, animation: 'fadeIn 0.5s ease-out forwards' }}>
                       {currentModules[activeModule]?.subtitle}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -919,7 +948,7 @@ function ProductSingle() {
                         </div>
                         <div className="timeline-content">
                           <h4 className="timeline-title">{mod.title}</h4>
-                          <div
+                          {/* <div
                             className="timeline-subtitle-wrap"
                             style={{
                               maxHeight: activeModule === idx ? '250px' : '0px',
@@ -928,7 +957,7 @@ function ProductSingle() {
                             }}
                           >
                             <p className="timeline-subtitle">{mod.subtitle}</p>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="timeline-arrow">
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -1032,7 +1061,7 @@ function ProductSingle() {
 
       {/* Final Call To Action */}
       <div id="contact-section">
-        <CTABannerSection 
+        <CTABannerSection
           title={`Ready to Transform Your Business with ${product.title}?`}
           subtitle={`Get in touch with our experts to learn more about our comprehensive solutions and how ${product.title} can help you achieve your goals.`}
         />

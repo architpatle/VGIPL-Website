@@ -257,6 +257,9 @@
   .cta-banner-wrapper { padding-left: 15px; padding-right: 15px;  }
   .cta-buttons-wrapper { flex-direction: column; }
   .cta-btn { justify-content: center; }
-  .cta-headline { font-size: 32px; }
+  .cta-headline { font-size: 28px; }
+  .cta-subheadline{
+    font-size: 16px;
+  }
   .cta-banner-card { padding-left:30px; padding-right:30px;}
 }

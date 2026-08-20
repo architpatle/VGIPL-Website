@@ -1,0 +1,51 @@
+.fintech-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .card-top-m{
+        margin-top: 12px !important;
+    }
+    .fintech-icon-wrap{
+        height: 36px !important;
+        width: 36px !important;
+    }
+    .fintech-icon-wrap svg {
+        height: 18px !important;
+        width: 18px !important;
+    }
+    .fintech-card-heading{
+        margin-bottom: 4px;
+    }
+    .fintech-stat-label {
+        font-size: 16px !important;
+    }
+
+    .premium-image-overlay{
+        padding: 24px !important;
+    }
+    .timeline-modules-container {
+        display: none
+    }
+
+    .premium-image-card {
+        height: 540px !important;
+    }
+
+    .fintech-modules-wrapper h2,
+    .features-benefits-section h2 {
+        font-size: 28px !important;
+    }
+
+    .premium-image-overlay h3 {
+        font-size: 24px !important;
+    }
+
+    .premium-image-overlay p,
+    .features-benefits-section p {
+        font-size: 16px !important;
+    }
+}
