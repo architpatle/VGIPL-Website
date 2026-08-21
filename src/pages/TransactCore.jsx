@@ -510,7 +510,7 @@ function TransactCore() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp">
+              <div key={idx} className="effectFade fadeUp h-100">
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">

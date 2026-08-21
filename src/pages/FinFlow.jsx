@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './FinFlow.css'
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
 import finFlowImg from '../assets/Products-img/FinFlow.png';
@@ -40,7 +41,7 @@ function FinFlow() {
               font-size: 1rem !important;
             }
                .section-heading-responsive {
-              font-size: 2.2rem !important;
+              font-size: 2.2rem ;
             }
               .overview-card {
               padding: 30px 20px !important;
@@ -84,7 +85,7 @@ function FinFlow() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -146,11 +147,11 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2px', position: 'relative', width: '200px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, #ff2b2b, transparent)', borderRadius: '10px' }}></div>
@@ -169,7 +170,7 @@ function FinFlow() {
             <div className="overview-card">
               <div className="row align-items-center">
                 {/* Left Side: Concentric circles and 3D Isometric box */}
-                <div className="col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
+                <div className=" overview-motion col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
                   <div style={{ position: 'absolute', top: '10%', left: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
                   <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
 
@@ -243,13 +244,13 @@ function FinFlow() {
 
                 {/* Right Side: Description */}
                 <div className="col-lg-7">
-                  <div style={{ paddingLeft: '20px' }} className="md-p-0">
+                  <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                     <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
                       <span className="text-highlight-pill">Fin Flow</span> is a unified digital ecosystem designed for <span className="text-highlight-pill">Banks</span> and their corporate and retail <span className="text-highlight-pill">Businesses</span> to manage end-to-end business operations seamlessly. It brings together finance, HR, procurement, budgeting, inventory, and operational workflows on a single centralized platform.
                     </p>
 
                     {/* Red divider with a dot */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
+                    <div className='overview-desc-line' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3))' }}></div>
                       <div style={{ width: '6px', height: '6px', backgroundColor: '#ff2b2b', borderRadius: '50%', boxShadow: '0 0 8px #ff2b2b' }}></div>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to left, transparent, rgba(255, 43, 43, 0.3))' }}></div>
@@ -267,7 +268,7 @@ function FinFlow() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -298,7 +299,7 @@ function FinFlow() {
               overflow: hidden;
               z-index: 1;
               display: flex;
-              align-items: start;
+              align-items: center;
               gap: 25px;
             }
             
@@ -390,14 +391,14 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container capabilities-heading' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
               Integrated financial orchestration and operations
             </p>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3), transparent)' }}></div>
@@ -488,7 +489,7 @@ function FinFlow() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" >
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">
@@ -673,8 +674,8 @@ function FinFlow() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
+          <div className='section-heading-container designed-for-heading' style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
+            {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ display: 'flex', gap: '4px' }}>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -686,7 +687,7 @@ function FinFlow() {
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
-            </div>
+            </div> */}
 
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Technology & <span style={{ color: '#ff2b2b' }}>Architecture</span>
@@ -757,17 +758,19 @@ function FinFlow() {
                 )
               }
             ].map((target, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100">
                 <div className="designed-card">
                   <div className="designed-card-tab"></div>
                   <div className="designed-icon-container">
                     <div className="designed-icon-orbit"></div>
-                    <div className="designed-icon-dot"></div>
+                    {/* <div className="designed-icon-dot"></div> */}
                     <div className="designed-icon-glow"></div>
                     {target.icon}
                   </div>
-                  <h4 className="designed-card-title">{target.title}</h4>
-                  <p className="designed-card-desc">{target.desc}</p>
+                  <div className="designed-content">
+                    <h4 className="designed-card-title">{target.title}</h4>
+                    <p className="designed-card-desc">{target.desc}</p>
+                  </div>
                   <div className="designed-card-divider"></div>
                 </div>
               </div>
@@ -841,14 +844,14 @@ function FinFlow() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container designed-for-heading' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Operational <span style={{ color: '#ff2b2b' }}>Benefits</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
               Measurable advantages for financial growth and banking collaboration
             </p>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3), transparent)' }}></div>
@@ -919,7 +922,7 @@ function FinFlow() {
                 )
               }
             ].map((benefit, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" >
                 <div className="benefit-card">
                   <div className="benefit-icon-box">
                     {benefit.icon}
@@ -933,7 +936,7 @@ function FinFlow() {
       </section>
 
       {/* 5. Why Choose Fin Flow Section */}
-      <section id="why-choose" className="section-spacing-lg" style={{position: 'relative', overflow: 'hidden' }}>
+      <section id="why-choose" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1130,11 +1133,11 @@ function FinFlow() {
 
         {/* Background Map & Glows */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${abstractWorldMapImg})`, backgroundSize: 'cover', opacity: 0.03, zIndex: 0, pointerEvents: 'none' }}></div>
-        
+
         {/* Ambient gradient lighting */}
         <div style={{ position: 'absolute', top: '-10%', left: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
         <div style={{ position: 'absolute', bottom: '-10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
-        
+
         {/* Curved connection lines */}
         <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, opacity: 0.12 }} viewBox="0 0 1440 800" fill="none">
           <path d="M-100,200 C300,100 500,600 900,400 C1100,300 1300,700 1600,500" stroke="#ff2b2b" strokeWidth="1.5" strokeDasharray="5 5" />
@@ -1143,12 +1146,12 @@ function FinFlow() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
+            {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <span style={{ color: '#ff2b2b', fontSize: '0.85rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase' }}>WHY CHOOSE US</span>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Fin Flow</span>?
@@ -1222,21 +1225,23 @@ function FinFlow() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" >
                 <div className="why-choose-card">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
                     <div className="why-choose-icon-glow"></div>
                     {card.icon}
                   </div>
-                  <h4 className="why-choose-card-title">{card.title}</h4>
-                  <p className="why-choose-card-desc">{card.desc}</p>
+                  <div className="why-choose-content">
+                    <h4 className="why-choose-card-title">{card.title}</h4>
+                    <p className="why-choose-card-desc">{card.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
+            <div className="effectFade fadeUp h-100">
               <div className="why-choose-cta-card">
                 <div className="why-choose-cta-glow"></div>
                 <svg className="why-choose-cta-waves" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -1248,19 +1253,22 @@ function FinFlow() {
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-cta-icon" style={{ color: '#ffffff', marginBottom: '25px' }}>
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
-                  <h4 className="why-choose-cta-title">Start Growing Today</h4>
-                  <p className="why-choose-cta-desc">
+                  {/* <p className="why-choose-cta-desc">
                     Connect banking with business operations
-                  </p>
+                  </p> */}
                 </div>
+                <div className="ready-content">
 
-                <a href="#contact-section" className="why-choose-cta-btn">
-                  <span>Get Started</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
+                  <h4 className="why-choose-cta-title">Start Growing Today</h4>
+
+                  <a href="#contact-section" className="why-choose-cta-btn">
+                    <span>Get Started</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1268,7 +1276,7 @@ function FinFlow() {
       </section>
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing-lg" style={{position: 'relative', overflow: 'hidden' }}>
+      <section id="outcome" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
@@ -1426,7 +1434,7 @@ function FinFlow() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -1434,12 +1442,12 @@ function FinFlow() {
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '3px', width: '100%', backgroundColor: '#ff2b2b', borderRadius: '2px' }}></div>
@@ -1453,7 +1461,7 @@ function FinFlow() {
             <div className="outcome-main-card">
               <div className="outcome-corner-bracket-tl"></div>
               <div className="outcome-corner-bracket-br"></div>
-              
+
               {/* Center Checkmark with Orbits */}
               <div className="outcome-icon-outer">
                 <div className="outcome-icon-middle"></div>
@@ -1472,7 +1480,7 @@ function FinFlow() {
               </p>
 
               {/* 4 Outcome Keyword Highlights */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
+              {/* <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
                 {['Efficiency', 'Compliance', 'Smart Financing', 'Sustainable Growth'].map((word, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 43, 43, 0.05)', border: '1px solid rgba(255, 43, 43, 0.15)', padding: '8px 20px', borderRadius: '30px', fontWeight: '700', color: '#1a1a1a', fontSize: '1rem' }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="3">
@@ -1481,7 +1489,7 @@ function FinFlow() {
                     <span>{word}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <a href="#contact-section" className="outcome-cta-btn">
                 <span>Start Your Digital Transformation</span>
@@ -1499,7 +1507,7 @@ function FinFlow() {
 
       {/* 7. Contact Us Section */}
       <div id="contact-section">
-        <CTABannerSection 
+        <CTABannerSection
           title={`Ready to Orchestrate Workflows with ${product.title}?`}
           subtitle={`Schedule a free consultation with our workflow automation experts and discover how ${product.title} can connect banks and businesses.`}
         />
