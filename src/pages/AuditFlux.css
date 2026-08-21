@@ -1,0 +1,20 @@
+@media (max-width: 480px) {
+    .section-heading-container {
+        margin-bottom: 20px !important;
+    }
+
+    .section-heading-container p {
+        font-size: 16px !important;
+    }
+
+    .section-heading-responsive {
+        font-size: 24px !important;
+        margin-bottom: 12px !important;
+    }
+    .overview-card {
+        padding: 16px !important;
+    }
+    .capability-card-desc{
+        display: none;
+    }
+}

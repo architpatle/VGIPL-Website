@@ -80,6 +80,10 @@
         font-size: 16px !important;
     }
 
+    .designed-grid {
+        gap: 12px !important;
+    }
+
     .designed-card {
         padding: 12px !important;
         flex-direction: row !important;
@@ -146,14 +150,15 @@
         font-size: 16px !important;
     }
 
-    .why-choose-grid{
-        gap:12px !important
+    .why-choose-grid {
+        gap: 12px !important
     }
+
     .why-choose-card {
         padding: 16px !important;
         flex-direction: row !important;
         align-items: center;
-        gap: 12px ;
+        gap: 12px;
     }
 
     .why-choose-icon-container {
@@ -162,9 +167,10 @@
         height: 40px !important;
         margin-bottom: 0 !important;
     }
-     .why-choose-icon-container svg{
+
+    .why-choose-icon-container svg {
         height: 18px !important;
-     }
+    }
 
     .why-choose-card-number {
         display: none !important;
@@ -180,41 +186,55 @@
         line-height: 1.5 !important;
     }
 
-    .why-choose-cta-card{
+    .why-choose-cta-card {
         padding: 16px !important;
         flex-direction: row !important;
         justify-content: start !important;
         align-items: center !important;
-        gap : 12px !important
+        gap: 12px !important
     }
+
     .why-choose-cta-icon {
         margin-bottom: 0 !important;
         height: 28px !important;
     }
-    .why-choose-cta-title{
+
+    .why-choose-cta-title {
         font-size: 18px !important;
     }
-    .why-choose-cta-btn{
+
+    .why-choose-cta-btn {
         font-size: 14px !important;
         padding: 8px 16px !important;
     }
 
-    .outcome-main-card{
-        padding: 16px    !important;
+    .outcome-main-card {
+        padding: 16px !important;
     }
-    .outcome-text{
+
+    .outcome-text {
         font-size: 16px !important;
         line-height: 1.5 !important;
         margin-bottom: 16px !important;
     }
-    .outcome-cta-btn{
+
+    .outcome-cta-btn {
         font-size: 16px !important;
     }
-    .outcome-corner-bracket-tl{
-        top : 4px !important;
+
+    .outcome-btn-arrow {
+        flex: 0 0 20px !important;
+        height: 20px !important;
+        width: 20px !important;
+
+    }
+
+    .outcome-corner-bracket-tl {
+        top: 4px !important;
         left: 4px !important;
     }
-    .outcome-corner-bracket-br{
+
+    .outcome-corner-bracket-br {
         bottom: 4px !important;
         right: 4px !important;
     }

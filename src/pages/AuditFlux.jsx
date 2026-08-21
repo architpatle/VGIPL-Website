@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './AuditFlux.css'
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
 import auditFluxImg from '../assets/Products-img/AuditFlux.png';
@@ -40,10 +41,10 @@ function AuditFlux() {
               font-size: 1rem !important;
             }
              .section-heading-responsive {
-              font-size: 2.2rem !important;
+              font-size: 2.2rem;
             }
               .overview-card {
-              padding: 30px 20px !important;
+              padding: 30px 20px ;
             }
           }
         `}
@@ -146,7 +147,7 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
@@ -169,7 +170,7 @@ function AuditFlux() {
             <div className="overview-card">
               <div className="row align-items-center">
                 {/* Left Side: Concentric circles and 3D Isometric box */}
-                <div className="col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
+                <div className="overview-motion col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
                   {/* Abstract dots behind the circles */}
                   <div style={{ position: 'absolute', top: '10%', left: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
                   <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
@@ -244,13 +245,13 @@ function AuditFlux() {
 
                 {/* Right Side: Description */}
                 <div className="col-lg-7">
-                  <div style={{ paddingLeft: '20px' }} className="md-p-0">
+                  <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                     <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
                       <span className="text-highlight-pill">AuditFlux</span> is a next-generation audit management platform designed to modernize and streamline audit operations across financial institutions.
                     </p>
 
                     {/* Red divider with a dot */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
+                    <div className='overview-desc-line' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3))' }}></div>
                       <div style={{ width: '6px', height: '6px', backgroundColor: '#ff2b2b', borderRadius: '50%', boxShadow: '0 0 8px #ff2b2b' }}></div>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to left, transparent, rgba(255, 43, 43, 0.3))' }}></div>
@@ -268,7 +269,7 @@ function AuditFlux() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -394,7 +395,7 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
@@ -492,7 +493,7 @@ function AuditFlux() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" >
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">
@@ -512,7 +513,7 @@ function AuditFlux() {
       </section>
 
       {/* 3. Designed For Section */}
-      <section id="designed-for" className="section-spacing-lg" style={{ backgroundColor: '#ffffff',  position: 'relative', overflow: 'hidden' }}>
+      <section id="designed-for" className="section-spacing-lg" style={{ backgroundColor: '#ffffff', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .designed-grid {
@@ -541,7 +542,7 @@ function AuditFlux() {
               background: #ffffff;
               border-radius: 24px;
               padding: 40px 24px;
-              border: 1px solid rgba(255, 43, 43, 0.08);
+              border: 1px solid rgba(255, 43, 43, 0.2);
               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.015);
               transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
               height: 100%;
@@ -661,7 +662,7 @@ function AuditFlux() {
         <div style={{ position: 'absolute', bottom: '10%', right: '-5%', width: '350px', height: '350px', background: 'radial-gradient(circle, rgba(255,43,43,0.03) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(50px)', pointerEvents: 'none', zIndex: 0 }}></div>
 
         {/* Floating Side Ring Left */}
-        <div style={{ position: 'absolute', left: '-100px', top: '50%', transform: 'translateY(-50%)', width: '200px', height: '200px', pointerEvents: 'none', zIndex: 0, opacity: 0.6 }}>
+        <div className='left-ring' style={{ position: 'absolute', left: '-100px', top: '50%', transform: 'translateY(-50%)', width: '200px', height: '200px', pointerEvents: 'none', zIndex: 0, opacity: 0.6 }}>
           <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
             <circle cx="20" cy="50" r="45" stroke="#ff2b2b" strokeWidth="1" strokeDasharray="3 3" />
             <circle cx="20" cy="50" r="30" stroke="#ff2b2b" strokeWidth="1" />
@@ -670,7 +671,7 @@ function AuditFlux() {
         </div>
 
         {/* Floating Side Ring Right */}
-        <div style={{ position: 'absolute', right: '-100px', top: '50%', transform: 'translateY(-50%)', width: '200px', height: '200px', pointerEvents: 'none', zIndex: 0, opacity: 0.6 }}>
+        <div className='right-ring' style={{ position: 'absolute', right: '-100px', top: '50%', transform: 'translateY(-50%)', width: '200px', height: '200px', pointerEvents: 'none', zIndex: 0, opacity: 0.6 }}>
           <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
             <circle cx="80" cy="50" r="45" stroke="#ff2b2b" strokeWidth="1" strokeDasharray="3 3" />
             <circle cx="80" cy="50" r="30" stroke="#ff2b2b" strokeWidth="1" />
@@ -695,9 +696,9 @@ function AuditFlux() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
+          <div className='section-heading-container designed-for-heading' style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Header Badge */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
+            {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ display: 'flex', gap: '4px' }}>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -709,7 +710,7 @@ function AuditFlux() {
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
                 <div style={{ width: '4px', height: '4px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
-            </div>
+            </div> */}
 
             {/* Main title */}
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
@@ -784,17 +785,20 @@ function AuditFlux() {
                 )
               }
             ].map((target, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp" >
                 <div className="designed-card">
                   <div className="designed-card-tab"></div>
                   <div className="designed-icon-container">
                     <div className="designed-icon-orbit"></div>
-                    <div className="designed-icon-dot"></div>
+                    {/* <div className="designed-icon-dot"></div> */}
                     <div className="designed-icon-glow"></div>
                     {target.icon}
                   </div>
-                  <h4 className="designed-card-title">{target.title}</h4>
-                  <p className="designed-card-desc">{target.desc}</p>
+                  <div className="designed-content">
+
+                    <h4 className="designed-card-title">{target.title}</h4>
+                    <p className="designed-card-desc">{target.desc}</p>
+                  </div>
                   <div className="designed-card-divider"></div>
                 </div>
               </div>
@@ -814,11 +818,77 @@ function AuditFlux() {
               max-width: 1200px;
               margin: 0 auto;
             }
-            @media (max-width: 990px) {
+              
+.features-slider-viewport {
+  width: 100%;
+}
+            @media (max-width: 991px) {
+
+            .features-slider-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
               .features-columns-wrapper {
-                grid-template-columns: 1fr;
-                gap: 30px;
+               display: grid;
+               grid-template-columns: repeat(2, 100%);
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+gap: 16px;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    animation: featuresMobileSlider 8s ease-in-out infinite;
               }
+
+    .features-columns-wrapper .effectFade {
+    width: 100%;
+    min-width: 0;
+    height: auto !important;
+  }
+
+      .features-columns-wrapper .feature-section-card {
+    width: 100%;
+    height: 100%;
+  }
+        .features-columns-wrapper .feature-section-card:hover {
+    transform: none;
+  }
+
+  @keyframes featuresMobileSlider {
+
+  /* ================================
+     CARD 1
+  ================================= */
+
+  0%,
+  40% {
+    transform: translateX(0);
+  }
+
+
+  /* ================================
+     SLIDE TO CARD 2
+  ================================= */
+
+  50%,
+  90% {
+    transform: translateX(calc(-100% - 16px));
+  }
+
+
+  /* ================================
+     SLIDE BACK TO CARD 1
+  ================================= */
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
             }
             
             .feature-section-card {
@@ -905,7 +975,7 @@ function AuditFlux() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
               Core <span style={{ color: '#ff2b2b' }}>Components</span>
             </h2>
@@ -917,53 +987,56 @@ function AuditFlux() {
             </div>
           </div>
 
-          <div className="features-columns-wrapper">
-            {/* Left Card: Technology & Architecture */}
-            <div className="effectFade fadeUp h-100">
-              <div className="feature-section-card">
-                <div className="feature-header-row">
-                  <div className="feature-card-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    </svg>
-                  </div>
-                  <div className="feature-header-text">
-                    <h3 className="feature-card-main-title">Technology & Architecture</h3>
-                    <p className="feature-card-subtitle">Fostering rapid innovation through advanced audit architecture</p>
-                  </div>
-                </div>
-                <ul className="feature-bullets-list">
-                  <li className="feature-bullet-item"><strong>Seamless Core Banking System (CBS) Integration</strong></li>
-                  <li className="feature-bullet-item"><strong>Secure, API-driven Architecture</strong></li>
-                  <li className="feature-bullet-item"><strong>Centralized Data Repository with Audit Trails</strong></li>
-                  <li className="feature-bullet-item"><strong>Scalable for Multi-Branch & Multi-Entity Institutions</strong></li>
-                  <li className="feature-bullet-item"><strong>On-Premise, Private Cloud & Hybrid Deployment</strong></li>
-                </ul>
-              </div>
-            </div>
+          <div className="features-slider-viewport">
 
-            {/* Right Card: Operational Benefits */}
-            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.1s' }}>
-              <div className="feature-section-card">
-                <div className="feature-header-row">
-                  <div className="feature-card-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="23 4 12 15 7 10 1 16" />
-                      <polyline points="17 4 23 4 23 10" />
-                    </svg>
+            <div className="features-columns-wrapper">
+              {/* Left Card: Technology & Architecture */}
+              <div className="effectFade fadeUp h-100">
+                <div className="feature-section-card">
+                  <div className="feature-header-row">
+                    <div className="feature-card-icon-box">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                    </div>
+                    <div className="feature-header-text">
+                      <h3 className="feature-card-main-title">Technology & Architecture</h3>
+                      <p className="feature-card-subtitle">Fostering rapid innovation through advanced audit architecture</p>
+                    </div>
                   </div>
-                  <div className="feature-header-text">
-                    <h3 className="feature-card-main-title">Operational Benefits</h3>
-                    <p className="feature-card-subtitle">Measurable benefits for audit infrastructure growth</p>
-                  </div>
+                  <ul className="feature-bullets-list">
+                    <li className="feature-bullet-item"><strong>Seamless Core Banking System (CBS) Integration</strong></li>
+                    <li className="feature-bullet-item"><strong>Secure, API-driven Architecture</strong></li>
+                    <li className="feature-bullet-item"><strong>Centralized Data Repository with Audit Trails</strong></li>
+                    <li className="feature-bullet-item"><strong>Scalable for Multi-Branch & Multi-Entity Institutions</strong></li>
+                    <li className="feature-bullet-item"><strong>On-Premise, Private Cloud & Hybrid Deployment</strong></li>
+                  </ul>
                 </div>
-                <ul className="feature-bullets-list">
-                  <li className="feature-bullet-item"><strong>Improved audit efficiency & reduced manual effort</strong></li>
-                  <li className="feature-bullet-item"><strong>Enhanced transparency across audit processes</strong></li>
-                  <li className="feature-bullet-item"><strong>Faster identification of risks & compliance gaps</strong></li>
-                  <li className="feature-bullet-item"><strong>Real-time visibility into audit observations</strong></li>
-                  <li className="feature-bullet-item"><strong>Stronger governance & regulatory readiness</strong></li>
-                </ul>
+              </div>
+
+              {/* Right Card: Operational Benefits */}
+              <div className="effectFade fadeUp h-100" >
+                <div className="feature-section-card">
+                  <div className="feature-header-row">
+                    <div className="feature-card-icon-box">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="23 4 12 15 7 10 1 16" />
+                        <polyline points="17 4 23 4 23 10" />
+                      </svg>
+                    </div>
+                    <div className="feature-header-text">
+                      <h3 className="feature-card-main-title">Operational Benefits</h3>
+                      <p className="feature-card-subtitle">Measurable benefits for audit infrastructure growth</p>
+                    </div>
+                  </div>
+                  <ul className="feature-bullets-list">
+                    <li className="feature-bullet-item"><strong>Improved audit efficiency & reduced manual effort</strong></li>
+                    <li className="feature-bullet-item"><strong>Enhanced transparency across audit processes</strong></li>
+                    <li className="feature-bullet-item"><strong>Faster identification of risks & compliance gaps</strong></li>
+                    <li className="feature-bullet-item"><strong>Real-time visibility into audit observations</strong></li>
+                    <li className="feature-bullet-item"><strong>Stronger governance & regulatory readiness</strong></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -1187,11 +1260,11 @@ function AuditFlux() {
           {/* Section Header */}
           <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Small premium top label with divider lines */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
+            {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <span style={{ color: '#ff2b2b', fontSize: '0.85rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase' }}>WHY CHOOSE US</span>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             {/* Main heading */}
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
@@ -1267,21 +1340,23 @@ function AuditFlux() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100" >
                 <div className="why-choose-card">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
                     <div className="why-choose-icon-glow"></div>
                     {card.icon}
                   </div>
-                  <h4 className="why-choose-card-title">{card.title}</h4>
-                  <p className="why-choose-card-desc">{card.desc}</p>
+                  <div className="why-choose-content">
+                    <h4 className="why-choose-card-title">{card.title}</h4>
+                    <p className="why-choose-card-desc">{card.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
+            <div className="effectFade fadeUp h-100" >
               <div className="why-choose-cta-card">
                 <div className="why-choose-cta-glow"></div>
 
@@ -1295,19 +1370,24 @@ function AuditFlux() {
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-cta-icon" style={{ color: '#ffffff', marginBottom: '25px' }}>
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
-                  <h4 className="why-choose-cta-title">Achieve Audit Excellence</h4>
-                  <p className="why-choose-cta-desc">
-                    Transform your audit operations today
-                  </p>
                 </div>
 
-                <a href="#contact-section" className="why-choose-cta-btn">
-                  <span>Get Started</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
+                <div className="ready-content">
+
+                  <h4 className="why-choose-cta-title">Achieve Audit Excellence</h4>
+                  {/* <p className="why-choose-cta-desc">
+                    Transform your audit operations today
+                  </p> */}
+
+                  <a href="#contact-section" className="why-choose-cta-btn">
+                    <span>Get Started</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>
@@ -1538,7 +1618,7 @@ function AuditFlux() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -1546,7 +1626,7 @@ function AuditFlux() {
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
@@ -1585,7 +1665,7 @@ function AuditFlux() {
               </p>
 
               {/* 4 Outcome Keyword Highlights */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
+              {/* <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
                 {['Measurable', 'Efficient', 'Excellent', 'Future-Ready'].map((word, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 43, 43, 0.05)', border: '1px solid rgba(255, 43, 43, 0.15)', padding: '8px 20px', borderRadius: '30px', fontWeight: '700', color: '#1a1a1a', fontSize: '1rem' }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="3">
@@ -1594,7 +1674,7 @@ function AuditFlux() {
                     <span>{word}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <a href="#contact-section" className="outcome-cta-btn">
                 <span>Transform Your Audit Operations</span>
