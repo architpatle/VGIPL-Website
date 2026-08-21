@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TransactCore.css';
 import { Link } from 'react-router-dom';
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
@@ -45,16 +46,16 @@ function TransactCore() {
               min-height: auto !important;
             }
             .section-heading-responsive {
-              font-size: 2.2rem !important;
+              font-size: 2.2rem ;
             }
             .section-spacing-responsive {
               padding: 60px 0 !important;
             }
             .overview-card {
-              padding: 30px 0px !important;
+              padding: 30px 0px;
             }
             .capability-card {
-              padding: 25px 20px !important;
+              padding: 25px 20px ;
             }
           }
         `}
@@ -69,16 +70,16 @@ function TransactCore() {
               font-size: 1rem !important;
             }
             .section-heading-responsive {
-              font-size: 2.2rem !important;
+              font-size: 2.2rem ;
             }
             .section-spacing-responsive {
               padding: 60px 0 !important;
             }
             .overview-card {
-              padding: 30px 20px !important;
+              padding: 30px 20px ;
             }
             .capability-card {
-              padding: 25px 20px !important;
+              padding: 25px 20px ;
             }
           }
         `}
@@ -92,7 +93,7 @@ function TransactCore() {
               <img
                 src={transactCoreImg}
                 alt={`${product.title} Logo`}
-                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain',  marginBottom: '8px' }}
+                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', marginBottom: '8px' }}
               />
             </div>
             <div className="title text-display-2 effectFade fadeRotateX prod-hero-title">
@@ -119,7 +120,7 @@ function TransactCore() {
       </div>
 
       {/* 1. Product Overview Section */}
-      <section id="overview" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      <section id="overview" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             @keyframes pulse-dot {
@@ -181,11 +182,11 @@ function TransactCore() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className="section-heading-responsive" style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px' }}>
               Product <span style={{ color: '#ff2b2b' }}>Overview</span>
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2px', position: 'relative', width: '200px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, #ff2b2b, transparent)', borderRadius: '10px' }}></div>
@@ -204,7 +205,7 @@ function TransactCore() {
             <div className="overview-card">
               <div className="row align-items-center">
                 {/* Left Side: Concentric circles and 3D Isometric box */}
-                <div className="col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
+                <div className="overview-motion col-lg-5 d-flex justify-content-center md-mb-40" style={{ position: 'relative' }}>
                   {/* Abstract dots behind the circles */}
                   <div style={{ position: 'absolute', top: '10%', left: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
                   <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '100px', height: '80px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.6 }}></div>
@@ -282,7 +283,7 @@ function TransactCore() {
 
                 {/* Right Side: Description */}
                 <div className="col-lg-7">
-                  <div style={{ paddingLeft: '20px' }} className="md-p-0">
+                  <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                     <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
                       <span className="text-highlight-pill">Transact Core 360</span> is a unified digital payment switch platform
                       designed to enable seamless transaction routing, monitoring, and reconciliation across ATM, UPI, and IMPS networks.
@@ -291,7 +292,7 @@ function TransactCore() {
                     </p>
 
                     {/* Red divider with a dot */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
+                    <div className='overview-desc-line' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', margin: '30px 0' }}>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3))' }}></div>
                       <div style={{ width: '6px', height: '6px', backgroundColor: '#ff2b2b', borderRadius: '50%', boxShadow: '0 0 8px #ff2b2b' }}></div>
                       <div style={{ height: '1.5px', flex: 1, background: 'linear-gradient(to left, transparent, rgba(255, 43, 43, 0.3))' }}></div>
@@ -309,7 +310,7 @@ function TransactCore() {
       </section>
 
       {/* 2. Key Capabilities Section */}
-      <section id="capabilities" className="section-spacing-lg" style={{  borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
+      <section id="capabilities" className="section-spacing-lg" style={{ borderTop: '1px solid #eaeaea', position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .capabilities-grid {
@@ -428,14 +429,14 @@ function TransactCore() {
 
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container capabilities-heading' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className="section-heading-responsive" style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px' }}>
               Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
             </h2>
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
               Powering modern payment infrastructure
             </p>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '2px', width: '100%', background: 'linear-gradient(to right, transparent, rgba(255, 43, 43, 0.3), transparent)' }}></div>
@@ -509,7 +510,7 @@ function TransactCore() {
                 )
               }
             ].map((cap, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp">
                 <div className="capability-card">
                   <div className="capability-card-number">{cap.num}</div>
                   <div className="capability-icon-container">
@@ -554,10 +555,10 @@ function TransactCore() {
             
             .designed-card {
               position: relative;
-              background: #ffffff;
+              background: #fff;
               border-radius: 24px;
               padding: 40px 24px;
-              border: 1px solid rgba(255, 43, 43, 0.08);
+              border: 1px solid rgba(255, 43, 43, 0.2);
               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.015);
               transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
               height: 100%;
@@ -677,7 +678,7 @@ function TransactCore() {
         <div style={{ position: 'absolute', bottom: '10%', right: '-5%', width: '350px', height: '350px', background: 'radial-gradient(circle, rgba(255,43,43,0.03) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(50px)', pointerEvents: 'none', zIndex: 0 }}></div>
 
         {/* Left Side Floating Ring */}
-        <div style={{
+        <div className='left-ring' style={{
           position: 'absolute',
           left: '-60px',
           top: '55%',
@@ -698,7 +699,7 @@ function TransactCore() {
         </div>
 
         {/* Right Side Floating Ring */}
-        <div style={{
+        <div className='right-ring' style={{
           position: 'absolute',
           right: '-60px',
           top: '55%',
@@ -743,8 +744,8 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
+          <div className='section-heading-container designed-for-heading' style={{ textAlign: 'center', marginBottom: '40px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -752,7 +753,7 @@ function TransactCore() {
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             <h2 className="section-heading-responsive" style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px' }}>
               Designed <span style={{ color: '#ff2b2b' }}>For</span>
@@ -760,7 +761,7 @@ function TransactCore() {
             <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
               Serving all financial institutions in the payments ecosystem
             </p>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '3px', width: '100%', backgroundColor: '#ff2b2b', borderRadius: '2px' }}></div>
@@ -825,16 +826,19 @@ function TransactCore() {
                 )
               }
             ].map((target, idx) => (
-              <div key={idx} className="effectFade fadeUp" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp" >
                 <div className="designed-card">
                   <div className="designed-icon-container">
                     <div className="designed-icon-orbit"></div>
-                    <div className="designed-icon-dot"></div>
+                    {/* <div className="designed-icon-dot"></div> */}
                     <div className="designed-icon-glow"></div>
                     {target.icon}
                   </div>
-                  <h4 className="designed-card-title">{target.title}</h4>
-                  <p className="designed-card-desc">{target.desc}</p>
+                  <div className="designed-content">
+                    <h4 className="designed-card-title">{target.title}</h4>
+                    <p className="designed-card-desc">{target.desc}</p>
+                  </div>
+
                   <div className="designed-card-divider"></div>
                   <div className="designed-card-tab"></div>
                 </div>
@@ -849,18 +853,128 @@ function TransactCore() {
         <style>
           {`
             .features-grid {
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              gap: 40px;
-              max-width: 1100px;
-              margin: 0 auto;
-            }
-            @media (max-width: 991px) {
-              .features-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-              }
-            }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.features-slider-viewport {
+  width: 100%;
+}
+
+/* =========================================
+   MOBILE FEATURES SLIDER
+========================================= */
+
+@media (max-width: 991px) {
+
+  /* =========================================
+     FIXED VIEWPORT
+  ========================================= */
+
+  .features-slider-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  /* =========================================
+     MOVING TRACK
+  ========================================= */
+
+  .features-grid {
+    display: grid;
+
+    /*
+      Each card gets exactly one
+      viewport width.
+    */
+    grid-template-columns: repeat(2, 100%);
+
+    /*
+      Only one row because we only
+      have two feature cards.
+    */
+    grid-template-rows: 1fr;
+
+    /*
+      Keep cards arranged horizontally.
+    */
+    grid-auto-flow: column;
+
+    /*
+      Exact gap between cards.
+    */
+    gap: 16px;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    animation: featuresMobileSlider 8s ease-in-out infinite;
+  }
+
+
+  /* =========================================
+     INDIVIDUAL SLIDES
+  ========================================= */
+
+  .features-grid > .effectFade {
+    width: 100%;
+    min-width: 0;
+    height: auto !important;
+  }
+
+
+  .features-grid .feature-section-card {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* Disable hover lift on touch devices */
+  .features-grid .feature-section-card:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   HORIZONTAL SLIDE
+========================================= */
+
+@keyframes featuresMobileSlider {
+
+  /* ================================
+     CARD 1
+  ================================= */
+
+  0%,
+  40% {
+    transform: translateX(0);
+  }
+
+
+  /* ================================
+     SLIDE TO CARD 2
+  ================================= */
+
+  50%,
+  90% {
+    transform: translateX(calc(-100% - 16px));
+  }
+
+
+  /* ================================
+     SLIDE BACK TO CARD 1
+  ================================= */
+
+  100% {
+    transform: translateX(0);
+  }
+}
             
             .feature-section-card {
               background: #ffffff;
@@ -955,7 +1069,7 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Core Features
             </h2>
@@ -963,65 +1077,68 @@ function TransactCore() {
           </div>
 
           {/* Features Cards Grid */}
-          <div className="features-grid">
-            {/* Left Card: Technology & Architecture */}
-            <div className="effectFade fadeUp h-100">
-              <div className="feature-section-card">
-                <div className="feature-header-row">
-                  <div className="feature-card-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="4" y="4" width="16" height="16" rx="2" />
-                      <rect x="9" y="9" width="6" height="6" />
-                      <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
-                    </svg>
+          <div className="features-slider-viewport">
+            <div className="features-grid">
+              {/* Left Card: Technology & Architecture */}
+              <div className="effectFade fadeUp h-100">
+                <div className="feature-section-card">
+                  <div className="feature-header-row">
+                    <div className="feature-card-icon-box">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <rect x="9" y="9" width="6" height="6" />
+                        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
+                      </svg>
+                    </div>
+                    <div className="feature-header-text">
+                      <h3 className="feature-card-main-title">Technology & Architecture</h3>
+                      <p className="feature-card-subtitle">Fostering rapid innovation through advanced payment architecture</p>
+                    </div>
                   </div>
-                  <div className="feature-header-text">
-                    <h3 className="feature-card-main-title">Technology & Architecture</h3>
-                    <p className="feature-card-subtitle">Fostering rapid innovation through advanced payment architecture</p>
-                  </div>
+                  <ul className="feature-bullets-list">
+                    <li className="feature-bullet-item">Intelligent Payment Switching Engine</li>
+                    <li className="feature-bullet-item">Secure, API-Driven Integration Framework</li>
+                    <li className="feature-bullet-item">Real-time Transaction Monitoring & Logs</li>
+                    <li className="feature-bullet-item">High Availability & Fault-Tolerant Design</li>
+                    <li className="feature-bullet-item">Scalable Architecture for Growing Transaction Volumes</li>
+                    <li className="feature-bullet-item">On-Premise, Private Cloud & Hybrid Deployment</li>
+                  </ul>
                 </div>
-                <ul className="feature-bullets-list">
-                  <li className="feature-bullet-item">Intelligent Payment Switching Engine</li>
-                  <li className="feature-bullet-item">Secure, API-Driven Integration Framework</li>
-                  <li className="feature-bullet-item">Real-time Transaction Monitoring & Logs</li>
-                  <li className="feature-bullet-item">High Availability & Fault-Tolerant Design</li>
-                  <li className="feature-bullet-item">Scalable Architecture for Growing Transaction Volumes</li>
-                  <li className="feature-bullet-item">On-Premise, Private Cloud & Hybrid Deployment</li>
-                </ul>
               </div>
-            </div>
 
-            {/* Right Card: Operational Benefits */}
-            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.1s' }}>
-              <div className="feature-section-card">
-                <div className="feature-header-row">
-                  <div className="feature-card-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="18" y1="20" x2="18" y2="10" />
-                      <line x1="12" y1="20" x2="12" y2="4" />
-                      <line x1="6" y1="20" x2="6" y2="14" />
-                    </svg>
+              {/* Right Card: Operational Benefits */}
+              <div className="effectFade fadeUp h-100" >
+                <div className="feature-section-card">
+                  <div className="feature-header-row">
+                    <div className="feature-card-icon-box">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                      </svg>
+                    </div>
+                    <div className="feature-header-text">
+                      <h3 className="feature-card-main-title">Operational Benefits</h3>
+                      <p className="feature-card-subtitle">Measurable benefits for payment infrastructure growth</p>
+                    </div>
                   </div>
-                  <div className="feature-header-text">
-                    <h3 className="feature-card-main-title">Operational Benefits</h3>
-                    <p className="feature-card-subtitle">Measurable benefits for payment infrastructure growth</p>
-                  </div>
+                  <ul className="feature-bullets-list">
+                    <li className="feature-bullet-item">Real-time Monitoring</li>
+                    <li className="feature-bullet-item">Improved uptime across digital payment channels</li>
+                    <li className="feature-bullet-item">Reduced transaction failures and reconciliation gaps</li>
+                    <li className="feature-bullet-item">Complete visibility into transaction flows</li>
+                    <li className="feature-bullet-item">Enhanced operational control and compliance readiness</li>
+                  </ul>
                 </div>
-                <ul className="feature-bullets-list">
-                  <li className="feature-bullet-item">Real-time Monitoring</li>
-                  <li className="feature-bullet-item">Improved uptime across digital payment channels</li>
-                  <li className="feature-bullet-item">Reduced transaction failures and reconciliation gaps</li>
-                  <li className="feature-bullet-item">Complete visibility into transaction flows</li>
-                  <li className="feature-bullet-item">Enhanced operational control and compliance readiness</li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* 5. Why Choose Transact Core 360 Section */}
-      <section id="why-choose" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      < section id="why-choose" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }
+      }>
         <style>
           {`
             @keyframes pulse-glow-dot {
@@ -1218,15 +1335,15 @@ function TransactCore() {
 
         {/* Background Map & Glows */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${abstractWorldMapImg})`, backgroundSize: 'cover', opacity: 0.03, zIndex: 0, pointerEvents: 'none' }}></div>
-        
+
         {/* Ambient gradient lighting */}
         <div style={{ position: 'absolute', top: '-10%', left: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
         <div style={{ position: 'absolute', bottom: '-10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255,43,43,0.04) 0%, transparent 70%)', borderRadius: '50%', zIndex: 0, filter: 'blur(60px)', pointerEvents: 'none' }}></div>
-        
+
         {/* Abstract dotted patterns */}
         <div style={{ position: 'absolute', top: '20%', right: '5%', width: '100px', height: '100px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.7, zIndex: 0, pointerEvents: 'none' }}></div>
         <div style={{ position: 'absolute', bottom: '20%', left: '5%', width: '100px', height: '100px', backgroundImage: 'radial-gradient(rgba(255, 43, 43, 0.15) 1px, transparent 1px)', backgroundSize: '10px 10px', opacity: 0.7, zIndex: 0, pointerEvents: 'none' }}></div>
-        
+
         {/* Curved connection lines */}
         <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, opacity: 0.12 }} viewBox="0 0 1440 800" fill="none">
           <path d="M-100,200 C300,100 500,600 900,400 C1100,300 1300,700 1600,500" stroke="#ff2b2b" strokeWidth="1.5" strokeDasharray="5 5" />
@@ -1235,13 +1352,13 @@ function TransactCore() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
-          <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
+          <div className='section-heading-container' style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
             {/* Small premium top label with divider lines */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
+            {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px', marginBottom: '16px' }}>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <span style={{ color: '#ff2b2b', fontSize: '0.85rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase' }}>WHY CHOOSE US</span>
               <div style={{ width: '30px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             {/* Main heading */}
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
@@ -1320,24 +1437,26 @@ function TransactCore() {
                 )
               }
             ].map((card, idx) => (
-              <div key={idx} className="effectFade fadeUp h-100" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} className="effectFade fadeUp h-100">
                 <div className="why-choose-card h-100">
                   <div className="why-choose-card-number">{card.num}</div>
                   <div className="why-choose-icon-container">
                     <div className="why-choose-icon-glow"></div>
                     {card.icon}
                   </div>
-                  <h4 className="why-choose-card-title">{card.title}</h4>
-                  <p className="why-choose-card-desc">{card.desc}</p>
+                  <div className="why-choose-content">
+                    <h4 className="why-choose-card-title">{card.title}</h4>
+                    <p className="why-choose-card-desc">{card.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
 
             {/* 6th Card: CTA Card */}
-            <div className="effectFade fadeUp h-100" style={{ transitionDelay: '0.5s' }}>
+            <div className="effectFade fadeUp h-100" >
               <div className="why-choose-cta-card ">
                 <div className="why-choose-cta-glow"></div>
-                
+
                 {/* Modern Wave SVG Accent */}
                 <svg className="why-choose-cta-waves" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <path d="M0,50 C30,40 70,60 100,50 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)" />
@@ -1348,27 +1467,29 @@ function TransactCore() {
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-cta-icon" style={{ color: '#ffffff', marginBottom: '25px' }}>
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
-                  <h4 className="why-choose-cta-title">Ready to Switch?</h4>
+
                   {/* <p className="why-choose-cta-desc">
                     Get started with Transact Core 360 today and power your business with next-gen transaction switching.
                   </p> */}
                 </div>
-
-                <a href="#contact-section" className="why-choose-cta-btn">
-                  <span>Get Started</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
+                <div className="ready-content">
+                  <h4 className="why-choose-cta-title">Ready to Switch?</h4>
+                  <a href="#contact-section" className="why-choose-cta-btn">
+                    <span>Get Started</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* 6. Outcome Section */}
-      <section id="outcome" className="section-spacing-lg" style={{  position: 'relative', overflow: 'hidden' }}>
+      < section id="outcome" className="section-spacing-lg" style={{ position: 'relative', overflow: 'hidden' }}>
         <style>
           {`
             .outcome-outer-container {
@@ -1591,7 +1712,7 @@ function TransactCore() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Section Header */}
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', marginBottom: '12px' }}>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #ff2b2b)' }}></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
@@ -1599,12 +1720,12 @@ function TransactCore() {
                 <div style={{ width: '5px', height: '5px', backgroundColor: '#ff2b2b', borderRadius: '50%' }}></div>
               </div>
               <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #ff2b2b)' }}></div>
-            </div>
+            </div> */}
 
             <h2 className='section-heading-responsive' style={{ fontSize: '3.5rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '15px', lineHeight: '1.2' }}>
               Outcome
             </h2>
-            
+
             {/* Glowing divider line below heading */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
               <div style={{ height: '3px', width: '100%', backgroundColor: '#ff2b2b', borderRadius: '2px' }}></div>
@@ -1618,7 +1739,7 @@ function TransactCore() {
             <div className="outcome-main-card">
               <div className="outcome-corner-bracket-tl"></div>
               <div className="outcome-corner-bracket-br"></div>
-              
+
               {/* Center Checkmark with Orbits */}
               <div className="outcome-icon-outer">
                 <div className="outcome-icon-middle"></div>
@@ -1649,15 +1770,15 @@ function TransactCore() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* 7. Contact Us Section */}
-      <div id="contact-section">
-        <CTABannerSection 
+      < div id="contact-section" >
+        <CTABannerSection
           title={`Ready to Scale Transactions with ${product.title}?`}
           subtitle={`Schedule a free consultation with our transaction switching experts and discover how ${product.title} can power high-volume payments.`}
         />
-      </div>
+      </div >
     </>
   );
 }
