@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import tes1 from "../../assets/Testimonials-img/testimonial-1.png";
-import tes2 from "../../assets/Testimonials-img/testimonial-2.png";
-import tes3 from "../../assets/Testimonials-img/testimonial-3.png";
-import tes4 from "../../assets/Testimonials-img/testimonial-4.png";
+import tes1 from "../../assets/National-bank/bhandara_bank.png";
+import tes2 from "../../assets/National-bank/jalna-logo.png";
+import tes3 from "../../assets/National-bank/yavatmal_dcc_bank.png";
+import tes4 from "../../assets/National-bank/osmanbad_dcc_bank.png";
+import tes5 from "../../assets/National-bank/bdcc_bank.png";
+
 
 const TESTIMONIALS_DATA = [
   {
     id: 1,
     image: tes1,
-    stars: 5,
-    text: "“We were looking for the services that have the ability to understand our business process and operating model. Our aim was to provide seamless IT solutions to our valuable Clients.”",
+    stars: 0,
+    text: "We were looking for the services that have the ability to understand our business process and operating model. Our aim was to provide seamless IT solutions to our valuable Clients.",
     name: "Mr. Sanjay Barde",
     role: "CEO, The Bhandara District Central Co. Op. Bank Limited"
   },
@@ -17,7 +19,7 @@ const TESTIMONIALS_DATA = [
     id: 2,
     image: tes2,
     stars: 0,
-    text: "“With VGIL's E-Banker, we have a partner to support both our Bank Operations and Customer Service 24/7. VGIL's E-Banker Core Banking Solution has helped channelize our products and services in a more customer-oriented manner and deliver excellence in the long run.”",
+    text: "With VGIL's E-Banker, we have a partner to support both our Bank Operations and Customer Service 24/7. VGIL's E-Banker Core Banking Solution has helped channelize our products and services in a more customer-oriented manner and deliver excellence in the long run.",
     name: "Mr. Ashutosh Deshmukh",
     role: "CEO, The Jalna District Central Co. Op. Bank Limited"
   },
@@ -25,7 +27,7 @@ const TESTIMONIALS_DATA = [
     id: 3,
     image: tes3,
     stars: 0,
-    text: "“I am very pleased with your Project Management capability. Your team has excellent communication skills and a fat response and turn around time. Highest work quality. I can say that VGIL is an honest and decent group of people with the highest work ethic I have ever seen for a development team.”.",
+    text: "I am very pleased with your Project Management capability. Your team has excellent communication skills and a fat response and turn around time. Highest work quality. I can say that VGIL is an honest and decent group of people with the highest work ethic I have ever seen for a development team.",
     name: "Mr. Arvind Deshpande",
     role: "CEO, The Yavatmal District Central Co. Op. Bank Limited"
   },
@@ -33,15 +35,15 @@ const TESTIMONIALS_DATA = [
     id: 4,
     image: tes4,
     stars: 0,
-    text: "“The VGIL's “E-Banker” (Core Banking Solution) has exceeded our expectations and helped to keep our bank on the leading edge of technology and customer experience. I would recommend this product to any bank which requires a solid banking technology partner for the long term.”",
+    text: "The VGIL's “E-Banker” (Core Banking Solution) has exceeded our expectations and helped to keep our bank on the leading edge of technology and customer experience. I would recommend this product to any bank which requires a solid banking technology partner for the long term.",
     name: "Mr. Barkul",
     role: "General Manager (IT & Accounts), The Osmanabad District Central Co. Op. Bank Limited"
   },
   {
     id: 5,
-    image: tes1,
+    image: tes5,
     stars: 0,
-    text: "“We are greatly impressed by the professional attitude shown by team VGIL whether it is the consultants, sales or after-sales support that has been given to us. There has been excellent support in terms of providing the services well on time & they truly stand by their motto in terms of creating enduring value for customers.”",
+    text: "We are greatly impressed by the professional attitude shown by team VGIL whether it is the consultants, sales or after-sales support that has been given to us. There has been excellent support in terms of providing the services well on time & they truly stand by their motto in terms of creating enduring value for customers.",
     name: "Mr. Somnath Ethape",
     role: "General Manager (IT), The Buldhana District Central Co. Op. Bank Limited"
   }

@@ -52,7 +52,7 @@ function ToolsSectionV2() {
             margin: 0,
             flexShrink: 0
           }}>
-            <img className="img-item img-item-1" src="/assets/images/about/tools-img/Ai Governance.jpg.jpeg" alt="AI Governance" />
+            <img className="img-item img-item-1" src="/assets/images/about/tools-img/eAutopsy.png" alt="eAutopsy" />
 
             <img className="img-item img-item-2" src="/assets/images/about/tools-img/Banking Solution.jpg.jpeg" alt="Banking Solution" />
 
@@ -108,9 +108,10 @@ function ToolsSectionV2() {
             </div>
           </div>
         </div>
-        <Link to="/contact" className="tf-btn effectFade fadeRotateX">
-          Get Started
-        </Link>
+        <div className="" style={{ visibility: 'hidden' }}>
+          <Link to="/contact" className="tf-btn effectFade fadeRotateX">
+            Get Started
+          </Link></div>
       </div>
     </div>
   );

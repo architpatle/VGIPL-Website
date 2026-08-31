@@ -11,7 +11,7 @@ function AboutSection() {
           <div className="col-12 ">
             <div className="heading-section" style={{ marginBottom: '15px' }}>
               <div className="heading-sub fw-semibold effectFade fadeUp" style={{ display: 'inline-block', marginBottom: '15px' }}>About Us</div>
-              <div className="heading-title text-gradient-2 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building 
+              <div className="heading-title text-gradient-1 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building 
                  {/* <br className="d-none d-md-block" /> */}
                  <span> Reliable IT Foundations!</span> </div>
             </div>
@@ -24,9 +24,9 @@ function AboutSection() {
                   Available for worldwide project
                 </div>
                 <h5 className="title fw-semibold text-white">Global Software <span className="text-brand">Solution since 1997</span></h5>
-                <Link to="/contact" className="tf-btn tf-btn-short">
+                {/* <Link to="/contact" className="tf-btn tf-btn-short">
                   Start a Project
-                </Link>
+                </Link> */}
               </div>
               <img className="effectFade fadeRotateX " src={earthImg} alt="Earth" style={{ alignSelf: 'center', maxWidth: '100%', marginTop:'-14px' }} />
             </div>
@@ -45,14 +45,14 @@ function AboutSection() {
                     </svg>
                     Employees
                   </div>
-                  <div className="d-flex gap-2">
+                  {/* <div className="d-flex gap-2">
                     {[1, 2, 3, 4, 5].map((item) => (
                       <svg key={item} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" fill="#3F3F46" />
                         <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white" />
                       </svg>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="counter text-neutral-400">
                   <span className="number" data-speed="1500" data-to="450" data-inviewport="yes">450</span><span>+</span>
@@ -62,7 +62,7 @@ function AboutSection() {
 
             <div className="review-box flex-grow-1 d-flex flex-column justify-content-center">
               <div className="d-flex justify-content-between flex-wrap align-items-end gap-12 border-bottom pb-4" style={{ borderColor: 'var(--neutral-300)' }}>
-                <div className="desc fw-semibold text-body-1 mb-0">Happy Clients</div>
+                <div className="desc fw-semibold text-body-1 mb-0">Satisfied Clients</div>
                 <div className="counter text-neutral-400">
                   <span className="number" data-speed="1500" data-to="200" data-inviewport="yes">200</span><span>+</span>
                 </div>

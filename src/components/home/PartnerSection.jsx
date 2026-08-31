@@ -39,7 +39,7 @@ import partner33 from '../../assets/National-bank/yavatmal_dcc_bank.png';
 
 function PartnerSection() {
   const logoStyle = {
-    height: '130px',
+    // height: '130px',s
     width: '100%',
     objectFit: 'contain',
     margin: '0 auto',
@@ -63,27 +63,35 @@ function PartnerSection() {
           <div className="col-12">
 
             <div
-              className="partner-wrap d-flex flex-wrap"
+              className=" partner-wrap d-flex flex-wrap"
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '20px'
               }}
             >
+              <div className="heading-section w-100">
+              <div className="heading-sub fw-semibold effectFade fadeUp" style={{ display: 'inline-block',  }}>Our Clients</div>
+
               <p
-                className="text-secondary fw-semibold mb-0"
+                // className="partner-heading text-secondary fw-semibold mb-0"
+                className='heading-title text-gradient-1 effectFade fadeRotateX'
                 style={{
                   minWidth: '150px',
-                  textAlign: 'center',
                   flex: '1 1 100%'
                 }}
               >
-                Trusted by 100+ top-tier brands
+                Trusted by 100+ Top-Tier Organizations
               </p>
+
+              </div>
 
               <style
                 dangerouslySetInnerHTML={{
                   __html: `
+
+                  .partner-heading {
+                  }
                     .partner-wrap .swiper-wrapper {
                       transition-timing-function: linear !important;
                     }
@@ -140,7 +148,7 @@ function PartnerSection() {
                       }
 
                       .partner-wrap img {
-                        height: 80px !important;
+                        height: 120px !important;
                       }
 
                       .section-partner {

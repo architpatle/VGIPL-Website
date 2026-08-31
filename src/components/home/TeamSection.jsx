@@ -63,7 +63,7 @@ useEffect(() => {
         <div className="heading-section center mb-0">
           <div className="heading-sub fw-semibold  effectFade fadeUp">Our Founders</div>
           <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-            The Minds Behind Virtual-Galaxy
+            The Minds Behind Virtual Galaxy
           </div>
         </div>
 
@@ -84,8 +84,8 @@ useEffect(() => {
               </div>
             </div>
             <div className="leader-info-wrap">
-              {/* <h3 className="leader-name">Mr. Avinash Shende</h3> */}
-              <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" />
+              <h3 className="leader-name">Mr. Avinash Shende</h3>
+              {/* <img src={avinashSignature} alt="Mr. Avinash Shende Signature" className="leader-signature" /> */}
               <div className="leader-position">Promoter, Chairman, Executive Director & Chief Financial Officer</div>
               {/* <div className="leader-divider"></div> */}
               <p className="leader-desc">
@@ -95,11 +95,11 @@ useEffect(() => {
           </div>
 
           {/* Center Circular Logo Container */}
-          <div className="leader-logo-center-wrap">
+          {/* <div className="leader-logo-center-wrap">
             <div className="logo-circle-container">
               <img src={logoImage} alt="Virtual Galaxy Logo" className="logo-center-img" />
             </div>
-          </div>
+          </div> */}
 
           {/* Right Card - Mr. Sachin Pande */}
           <div className="leader-card-item card-right founder-card founder-right">
@@ -115,8 +115,8 @@ useEffect(() => {
               </div>
             </div>
             <div className="leader-info-wrap">
-              {/* <h3 className="leader-name">Mr. Sachin Pande</h3> */}
-              <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" />
+              <h3 className="leader-name">Mr. Sachin Pande</h3>
+              {/* <img src={sachinSignature} alt="Mr. Sachin Pande Signature" className="leader-signature" /> */}
               <div className="leader-position">Promoter, Managing Director & Chief Technology Officer</div>
               {/* <div className="leader-divider"></div> */}
               <p className="leader-desc">
@@ -129,9 +129,9 @@ useEffect(() => {
 
         <style>{`
           /* Default (Desktop) */
-          .leader-name {
-            display: none !important;
-          }
+          // .leader-name {
+          //   display: none !important;
+          // }
           .leader-signature {
             display: block !important;
             height: 70px;

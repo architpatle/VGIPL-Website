@@ -40,42 +40,6 @@ function Footer() {
           <div className="vg-footer-social">
 
             <a
-              href="https://x.com/Virtualvgipl"
-              target="_blank"
-              rel="noreferrer"
-              className="vg-social-link"
-            >
-              <span className="vg-social-label">Twitter / X</span>
-              <span className="vg-social-icon">
-                <FaXTwitter />
-              </span>
-            </a>
-
-            <a
-              href="https://www.facebook.com/VirtualGalaxyInfotechLtd"
-              target="_blank"
-              rel="noreferrer"
-              className="vg-social-link"
-            >
-              <span className="vg-social-label">Facebook</span>
-              <span className="vg-social-icon">
-                <FaFacebookF />
-              </span>
-            </a>
-
-            <a
-              href="https://www.instagram.com/virtualgalaxyinfotech/"
-              target="_blank"
-              rel="noreferrer"
-              className="vg-social-link"
-            >
-              <span className="vg-social-label">Instagram</span>
-              <span className="vg-social-icon">
-                <FaInstagram />
-              </span>
-            </a>
-
-            <a
               href="https://www.linkedin.com/company/virtualgalaxy/"
               target="_blank"
               rel="noreferrer"
@@ -98,6 +62,47 @@ function Footer() {
                 <FaYoutube />
               </span>
             </a>
+
+           
+            <a
+              href="https://www.instagram.com/virtualgalaxyinfotech/"
+              target="_blank"
+              rel="noreferrer"
+              className="vg-social-link"
+            >
+              <span className="vg-social-label">Instagram</span>
+              <span className="vg-social-icon">
+                <FaInstagram />
+              </span>
+            </a>
+            <a
+              href="https://www.facebook.com/VirtualGalaxyInfotechLtd"
+              target="_blank"
+              rel="noreferrer"
+              className="vg-social-link"
+            >
+              <span className="vg-social-label">Facebook</span>
+              <span className="vg-social-icon">
+                <FaFacebookF />
+              </span>
+            </a>
+
+             <a
+              href="https://x.com/Virtualvgipl"
+              target="_blank"
+              rel="noreferrer"
+              className="vg-social-link"
+            >
+              <span className="vg-social-label">Twitter / X</span>
+              <span className="vg-social-icon">
+                <FaXTwitter />
+              </span>
+            </a>
+
+
+
+
+
 
           </div>
         </div>

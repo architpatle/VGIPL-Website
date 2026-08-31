@@ -98,19 +98,21 @@
 }
 
 .ds-hero-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 22px;
-  background: rgba(255, 51, 0, 0.1);
-  border: 1px solid rgba(255, 51, 0, 0.3);
-  border-radius: 50px;
-  color: #ff5533;
+  justify-content: center;
+  gap: 6px;
+  background: #fff1ee;
+  color: #E8380D;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 24px;
-  backdrop-filter: blur(10px);
-  animation: ds-badge-glow 3s ease-in-out infinite alternate;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  border: 1px solid #f5bfb3;
+  margin-bottom: 1.4rem;
+  /* margin: 0 auto; */
+  /* max-width: 180px; */
+  width:fit-content;
 }
 
 @keyframes ds-badge-glow {
@@ -119,7 +121,7 @@
 }
 
 .ds-hero-title {
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 800;
   color: #000;
   line-height: 1.15;
@@ -136,9 +138,9 @@
 
 .ds-hero-desc {
   font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.7);
+     color: rgb(75, 85, 99);
   line-height: 1.75;
-  max-width: 520px;
+  max-width: 1100px;
   margin-bottom: 36px;
 }
 

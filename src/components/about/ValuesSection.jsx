@@ -13,7 +13,7 @@ function ValuesSection() {
     {
       id: 1,
       title: "Innovation",
-      desc: "Innovation drives everything we do. We leverage emerging technologies, challenge conventions, and explore new possibilities to create solutions. Through insight, experimentation, and strategy, we craft transformative experiences that fuel growth, redefine standards, and create meaningful impact—ensuring every project shapes the future with purpose.",
+      desc: "Innovation drives everything we do. We embrace emerging technologies and creative thinking to deliver transformative solutions that fuel growth, create impact, and shape the future with purpose.",
       delay: "",
       colClass: "col-md-6 mb-24",
       icon: (
@@ -40,7 +40,7 @@ function ValuesSection() {
     {
       id: 2,
       title: "Creativity",
-      desc: "Creativity is the core of our agency. We transform ideas into compelling experiences that inspire, engage, and resonate. By blending imagination with strategy, we craft innovative solutions that stand out in crowded markets. Every project is an opportunity to explore new perspectives, push boundaries, and deliver work that is both original and impactful, leaving a lasting impression.",
+      desc: "Creativity is at the core of our agency. We blend imagination with strategy to transform ideas into innovative experiences that engage, inspire, and create lasting impact.",
       delay: "0.1",
       colClass: "col-md-6 mb-24",
       icon: (
@@ -57,7 +57,7 @@ function ValuesSection() {
     {
       id: 3,
       title: "Collaboration",
-      desc: "At the heart of our work lies collaboration—bringing together diverse talents, perspectives, and expertise to achieve results. We foster open communication, encourage co-creation, and build strong partnerships with clients, ensuring every project reflects shared vision and purpose. By working together, we transform ideas into impactful solutions that drive innovation and lasting value.",
+      desc: "Collaboration is at the heart of our work. We bring together diverse talents and perspectives to build strong partnerships, transform ideas into impactful solutions, and create lasting value through shared vision and purpose.",
       delay: "",
       colClass: "col-md-6 md-mb-24",
       icon: (
@@ -88,7 +88,7 @@ function ValuesSection() {
     {
       id: 4,
       title: "Excellence",
-      desc: "Excellence drives everything we do. From concept to execution, we pursue the highest standards in design, strategy, and delivery. Every detail matters, every decision is intentional, and every outcome reflects our commitment to quality. By continually refining our skills and processes, we ensure each project not only meets expectations but sets new benchmarks in creativity and performance.",
+      desc: "Excellence is at the core of our work. We uphold high standards in every detail, combining expertise and precision to deliver quality solutions that exceed expectations, drive performance, and set new benchmarks.",
       delay: "0.1",
       colClass: "col-md-6",
       icon: (

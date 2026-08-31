@@ -60,7 +60,7 @@
 .portfolio-card {
   flex: 1;
   border-radius: 24px;
-  padding: 40px 30px;
+  padding: 28px;
   position: relative;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
@@ -70,6 +70,83 @@
 
 .portfolio-card:hover {
   transform: translateY(-10px);
+}
+
+/* ---------------------------------------------------------
+   Shared structural layout — same across all three cards.
+   Only colors/backgrounds differ per card type below.
+------------------------------------------------------------ */
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.icon-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.icon-inner {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+}
+
+.progress-ring-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 1s ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.card-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.card-number {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.card-title-common {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-desc-common {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
 }
 
 /* Red Card */
@@ -101,49 +178,14 @@
   100% { transform: rotate(30deg) translateY(0%); }
 }
 
-.red-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.icon-box-red {
+.card-red .icon-box,
+.card-orange .icon-box {
   background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 12px;
-  border-radius: 12px;
 }
 
-.progress-ring-container {
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.progress-ring-circle {
-  transition: stroke-dashoffset 1s ease-in-out;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.1;
-}
-
-.card-number-red {
-  font-size: 48px;
-  font-weight: 800;
+.card-red .card-number,
+.card-orange .card-number {
   opacity: 0.9;
-  margin-bottom: 16px;
-  line-height: 1;
 }
 
 /* Glass Card */
@@ -159,22 +201,12 @@
   box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.08);
 }
 
-.glass-icon-wrapper {
-  position: relative;
-  display: inline-flex;
-  margin-bottom: 30px;
-}
-
-.glass-icon-box {
+.card-glass .icon-box {
   background: #f0fdf4;
-  padding: 16px;
-  border-radius: 16px;
-  position: relative;
-  z-index: 2;
   border: 1px solid #dcfce7;
 }
 
-.pulse-glow {
+.card-glass .pulse-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,12 +227,13 @@
   100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
 }
 
-.server-illustration {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
+.card-glass .card-number {
+  color: #22c55e;
+}
+
+.card-glass .card-desc-common {
+  color: #64748b;
+  opacity: 1;
 }
 
 /* Orange Card */
@@ -212,73 +245,6 @@
 
 .card-orange:hover {
   box-shadow: 0 30px 50px -15px rgba(255, 77, 0, 0.6);
-}
-
-.floating-icons-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-bottom: 30px;
-  position: relative;
-  height: 50px;
-}
-
-.float-icon {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 10px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: float 3s ease-in-out infinite;
-}
-
-.float-icon:nth-child(2) { animation-delay: 0.5s; }
-.float-icon:nth-child(3) { animation-delay: 1s; }
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.metrics-big {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 20px;
-}
-
-.metrics-big .m1 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.metrics-big .m2 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.9;
-}
-
-.card-title-common {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.card-desc-common {
-  font-size: 15px;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin: 0;
-}
-
-.card-glass .card-desc-common {
-  color: #64748b;
-  opacity: 1;
 }
 
 @media (max-width: 991px) {
@@ -295,5 +261,32 @@
   }
   .portfolio-subtitle {
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-assessment-section{
+    padding: 16px ;
+  }
+  .portfolio-heading{
+    line-height: 1.5 !important;
+  }
+  .portfolio-subtitle{
+    font-size: 16px ;
+    line-height: 1.5 !important;
+    margin-bottom: 12px ;
+  }
+  .portfolio-card{
+    padding: 16px !important;
+  }
+  .card-top{
+    margin-bottom: 0 !important;
+  }
+  .card-bottom-row {
+    justify-content: space-around;
+    gap: 16px;
+  }
+  .card-title-common{
+    margin-bottom: 0 !important;
   }
 }

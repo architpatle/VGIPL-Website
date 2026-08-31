@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Megaphone, TrendingUp, BarChart3, Globe, ArrowRight } from 'lucide-react';
 import './DigitalSolutionsHero.css';
 
@@ -47,27 +48,44 @@ const DigitalSolutionsHero = () => {
               transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <div className="ds-hero-badge mx-auto">
-                <Megaphone size={16} /> Digital Marketing Solutions
+                <span className="badge-dot" ></span> Digital Marketing Solutions
               </div>
 
               <h1 className="ds-hero-title ">
-                Get the <span className="ds-text-gradient">Digital Marketing</span> Solution You Need
+                {/* Get the <span className="ds-text-gradient">Digital Marketing</span> Solution You Need */}
+                Digital Marketing
               </h1>
 
               <p className="ds-hero-desc mx-auto">
                 Get the digital marketing solution and Online marketing Services you need. We offer online solutions for all your digital channels including Social Media, SEO and More.
               </p>
 
-              <div className="ds-hero-actions mx-auto">
+              {/* <div className="ds-hero-actions mx-auto">
                 <a href="#get-in-touch" className="ds-btn-primary">
                   Get In Touch <ArrowRight size={18} />
                 </a>
                 <a href="#services" className="ds-btn-outline">
                   Explore Services
                 </a>
+              </div> */}
+
+              <div className="hero-cta-btns mt-4">
+                <Link
+                  to="/contact"
+                  className="btn-primary-hero"
+
+                >
+                  Get In Touch &rarr;
+                </Link>
+
+                <Link
+                  to="/ai"
+                  className="btn-secondary-hero"
+
+                >Explore More</Link>
               </div>
 
-              <div className="ds-hero-stats-bar">
+              {/* <div className="ds-hero-stats-bar">
                 <motion.div
                   className="ds-hero-stat"
                   initial={{ opacity: 0, y: 20 }}
@@ -95,7 +113,7 @@ const DigitalSolutionsHero = () => {
                   <div className="ds-hero-stat-value">25%</div>
                   <div className="ds-hero-stat-label">Cost Reduction</div>
                 </motion.div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
 

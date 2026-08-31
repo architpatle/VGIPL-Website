@@ -57,7 +57,7 @@ function ConversationalAI() {
   const [activeModule, setActiveModule] = useState(0);
   const [showBrochureModal, setShowBrochureModal] = useState(false);
 
-  const allowedBrochureSlugs = ['core-banking-solution', 'mis-solution', 'digital-payments', 'end-to-end-cyber-security'];
+  const allowedBrochureSlugs = ['core-banking-solution', 'imis-solution', 'digital-payments', 'end-to-end-cyber-security'];
   const showBrochureButton = allowedBrochureSlugs.includes(slug);
 
   const ebankerModules = [
@@ -308,7 +308,7 @@ function ConversationalAI() {
     currentModules = ebankerModules;
     mainHeading = "E-Banker Modules";
     mainSubheading = "Streamlines customer onboarding with eKYC";
-  } else if (slug === 'mis-solution') {
+  } else if (slug === 'imis-solution') {
     currentModules = imisModules;
     mainHeading = "IMIS Modules";
     mainSubheading = "IMIS adheres to electronic transaction standards, cyber security requirements, and anti-money laundering regulations";
@@ -320,7 +320,7 @@ function ConversationalAI() {
     currentModules = vPayModules;
     mainHeading = "V-Pay Modules";
     mainSubheading = "V-Pay seamlessly integrates with a bank's core banking system, providing security as robust as a diamond vault";
-  } else if (slug === 'post-mortem-mgmt') {
+  } else if (slug === 'post-mortem-management') {
     currentModules = autopsyModules;
     mainHeading = "E-Autopsy Modules";
     mainSubheading = "End-to-end solution for Post Mortem (Autopsy) Departments";
@@ -386,10 +386,10 @@ function ConversationalAI() {
             </div>
           </div>
         </div>
-        <a href="#next-section" className="scroll-more">
+        {/* <a href="#next-section" className="scroll-more">
           <span className="fw-semibold link1">Scroll for more</span>
           <i className="icon icon-long-arrow-alt-down-solid"></i>
-        </a>
+        </a> */}
       </div>
 
 
@@ -1401,7 +1401,7 @@ function ConversationalAI() {
                       <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                     </svg>
                   </div>
-                  <span className="badge-label-text">Supporting <strong className="text-red">12+</strong> Indian Languages</span>
+                  <span className="badge-label-text">Support multiple languages</span>
                 </div>
               </div>
             </div>

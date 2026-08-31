@@ -5,7 +5,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import earthImg from '../../assets/earth.png';
+import earthImg from '../../assets/ai-network.png';
 
 function MissionSection() {
   return (
@@ -30,11 +30,11 @@ function MissionSection() {
               </div>
 
               <div
-                className="heading-title text-gradient-2 effectFade fadeRotateX"
+                className="heading-title text-gradient-1 effectFade fadeRotateX"
                 style={{ lineHeight: '1.2' }}
               >
                 Human-Centered AI,{' '}
-                <br className="d-none d-md-block" />
+                {/* <br className="d-none d-md-block" /> */}
                 Built for Production
               </div>
             </div>
@@ -53,18 +53,19 @@ function MissionSection() {
                 </div>
 
                 <h5 className="title fw-semibold text-white">
-                  Based in{' '}
+                  Technology. Transformation. Impact.
+                  {/* {' '}
                   <span className="text-brand">
-                    Nagpur, Mumbai & Pune
-                  </span>
+                    Technology. Transformation. Impact.
+                  </span> */}
                 </h5>
 
-                <a
+                {/* <a
                   href="/contact"
                   className="tf-btn tf-btn-short"
                 >
                   Start a Project
-                </a>
+                </a> */}
               </div>
 
               <img
@@ -73,7 +74,7 @@ function MissionSection() {
                 alt="Earth"
                 style={{
                   alignSelf: 'center',
-                  maxWidth: '100%'
+                  maxWidth: '100%',
                 }}
               />
             </div>
@@ -101,14 +102,14 @@ function MissionSection() {
                   Our Mission
                 </h4>
 
-                <div
+                {/* <div
                   className="line"
                   style={{
                     height: '2px',
                     background: '#e4e4e7',
                     margin: '10px 0'
                   }}
-                ></div>
+                ></div> */}
 
                 <p
                   className="text"
@@ -117,13 +118,7 @@ function MissionSection() {
                     fontSize: '16px'
                   }}
                 >
-                  To deliver cutting-edge IT solutions that drive
-                  operational efficiency, enhance customer experience,
-                  and foster business growth. We are committed to
-                  providing reliable, tailored technology services that
-                  empower organizations to thrive in a fast-evolving
-                  digital landscape, while ensuring the highest levels
-                  of quality, security, and customer satisfaction.
+                  To deliver reliable, tailored IT solutions that drive efficiency, enhance customer experience, and foster business growth—empowering organizations to thrive securely in a rapidly evolving digital landscape.
                 </p>
               </div>
 
@@ -143,14 +138,14 @@ function MissionSection() {
                   Our Vision
                 </h4>
 
-                <div
+                {/* <div
                   className="line"
                   style={{
                     height: '1px',
                     background: '#e4e4e7',
                     margin: '10px 0'
                   }}
-                ></div>
+                ></div> */}
 
                 <p
                   className="text"

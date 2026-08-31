@@ -128,7 +128,7 @@ function PerformanceComparison() {
                   className="tf-btn pc-btn"
                 >
 
-                  View Challenges
+                  Get In Touch
 
                 </Link>
 
@@ -231,11 +231,11 @@ function PerformanceComparison() {
                 </div>
 
                 <Link
-                  to="/contact"
+                  to="/ai"
                   className="tf-btn pc-btn"
                 >
 
-                  Explore Benefits
+                  Know More
 
                 </Link>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cyberLogo from '../../assets/home/cyber-logo.png';
 import styles from "./WhyChooseUs.module.css";
 
@@ -8,183 +8,211 @@ import img3 from '../../assets/home/Why-Choose-Us/ai-bot-img.png'
 
 
 function WhyChooseUs() {
+    // Tracks which single card is expanded on mobile. Card 0 (Performance)
+    // starts open so the section isn't fully collapsed on first paint.
+    // Opening a card closes whichever one was open before it; clicking the
+    // open card again closes it, leaving all four collapsed.
+    const [openIndex, setOpenIndex] = useState(0);
+
+    const toggleCard = (index) => {
+        setOpenIndex((prev) => (prev === index ? null : index));
+    };
+
+    // Reusable accordion header: title stays visible whether the card is
+    // open or closed; only the icon rotates and the body height animates.
+    // On desktop this is inert (CSS ignores the open/closed state).
+    const AccordionHeader = ({ index, title }) => (
+        <div
+            className={styles.accordionHeader}
+            onClick={() => toggleCard(index)}
+            role="button"
+            tabIndex={0}
+            aria-expanded={openIndex === index}
+            aria-controls={`wcu-panel-${index}`}
+            onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleCard(index);
+                }
+            }}
+        >
+            <h6 className="fw-semibold title mb-0">{title}</h6>
+            <span
+                className={`${styles.accordionIcon} ${openIndex === index ? styles.accordionIconOpen : ""}`}
+                aria-hidden="true"
+            ></span>
+        </div>
+    );
+
     return (
         <div className="section-benefits section-spacing-lg">
             <div className="container">
                 <div className={`heading-section ${styles.whyChooseUsHeading}`}>
                     <div className={`heading-sub ${styles.whyChooseUsHeadingSub} fw-semibold effectFade fadeUp`}>Benefits</div>
-                    <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Choose Us</div>
+                    <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Partner with VGIL?</div>
                 </div>
                 <div className={`row mb-24 ${styles.wcuRow}`}>
                     <div className="col-lg-7 ">
-                        <div className={`benefits-box benefits-progress `}>
-                            <div className={`${styles.performanceGrid} wcuPerformance ${styles.wcuCard}`}>
-                                {[
-                                    { value: 95, label: "Accuracy", icon: "" },
-                                    { value: 90, label: "Rapid", icon: "" },
-                                    { value: 98, label: "Trusted", icon: "" },
-                                    { value: 85, label: "Efficient", icon: "" },
-                                ].map((metric) => (
-                                    <div
-                                        key={metric.label}
-                                        className={`${styles.metricCard} effectFade fadeUp`}
-                                    >
-                                        <div
-                                            className={styles.progressCircle}
-                                            style={{
-                                                "--progress": metric.value,
-                                            }}
-                                        >
-                                            <svg viewBox="0 0 120 120">
-                                                <circle
-                                                    className={styles.bgCircle}
-                                                    cx="60"
-                                                    cy="60"
-                                                    r="52"
-                                                />
-                                                <circle
-                                                    className={styles.progressRing}
-                                                    cx="60"
-                                                    cy="60"
-                                                    r="52"
-                                                />
-                                            </svg>
+                        <div className={`benefits-box benefits-progress ${styles.accordionCard}`}>
+                            <div
+                                id="wcu-panel-0"
+                                className={`${styles.accordionBody} ${(openIndex === 0) ? styles.accordionBodyOpen : ""}`}
+                                aria-hidden={!(openIndex === 0)}
+                            >
+                                <div className={styles.accordionBodyInner}>
+                                    <div className={`${styles.performanceGrid} wcuPerformance ${styles.wcuCard}`}>
+                                        {[
+                                            { value: 98, label: "Expertise", icon: "" },
+                                            { value: 95, label: "Experience", icon: "" },
+                                            { value: 90, label: "Efficient", icon: "" },
+                                            { value: 100, label: "Execution", icon: "" },
+                                        ].map((metric) => (
+                                            <div
+                                                key={metric.label}
+                                                className={`${styles.metricCard} effectFade fadeUp`}
+                                            >
+                                                <div
+                                                    className={styles.progressCircle}
+                                                    style={{
+                                                        "--progress": metric.value,
+                                                    }}
+                                                >
+                                                    <svg viewBox="0 0 120 120">
+                                                        <circle
+                                                            className={styles.bgCircle}
+                                                            cx="60"
+                                                            cy="60"
+                                                            r="52"
+                                                        />
+                                                        <circle
+                                                            className={styles.progressRing}
+                                                            cx="60"
+                                                            cy="60"
+                                                            r="52"
+                                                        />
+                                                    </svg>
 
-                                            <div className={styles.metricCenter}>
-                                                <span className={styles.metricValue}>
-                                                    {metric.value}%
-                                                </span>
+                                                    <div className={styles.metricCenter}>
+                                                        <span className={styles.metricValue}>
+                                                            {metric.value}%
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className={styles.metricLabel}>
+                                                    <span>{metric.icon}</span>
+                                                    {metric.label}
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div className={styles.metricLabel}>
-                                            <span>{metric.icon}</span>
-                                            {metric.label}
-                                        </div>
+                                        ))}
                                     </div>
-                                ))}
+                                </div>
                             </div>
                             <div className="content">
-                                <h6 className="fw-semibold title">Performance You Can Trust</h6>
-                                <p className={`text text-secondary ${styles.wcuPara}`}>We measure what matters: Accurate, Rapid, Trusted, and Efficient — so every sprint ships business value, not just features.</p>
+                                <AccordionHeader index={0} title="Why Businesses Choose VGIL" />
+                                <div
+                                    className={`${styles.accordionBody} ${(openIndex === 0) ? styles.accordionBodyOpen : ""}`}
+                                    aria-hidden={!(openIndex === 0)}
+                                >
+                                    <div className={styles.accordionBodyInner}>
+                                        <p className={`text text-secondary ${styles.wcuPara}`}>We measure what matters: Accurate, Rapid, Trusted, and Efficient — so every sprint ships business value, not just features.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-5">
-                        <div className="benefits-box benefits-step  effectFade fadeUp">
-                            <div className={`benefits-step-inner ${styles.wcuCard}`}>
-                                <div className="line-step"></div>
-                                <div className="step-item">
-                                    <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
-                                </div>
-                                <div className="step-item">
-                                    <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
-                                </div>
-                                <div className="step-item">
-                                    <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
+                        <div className={`benefits-box benefits-step  effectFade fadeUp ${styles.accordionCard}`}>
+                            <div
+                                className={`${styles.accordionBody} ${(openIndex === 1) ? styles.accordionBodyOpen : ""}`}
+                                aria-hidden={!(openIndex === 1)}
+                            >
+                                <div className={styles.accordionBodyInner}>
+                                    <div className={`benefits-step-inner ${styles.wcuCard}`}>
+                                        <div className="line-step"></div>
+                                        <div className="step-item">
+                                            <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
+                                        </div>
+                                        <div className="step-item">
+                                            <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
+                                        </div>
+                                        <div className="step-item">
+                                            <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="content">
-                                <h6 className="fw-semibold title">Intelligence Built on Trust</h6>
-                                <p className={`text text-secondary ${styles.wcuPara}`}>We optimize for accuracy, speed, security and cost efficiency, delivering reliable real-world performance. </p>
+                                <AccordionHeader index={1} title="Built for Impact" />
+                                <div
+                                    id="wcu-panel-1"
+                                    className={`${styles.accordionBody} ${(openIndex === 1) ? styles.accordionBodyOpen : ""}`}
+                                    aria-hidden={!(openIndex === 1)}
+                                >
+                                    <div className={styles.accordionBodyInner}>
+                                        <p className={`text text-secondary ${styles.wcuPara}`}>We optimize for accuracy, speed, security and cost efficiency, delivering reliable real-world performance. </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-5">
-                        <div className="benefits-box benefits-secure ">
-                            <div className={`benefits-secure-inner text-center ${styles.wcuCard}`}>
-                                <img src={cyberLogo} alt="Cyber Security Logo" />
+                        <div className={`benefits-box benefits-secure ${styles.accordionCard}`}>
+                            <div
+                                className={`${styles.accordionBody} ${(openIndex === 2) ? styles.accordionBodyOpen : ""}`}
+                                aria-hidden={!(openIndex === 2)}
+                            >
+                                <div className={styles.accordionBodyInner}>
+                                    <div className={`benefits-secure-inner text-center ${styles.wcuCard}`}>
+                                        <img src={cyberLogo} alt="Cyber Security Logo" />
+                                    </div>
+                                </div>
                             </div>
                             <div className="content">
-                                <h6 className="fw-semibold title">Secure by Design</h6>
-                                <p className={`text text-secondary ${styles.wcuPara}`}>PII handling, SSO/SAML, RBAC, encryption, and audit trails -built in, not bolted on. Enterprise-ready from the start.</p>
+                                <AccordionHeader index={2} title="Designed for Trust" />
+                                <div
+                                    id="wcu-panel-2"
+                                    className={`${styles.accordionBody} ${(openIndex === 2) ? styles.accordionBodyOpen : ""}`}
+                                    aria-hidden={!(openIndex === 2)}
+                                >
+                                    <div className={styles.accordionBodyInner}>
+                                        <p className={`text text-secondary ${styles.wcuPara}`}>PII handling, SSO/SAML, RBAC, encryption, and audit trails -built in, not bolted on. Enterprise-ready from the start.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-7">
-                        <div className="benefits-box benefits-design">
-                            <div className={`benefits-design-inner ${styles.wcuCard}`}>
-                                <img className="item-img-1" src={img1} alt="" />
-                                <img className="item-img-2 rightleft" src={img2} alt="" />
-                                <img className="item-img-3 updown" src={img3} alt="" />
+                        <div className={`benefits-box benefits-design ${styles.accordionCard}`}>
+                            <div
+                                className={`${styles.accordionBody} ${(openIndex === 3) ? styles.accordionBodyOpen : ""}`}
+                                aria-hidden={!(openIndex === 3)}
+                            >
+                                <div className={styles.accordionBodyInner}>
+                                    <div className={`benefits-design-inner ${styles.wcuCard}`}>
+                                        <img className="item-img-1" src={img1} alt="" />
+                                        <img className="item-img-2 rightleft" src={img2} alt="" />
+                                        <img className="item-img-3 updown" src={img3} alt="" />
+                                    </div>
+                                </div>
                             </div>
                             <div className="content">
-                                <h6 className="fw-semibold title">Design-Led AI Experiences</h6>
-                                <p className={`text text-secondary ${styles.wcuPara}`}>We craft prompts, interfaces, and guardrails that feel intuitive - so adoption rises and support tickets fall.</p>
+                                <AccordionHeader index={3} title="Design-Led AI Experiences" />
+                                <div
+                                    id="wcu-panel-3"
+                                    className={`${styles.accordionBody} ${(openIndex === 3) ? styles.accordionBodyOpen : ""}`}
+                                    aria-hidden={!(openIndex === 3)}
+                                >
+                                    <div className={styles.accordionBodyInner}>
+                                        <p className={`text text-secondary ${styles.wcuPara}`}>We craft prompts, interfaces, and guardrails that feel intuitive - so adoption rises and support tickets fall.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* Why Choose Us: Expertise Section */}
-                {/* <div className="heading-section center" style={{ marginTop: '100px', marginBottom: '60px' }}>
-                    <div className="heading-sub fw-semibold effectFade fadeUp">Expertise</div>
-                    <div className="heading-title text-gradient-3 effectFade fadeRotateX">Expertise That Moves Business Forward</div>
-                </div> */}
-                {/* <div className="row">
-                    <div className="col-lg-6 col-md-6 mb-24">
-                        <div className="benefits-box h-100 effectFade fadeUp" style={{ padding: '30px' }}>
-                            <div className="content">
-                                <div className="d-flex align-items-center gap-12 mb-15">
-                                    <div style={{ display: 'inline-flex', padding: '10px', borderRadius: '10px', background: 'rgba(239, 68, 68, 0.08)' }}>
-                                        <i className="icon icon-bullseye-solid" style={{ color: '#ff3b30', fontSize: '1.2rem' }}></i>
-                                    </div>
-                                    <h6 className="fw-semibold title mb-0" style={{ fontSize: '18px' }}>1. DOMAIN EXPERTISE</h6>
-                                </div>
-                                <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6' }}>
-                                    VGIL has been a pioneer in the ever-evolving technology space in the verticals of Banking & Finance, eGovernance, ERP & DC / DR Solutions.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6 mb-24">
-                        <div className="benefits-box h-100 effectFade fadeUp" style={{ padding: '30px' }}>
-                            <div className="content">
-                                <div className="d-flex align-items-center gap-12 mb-15">
-                                    <div style={{ display: 'inline-flex', padding: '10px', borderRadius: '10px', background: 'rgba(239, 68, 68, 0.08)' }}>
-                                        <i className="icon icon-user-check-solid" style={{ color: '#ff3b30', fontSize: '1.2rem' }}></i>
-                                    </div>
-                                    <h6 className="fw-semibold title mb-0" style={{ fontSize: '18px' }}>2. Trusted by 500+ Enterprises</h6>
-                                </div>
-                                <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6' }}>
-                                    Support multiple types of organizations, including Bank Branches, Manufacturing Setups, and Business Houses.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6 mb-24 mb-md-0">
-                        <div className="benefits-box h-100 effectFade fadeUp" style={{ padding: '30px' }}>
-                            <div className="content">
-                                <div className="d-flex align-items-center gap-12 mb-15">
-                                    <div style={{ display: 'inline-flex', padding: '10px', borderRadius: '10px', background: 'rgba(239, 68, 68, 0.08)' }}>
-                                        <i className="icon icon-bolt-solid" style={{ color: '#ff3b30', fontSize: '1.2rem' }}></i>
-                                    </div>
-                                    <h6 className="fw-semibold title mb-0" style={{ fontSize: '18px' }}>3. 400+ Engineers</h6>
-                                </div>
-                                <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6' }}>
-                                    Certified experts managing India's critical infrastructure. PAN-India presence with 8+ years avg experience.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="benefits-box h-100 effectFade fadeUp" style={{ padding: '30px' }}>
-                            <div className="content">
-                                <div className="d-flex align-items-center gap-12 mb-15">
-                                    <div style={{ display: 'inline-flex', padding: '10px', borderRadius: '10px', background: 'rgba(239, 68, 68, 0.08)' }}>
-                                        <i className="icon icon-cog" style={{ color: '#ff3b30', fontSize: '1.2rem' }}></i>
-                                    </div>
-                                    <h6 className="fw-semibold title mb-0" style={{ fontSize: '18px' }}>4. Future Ready Solutions</h6>
-                                </div>
-                                <p className="text text-secondary" style={{ fontSize: '14px', lineHeight: '1.6' }}>
-                                    End-to-end lifecycle management for critical IT infrastructure: Consulting & Design → Implementation → 24x7 Operations → AMC Support
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

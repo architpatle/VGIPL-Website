@@ -20,6 +20,11 @@ const socials = [
         color: "#0A66C2",
     },
     {
+        icon: FaYoutube,
+        href: "https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg",
+        color: "#FF0000",
+    },
+    {
         icon: FaInstagram,
         href: "https://www.instagram.com/virtualgalaxyinfotech",
         color: "#E1306C",
@@ -29,17 +34,13 @@ const socials = [
         href: "https://www.facebook.com/VirtualGalaxyInfotechLtd",
         color: "#1877F2",
     },
+
     {
-        icon: FaYoutube,
-        href: "https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg",
-        color: "#FF0000",
-    },
-     {
         icon: FaXTwitter,
         href: "https://x.com/Virtualvgipl",
         color: "#1a1d1e",
     },
-   
+
 ];
 
 const containerVariants = {

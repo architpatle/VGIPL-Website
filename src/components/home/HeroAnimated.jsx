@@ -65,10 +65,10 @@ function HeroAnimated() {
           </div>
         </div>
       </div>
-      <a href="#about" className="scroll-more">
+      {/* <a href="#about" className="scroll-more">
         <span className="fw-semibold link1">Scroll for more</span>
         <i className="icon icon-long-arrow-alt-down-solid"></i>
-      </a>
+      </a> */}
     </div>
   );
 }

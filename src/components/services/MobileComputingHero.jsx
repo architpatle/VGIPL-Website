@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Smartphone, ShieldCheck, Zap } from 'lucide-react';
 import './MobileComputingHero.css';
 
@@ -10,26 +11,29 @@ const MobileComputingHero = () => {
         <div className="mc-circle mc-circle-1"></div>
         <div className="mc-circle mc-circle-2"></div>
       </div> */}
-      
+
       <div className="container position-relative z-2">
-        <div className="row align-items-center min-vh-75">
-          <div className="col-lg-6 mc-hero-content">
+        <div className="row align-items-center">
+          <div className="col-lg-12 mc-hero-content">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mc-badge">
-                <Zap size={16} /> Mobile Computing Services
+              <div className="mc-badge mx-auto">
+                <span className="badge-dot" ></span>
+                Mobile Computing Services
+
               </div>
-              <h1 className="mc-hero-title">
-                Mobile Computing <span className="text-red">Solutions</span>
+              <h1 className="mc-hero-title text-center">
+                Mobile Computing Solutions
+                {/* <span className="text-red">Solutions</span> */}
               </h1>
-              <p className="mc-hero-desc">
+              <p className="mc-hero-desc text-center mx-auto">
                 Redefining computing with mobile computing techniques to facilitate movement of mobile devices anywhere. Improve Business Productivity and security with mobile computing Services.
               </p>
-              
-              <div className="mc-hero-actions mt-4">
+
+              {/* <div className="mc-hero-actions mt-4">
                 <a href="#contact" className="btn-primary-mc">
                   Get In Touch &rarr;
                 </a>
@@ -41,11 +45,27 @@ const MobileComputingHero = () => {
                      <Zap size={20} color="#ff3300" /> Fast
                    </div>
                 </div>
+              </div> */}
+
+              <div className="hero-cta-btns mt-4">
+                <Link
+                  to="/contact"
+                  className="btn-primary-hero"
+
+                >
+                  Get In Touch &rarr;
+                </Link>
+
+                <Link
+                  to="/ai"
+                  className="btn-secondary-hero"
+
+                >Explore More</Link>
               </div>
             </motion.div>
           </div>
-          
-          <div className="col-lg-6">
+
+          {/* <div className="col-lg-6">
              <motion.div 
                className="mc-hero-visual"
                initial={{ opacity: 0, scale: 0.9 }}
@@ -77,7 +97,7 @@ const MobileComputingHero = () => {
                    </div>
                 </div>
              </motion.div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

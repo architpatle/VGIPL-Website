@@ -254,10 +254,10 @@ function JourneySection() {
                     <h4 className="card-title">{item.title}</h4>
                     {/* <div className="card-divider"></div> */}
                     <p className="card-desc">{item.description}</p>
-                    <div
+                    {/* <div
                       className="card-footer-graphic"
                       style={{ backgroundImage: `url(${item.footer})` }}
-                    ></div>
+                    ></div> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -587,7 +587,7 @@ function JourneySection() {
         }
 
         .journey-stat-item:hover .stat-icon-wrapper {
-          transform: scale(1.1) rotate(10deg);
+          // transform: scale(1.1) rotate(10deg);
           background: #e10600;
           color: #ffffff;
           border-color: #e10600;

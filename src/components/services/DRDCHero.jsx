@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Database, Server, Shield } from 'lucide-react';
 import './DRDCHero.css';
 
@@ -11,34 +12,51 @@ const DRDCHero = () => {
         <div className="dr-glow-circle dr-glow-1"></div>
         <div className="dr-glow-circle dr-glow-2"></div>
       </div> */}
-      
+
       <div className="container position-relative z-2">
         <div className="row align-items-center min-vh-75">
-          <div className="col-lg-6 dr-hero-content">
+          <div className="col-lg-12 dr-hero-content">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="dr-badge">
-                <Database size={16} /> DR & DC Services
+              <div className="dr-badge mx-auto">
+                <span className="badge-dot" ></span> DR & DC Services
               </div>
-              <h1 className="dr-hero-title">
-                End-to-End DataCentre <span className="text-red">Infrastructure</span> For Your Business
+              <h1 className="dr-hero-title text-center">
+                {/* End-to-End Data Centre <span className="text-red">Infrastructure</span> For Your Business */}
+                Data Centre and Disaster Recovery solutions
               </h1>
-              <p className="dr-hero-desc">
+              <p className="dr-hero-desc text-center mx-auto">
                 Centralize your IT Infrastructure, Operations, Storage & Security Management with Managed Security Services.
               </p>
-              
-              <div className="dr-hero-actions mt-4">
+
+              {/* <div className="dr-hero-actions mt-4">
                 <a href="#contact" className="btn-primary-dr">
                   Get In Touch &rarr;
                 </a>
+              </div> */}
+
+              <div className="hero-cta-btns mt-4">
+                <Link
+                  to="/contact"
+                  className="btn-primary-hero"
+
+                >
+                  Get In Touch &rarr;
+                </Link>
+
+                <Link
+                  to="/ai"
+                  className="btn-secondary-hero"
+
+                >Explore More</Link>
               </div>
             </motion.div>
           </div>
-          
-          <div className="col-lg-6">
+
+          {/* <div className="col-lg-6">
              <motion.div 
                className="dr-hero-visual"
                initial={{ opacity: 0, scale: 0.9 }}
@@ -88,7 +106,7 @@ const DRDCHero = () => {
                    </motion.div>
                 </div>
              </motion.div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

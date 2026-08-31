@@ -6,6 +6,7 @@ import {
   HelpCircle, ArrowRight, Activity, Server, Workflow, ShieldCheck, Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import aiImg from '../assets/aiImg.png';
 
 function AIPage() {
   // SEO Protection: Prevent search indexing
@@ -136,7 +137,7 @@ function AIPage() {
           type: 'info',
           text: 'Available Mainframe Commands:\n' +
             '  about     - Learn about VGIL Virtual Galaxy AI architectures\n' +
-            '  status    - View quantum node diagnostics and coherence levels\n' +
+            '  status    - View process node diagnostics and coherence levels\n' +
             '  agents    - Review active AI subroutines and background workers\n' +
             '  neural    - Run simulated synaptic feedback assessment\n' +
             '  optimize  - Trigger dynamic calibration sequence\n' +
@@ -158,7 +159,7 @@ function AIPage() {
             `  - Core Temperature: Nominal (${(25 + temperature * 15).toFixed(1)}°C)\n` +
             `  - Coherence Rate: ${calculatedCoherence}%\n` +
             `  - Active Node Clusters: 1,024 / 1,024\n` +
-            `  - Quantum Latency: ${calculatedLatency}ms\n` +
+            `  - Process Latency: ${calculatedLatency}ms\n` +
             `  - Encryption Index: AES-GCM-256 (Enforced)`
         });
         break;
@@ -608,7 +609,8 @@ function AIPage() {
                   filter: 'blur(30px)',
                   animation: 'pulse 4s infinite alternate'
                 }} />
-                <BrainCircuit size={180} className="text-orange" style={{ color: '#fd3a25', opacity: 0.85, zIndex: 1 }} />
+                {/* <BrainCircuit size={180} className="text-orange" style={{ color: '#fd3a25', opacity: 0.85, zIndex: 1 }} /> */}
+                <img src={aiImg} alt='aiImg' />
               </div>
             </div>
           </div>
@@ -619,7 +621,7 @@ function AIPage() {
           <div className="glass-panel" style={{ borderLeft: '4px solid #fd3a25' }}>
             <div className="row align-items-center">
               <div className="col-lg-8 text-start">
-                <div className="fw-bold mb-3 text-orange uppercase tracking-[1px]" style={{ color: '#fd3a25', fontSize: '0.82rem' }}>Quantum Flow Engine</div>
+                <div className="fw-bold mb-3 text-orange uppercase tracking-[1px]" style={{ color: '#fd3a25', fontSize: '0.82rem' }}>Process Flow Engine</div>
                 <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.1rem', letterSpacing: '-0.01em' }}>
                   Beyond AI Hype: Software That Actually Ships
                 </h2>
@@ -627,7 +629,7 @@ function AIPage() {
                   AI is trending. Impact is missing. We bridge the gap—turning ideas into intelligent, scalable systems.
                 </h5>
                 <p className="text-secondary mb-0" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-                  Because real transformation isn’t about tools—it’s about systems, strategy, and scale. At Virtual Galaxy, we turn AI into real business results with our AI Quantum Flow Engine.
+                  Because real transformation isn’t about tools—it’s about systems, strategy, and scale. At Virtual Galaxy, we turn AI into real business results with our AI Process Flow Engine.
                 </p>
               </div>
               <div className="col-lg-4 text-center mt-24 mt-lg-0">
@@ -643,7 +645,7 @@ function AIPage() {
         <section className="py-12" id="layers">
           <div className="text-center mb-12">
             <span className="ai-badge">The Architecture</span>
-            <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>The AI Quantum Flow Engine Layers</h2>
+            <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2.2rem', letterSpacing: '-0.01em' }}>The AI Process Flow Engine Layers</h2>
             <p className="mx-auto text-secondary" style={{ maxWidth: '600px', fontSize: '1.02rem', lineHeight: '1.5' }}>
               We orchestrate AI solutions through three discrete layers to ensure security, high performance, and domain alignment.
             </p>
@@ -909,7 +911,7 @@ function AIPage() {
 
                     <div>
                       <div className="d-flex justify-content-between mb-1" style={{ fontSize: '0.82rem', fontWeight: 600 }}>
-                        <span className="text-secondary">Quantum Latency</span>
+                        <span className="text-secondary">Process Latency</span>
                         <span style={{ color: calculatedLatency > 20 ? '#f59e0b' : '#fd3a25' }}>{calculatedLatency}ms</span>
                       </div>
                       <div style={{ height: '6px', background: '#e5e7eb', borderRadius: '3px', overflow: 'hidden' }}>
@@ -1030,7 +1032,7 @@ function AIPage() {
                 <div className="glass-panel d-flex flex-column h-100" style={{ minHeight: '460px' }}>
                   <h4 className="fw-bold text-dark mb-4 d-flex align-items-center gap-8" style={{ fontSize: '1.1rem' }}>
                     <Server size={18} style={{ color: '#fd3a25' }} />
-                    Mainframe Quantum Shell
+                    Mainframe Process Shell
                   </h4>
 
                   {/* Interactive Terminal Screen */}

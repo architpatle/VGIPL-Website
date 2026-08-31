@@ -65,14 +65,14 @@ function AboutTeamSection() {
     e.currentTarget.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
   };
   const vgilTeam = [
-    { name: 'Alhad Hardas', role: 'Director - Banking Domain Services', img: alhadImg },
-    { name: 'Bharat Zade', role: 'Director - Operations & Digital Transformation', img: bharatImg },
-    { name: 'Harshjit Deshmukh', role: 'Director - Domestic Business Development', img: harshjitImg },
-    { name: 'Ninad Mairal', role: 'Director - International Business Development', img: ninadImg },
-    { name: 'Nitendra Bisen', role: 'Principal Service Strategist', img: nitendraImg },
-    { name: 'Anil Katwale', role: 'Principal Solution Architect', img: anilImg },
-    { name: 'Satish Kukde', role: 'Principal Database Architect', img: satishImg },
-    { name: 'Sachin Burghate', role: 'Director - Technical (BFSI)', img: sachinBImg }
+    { name: 'Mr. Harshjit Deshmukh', role: 'Director - Domestic Business Development', img: harshjitImg },
+    { name: 'Mr. Bharat Zade', role: 'Director - Operations & Digital Transformation', img: bharatImg },
+    { name: 'Mr. Ninad Mairal', role: 'Director - International Business Development', img: ninadImg },
+    { name: 'Mr. Sachin Burghate', role: 'Director - Technical (BFSI)', img: sachinBImg },
+    { name: 'Mr. Alhad Hardas', role: 'Director - Banking Domain Services', img: alhadImg },
+    { name: 'Mr. Satish Kukde', role: 'Principal Database Architect', img: satishImg },
+    { name: 'Mr. Anil Katwale', role: 'Principal Solution Architect', img: anilImg },
+    { name: 'Mr. Nitendra Bisen', role: 'Principal Service Strategist', img: nitendraImg },
   ];
 
   const boardMembers = [
@@ -252,7 +252,7 @@ function AboutTeamSection() {
               ))}
             </div>
 
-            <div className="board-col-center">
+            {/* <div className="board-col-center">
               <div className="board-center-line"></div>
 
               <div className="board-connector-left board-connector-left-top"></div>
@@ -290,7 +290,7 @@ function AboutTeamSection() {
                   })}
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             <div className="board-col-right">
               {rightColumnMembers.map((member, i) => (
@@ -336,7 +336,7 @@ function AboutTeamSection() {
         <div className="vgil-standalone-section" >
           <div className="heading-section center mb-80">
             <h4 className="text-dark effectFade fadeUp vgil-title-responsive">
-              VGIL is not just about co-founders
+              Leadership That Drives Our Vision
             </h4>
             <div style={{ width: '80px', height: '4px', background: '#ff4d00', margin: '4px auto 16px auto', borderRadius: '2px' }}></div>
           </div>
@@ -588,7 +588,8 @@ function AboutTeamSection() {
           /* Board of Directors Styles */
           .board-layout {
             display: grid;
-            grid-template-columns: 1fr 140px 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap:24px;
             position: relative;
             align-items: center;
             max-width: 1200px;
@@ -1085,9 +1086,9 @@ function AboutTeamSection() {
           }
 
           /* Default (Desktop) */
-          .leader-name {
-            display: none !important;
-          }
+          // .leader-name {
+          //   display: none !important;
+          // }
           .leader-signature {
             display: block !important;
             height: 80px;

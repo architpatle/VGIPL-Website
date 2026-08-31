@@ -12,7 +12,7 @@ function PricingSection() {
           <div className="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
             Switch from Disconnected Legacy Systems to  <br />
             <input type="checkbox" id="pricingSwitch" className="tf-switch-check" checked={isAIEnabled} onChange={() => setIsAIEnabled(!isAIEnabled)} />&nbsp;
-            AI-Enabled Cybersecurity.
+            AI-Enabled Cybersecurity
           </div>
         </div>
         <div className="row">

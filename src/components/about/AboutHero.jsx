@@ -17,7 +17,7 @@ function AboutHero() {
             <br />
             <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
               <span className="fw-semibold text-gradient-1">Industries</span>
-              <div className="title-icon">
+              {/* <div className="title-icon">
                 <div className="box"></div>
                 <div className="title-icon-wrap">
                   <div className="img-1 img-transform-3" style={{ backgroundColor: '#fff', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', padding: '1px', width: 'clamp(50px, 8vw, 70px)', height: 'clamp(50px, 8vw, 70px)', display: 'flex', alignItems: 'center', justifyContent: 'center', transform: 'rotate(-25deg)' }}>
@@ -30,7 +30,7 @@ function AboutHero() {
                     <img src={eBankerImg} alt="Core Banking" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <p className="text effectFade fadeUp">

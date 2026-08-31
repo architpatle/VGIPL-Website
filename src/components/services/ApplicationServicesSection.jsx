@@ -69,25 +69,40 @@ const ApplicationServicesSection = () => {
                   <div className="card-bg-number">{service.id}</div>
                   
                   <div className="icon-container">
-                    <svg className="progress-ring" width="60" height="60">
-                      <circle className="progress-bg" cx="30" cy="30" r="28" />
-                      <circle className="progress-fg" cx="30" cy="30" r="28" />
-                    </svg>
+                    <svg
+  className="progress-ring"
+  viewBox="0 0 60 60"
+  width="60"
+  height="60"
+>
+  <circle
+    className="progress-bg"
+    cx="30"
+    cy="30"
+    r="28"
+  />
+  <circle
+    className="progress-fg"
+    cx="30"
+    cy="30"
+    r="28"
+  />
+</svg>
                     <div className="icon-inner">
                       <Icon size={24} strokeWidth={2} />
                     </div>
                   </div>
 
-                  <div className="mt-auto">
+                  <div className="">
                     <h3 className="card-title-app">{service.title}</h3>
-                    <div className="card-underline"></div>
+                    {/* <div className="card-underline"></div> */}
                   </div>
 
-                  <div className="card-particles">
+                  {/* <div className="card-particles">
                     <div className="particle"></div>
                     <div className="particle"></div>
                     <div className="particle"></div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             );

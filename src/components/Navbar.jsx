@@ -132,11 +132,11 @@ function Navbar() {
           id: i.slug,
           title: i.title,
           description: i.desc,
-          image: i.logo, // Fallback to logo if no hero
+          image: i.heroImage,
           logo: i.logo,
           link: `/investors/${i.slug}`,
           icon: i.icon || 'chart-line',
-          imageFit: 'contain'
+          imageFit: 'cover'
         }));
       case 'resource':
         return RESOURCE_DATA.map(r => ({
@@ -204,14 +204,20 @@ function Navbar() {
             {activeItem && (
               <Link to={activeItem.link} className={styles.previewCard} style={{ textDecoration: 'none' }}>
                 <div
-                  className={styles.previewImageWrapper}
+                  className={`${styles.previewImageWrapper} ${type === 'products'
+                    ? styles.productsPreviewImageWrapper
+                    : ''
+                    }`}
                   style={activeItem.imageFit === 'cover' ? { padding: '0px', background: 'transparent' } : {}}
                 >
                   {activeItem.image ? (
                     <img
                       src={activeItem.image}
                       alt={activeItem.title}
-                      className={styles.previewImage}
+                      className={`${styles.previewImage} ${type === 'products'
+                        ? styles.productsPreviewImage
+                        : ''
+                        }`}
                       style={{ objectFit: activeItem.imageFit || 'contain' }}
                     />
                   ) : activeItem.logo ? (

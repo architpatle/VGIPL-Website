@@ -380,7 +380,7 @@
     padding: 8px 0 !important;
     gap: 12px !important;
     align-items: center !important;
-    text-align: center !important;
+    /* text-align: center !important; */
   }
 
   .partner-wrap p.text {
@@ -1328,19 +1328,21 @@
 
   .benefits-design .benefits-design-inner .item-img-1 {
     max-height: 300px !important;
+    position: absolute;
     width: auto !important;
+    right: 90px !important
   }
 
   .benefits-design .benefits-design-inner .item-img-2 {
     /* top: 15px !important; */
-    /* right: 180px !important; */
+    right: 300px !important;
     max-height: 160px !important;
     width: auto !important;
   }
 
   .benefits-design .benefits-design-inner .item-img-3 {
     /* bottom: -150px !important; */
-    right: -30px !important;
+    right: -10px !important;
     max-height: 100px !important;
     width: auto !important;
   }
@@ -1362,7 +1364,7 @@
   }
 
   .benefits-design .benefits-design-inner .item-img-1 {
-    max-height: 250px !important;
+    max-height: 230px !important;
   }
 
   .benefits-design .benefits-design-inner .item-img-3 {
@@ -1379,6 +1381,7 @@
 @media (max-width: 480px) {
   .benefits-box{
     margin-bottom: 12px !important;
+    border-radius: 20px !important;
   }
 }
 
@@ -1491,7 +1494,7 @@
   align-items: stretch !important;
   justify-content: center !important;
   position: relative !important;
-  gap: 60px !important;
+  gap: 200px !important;
   z-index: 5 !important;
 }
 
@@ -1650,7 +1653,7 @@
 @media (max-width: 1440px) {
   .leadership-grid-container {
     max-width: 1100px !important;
-    gap: 24px !important;
+    gap: 240px !important;
   }
 }
 
@@ -1662,7 +1665,7 @@
 
   .leadership-grid-container {
     max-width: 960px !important;
-    gap: 16px !important;
+    gap: 160px !important;
   }
 
   .leader-card-item {
@@ -2232,8 +2235,8 @@
   }
 
   .section-featured-works .featured-works-item .image img {
-    max-width: 100px !important;
-    max-height: 100px !important;
+    max-width: auto !important;
+    height: 60px !important;
   }
 
   .section-featured-works .featured-works-item .image .view-project {

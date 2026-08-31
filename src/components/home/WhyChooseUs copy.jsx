@@ -13,17 +13,17 @@ function WhyChooseUs() {
             <div className="container">
                 <div className={`heading-section ${styles.whyChooseUsHeading}`}>
                     <div className={`heading-sub ${styles.whyChooseUsHeadingSub} fw-semibold effectFade fadeUp`}>Benefits</div>
-                    <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Choose Us</div>
+                    <div className={`heading-title ${styles.whyChooseUsHeadingTitle} text-gradient-3 effectFade fadeRotateX`}>Why Choose Us?</div>
                 </div>
-                <div className="row mb-24">
+                <div className={`row mb-24 ${styles.wcuRow}`}>
                     <div className="col-lg-7 ">
-                        <div className="benefits-box benefits-progress ">
-                            <div className={`${styles.performanceGrid} wcuPerformance`}>
+                        <div className={`benefits-box benefits-progress `}>
+                            <div className={`${styles.performanceGrid} wcuPerformance ${styles.wcuCard}`}>
                                 {[
-                                    { value: 95, label: "Accuracy", icon: "" },
-                                    { value: 90, label: "Rapid", icon: "" },
-                                    { value: 98, label: "Trusted", icon: "" },
-                                    { value: 85, label: "Efficient", icon: "" },
+                                    { value: 98, label: "Expertise", icon: "" },
+                                    { value: 95, label: "Experience", icon: "" },
+                                    { value: 90, label: "Efficient", icon: "" },
+                                    { value: 100, label: "Execution", icon: "" },
                                 ].map((metric) => (
                                     <div
                                         key={metric.label}
@@ -66,13 +66,13 @@ function WhyChooseUs() {
                             </div>
                             <div className="content">
                                 <h6 className="fw-semibold title">Performance You Can Trust</h6>
-                                <p className="text text-secondary">We measure what matters: Accurate, Rapid, Trusted, and Efficient — so every sprint ships business value, not just features.</p>
+                                <p className={`text text-secondary ${styles.wcuPara}`}>We measure what matters: Accurate, Rapid, Trusted, and Efficient — so every sprint ships business value, not just features.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-5">
                         <div className="benefits-box benefits-step  effectFade fadeUp">
-                            <div className="benefits-step-inner">
+                            <div className={`benefits-step-inner ${styles.wcuCard}`}>
                                 <div className="line-step"></div>
                                 <div className="step-item">
                                     <i className={`icon icon-check-solid ${styles.checkIcon}`}></i>
@@ -86,7 +86,7 @@ function WhyChooseUs() {
                             </div>
                             <div className="content">
                                 <h6 className="fw-semibold title">Intelligence Built on Trust</h6>
-                                <p className="text text-secondary">We optimize for accuracy, speed, security and cost efficiency, delivering reliable real-world performance. </p>
+                                <p className={`text text-secondary ${styles.wcuPara}`}>We optimize for accuracy, speed, security and cost efficiency, delivering reliable real-world performance. </p>
                             </div>
                         </div>
                     </div>
@@ -94,25 +94,25 @@ function WhyChooseUs() {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="benefits-box benefits-secure ">
-                            <div className="benefits-secure-inner text-center ">
+                            <div className={`benefits-secure-inner text-center ${styles.wcuCard}`}>
                                 <img src={cyberLogo} alt="Cyber Security Logo" />
                             </div>
                             <div className="content">
                                 <h6 className="fw-semibold title">Secure by Design</h6>
-                                <p className="text text-secondary">PII handling, SSO/SAML, RBAC, encryption, and audit trails -built in, not bolted on. Enterprise-ready from the start.</p>
+                                <p className={`text text-secondary ${styles.wcuPara}`}>PII handling, SSO/SAML, RBAC, encryption, and audit trails -built in, not bolted on. Enterprise-ready from the start.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-7">
                         <div className="benefits-box benefits-design">
-                            <div className="benefits-design-inner">
+                            <div className={`benefits-design-inner ${styles.wcuCard}`}>
                                 <img className="item-img-1" src={img1} alt="" />
                                 <img className="item-img-2 rightleft" src={img2} alt="" />
                                 <img className="item-img-3 updown" src={img3} alt="" />
                             </div>
                             <div className="content">
                                 <h6 className="fw-semibold title">Design-Led AI Experiences</h6>
-                                <p className="text text-secondary">We craft prompts, interfaces, and guardrails that feel intuitive - so adoption rises and support tickets fall.</p>
+                                <p className={`text text-secondary ${styles.wcuPara}`}>We craft prompts, interfaces, and guardrails that feel intuitive - so adoption rises and support tickets fall.</p>
                             </div>
                         </div>
                     </div>

@@ -18,7 +18,7 @@ function About() {
     <>
       <AboutHero />
       <MissionSection />
-      <PartnerSection />
+      {/* <PartnerSection /> */}
 
       <div className="box-white">
         <ValuesSection />

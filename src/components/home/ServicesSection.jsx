@@ -68,7 +68,7 @@ function ServicesSection() {
               <div className="col-left d-flex flex-column justify-content-start gap-30 h-100 services-section-col-left">
                 <div>
                   <div className="heading-section ">
-                    <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us</div>
+                    <div className="heading-sub fw-semibold effectFade fadeUp">Why Choose Us?</div>
                     <div className="heading-title text-gradient-3 effectFade fadeRotateX">End-to-End <br /> AI Services</div>
                   </div>
                   <p className="effectFade fadeUp services-section-p-none " >Since 1997, Virtual Galaxy Infotech has been empowering banks, enterprises and government organizations through secure software, intelligent automation and AI-driven innovation, delivering scalable, reliable, future-ready digital transformation solutions across diverse industries worldwide.</p>
@@ -143,7 +143,7 @@ function ServicesSection() {
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', service3Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
                   <div className="accordion-title services-section-accordian-title">
-                    400+ Associates <br />
+                    400+ Resources <br />
                     {/* <div className="text-body-1 num">(03)</div> */}
                   </div>
                 </div>

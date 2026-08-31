@@ -62,17 +62,17 @@ function ProductSingle() {
 
   const slugBgImages = {
     'core-banking-solution': bgCoreBanking,
-    'mis-solution': bgMis,
+    'imis-solution': bgMis,
     'end-to-end-cyber-security': bgCyberSecurity,
     'digital-payments': bgVpay,
-    'post-mortem-mgmt': bgAutopsy,
+    'post-mortem-management': bgAutopsy,
     'agriculture-trading': bgEapmc,
     'erp-solution': bgErp,
   };
 
   const currentBg = slugBgImages[slug] || '';
 
-  const allowedBrochureSlugs = ['core-banking-solution', 'mis-solution', 'digital-payments', 'end-to-end-cyber-security'];
+  const allowedBrochureSlugs = ['core-banking-solution', 'imis-solution', 'digital-payments', 'end-to-end-cyber-security'];
   const showBrochureButton = allowedBrochureSlugs.includes(slug);
 
   const ebankerModules = [
@@ -296,7 +296,7 @@ function ProductSingle() {
     currentModules = ebankerModules;
     mainHeading = "E-Banker Modules";
     mainSubheading = "Streamlines customer onboarding with eKYC";
-  } else if (slug === 'mis-solution') {
+  } else if (slug === 'imis-solution') {
     currentModules = imisModules;
     mainHeading = "IMIS Modules";
     mainSubheading = "IMIS adheres to electronic transaction standards, cyber security requirements, and anti-money laundering regulations";
@@ -308,7 +308,7 @@ function ProductSingle() {
     currentModules = vPayModules;
     mainHeading = "V-Pay Modules";
     mainSubheading = "V-Pay seamlessly integrates with a bank's core banking system, providing security as robust as a diamond vault";
-  } else if (slug === 'post-mortem-mgmt') {
+  } else if (slug === 'post-mortem-management') {
     currentModules = autopsyModules;
     mainHeading = "E-Autopsy Modules";
     mainSubheading = "End-to-end solution for Post Mortem (Autopsy) Departments";
@@ -419,10 +419,10 @@ function ProductSingle() {
             </div>
           </div>
         </div>
-        <a href="#next-section" className="scroll-more">
+        {/* <a href="#next-section" className="scroll-more">
           <span className="fw-semibold link1">Scroll for more</span>
           <i className="icon icon-long-arrow-alt-down-solid"></i>
-        </a>
+        </a> */}
       </div>
 
 

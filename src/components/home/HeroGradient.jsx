@@ -54,7 +54,7 @@ function HeroGradient() {
             AI-Powered Solutions
           </div>
           <div className="title text-display-2 effectFade fadeRotateX">
-            <span className="title1 fw-semibold text-gradient-1">Your-Complete </span>
+            <span className="title1 fw-semibold text-gradient-1">Your Complete </span>
             {/* <br /> */}
             <div className="title2 d-flex gap-20 justify-content-center  align-items-start flex-wrap" >
               <div className="hero-rotating-title inline  ">
@@ -105,10 +105,10 @@ function HeroGradient() {
           </div>
         </div>
       </div>
-      <a href="#about" className="scroll-more">
+      {/* <a href="#about" className="scroll-more">
         <span className="fw-semibold link1">Scroll for more</span>
         <i className="icon icon-long-arrow-alt-down-solid"></i>
-      </a>
+      </a> */}
     </div>
   );
 }

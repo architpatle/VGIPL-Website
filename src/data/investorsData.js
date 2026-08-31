@@ -20,6 +20,7 @@ export const INVESTORS_DATA = [
     slug: 'board-and-management',
     title: 'Board and Management',
     icon: 'user-friends-solid',
+    heroImage:imgBoardManagement,
     logo: imgBoardManagement,
     desc: 'Meet our leadership team dedicated to guiding Virtual Galaxy towards innovation, sustainable growth, and long-term success.',
     gridItems: [
@@ -33,6 +34,7 @@ export const INVESTORS_DATA = [
     slug: 'group-companies',
     title: 'Group Companies',
     icon: 'building',
+    heroImage: imgGroupCompanies,
     logo: imgGroupCompanies,
     desc: 'Information about our group companies and subsidiaries working synergistically across various sectors.',
     gridItems: []
@@ -41,6 +43,7 @@ export const INVESTORS_DATA = [
     slug: 'financial-information-reports',
     title: 'Financial Information & Statutory Reports',
     icon: 'chart-line-solid',
+    heroImage: imgFinancialInfo,
     logo: imgFinancialInfo,
     desc: 'Review our financial performance, quarterly results, and statutory reports.',
     gridItems: []
@@ -49,6 +52,7 @@ export const INVESTORS_DATA = [
     slug: 'corporate-governance',
     title: 'Corporate Governance',
     icon: 'shield-alt-solid',
+    heroImage: imgCorporateGovernance,
     logo: imgCorporateGovernance,
     desc: 'Our commitment to ethical business practices, transparency, and accountability.',
     gridItems: []
@@ -57,6 +61,7 @@ export const INVESTORS_DATA = [
     slug: 'investor-contacts-grievances',
     title: 'Investor Contacts/Grievances',
     icon: 'headset-solid',
+    heroImage: imgInvestorContacts,
     logo: imgInvestorContacts,
     desc: 'Get in touch with our investor relations team or submit any grievances for prompt resolution.',
     gridItems: []
@@ -65,6 +70,7 @@ export const INVESTORS_DATA = [
     slug: 'material-creditors',
     title: 'Material Creditors',
     icon: 'coins-solid',
+    heroImage: imgMaterialCreditors,
     logo: imgMaterialCreditors,
     desc: 'Details regarding our material creditors and outstanding financial obligations.',
     gridItems: []
@@ -73,6 +79,7 @@ export const INVESTORS_DATA = [
     slug: 'preferential-allotment-warrants',
     title: 'Preferential Allotment of Warrants',
     icon: 'clipboard-check-solid',
+    heroImage: imgPreferentialAllotmentofWarrants,
     logo: imgPreferentialAllotmentofWarrants,
     desc: 'Information on the preferential allotment of warrants and related disclosures.',
     gridItems: []
@@ -81,6 +88,7 @@ export const INVESTORS_DATA = [
     slug: 'material-contracts',
     title: 'Material Contracts',
     icon: 'book-solid',
+    heroImage: imgMaterialContracts,
     logo: imgMaterialContracts,
     desc: 'Key material contracts that govern our strategic partnerships and business operations.',
     gridItems: []
@@ -89,6 +97,7 @@ export const INVESTORS_DATA = [
     slug: 'material-documents',
     title: 'Material Documents',
     icon: 'paperclip-solid',
+    heroImage: imgMaterialDocuments,
     logo: imgMaterialDocuments,
     desc: 'Important material documents available for investor review and compliance.',
     gridItems: []
@@ -97,6 +106,7 @@ export const INVESTORS_DATA = [
     slug: 'investor-analyst-meet',
     title: 'Investor Analyst Meet',
     icon: 'comments-solid',
+    heroImage: imgInvestorAnalystMeet,
     logo: imgInvestorAnalystMeet,
     desc: 'Presentations, transcripts, and schedules for our investor and analyst meetings.',
     gridItems: []
@@ -105,6 +115,7 @@ export const INVESTORS_DATA = [
     slug: 'annual-reports',
     title: 'Annual Reports',
     icon: 'book-open-solid',
+    heroImage: imgAnnualReports,
     logo: imgAnnualReports,
     desc: 'Comprehensive annual reports detailing our financial health, achievements, and strategic outlook.',
     gridItems: []
@@ -113,6 +124,7 @@ export const INVESTORS_DATA = [
     slug: 'notice-of-meetings',
     title: 'Notice of Meetings',
     icon: 'bell',
+    heroImage: imgNoticeofMeetings,
     logo: imgNoticeofMeetings,
     desc: 'Official notices for Annual General Meetings (AGMs) and Extraordinary General Meetings (EGMs).',
     gridItems: []
@@ -121,6 +133,7 @@ export const INVESTORS_DATA = [
     slug: 'dividend',
     title: 'Dividend',
     icon: 'coins-solid',
+    heroImage: imgDividend,
     logo: imgDividend,
     desc: 'Information regarding our dividend policy, declarations, and historical payouts.',
     gridItems: []
@@ -129,6 +142,7 @@ export const INVESTORS_DATA = [
     slug: 'announcement',
     title: 'Announcement',
     icon: 'bullseye-solid',
+    heroImage: imgAnnouncement,
     logo: imgAnnouncement,
     desc: 'Latest corporate announcements, press releases, and regulatory filings.',
     gridItems: []

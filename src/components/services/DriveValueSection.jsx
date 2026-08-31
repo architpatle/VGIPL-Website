@@ -73,9 +73,9 @@ const DriveValueSection = () => {
             <div>
               <h2 className="section-heading-responsive fw-bold mb-2" style={{  lineHeight: '1.1', color: '#0f172a' }}>
                 Drive Value
-              </h2>
-              <h2 className=" section-heading-responsive fw-bold mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.1', color: '#E8380D' }}>
-                From Your Applications
+              
+              <span className=" section-heading-responsive fw-bold mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.1', color: '#E8380D' }}>  From Your Applications 
+                </span>
               </h2>
             </div>
 
@@ -132,20 +132,20 @@ const DriveValueSection = () => {
           </motion.div>
 
           {/* Right Column: Glassmorphism Card and Icons */}
-          <motion.div variants={rightVariants} className="col-12 col-lg-7 d-flex flex-column position-relative mt-5 mt-lg-0" style={{ zIndex: 20 }}>
+          <motion.div variants={rightVariants} className="section-drive-value-right col-12 col-lg-7 d-flex flex-column position-relative mt-5 mt-lg-0" style={{ zIndex: 20 }}>
             <div className="w-100 position-relative">
               {/* Background blob for glassmorphism effect */}
               <div className="position-absolute top-50 start-50 translate-middle w-75 h-75 rounded-circle" style={{ background: '#e2e8f0', filter: 'blur(80px)', opacity: 0.6, zIndex: 0 }}></div>
 
-              <div className="position-relative z-1 mb-1" style={{ backdropFilter: 'blur(24px)', background: 'rgba(255, 255, 255, 0.5)', border: '1px solid rgba(232, 56, 13, 0.1)', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.07)', borderRadius: '1.5rem', padding: '2.5rem 3rem' }}>
-                <div className="d-flex flex-column fw-medium text-center" style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.75' }}>
+              <div className="section-drive-value-right-card position-relative z-1 mb-1" style={{ backdropFilter: 'blur(24px)', background: 'rgba(255, 255, 255, 0.5)', border: '1px solid rgba(232, 56, 13, 0.1)', boxShadow: '0 8px 32px 0 rgba(31,38,135,0.07)', borderRadius: '1.5rem', padding: '2.5rem 3rem' }}>
+                <div className="section-drive-value-right-card-para d-flex flex-column fw-medium text-center" style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.75' }}>
                   At Virtual Galaxy, we specialize in optimizing your mission-critical applications to deliver more than just cost savings. Our comprehensive approach improves operational excellence, mitigates risks, enhances performance, and provides strategic direction for your software's long-term evolution.
                 </div>
               </div>
             </div>
 
             {/* Feature Icons Grid */}
-            <div className="d-flex flex-row justify-content-between align-items-center position-relative z-1 px-1 px-lg-3 gap-2 mt-4 mb-3">
+            <div className="section-drive-value-right-metrics d-flex flex-wrap flex-row justify-content-between align-items-center position-relative z-1 px-1 px-lg-3 gap-2 mt-4 mb-3">
               {/* Connecting line behind icons */}
               <div className="position-absolute top-50 start-0 end-0 opacity-50" style={{ background: '#E8380D', height: '2px', transform: 'translateY(-50%)', margin: '0 2.5rem', zIndex: 0 }}></div>
 
@@ -154,7 +154,7 @@ const DriveValueSection = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ y: -5, scale: 1.05, transition: { duration: 0.2 } }}
-                  className="d-flex flex-column align-items-center justify-content-center flex-fill position-relative"
+                  className=" section-drive-value-right-metrics-items d-flex flex-column align-items-center justify-content-center flex-fill position-relative"
                   style={{ background: '#ffffff', borderRadius: '1rem', border: '1px solid #f1f5f9', padding: '0.75rem', gap: '0.5rem', maxWidth: '100px', aspectRatio: '1/1', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', cursor: 'pointer', zIndex: 10 }}
                   onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 15px 30px rgba(232,56,13,0.15)'}
                   onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'}

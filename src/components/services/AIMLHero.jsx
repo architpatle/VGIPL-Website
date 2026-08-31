@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, Cpu, Eye, MessageSquare, BarChart3 } from 'lucide-react';
 import './AIMLHero.css';
 
@@ -67,30 +68,49 @@ const AIMLHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="ai-hero-badge">
-                <Brain size={16} /> AI & Machine Learning
+              <div className="ai-hero-badge mx-auto">
+                <span className="badge-dot" ></span>  AI & Machine Learning
               </div>
 
               <h1 className="ai-hero-title">
-                <span className="ai-gradient-text">Artificial Intelligence</span> Solutions
+                {/* <span className="ai-gradient-text">Artificial Intelligence</span> Solutions */}
+                Artificial Intelligence Solutions
+
               </h1>
 
               <p className="ai-hero-desc mx-auto">
-                Automating & augmenting operations with AI to enhance performance and transform your business.
+                Automating & augmenting operations with AI to enhance performance and transform your business. Transforming businesses through intelligent automation and data-driven insights.
               </p>
 
-              <p className="ai-hero-sub-desc mx-auto">
-                Transforming businesses through intelligent automation and data-driven insights.
-              </p>
+              {/* <p className="ai-hero-sub-desc mx-auto">
+                
+              </p> */}
 
-              <div className="ai-hero-actions">
+              {/* <div className="ai-hero-actions">
                 <a href="#get-in-touch" className="ai-btn-primary">
                   Get In Touch <ArrowRight size={18} />
                 </a>
                 <a href="#ai-services" className="ai-btn-outline">
                   Explore AI Services
                 </a>
+              </div> */}
+
+              <div className="hero-cta-btns mt-4">
+                <Link
+                  to="/contact"
+                  className="btn-primary-hero"
+
+                >
+                  Get In Touch &rarr;
+                </Link>
+
+                <Link
+                  to="/ai"
+                  className="btn-secondary-hero"
+
+                >Explore More</Link>
               </div>
+              
             </motion.div>
           </div>
 

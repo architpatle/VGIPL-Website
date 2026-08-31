@@ -113,10 +113,7 @@ function TransactCore() {
             </div>
           </div>
         </div>
-        <a href="#overview" className="scroll-more">
-          <span className="fw-semibold link1">Scroll for more</span>
-          <i className="icon icon-long-arrow-alt-down-solid"></i>
-        </a>
+        {/* c */}
       </div>
 
       {/* 1. Product Overview Section */}

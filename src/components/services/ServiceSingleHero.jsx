@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Layers, Activity } from 'lucide-react';
 import './ServiceSingleHero.css';
@@ -20,8 +21,8 @@ function ServiceSingleHero({ service }) {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] }
     }
@@ -29,7 +30,7 @@ function ServiceSingleHero({ service }) {
 
   const lineVariants = {
     hidden: { width: 0 },
-    visible: { 
+    visible: {
       width: '40px',
       transition: { duration: 0.8, ease: "easeInOut" }
     }
@@ -37,7 +38,7 @@ function ServiceSingleHero({ service }) {
 
   const textBlurVariants = {
     hidden: { opacity: 0, filter: 'blur(10px)', y: 20 },
-    visible: { 
+    visible: {
       opacity: 1, filter: 'blur(0px)', y: 0,
       transition: { duration: 0.8, ease: "easeOut" }
     }
@@ -53,7 +54,7 @@ function ServiceSingleHero({ service }) {
 
   const tagVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
+    visible: {
       opacity: 1, scale: 1,
       transition: { type: "spring", stiffness: 100, damping: 12 }
     }
@@ -62,7 +63,7 @@ function ServiceSingleHero({ service }) {
   // Right Side Variants
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.92, y: 40 },
-    visible: { 
+    visible: {
       opacity: 1, scale: 1, y: 0,
       transition: { duration: 1, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.3 }
     }
@@ -74,13 +75,13 @@ function ServiceSingleHero({ service }) {
     const y = (e.clientY - rect.top) / rect.height - 0.5;
     e.currentTarget.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`;
   };
-  
-  const onMouseLeave = (e) => { 
-    e.currentTarget.style.transform = ''; 
+
+  const onMouseLeave = (e) => {
+    e.currentTarget.style.transform = '';
   };
 
   return (
-    <motion.div 
+    <motion.div
       className={`section-hero-premium ${service.slug === 'vgst' ? 'hero-vgst-specific' : ''}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -89,7 +90,7 @@ function ServiceSingleHero({ service }) {
       {/* Background Animated Elements */}
       {service.slug === 'vgst' ? (
         <div className="hero-bg-shapes">
-          <motion.div 
+          <motion.div
             className="hero-shape-square"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -106,33 +107,35 @@ function ServiceSingleHero({ service }) {
 
       <div className="container position-relative" style={{ zIndex: 10 }}>
         <div className="row align-items-center g-5">
-          
+
           {/* Left Content Area */}
-          <div className="col-lg-6">
-            <motion.div 
+          <div className="col-lg-12 ">
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <motion.div className="hero-badge-pill" variants={itemVariants} style={service.slug === 'vgst' ? { background: '#ffe4e1', color: '#ff3300', border: 'none' } : {}}>
+              <motion.div className="hero-badge-pill mx-auto" variants={itemVariants} style={service.slug === 'vgst' ? { background: '#ffe4e1', color: '#ff3300', border: 'none' } : {}}>
                 <span className="badge-dot" style={service.slug === 'vgst' ? { background: '#ff3300' } : {}}></span>
                 {service.slug === 'vgst' ? 'GST Compliance Services' : 'Service Excellence'}
               </motion.div>
-              
-              <motion.h1 
+
+              <motion.h1
                 variants={itemVariants}
-                className="premium-heading" 
-                style={{ 
-                  fontSize: 'clamp(2.6rem, 4.5vw, 4rem)', 
-                  lineHeight: '1.1', 
-                  fontWeight: '800', 
-                  marginBottom: '1.5rem', 
+                className="premium-heading text-center"
+                style={{
+                  fontSize: 'clamp(2.6rem, 4.5vw, 4rem)',
+                  lineHeight: '1.1',
+                  fontWeight: '800',
+                  marginBottom: '1.5rem',
                   color: '#0e0e0e',
                   letterSpacing: '-1px'
                 }}
               >
                 {service.slug === 'vgst' ? (
-                  <>Simplify Your GST<br/>Compliance<br/>With <span style={{ color: '#ff3300' }}>VGST Solutions</span></>
+                  // <>Simplify Your GST Compliance With <span style={{ color: '#ff3300' }}>VGST Solutions</span></>
+                  <>VGST Solutions</>
+
                 ) : (
                   <motion.span
                     initial={{ letterSpacing: '-5px' }}
@@ -143,23 +146,23 @@ function ServiceSingleHero({ service }) {
                   </motion.span>
                 )}
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 variants={textBlurVariants}
-                className="text-body-2 mb-24" 
-                style={{ 
-                  color: '#4b5563', 
-                  lineHeight: '1.7', 
+                className="premimum-para text-body-2 mb-24 mx-auto text-center"
+                style={{
+                  color: '#4b5563',
+                  lineHeight: '1.7',
                   fontSize: '18px',
-                  maxWidth: '90%'
+                  maxWidth: '1100px'
                 }}
               >
-                {service.slug === 'vgst' 
+                {service.slug === 'vgst'
                   ? 'VGST - GSP Suvidha Provider automates GST compliance with single login for all GSTINs & reduces return filing time significantly.'
                   : service.longDescription}
               </motion.p>
-              
-              {service.slug !== 'vgst' && (
+
+              {/* {service.slug !== 'vgst' && (
                 <motion.div 
                   className="d-flex flex-wrap gap-12 mt-12 mb-24"
                   variants={tagContainerVariants}
@@ -173,18 +176,41 @@ function ServiceSingleHero({ service }) {
                     </motion.div>
                   ))}
                 </motion.div>
-              )}
+              )} */}
 
               <motion.div className="hero-cta-btns mt-4" variants={itemVariants}>
-                <button className="btn-primary-hero" style={service.slug === 'vgst' ? { background: '#ff3300', borderColor: '#ff3300' } : {}}>Get In Touch &rarr;</button>
-                <button className="btn-secondary-hero" style={service.slug === 'vgst' ? { background: '#f8fafc', borderColor: '#cbd5e1' } : {}}>Explore Services</button>
+
+                <Link
+                  to="/contact"
+                  className="btn-primary-hero"
+                  style={
+                    service.slug === 'vgst'
+                      ? { background: '#ff3300', borderColor: '#ff3300' }
+                      : {}
+                  }
+                >
+                  Get In Touch &rarr;
+                </Link>
+
+                <Link
+                  to="/ai"
+                  className="btn-secondary-hero"
+                  style={
+                    service.slug === 'vgst'
+                      ? { background: '#f8fafc', borderColor: '#cbd5e1' }
+                      : {}
+                  }
+                >
+                  Explore More
+                </Link>
+
               </motion.div>
             </motion.div>
           </div>
-          
+
           {/* Right Visual Area */}
-          <div className="col-lg-6">
-            <motion.div 
+          {/* <div className="col-lg-6 servies-hero-visual">
+            <motion.div
               variants={cardVariants}
               initial="hidden"
               animate="visible"
@@ -194,7 +220,7 @@ function ServiceSingleHero({ service }) {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
               >
-                <div 
+                <div
                   className={`vgst-hero-card ${service.slug === 'vgst' ? 'card-vgst-gst' : ''}`}
                   onMouseMove={onMouseMove}
                   onMouseLeave={onMouseLeave}
@@ -210,7 +236,7 @@ function ServiceSingleHero({ service }) {
                       <div className="text-center mb-4">
                         <div className="vgst-card-badge" style={{ background: 'transparent', color: '#ff3300', fontWeight: '700', padding: 0 }}>Automated & Hassle-Free</div>
                       </div>
-                      
+
                       <div className="vgst-feature-grid" style={{ gap: '1rem' }}>
                         {[
                           'GST Return Filing',
@@ -240,7 +266,7 @@ function ServiceSingleHero({ service }) {
                         </div>
                       </div>
                       <div className="vgst-card-badge">IoT & Smart City Platform</div>
-                      
+
                       <div className="vgst-feature-grid">
                         {service.features.map((f, i) => (
                           <div key={i} className="vgst-feature-item">
@@ -257,15 +283,15 @@ function ServiceSingleHero({ service }) {
                           Smart Analytics
                         </div>
                       </div>
-                      
-                      <motion.div 
+
+                      <motion.div
                         className="floating-ui ui-1"
                         animate={{ y: [0, 10, 0], rotate: [0, 5, 0] }}
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                       >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                       </motion.div>
-                      <motion.div 
+                      <motion.div
                         className="floating-ui ui-2"
                         animate={{ y: [0, -10, 0], rotate: [0, -5, 0] }}
                         transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
@@ -277,7 +303,7 @@ function ServiceSingleHero({ service }) {
                 </div>
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
 
         </div>
       </div>

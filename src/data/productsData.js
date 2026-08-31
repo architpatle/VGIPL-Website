@@ -44,8 +44,8 @@ export const PRODUCTS_DATA = [
     ]
   },
   {
-    slug: 'mis-solution',
-    title: 'MIS Solution',
+    slug: 'imis-solution',
+    title: 'Business Management Platform',
     subtitle: 'Intelligent Management Information System',
     shortDescription: 'Transform raw data into actionable insights with our advanced Management Information System tailored for informed decision-making.',
     icon: 'chart-line-solid',
@@ -156,8 +156,8 @@ export const PRODUCTS_DATA = [
     ]
   },
   {
-    slug: 'post-mortem-mgmt',
-    title: 'Post-Mortem Mgmt.',
+    slug: 'post-mortem-management',
+    title: 'Post-Mortem Management',
     subtitle: 'Comprehensive Autopsy and Forensic Management',
     shortDescription: 'A specialized digital solution to streamline forensic documentation, manage autopsy reports, and track evidence securely.',
     icon: 'clipboard-check-solid',
@@ -242,7 +242,7 @@ export const PRODUCTS_DATA = [
   },
   {
     slug: 'transact-core',
-    title: 'Transact Core',
+    title: 'Transaction Processing Platform',
     subtitle: 'High-Volume Transaction Processing Engine',
     shortDescription: 'A robust processing engine designed to handle massive volumes of transactions with ultra-low latency and perfect accuracy.',
     icon: 'long-arrow-alt-right-solid',
@@ -270,7 +270,7 @@ export const PRODUCTS_DATA = [
   },
   {
     slug: 'audit-flux',
-    title: 'Audit Flux',
+    title: 'Audit Management Platform',
     subtitle: 'Dynamic Compliance and Auditing Software',
     shortDescription: 'Streamline your internal and external auditing processes with automated workflows, risk assessments, and compliance tracking.',
     icon: 'check-solid',
@@ -298,7 +298,7 @@ export const PRODUCTS_DATA = [
   },
   {
     slug: 'fin-flow',
-    title: 'Fin Flow',
+    title: 'Enterprise Workflow Platform',
     subtitle: 'Agile Financial Workflow Automation',
     shortDescription: 'Optimize your financial operations by automating approvals, invoice processing, and budget tracking with Fin Flow.',
     icon: 'bolt-solid',

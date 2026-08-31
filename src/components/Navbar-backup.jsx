@@ -356,7 +356,6 @@ function Navbar() {
           <div
             className={`${styles.mobileToggle} open-mb-menu`}
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
               const menu = document.querySelector('.offcanvas-menu');
               if (menu) menu.classList.add('show');
               document.body.style.overflow = "hidden";
@@ -372,4 +371,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

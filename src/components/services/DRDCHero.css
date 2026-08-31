@@ -49,17 +49,21 @@
 }
 
 .dr-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(255, 51, 0, 0.15);
-  color: #ff5533;
-  border: 1px solid rgba(255, 51, 0, 0.3);
-  border-radius: 50px;
+  justify-content: center;
+  gap: 6px;
+  background: #fff1ee;
+  color: #E8380D;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  border: 1px solid #f5bfb3;
+  margin-bottom: 1.4rem;
+  /* margin: 0 auto; */
+  /* max-width: 180px; */
+  width:fit-content;
 }
 
 .dr-hero-title {
