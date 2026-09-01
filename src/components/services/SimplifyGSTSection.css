@@ -148,7 +148,7 @@
   left: 10%;
   right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, rgba(255,51,0,0) 0%, rgba(255,51,0,0.2) 15%, rgba(255,51,0,0.2) 85%, rgba(255,51,0,0) 100%);
+  background: linear-gradient(90deg, rgba(255, 51, 0, 0) 0%, rgba(255, 51, 0, 0.2) 15%, rgba(255, 51, 0, 0.2) 85%, rgba(255, 51, 0, 0) 100%);
   z-index: 0;
 }
 
@@ -213,10 +213,21 @@
   z-index: -1;
 }
 
-.simplify-gst-section .benefit-card:nth-child(2) .card-icon-wrap::after { left: -40px; }
-.simplify-gst-section .benefit-card:nth-child(3) .card-icon-wrap::after { left: -40px; }
-.simplify-gst-section .benefit-card:nth-child(4) .card-icon-wrap::after { left: -40px; }
-.simplify-gst-section .benefit-card:nth-child(5) .card-icon-wrap::after { left: -40px; }
+.simplify-gst-section .benefit-card:nth-child(2) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(3) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(4) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(5) .card-icon-wrap::after {
+  left: -40px;
+}
 
 .simplify-gst-section .card-title {
   font-size: 1.25rem;
@@ -275,6 +286,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
   }
+
   .simplify-gst-section .connecting-line {
     display: none;
   }
@@ -284,11 +296,45 @@
   .simplify-gst-section .cards-grid {
     grid-template-columns: 1fr;
   }
+
   .simplify-gst-section .main-title {
-    font-size: 2rem;
+    font-size: 28px;
+    gap: 0;
+    margin-bottom: 12px;
   }
+
+  .simplify-gst-section .main-title::before,
+  .simplify-gst-section .main-title::after {
+    display: none;
+  }
+
   .simplify-gst-section .info-box {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .simplify-gst-section .line-divider {
+    margin-bottom: 12px;
+  }
+
+  .simplify-gst-section .sub-title::before,
+  .simplify-gst-section .sub-title::after {
+    display: none;
+  }
+
+  .simplify-gst-section .sub-title{
+    font-size: 28px;
+  }
+  .simplify-gst-section .sub-desc {
+    margin-bottom: 12px;
+  }
+  .simplify-gst-section .card-icon-wrap{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 0;
+  }
+  .simplify-gst-section .card-title, .simplify-gst-section .card-desc{
+    margin-bottom: 0;
   }
 }

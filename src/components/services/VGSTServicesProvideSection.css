@@ -105,10 +105,17 @@
 
 @media (max-width: 576px) {
   .vgst-sp-wrapper {
-    padding: 32px;
+    padding: 24px;
+  }
+  .vgst-sp-header{
+    margin-bottom: 12px;
+  }
+  .vgst-sp-item{
+    padding: 16px;
   }
   .vgst-sp-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .vgst-sp-badge {
     font-size: 1.1rem;

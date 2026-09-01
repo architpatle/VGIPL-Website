@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Network, ArrowRight } from 'lucide-react';
 import './DRDCSolveSection.css';
+import { Link } from 'react-router-dom';
 
 const DRDCSolveSection = () => {
   return (
@@ -9,7 +10,7 @@ const DRDCSolveSection = () => {
       <div className="container">
         <div className="row align-items-center g-5">
           <div className="col-lg-6">
-            <motion.div 
+            <motion.div
               className="dr-solve-image-wrapper"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -17,9 +18,9 @@ const DRDCSolveSection = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="dr-solve-backdrop"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop" 
-                alt="Data Center Server Room" 
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+                alt="Data Center Server Room"
                 className="img-fluid dr-solve-img"
               />
               <div className="dr-solve-overlay-card">
@@ -28,9 +29,9 @@ const DRDCSolveSection = () => {
               </div>
             </motion.div>
           </div>
-          
+
           <div className="col-lg-6">
-            <motion.div 
+            <motion.div
               className="dr-solve-content"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -48,9 +49,11 @@ const DRDCSolveSection = () => {
                   Our solutions offer high optimization, lowest latency, scalability on demand, and complete data centre management with lower cost of ownership.
                 </p>
               </div>
-              <button className="btn-outline-dr mt-4">
-                Explore Features <ArrowRight size={18} className="ms-2" />
-              </button>
+              {/* <Link to='/services/dr-dc/#services'> */}
+                <a href='#servicesDRDC' className="btn-outline-dr mt-4">
+                  Explore Services <ArrowRight size={18} className="ms-2" />
+                </a>
+              {/* </Link> */}
             </motion.div>
           </div>
         </div>

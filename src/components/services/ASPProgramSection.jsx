@@ -1,16 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Handshake, Map, Briefcase, Percent, HeadphonesIcon, Megaphone, 
-  UserCircle, TrendingUp, Globe, ShieldCheck, Target, Users, ArrowRight 
+import {
+  Handshake, Map, Briefcase, Percent, HeadphonesIcon, Megaphone,
+  UserCircle, TrendingUp, Globe, ShieldCheck, Target, Users, ArrowRight
 } from 'lucide-react';
+import { Link } from "react-router-dom";
 import './ASPProgramSection.css';
 
 const ASPProgramSection = () => {
   return (
     <section className="asp-program-section section-spacing-lg">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="text-center mb-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +19,7 @@ const ASPProgramSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="asp-title">
-            ASP (Application Service Provider) Program<br/>
+            ASP (Application Service Provider) Program<br />
             Achieve more with <span className="highlight-red">VGST</span>
           </h2>
           <div className="title-underline">
@@ -29,7 +30,7 @@ const ASPProgramSection = () => {
         <div className="row g-4 align-items-stretch">
           {/* Left Side: Partner Program Card */}
           <div className="col-lg-5">
-            <motion.div 
+            <motion.div
               className="asp-left-card h-100"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -37,7 +38,7 @@ const ASPProgramSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="asp-card-decor"></div>
-              
+
               <div className="asp-handshake-wrapper">
                 <div className="ring ring-1"></div>
                 <div className="ring ring-2"></div>
@@ -52,7 +53,7 @@ const ASPProgramSection = () => {
 
               <div className="asp-main-text">
                 <h3>Partner Program</h3>
-                <p>Join our partner network<br/>and grow your business</p>
+                <p>Join our partner network<br />and grow your business</p>
               </div>
 
               <div className="asp-left-metrics">
@@ -79,9 +80,9 @@ const ASPProgramSection = () => {
           {/* Right Side: Stacked Cards */}
           <div className="col-lg-7">
             <div className="d-flex flex-column h-100 gap-4">
-              
+
               {/* Top Card */}
-              <motion.div 
+              <motion.div
                 className="asp-right-card top-card"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -101,7 +102,7 @@ const ASPProgramSection = () => {
               </motion.div>
 
               {/* Middle Card */}
-              <motion.div 
+              <motion.div
                 className="asp-right-card mid-card flex-grow-1"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -113,7 +114,7 @@ const ASPProgramSection = () => {
                   <span className="text">Partner Benefits</span>
                   <span className="line"></span>
                 </div>
-                
+
                 <div className="benefits-grid">
                   <div className="benefit-item">
                     <div className="b-icon-wrap"><Percent size={24} /></div>
@@ -135,14 +136,14 @@ const ASPProgramSection = () => {
               </motion.div>
 
               {/* Bottom Card */}
-              <motion.div 
+              <motion.div
                 className="asp-right-card bottom-card"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="d-flex align-items-center flex-wrap gap-4 p-4">
+                <div className="d-flex align-items-center flex-wrap gap-24 p-4">
                   <div className="bot-icon-wrap">
                     <Users size={28} />
                   </div>
@@ -150,9 +151,10 @@ const ASPProgramSection = () => {
                     <h4>Together, let's unlock new opportunities</h4>
                     <p>Be a part of our growth journey and create long-term success together.</p>
                   </div>
-                  <button className="asp-cta-btn">
-                    Become a Partner <ArrowRight size={18} />
-                  </button>
+                  <Link to='/contact'>
+                    <button className="asp-cta-btn">
+                      Become a Partner <ArrowRight size={18} />
+                    </button></Link>
                 </div>
               </motion.div>
 

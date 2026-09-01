@@ -117,12 +117,20 @@
 
 @media (max-width: 576px) {
   .dr-sp-wrapper {
-    padding: 32px;
+    padding: 24px;
   }
   .dr-sp-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .dr-sp-badge {
     font-size: 1.15rem;
+    padding: 12px;
+  }
+  .dr-sp-item{
+    padding: 16px;
+    border: 1px solid #ff33004d;
+    flex-direction: row;
+    justify-content: start;
   }
 }

@@ -36,6 +36,7 @@ const DRDCServicesProvideSection = () => {
     <section className="dr-sp-section section-spacing-lg">
       <div className="container">
         <motion.div 
+        id='servicesDRDC'
           className="dr-sp-wrapper"
           initial="hidden"
           whileInView="visible"

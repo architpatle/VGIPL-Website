@@ -198,3 +198,20 @@
     font-size: 1.6rem;
   }
 }
+
+@media (max-width:480px) {
+  .ds-provide-wrapper{
+    padding: 24px;
+  }
+  .ds-provide-item{
+    padding: 12px;
+  }
+  .ds-provide-icon{
+    height: 40px;
+    width: 40px;
+  }
+  .ds-provide-icon svg{
+    height: 16px;
+    width: 16px;
+  }
+}
