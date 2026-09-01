@@ -8,12 +8,12 @@ const CareerPath = () => {
   }, []);
 
   const jobs = [
-    { id: 'senior-react-developer', title: 'Senior React Developer', location: 'Nagpur / Pune, India', type: 'Full-Time', dept: 'Engineering' },
-    { id: 'ui-ux-designer', title: 'Senior UI/UX Designer', location: 'Pune, India', type: 'Full-Time', dept: 'Design' },
-    { id: 'backend-engineer', title: 'Backend Node.js Engineer', location: 'Remote / India', type: 'Full-Time', dept: 'Engineering' },
-    { id: 'product-manager', title: 'Technical Product Manager', location: 'Nagpur, India', type: 'Full-Time', dept: 'Product' },
-    { id: 'sales-executive', title: 'Enterprise Sales Executive', location: 'Mumbai, India', type: 'Full-Time', dept: 'Sales' },
-    { id: 'data-scientist', title: 'Data Scientist (AI/ML)', location: 'Remote', type: 'Full-Time', dept: 'Data' },
+    { id: 'business-development-analyst', title: 'Business Development Analyst', location: 'Nagpur / Pune / Hyderabad / Mumbai, India', type: 'Full-Time', dept: 'Engineering' },
+    { id: 'customer-acquisition-execution', title: 'Customer Acquisition Executive', location: 'Nagpur, India', type: 'Full-Time', dept: 'Sales' },
+    { id: 'solution', title: 'Solution Opportunity Manager (Govt.& BFSI)', location: 'Chennai, Jaipur, Hyderabad, Mumbai, Nagpur / India', type: 'Full-Time', dept: 'Sales' },
+    // { id: 'product-manager', title: 'Technical Product Manager', location: 'Nagpur, India', type: 'Full-Time', dept: 'Product' },
+    // { id: 'sales-executive', title: 'Enterprise Sales Executive', location: 'Mumbai, India', type: 'Full-Time', dept: 'Sales' },
+    // { id: 'data-scientist', title: 'Data Scientist (AI/ML)', location: 'Remote', type: 'Full-Time', dept: 'Data' },
   ];
 
   return (
@@ -83,7 +83,7 @@ const CareerPath = () => {
                 <div style={{ backgroundColor: '#f9f9f9', padding: '25px', borderRadius: '16px', border: '1px solid #eaeaea' }}>
                   <h4 style={{ fontWeight: '700', marginBottom: '10px' }}>Don't see a fit?</h4>
                   <p style={{ color: '#555', marginBottom: '20px' }}>Send your resume to our general talent pool and we'll reach out.</p>
-                  <a href="mailto:careers@vginfotech.ai" style={{ color: '#e10600', fontWeight: '700', textDecoration: 'none' }}>Email our recruiting team <i className="icon icon-arrow-right"></i></a>
+                  <a href="mailto:careers@vgipl.in" style={{ color: '#e10600', fontWeight: '700', textDecoration: 'none' }}>Email our recruiting team <i className="icon icon-arrow-right"></i></a>
                 </div>
               </div>
             </div>

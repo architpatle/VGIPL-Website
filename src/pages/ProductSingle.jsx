@@ -60,6 +60,10 @@ function ProductSingle() {
   const [activeModule, setActiveModule] = useState(0);
   const [showBrochureModal, setShowBrochureModal] = useState(false);
 
+  useEffect(() => {
+  setActiveModule(0);
+}, [slug]);
+
   const slugBgImages = {
     'core-banking-solution': bgCoreBanking,
     'imis-solution': bgMis,

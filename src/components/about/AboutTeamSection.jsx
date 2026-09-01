@@ -14,6 +14,7 @@ import ninadImg from '../../assets/home/ownwer-img/ninad-mairal.jpg';
 import nitendraImg from '../../assets/home/ownwer-img/Nitendra_Bisen.jpg';
 import sachinBImg from '../../assets/home/ownwer-img/sachin_burghate.jpg';
 import satishImg from '../../assets/home/ownwer-img/Satish_Kukde.jpg';
+import anjaliImg from '../../assets/home/ownwer-img/anjali-padhe.png'
 
 function AboutTeamSection() {
   const [activeDirector, setActiveDirector] = useState(null);
@@ -73,6 +74,8 @@ function AboutTeamSection() {
     { name: 'Mr. Satish Kukde', role: 'Principal Database Architect', img: satishImg },
     { name: 'Mr. Anil Katwale', role: 'Principal Solution Architect', img: anilImg },
     { name: 'Mr. Nitendra Bisen', role: 'Principal Service Strategist', img: nitendraImg },
+    { name: 'Mrs. Anjali Padhye', role: 'Company Secretary and Compliance Officer', img: anjaliImg },
+
   ];
 
   const boardMembers = [
@@ -352,7 +355,7 @@ function AboutTeamSection() {
                       width: '100%',
                       height: '100%',
                       objectFit: 'contain',
-                      padding: '20px 20px 0px 20px',
+                      padding: '20px 0px 0px 0px',
                       transition: 'all 0.6s ease'
                     }}
                   />
@@ -806,7 +809,7 @@ function AboutTeamSection() {
 
           .team-grid-responsive {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 12px 30px;
             max-width: 1300px;
             margin: 0 auto;
@@ -1069,7 +1072,7 @@ function AboutTeamSection() {
               border-radius: 18px !important;
             }
             .vgil-card-unique img {
-              padding: 14px 14px 0px 14px !important;
+              padding: 14px 0px 0px 0px !important;
             }
             .card-overlay {
               display: none !important;

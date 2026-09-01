@@ -42,7 +42,7 @@ function Contact() {
       </section>
 
       {/* ==================== CONTACT SECTION (Aigocy style) ==================== */}
-  
+
 
 
       <div className="section-maps flat-spacing pt-20">
@@ -58,10 +58,10 @@ function Contact() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 padding: '60px',
-               
+
                 transition: 'all 0.3s ease-in-out',
-                
-  boxShadow:' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
+
+                boxShadow: ' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
               }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
@@ -77,7 +77,7 @@ function Contact() {
               </div>
             </div>
             <div className="col-lg-7">
-              <div className="wg-map" style={{ borderRadius: '32px', overflow: 'hidden', height: '420px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1.5px solid #000000', margin: 0 }}>
+              <div className="wg-map" style={{ borderRadius: '32px', overflow: 'hidden', height: '420px', margin: 0 }}>
                 <iframe
                   src="https://maps.google.com/maps?q=Virtual%20Galaxy%20Infotech%20Ltd,%20Vivekanand%20Nagar,%20Nagpur&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
@@ -86,12 +86,14 @@ function Contact() {
           </div>
 
           {/* Pune Branch */}
-          <div className="row align-items-center effectFade fadeUp">
+          <div className="row mb-40 align-items-center effectFade fadeUp">
             <div className="col-lg-7 order-lg-1 order-2">
-              <div className="wg-map" style={{ borderRadius: '32px', overflow: 'hidden', height: '420px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1.5px solid #000000', margin: 0 }}>
+              <div className="wg-map" style={{ borderRadius: '32px', overflow: 'hidden', height: '420px', margin: 0 }}>
                 <iframe
                   src="https://maps.google.com/maps?q=GT%20Arcade,%20B%20T%20Kawade%20Road,%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+
+                  
               </div>
             </div>
             <div className="col-lg-5 order-lg-2 order-1 lg-mb-24">
@@ -103,7 +105,7 @@ function Contact() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 padding: '60px',
-                boxShadow:' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
+                boxShadow: ' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
                 transition: 'all 0.3s ease-in-out',
                 cursor: 'pointer'
               }}
@@ -121,10 +123,48 @@ function Contact() {
               </div>
             </div>
           </div>
+
+          {/* Mumbai Branch */}
+          <div className="row mb-40 align-items-center effectFade fadeUp">
+            <div className="col-lg-5 lg-mb-24">
+              <div className="box-address" style={{
+                backgroundColor: '#fff5f5',
+                borderRadius: '32px',
+                height: '420px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '60px',
+
+                transition: 'all 0.3s ease-in-out',
+
+                boxShadow: ' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
+              }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
+                <img src={maharashtraLogo} alt="Maharashtra" style={{ width: '70px', marginBottom: '30px' }} />
+                <h3 className="fw-bold mb-16" style={{ fontSize: '32px' }}>Mumbai</h3>
+                <p className="text-body-1 mb-24" style={{ lineHeight: '1.7', color: '#4b5563', fontSize: '16px' }}>
+                  Unit No. 301, 3rd floor, Wing-A, Inspire BKC Rd, G Block BKC, Patthar Nagar, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051  
+                </p>
+                <a href="https://maps.app.goo.gl/1Da42v1fQhwtav2s6" target="_blank" rel="noreferrer" className="tf-link-icon fw-semibold" style={{ fontSize: '18px', color: '#ff0000', textDecoration: 'underline' }}>
+                  Get directions
+                  <i className="icon icon-arrow-top-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <div className="wg-map" style={{ borderRadius: '32px', overflow: 'hidden', height: '420px', margin: 0 }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.001988210882!2d72.8580778!3d19.0636502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93cb9cd10bb%3A0xa380ad6cf5da2f54!2sBHIVE%20Platinum%20Plus%20BKC%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1788259935608!5m2!1sen!2sin"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-  <ContactSection />
+      <ContactSection />
 
       <div className="section-faqs flat-spacing">
         <div className="container">

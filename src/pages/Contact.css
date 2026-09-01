@@ -421,6 +421,11 @@
   .heading-section .heading-title {
     font-size: 28px !important;
   }
+
+  .box-address{
+    padding: 24px !important;
+    height: auto !important ;
+  }
 }
 
 @media (max-width:786px) {

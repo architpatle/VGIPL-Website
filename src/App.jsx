@@ -25,6 +25,7 @@ import Careers from './pages/Careers';
 import WhyJoin from './pages/WhyJoin';
 import MeetOurPeople from './pages/MeetOurPeople';
 import CareerPath from './pages/CareerPath';
+import CareerDetails from './pages/CareerDetails';
 import JobSingle from './pages/JobSingle';
 import IPO from './pages/IPO';
 import InvestorSingle from './pages/InvestorSingle';
@@ -88,6 +89,10 @@ function App() {
             <Route path="/careers/why-join" element={<WhyJoin />} />
             <Route path="/careers/meet-our-people" element={<MeetOurPeople />} />
             <Route path="/careers/career-path" element={<CareerPath />} />
+             <Route
+              path="/careers/:jobId"
+              element={<CareerDetails />}
+            />
             <Route path="/careers/:slug" element={<JobSingle />} />
             <Route path="/ipo" element={<IPO />} />
             <Route path="/investors/board-and-management" element={<BoardManagement />} />
