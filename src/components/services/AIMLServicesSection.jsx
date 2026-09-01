@@ -82,7 +82,7 @@ const AIMLServicesSection = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="ai-services-item-icon">
-                    <Icon size={26} color="#ff5533" strokeWidth={1.5} />
+                    <Icon size={26} color="var(--neutral-300)" strokeWidth={1.5} />
                   </div>
                   <span className="ai-services-item-text">{service.title}</span>
                 </motion.div>

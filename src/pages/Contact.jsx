@@ -43,7 +43,7 @@ function Contact() {
 
       {/* ==================== CONTACT SECTION (Aigocy style) ==================== */}
   
-  <ContactSection />
+
 
       <div className="section-maps flat-spacing pt-20">
         <div className="container">
@@ -58,9 +58,10 @@ function Contact() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 padding: '60px',
-                border: '1.5px solid #000000',
+               
                 transition: 'all 0.3s ease-in-out',
-                cursor: 'pointer'
+                
+  boxShadow:' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
               }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fff5f5'}>
@@ -102,7 +103,7 @@ function Contact() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 padding: '60px',
-                border: '1.5px solid #000000',
+                boxShadow:' 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -8px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset',
                 transition: 'all 0.3s ease-in-out',
                 cursor: 'pointer'
               }}
@@ -122,6 +123,8 @@ function Contact() {
           </div>
         </div>
       </div>
+
+  <ContactSection />
 
       <div className="section-faqs flat-spacing">
         <div className="container">

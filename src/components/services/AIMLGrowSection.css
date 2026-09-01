@@ -42,7 +42,9 @@
   margin-bottom: 12px;
 }
 
-.ai-grow-title .text-red { color: #ff3300; }
+.ai-grow-title .text-red {
+  color: #ff3300;
+}
 
 .ai-grow-subtitle {
   font-size: 1.05rem;
@@ -202,7 +204,9 @@
   transition: transform 0.4s ease;
 }
 
-.ai-grow-usecase:hover::after { transform: scaleX(1); }
+.ai-grow-usecase:hover::after {
+  transform: scaleX(1);
+}
 
 .ai-grow-usecase:hover {
   transform: translateY(-6px);
@@ -242,7 +246,24 @@
 
 /* CTA section */
 .ai-grow-cta {
-  background: linear-gradient(135deg, #ff3300 0%, #cc2900 40%, #ff5533 100%);
+  /* background: linear-gradient(135deg, #ff3300 0%, #cc2900 40%, #ff5533 100%); */
+  background:
+    radial-gradient(circle at 18% 45%,
+      rgba(255, 202, 164, 0.95) 0%,
+      rgba(255, 202, 164, 0.55) 25%,
+      rgba(255, 202, 164, 0) 55%),
+    radial-gradient(circle at 82% 15%,
+      rgba(255, 190, 145, 0.95) 0%,
+      rgba(255, 190, 145, 0.55) 25%,
+      rgba(255, 190, 145, 0) 55%),
+    radial-gradient(circle at 65% 85%,
+      rgba(255, 214, 193, 0.9) 0%,
+      rgba(255, 214, 193, 0) 55%),
+    linear-gradient(135deg,
+      #f8e8e1 0%,
+      #ffe0cc 35%,
+      #f9e9e3 65%,
+      #f3ded8 100%);
   border-radius: 28px;
   padding: 50px 40px;
   position: relative;
@@ -277,20 +298,31 @@
 }
 
 .ai-grow-cta-circle-1 {
-  width: 350px; height: 350px;
-  top: -180px; left: -80px;
+  width: 350px;
+  height: 350px;
+  top: -180px;
+  left: -80px;
   animation: ai-cta-float 8s ease-in-out infinite;
 }
 
 .ai-grow-cta-circle-2 {
-  width: 250px; height: 250px;
-  bottom: -120px; right: -60px;
+  width: 250px;
+  height: 250px;
+  bottom: -120px;
+  right: -60px;
   animation: ai-cta-float 10s ease-in-out infinite reverse;
 }
 
 @keyframes ai-cta-float {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(15px, -15px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(15px, -15px);
+  }
 }
 
 .ai-grow-cta-sparkles {
@@ -309,10 +341,24 @@
 }
 
 @keyframes ai-sparkle-float {
-  0% { transform: translateY(0) scale(0); opacity: 0; }
-  30% { opacity: 1; transform: scale(1); }
-  70% { opacity: 1; }
-  100% { transform: translateY(-100px) scale(0); opacity: 0; }
+  0% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
 }
 
 .ai-grow-cta-content {
@@ -332,13 +378,16 @@
 .ai-grow-cta-icon-bubble {
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(232, 56, 13, 0.1);
+
+  border: 1px solid rgba(232, 56, 13, 0.8);
+
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgba(232, 56, 13, 1);
+
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -351,7 +400,7 @@
 .ai-grow-cta-headline {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 14px;
   letter-spacing: -0.5px;
   line-height: 1.2;
@@ -359,7 +408,7 @@
 
 .ai-grow-cta-desc {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   line-height: 1.7;
   margin-bottom: 36px;
 }
@@ -386,31 +435,34 @@
 }
 
 .ai-grow-cta-btn-white {
-  background: #ffffff;
-  color: #ff3300;
+  background: #000;
+  color: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .ai-grow-cta-btn-white::before {
   content: '';
   position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 51, 0, 0.08), transparent);
   transition: 0.6s;
 }
 
-.ai-grow-cta-btn-white:hover::before { left: 100%; }
+.ai-grow-cta-btn-white:hover::before {
+  left: 100%;
+}
 
 .ai-grow-cta-btn-white:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  color: #ff3300;
 }
 
 .ai-grow-cta-btn-outline {
   background: transparent;
-  color: #ffffff;
+  color: #000;
   border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
@@ -418,7 +470,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-3px);
-  color: #ffffff;
+  color: rgba(232, 56, 13, 1);
 }
 
 .ai-grow-cta-btn-icon {
@@ -436,24 +488,69 @@
 
 .ai-grow-cta-btn-outline .ai-grow-cta-btn-icon {
   background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(232, 56, 13, 0.5);
+  color: rgba(232, 56, 13, 1);
 }
 
 /* Responsive */
 @media (max-width: 991px) {
-  .ai-grow-main-inner { flex-direction: column; }
-  .ai-grow-main-visual { width: 100%; height: 280px; }
-  .ai-grow-usecases { grid-template-columns: repeat(2, 1fr); }
-  .ai-grow-title { font-size: 2.2rem; }
-  .ai-grow-cta-headline { font-size: 1.8rem; }
-  .ai-grow-cta { padding: 40px 30px; }
+  .ai-grow-main-inner {
+    flex-direction: column;
+  }
+
+  .ai-grow-main-visual {
+    width: 100%;
+    height: 280px;
+  }
+
+  .ai-grow-usecases {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-grow-title {
+    font-size: 2.2rem;
+  }
+
+  .ai-grow-cta-headline {
+    font-size: 1.8rem;
+  }
+
+  .ai-grow-cta {
+    padding: 40px 30px;
+  }
 }
 
 @media (max-width: 767px) {
+
   /* .ai-grow-section { padding: 40px 0; } */
-  .ai-grow-main-content { padding: 24px 20px; }
-  .ai-grow-usecases { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .ai-grow-title { font-size: 1.8rem; }
-  .ai-grow-cta-headline { font-size: 1.5rem; }
-  .ai-grow-cta-buttons { flex-direction: column; align-items: center; }
-  .ai-grow-cta { padding: 24px 16px; border-radius: 20px; }
+  .ai-grow-main-content {
+    padding: 24px 20px;
+  }
+
+  .ai-grow-usecases {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .ai-grow-title {
+    font-size: 1.8rem;
+  }
+
+  .ai-grow-cta-headline {
+    font-size: 1.5rem;
+  }
+
+  .ai-grow-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ai-grow-cta {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  .ai-grow-cta-btn {
+    padding: 16px;
+  }
 }

@@ -240,23 +240,44 @@ function ProductSingle() {
     }
   ];
 
-  const placeholderModules = [
+  const cyberSentinelModules = [
     {
       title: "Overview",
-      subtitle: "Content details for this module will be provided shortly.",
-      image: overviewImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+      subtitle: "This is a Virtual Security Operations Center (VSOC) is a centralized management platform that enables organizations to monitor, detect, and respond to security threats in real-time.",
+      image: csOverviewImg,
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
     },
     {
-      title: "Core Features",
-      subtitle: "Content details for this module will be provided shortly.",
-      image: overviewImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+      title: "Real-time Monitoring",
+      subtitle: "provides a comprehensive solution for threat hunting, incident response, and security orchestration. It integrates multiple security tools and systems, providing a single pane of glass for visibility and collaboration. Key features include threat intelligence, incident response automation, and reporting and analytics.",
+      image: csRealtimeImg,
+      icon:  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+    </svg>
     },
     {
-      title: "Analytics & Reporting",
-      subtitle: "Content details for this module will be provided shortly.",
-      image: overviewImg,
+      title: "Automation",
+      subtitle: "It features orchestration and automation capabilities that enable the coordination of actions across multiple security tools. This allows for streamlined incident response and remediation processes by automating repetitive tasks and ensuring consistent responses to security events.",
+      image: csAutomationImg,
+      icon: (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+  </svg>
+)
+    },
+    {
+      title: "Analytics",
+      subtitle: "It offers robust reporting and analytics capabilities, allowing organizations to gain insights into their security posture, identify trends, and make data-driven decisions to enhance cybersecurity measures.",
+      image: csAnalysisImg,
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
     }
   ];
@@ -301,7 +322,7 @@ function ProductSingle() {
     mainHeading = "IMIS Modules";
     mainSubheading = "IMIS adheres to electronic transaction standards, cyber security requirements, and anti-money laundering regulations";
   } else if (slug === 'end-to-end-cyber-security') {
-    currentModules = placeholderModules;
+    currentModules = cyberSentinelModules;
     mainHeading = "Cyber Sentinel Modules";
     mainSubheading = "Comprehensive protection for your digital infrastructure";
   } else if (slug === 'digital-payments') {
@@ -396,9 +417,10 @@ function ProductSingle() {
             {product.logo && (
               <div className="product-logo effectFade fadeUp mb-4 d-flex justify-content-center">
                 <img
+                className='productLogo'
                   src={product.logo}
                   alt={`${product.title} Logo`}
-                  style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', marginBottom: '8px' }}
+                  style={{ width: 'auto', maxHeight: '80px', objectFit: 'contain', marginBottom: '8px' }}
                 />
               </div>
             )}
@@ -933,7 +955,7 @@ function ProductSingle() {
 
               {/* RIGHT SIDE */}
               <div className="col-lg-6">
-                <div className="timeline-modules-container effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+                <div className="timeline-modules-container effectFade fadeUp">
                   <div className="timeline-line"></div>
 
                   {currentModules.map((mod, idx) => (

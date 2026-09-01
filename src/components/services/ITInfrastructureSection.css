@@ -373,4 +373,10 @@
   .it-services-grid { grid-template-columns: 1fr; }
   .it-section-title { font-size: 28px; }
   .it-highlight-line { width: 20px; margin: 0 8px; }
+
+  .it-info-card{
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+  }
 }

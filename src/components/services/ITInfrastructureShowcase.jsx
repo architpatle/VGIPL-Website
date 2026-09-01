@@ -92,9 +92,9 @@ const ITInfrastructureShowcase = () => {
   return (
     <div className="it-showcase-wrapper section-spacing-lg mb-0">
       <div className="container position-relative z-10">
-        
+
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -111,13 +111,29 @@ const ITInfrastructureShowcase = () => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
               return (
-                <div 
+                <div
                   key={tab.id}
                   className={`it-showcase-tab ${isActive ? 'active' : ''}`}
                   onClick={() => setActiveTab(tab.id)}
                 >
                   <div className="it-showcase-tab-icon">
-                    <Icon size={16} strokeWidth={isActive ? 2.5 : 2} />
+                    <svg
+                      className="it-showcase-tab-icon-ring"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="14"
+                      />
+                    </svg>
+
+                    <Icon
+                      size={16}
+                      strokeWidth={isActive ? 2.5 : 2}
+                    />
                   </div>
                   <span>{tab.label}</span>
                 </div>
@@ -127,7 +143,7 @@ const ITInfrastructureShowcase = () => {
         </motion.div>
 
         {/* Main Content Card */}
-        <motion.div 
+        <motion.div
           className="it-showcase-card"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,20 +151,38 @@ const ITInfrastructureShowcase = () => {
           transition={{ duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.2 }}
         >
           <div className="it-showcase-content-wrapper">
-            
+
             {/* Left Icon Area */}
             <div className="it-showcase-icon-area">
-              <div className="it-showcase-icon-ring"></div>
-              <div className="it-showcase-icon-ring"></div>
-              <motion.div 
-                key={activeTab}
-                initial={{ scale: 0.5, opacity: 0, rotate: -30 }}
-                animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                transition={{ type: 'spring', damping: 15, stiffness: 100 }}
-                className="it-showcase-icon-box"
-              >
-                <ActiveIcon size={64} strokeWidth={1.5} />
-              </motion.div>
+              <div className="it-showcase-orb-container">
+                <div className="it-showcase-orb-glow"></div>
+                <div className="it-showcase-orb-ring"></div>
+
+                <motion.div
+                  key={activeTab}
+                  initial={{
+                    scale: 0.5,
+                    opacity: 0,
+                    rotate: -45
+                  }}
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                    rotate: 0
+                  }}
+                  transition={{
+                    type: 'spring',
+                    damping: 15,
+                    stiffness: 100
+                  }}
+                  className="it-showcase-orb-icon"
+                >
+                  <ActiveIcon
+                    size={36}
+                    strokeWidth={1.5}
+                  />
+                </motion.div>
+              </div>
             </div>
 
             {/* Right Content Area */}
@@ -166,8 +200,8 @@ const ITInfrastructureShowcase = () => {
 
                   <div className="it-showcase-features">
                     {activeData.features.map((feat, idx) => (
-                      <motion.div 
-                        key={idx} 
+                      <motion.div
+                        key={idx}
                         className="it-showcase-feature-item"
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -180,7 +214,7 @@ const ITInfrastructureShowcase = () => {
                   </div>
 
                   {/* Progress Area */}
-                  <motion.div 
+                  <motion.div
                     className="it-showcase-progress-area"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -191,7 +225,7 @@ const ITInfrastructureShowcase = () => {
                       <span className="it-showcase-progress-status">{currentProgress}% Optimized</span>
                     </div>
                     <div className="it-showcase-progress-bar-bg">
-                      <motion.div 
+                      <motion.div
                         className="it-showcase-progress-bar-fill"
                         initial={{ width: 0 }}
                         animate={{ width: `${currentProgress}%` }}

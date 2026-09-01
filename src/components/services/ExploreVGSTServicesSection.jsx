@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ShieldCheck, ClipboardList, FileText, Link2, Cloud, IdCard, 
-  Settings, UserCheck, Clock, CheckCircle2, RefreshCw, FileSignature, ChevronLeft, ChevronRight
+import {
+  ShieldCheck, ClipboardList, FileText, Link2, Cloud, IdCard,
+  Settings, UserCheck, Clock, CheckCircle2, RefreshCw, FileSignature, ChevronLeft, ChevronRight,
+   Headphones, BookOpen, Activity, Code2, QrCodeIcon, FilePlus2 ,FilePenLine ,FileX2 ,FileSearch ,Layers, Files, UserRoundSearch , BadgeCheck 
 } from 'lucide-react';
 import './ExploreVGSTServicesSection.css';
 
@@ -11,7 +12,7 @@ const TABS_DATA = [
   { id: 'eway', title: 'E-Way', icon: ClipboardList },
   { id: 'einvoice', title: 'E-Invoice', icon: FileText },
   { id: 'gstapi', title: 'GST API', icon: Link2 },
-  { id: 'webelapi', title: 'Webel API', icon: Cloud },
+  { id: 'waybillapi', title: 'Waybill API', icon: Cloud },
   { id: 'gstinapi', title: 'GSTIN API', icon: IdCard },
 ];
 
@@ -30,15 +31,69 @@ const CONTENT_DATA = {
   },
   'eway': {
     prefix: 'E-WAY',
-    title: ' BILL SYSTEM',
-    desc: 'Generate and manage e-way bills seamlessly with our integrated system designed for bulk operations and multi-user access.',
+    title: ' BILL',
+    desc: 'Generate, manage, and track e-way bills seamlessly with our comprehensive e-way bill solution for businesses of all sizes.',
     features: [
-      { text: 'Bulk E-Way bill generation', icon: FileSignature },
-      { text: 'Real-time vehicle tracking integration', icon: Link2 },
-      { text: 'Automated validity extensions', icon: Clock },
-      { text: 'Consolidated reporting', icon: FileText }
+      { text: 'Bulk generation of e-way bills', icon: FileSignature },
+      { text: 'Real-time tracking', icon: CheckCircle2 },
+      { text: 'Validity period management', icon: Clock },
+      { text: 'Auto-update of vehicle details', icon: FileText },
+      { text: 'Integration with ERP systems', icon: Link2 }
+
     ]
-  }
+  },
+  'einvoice': {
+    prefix: 'E-INVOICING',
+    title: '',
+    desc: 'Generate compliant e-invoices with automated IRN and QR code generation as per government regulations.',
+    features: [
+      { text: 'IRN generation and cancellation', icon: FileSignature },
+      { text: 'QR code generation', icon: QrCodeIcon },
+      { text: 'B2B and B2C invoice support', icon: FileText },
+      { text: 'Real-time validation', icon: CheckCircle2 },
+      { text: 'Integration with existing billing systems', icon: Link2 }
+
+    ]
+  },
+  'gstapi': {
+    prefix: 'GST ',
+    title: 'API',
+    desc: 'Robust GST APIs for developers to integrate GST compliance features directly into their applications.',
+    features: [
+      { text: 'RESTful API architecture', icon: Code2 },
+      { text: 'Real-time data processing', icon: Activity },
+      { text: 'Secure authentication', icon: ShieldCheck },
+      { text: 'Comprehensive documentation', icon: BookOpen },
+      { text: '24/7 technical support', icon: Headphones }
+
+    ]
+  },
+  'waybillapi': {
+    prefix: 'E-Way Bill',
+    title: ' APIs',
+    desc: 'Complete suite of APIs for e-way bill generation, management, and tracking integrated into your business applications.',
+    features: [
+      { text: 'Generate e-way bills via API', icon: FilePlus2  },
+      { text: 'Update/Extend e-way bills', icon: FilePenLine  },
+      { text: 'Cancel e-way bills', icon: FileX2  },
+      { text: 'Get e-way bill details', icon: FileSearch  },
+      { text: 'Bulk operations support', icon: Layers  }
+
+    ]
+  },
+  'gstinapi': {
+    prefix: 'GSTIN ',
+    title: 'API',
+    desc: 'Verify GSTIN numbers and retrieve taxpayer details with our reliable GSTIN validation API.',
+    features: [
+      { text: 'Instant GSTIN validation', icon: BadgeCheck  },
+      { text: 'Taxpayer details retrieval', icon: UserRoundSearch  },
+      { text: 'Bulk verification', icon: Files  },
+      { text: 'Real-time status checking', icon: RefreshCw  },
+      { text: 'Integration with onboarding systems', icon: Link2 }
+
+    ]
+  },
 };
 
 const getTabContent = (id) => {
@@ -59,7 +114,7 @@ const getTabContent = (id) => {
 
 const ExploreVGSTServicesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   const activeTab = TABS_DATA[activeIndex];
   const activeContent = getTabContent(activeTab.id);
   const ActiveIcon = activeTab.icon;
@@ -75,8 +130,8 @@ const ExploreVGSTServicesSection = () => {
   return (
     <section className="explore-vgst-section section-spacing-lg">
       <div className="container position-relative z-2">
-        <motion.div 
-          className="text-center mb-5"
+        <motion.div
+          className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -93,7 +148,7 @@ const ExploreVGSTServicesSection = () => {
         </motion.div>
 
         {/* Tabs Row */}
-        <motion.div 
+        <motion.div
           className="vgst-tabs-row"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,16 +158,29 @@ const ExploreVGSTServicesSection = () => {
           {TABS_DATA.map((tab, idx) => {
             const Icon = tab.icon;
             const isActive = activeIndex === idx;
-            
+
             return (
-              <div 
-                key={tab.id} 
+              <div
+                key={tab.id}
                 className={`vgst-tab-btn ${isActive ? 'active' : ''}`}
                 onClick={() => setActiveIndex(idx)}
               >
                 <div className="tab-icon-wrap">
-                  <Icon size={18} />
-                </div>
+  <svg
+    className="vgst-tab-icon-ring"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+  >
+    <circle
+      cx="16"
+      cy="16"
+      r="14"
+    />
+  </svg>
+
+  <Icon size={18} />
+</div>
                 <span>{tab.title}</span>
               </div>
             );
@@ -120,7 +188,7 @@ const ExploreVGSTServicesSection = () => {
         </motion.div>
 
         {/* Main Content Box */}
-        <motion.div 
+        <motion.div
           className="vgst-main-content-box"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +262,7 @@ const ExploreVGSTServicesSection = () => {
                       </div>
                     </div>
                     {/* Floating Shield */}
-                    <motion.div 
+                    <motion.div
                       className="floating-shield"
                       animate={{ y: [-10, 10, -10] }}
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

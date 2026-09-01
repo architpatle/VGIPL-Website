@@ -61,10 +61,10 @@
   align-items: center;
   gap: 10px;
   padding: 10px 22px;
-  background: rgba(255, 51, 0, 0.15);
-  border: 1px solid rgba(255, 51, 0, 0.3);
+  background: #fd3b252f;
+  border: 1px solid #fafafa43;
   border-radius: 50px;
-  color: #ff5533;
+  color: var(--neutral-100);
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 16px;
@@ -127,14 +127,14 @@
 .ds-provide-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(255, 51, 0, 0.15), rgba(255, 119, 51, 0.08));
+  background:#fd3b252f;
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
   transition: all 0.4s ease;
-  border: 1px solid rgba(255, 51, 0, 0.1);
+  border: 1px solid #fafafa43;
 }
 
 .ds-provide-item:hover .ds-provide-icon {

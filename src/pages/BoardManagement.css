@@ -891,7 +891,7 @@
 
 .group-companies-container {
   max-width: 1140px;
-  margin: 0px auto ;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1191,6 +1191,77 @@
 /* ==========================================================================
    Policies (Corporate Governance) Subpage Layout Styles
    ========================================================================== */
+
+
+
+/* =========================================
+   NEW: CORPORATE GOVERNANCE TABS
+   ========================================= */
+
+.governance-tabs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 60px;
+  gap: 0;
+}
+
+.governance-tab {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.governance-tab:hover {
+  color: #f4511e;
+}
+
+.governance-tab.active {
+  color: #f4511e;
+}
+
+.governance-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #f4511e;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .governance-tabs {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    scrollbar-width: none;
+  }
+
+  .governance-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .governance-tab {
+    flex-shrink: 0;
+    padding: 13px 18px;
+    font-size: 14px;
+  }
+}
+
 
 .policies-page-container {
   max-width: 1040px;

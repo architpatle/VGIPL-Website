@@ -6,6 +6,7 @@ import { RESOURCE_DATA } from '../data/resourceData';
 import VideoSection from '../components/common/VideoSection';
 import resourceBgImg from '../assets/home/hero-bg-img.jpg';
 import InstagramFeed from '../components/common/InstagramFeed';
+import favicon from '../assets/Blogs-img/favicon.png';
 
 
 function ResourceSingle() {
@@ -41,55 +42,85 @@ function ResourceSingle() {
             </div>
 
             {/* Specialized News/Blog/Press Layouts */}
-            {slug === 'media' ? (<InstagramFeed />) : slug === 'news' || slug === 'blog' ?  (
+            {slug === 'media' ? (<InstagramFeed />) : slug === 'news' || slug === 'blog' ? (
               <div className="news-grid mt-4">
                 {resourceData.gridItems.map((item, index) => (
-                  <div className="news-grid-item effectFade fadeUp" data-delay={0.1 + (index * 0.05)} key={index}>
+                  <div className="news-grid-item h-100 effectFade fadeUp" data-delay={0.1 + (index * 0.05)} key={index}>
                     {slug === 'news' ? (
-                      <div className="news-poster-card">
-                        <div className="news-poster-header">
-                          <h4 className="news-poster-title">{item.title}</h4>
-                        </div>
-                        <a 
-                          href={item.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                      <div className="news-poster-card h-100">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="fb-post-mockup"
                         >
-                          <div className="fb-post-top">
-                            <div className="fb-post-profile">
-                              <div className="fb-profile-img">VG</div>
-                              <div className="fb-profile-info">
-                                <div className="fb-profile-name">Virtual Galaxy Infotech Limited</div>
-                                <div className="fb-post-meta">about {index + 1} week{index !== 0 ? 's' : ''} ago</div>
-                              </div>
-                            </div>
-                            <div className="fb-post-icon">
-                              <i className="icon icon-facebook-f"></i>
-                            </div>
-                          </div>
+                          {/* Image */}
                           <div className="fb-post-content">
                             <div className="fb-image-container">
-                              <img 
-                                src={item.image} 
-                                alt={item.title} 
-                                style={{ 
-                                  width: '100%', 
-                                  height: '100%', 
+
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
                                   objectFit: 'cover',
                                   transition: 'transform 0.5s ease'
                                 }}
                                 className="fb-post-img"
                               />
-                              <div className="fb-post-badge">
-                                <span>{item.type === 'video' ? 'Watch Video' : 'View Post'}</span>
-                              </div>
+
+                              {/* Guest Favourite badge */}
+                              {/* <div className="fb-post-badge">
+          <span>Guest Favourite</span>
+        </div> */}
+
                             </div>
                           </div>
+
+                          {/* Card Content */}
                           <div className="fb-post-footer">
-                            <div className="fb-footer-text">
-                              Virtual Galaxy Infotech {item.title.substring(0, 40)}...
+
+                            {/* Title + View */}
+                            <div className="news-poster-header">
+                              <h4 className="news-poster-title">
+                                {item.title}
+                              </h4>
+
+                              <div className="fb-post-icon">
+                                View
+                              </div>
                             </div>
+
+                            {/* Description */}
+                            <div className="fb-footer-text">
+                              Virtual Galaxy Infotech Limited
+                            </div>
+
+                            {/* Bottom information */}
+                            <div className="fb-post-top">
+                              <div className="fb-post-profile">
+
+                                <div className="fb-profile-img">
+                                  <img
+                                    src={favicon}
+                                    alt={resourceData.title}
+                                  />
+                                </div>
+
+                                <div className="fb-profile-info">
+                                  <div className="fb-profile-name">
+                                    News
+                                  </div>
+
+                                  <div className="fb-post-meta">
+                                    About {index + 1} week{index !== 0 ? 's' : ''} ago
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+
                           </div>
                         </a>
                       </div>
@@ -117,11 +148,11 @@ function ResourceSingle() {
                     <h3 className="press-category-title mb-30">{category.name}</h3>
                     <div className="press-list">
                       {category.items.map((item, itemIndex) => (
-                        <a 
-                          href={item.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="press-item-link mb-16 effectFade fadeUp" 
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="press-item-link mb-16 effectFade fadeUp"
                           key={itemIndex}
                         >
                           <span className="press-item-title">{item.title}</span>
@@ -157,131 +188,170 @@ function ResourceSingle() {
 
       <style>{`
         .news-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 60px 40px;
-          max-width: 1200px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .news-grid-item {
-          width: 100%;
-        }
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Makes grid items stretch to equal row height */
+  align-items: stretch;
+}
+
+.news-grid-item {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.news-poster-card,
+.blog-poster-card {
+  width: 100%;
+  height: 100%;
+}
+
+.fb-post-mockup,
+.blog-post-box {
+  height: 100%;
+}
+
+.news-poster-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-post-mockup {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-post-footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-post-top {
+  margin-top: auto;
+}
+
         .news-poster-card {
-          background: transparent;
-          border-radius: 0;
-          overflow: hidden;
-          transition: all 0.3s ease;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          padding: 0 10px;
-        }
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.news-poster-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
         .news-poster-header {
-          padding-bottom: 15px;
-          text-align: left;
-          min-height: 80px;
-          display: flex;
-          align-items: flex-end;
-        }
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
         .news-poster-title {
-          font-size: 19px;
-          line-height: 1.3;
-          color: #111827;
-          font-weight: 700;
-          margin: 0;
-          letter-spacing: -0.01em;
-        }
-        .fb-post-mockup {
-          border: 2.5px solid #000000;
-          background: #ffffff;
-          display: block;
-          text-decoration: none;
-          color: inherit;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          border-radius: 20px;
-          overflow: hidden;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+  margin: 0;
+  color: #222;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+      .fb-post-mockup {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+}
         .fb-post-mockup:hover {
           transform: translateY(-8px);
           box-shadow: 0 20px 30px rgba(0,0,0,0.1);
           border-color: #ff4d00;
         }
-        .fb-post-top {
-          padding: 15px 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          border-bottom: 1px solid #f0f2f5;
-        }
+   .fb-post-top {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
         .fb-post-profile {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-        .fb-profile-img {
-          width: 44px;
-          height: 44px;
-          background: #ff4d00;
-          color: #fff;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 700;
-          font-size: 16px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .fb-profile-info {
-          display: flex;
-          flex-direction: column;
-        }
+  display: flex;
+  align-items: center;
+}
+       .fb-profile-img {
+  display: none;
+}
+         .fb-profile-img img{
+         width: 44px;
+         height: 44px;
+         border-radius: 50%;}
+
+
+      .fb-profile-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
         .fb-profile-name {
-          font-weight: 700;
-          font-size: 15px;
-          color: #050505;
-          line-height: 1.2;
-        }
-        .fb-post-meta {
-          font-size: 13px;
-          color: #65676b;
-        }
-        .fb-post-icon {
-          color: #1877f2;
-          font-size: 24px;
-        }
-        .fb-post-icon i {
-          font-weight: bold;
-        }
-        .fb-post-content {
-          position: relative;
-          background: #ffffff;
-          aspect-ratio: 16/9;
-          overflow: hidden;
-          padding: 10px;
-        }
-        .fb-image-container {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          background: #f8fafc;
-          border-radius: 12px;
-          overflow: hidden;
-          border: 1px solid #f1f5f9;
-        }
-        .fb-post-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        .fb-post-mockup:hover .fb-post-img {
-          transform: scale(1.1);
-        }
+  padding-right: 13px;
+  margin-right: 13px;
+  border-right: 1px solid #ddd;
+
+  color: #555;
+  font-size: 11px;
+  font-weight: 500;
+}
+       .fb-post-meta {
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+}
+       .fb-post-icon {
+  flex-shrink: 0;
+  color: #222;
+  font-size: 13px;
+  font-weight: 600;
+}
+        // .fb-post-icon i {
+        //   font-weight: bold;
+        //       z-index: 1000 !important;
+        // }
+    .fb-post-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+       .fb-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.fb-post-img {
+  display: block;
+  width: 100% !important;
+  height: 240px !important;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 10px;
+}
+       .fb-post-mockup:hover .fb-post-img {
+  transform: scale(1.04);
+}
         .fb-image-overlay {
           position: absolute;
           top: 15px;
@@ -299,53 +369,78 @@ function ResourceSingle() {
           box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
         }
         .fb-post-badge {
-          position: absolute;
-          bottom: 15px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: rgba(0, 0, 0, 0.7);
-          backdrop-filter: blur(8px);
-          color: #fff;
-          padding: 8px 20px;
-          border-radius: 30px;
-          font-size: 14px;
-          font-weight: 700;
-          z-index: 2;
-          border: 1px solid rgba(255,255,255,0.1);
-          opacity: 0.9;
-          transition: all 0.3s ease;
-        }
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 7px 13px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  color: #222;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
         .fb-post-mockup:hover .fb-post-badge {
           opacity: 1;
           background: #1877f2;
           transform: translateX(-50%) translateY(-5px);
         }
-        .fb-post-footer {
-          padding: 15px 20px;
-          background: #f8fafc;
-          border-top: 1px solid #f0f2f5;
-        }
-        .fb-footer-text {
-          font-size: 14px;
-          color: #4b5563;
-          font-weight: 500;
-          line-height: 1.5;
-        }
+       .fb-post-footer {
+  padding: 16px 18px 14px;
+}
+       .fb-footer-text {
+  margin-top: 7px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+
+
+@media (max-width: 992px) {
+  .fb-image-container {
+    height: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fb-image-container {
+    height: 240px;
+  }
+}
+
+
 
         /* Blog Poster Card Styles */
+        .blog-poster-card {
+  width: 100%;
+  height: 100%;
+}
+
+.blog-post-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post-content-bottom {
+  flex: 1;
+}
         .blog-poster-card {
           height: 100%;
         }
         .blog-post-box {
           display: block;
           background: #fff;
-          border: 2px solid #000;
+        
           border-radius: 20px;
           overflow: hidden;
           transition: all 0.3s ease;
           height: 100%;
           text-decoration: none;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          box-shadow: 10px 24px 15px rgba(247, 194, 159, 0.44);
         }
         .blog-post-box:hover {
           transform: translateY(-10px);
@@ -354,9 +449,9 @@ function ResourceSingle() {
         }
         .blog-post-image {
           width: 100%;
-          aspect-ratio: 16/10;
+          aspect-ratio: 16/9;
           overflow: hidden;
-          border-bottom: 2px solid #000;
+        
           background: #fff;
           display: flex;
           align-items: center;
@@ -467,9 +562,9 @@ function ResourceSingle() {
         }
       `}</style>
 
-      <div>
+      {/* <div>
         <ContactSection />
-      </div>
+      </div> */}
     </>
   );
 }

@@ -164,7 +164,7 @@ const Careers = () => {
                   <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1a1a1a', margin: '0 0 5px 0' }}>42+</h3>
                   <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>Open Positions</p>
                 </div>
-                <a href="mailto:careers@vgipl.in" style={{ backgroundColor: '#e10600', color: '#fff', padding: '12px 25px', borderRadius: '100px', textDecoration: 'none', fontWeight: '600' }}>Apply Now</a>
+                <a href="hr@vginfotech.ai " style={{ backgroundColor: '#e10600', color: '#fff', padding: '12px 25px', borderRadius: '100px', textDecoration: 'none', fontWeight: '600' }}>Apply Now</a>
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">

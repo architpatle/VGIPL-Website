@@ -224,7 +224,7 @@ const AIMLGrowSection = () => {
               </motion.a>
 
               <motion.a
-                href="mailto:presales@vgipl.in"
+                href="mailto:presales@vginfotech.ai"
                 className="ai-grow-cta-btn ai-grow-cta-btn-outline"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -232,7 +232,7 @@ const AIMLGrowSection = () => {
                 <div className="ai-grow-cta-btn-icon">
                   <Mail size={18} />
                 </div>
-                Email: presales@vgipl.in
+                Email: presales@vginfotech.ai
               </motion.a>
             </motion.div>
           </div>

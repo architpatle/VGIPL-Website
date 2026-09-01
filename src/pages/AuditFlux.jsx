@@ -133,14 +133,14 @@ function AuditFlux() {
             }
             
             .text-highlight-pill {
-              display: inline-block;
+              // display: inline-block;
               background: rgba(255, 43, 43, 0.04);
               color: #ff2b2b;
               font-weight: 700;
               padding: 4px 16px;
               border-radius: 20px;
               border: 1px solid rgba(255, 43, 43, 0.12);
-              margin: 0 4px;
+              // margin: 0 4px;
             }
           `}
         </style>

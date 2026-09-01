@@ -82,7 +82,7 @@ const DigitalProvideSection = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="ds-provide-icon">
-                    <Icon size={26} color="#ff5533" strokeWidth={1.5} />
+                    <Icon size={26} color="var(--neutral-300)" strokeWidth={1.5} />
                   </div>
                   <span className="ds-provide-text">{service.title}</span>
                 </motion.div>

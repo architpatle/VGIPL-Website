@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import careersBg from '../assets/home/hero-bg-img.jpg';
+import futuree from '../assets/home/future2.png'
+import future from '../assets/home/future1.png'
+import futureee from '../assets/home/future3.png'
 
 const WhyJoin = () => {
   useEffect(() => {
@@ -63,14 +66,23 @@ const WhyJoin = () => {
                 <a href="https://facebook.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
                   <i className="icon icon-facebook-f"></i>
                 </a>
+                <a href="https://x.com/Virtualvgipl" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
+                  <i className="icon icon-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCNHCxfflXlIj52Ch3QV2ayg" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
+                  <i className="icon icon-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/virtualgalaxyinfotech/" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
+                  <i className="icon icon-instagram"></i>
+                </a>
               </div>
             </div>
 
             <div className="col-lg-6">
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" alt="Team collaborating" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '16px', gridRow: 'span 2' }} />
-                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=400" alt="Office workspace" style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '16px' }} />
-                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&q=80&w=400" alt="Mentorship" style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '16px' }} />
+                <img src={futuree} alt="Team collaborating" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '16px', gridRow: 'span 2' }} />
+                <img src={future} alt="Office workspace" style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '16px' }} />
+                <img src={futureee} alt="Mentorship" style={{ width: '100%', height: '192px', objectFit: 'cover', borderRadius: '16px' }} />
               </div>
             </div>
           </div>

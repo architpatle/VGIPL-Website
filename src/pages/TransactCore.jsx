@@ -165,14 +165,14 @@ function TransactCore() {
             }
             
             .text-highlight-pill {
-              display: inline-block;
+              // display: inline-block;
               background: rgba(255, 43, 43, 0.04);
               color: #ff2b2b;
               font-weight: 700;
               padding: 4px 16px;
               border-radius: 20px;
               border: 1px solid rgba(255, 43, 43, 0.12);
-              margin: 0 4px;
+              // margin: 0 4px;
             }
           `}
         </style>
@@ -282,7 +282,7 @@ function TransactCore() {
                 <div className="col-lg-7">
                   <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                     <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
-                      <span className="text-highlight-pill">Transact Core 360</span> is a unified digital payment switch platform
+                      <span className="text-highlight-pill">Transact Core 360 Switching Intelligence for Modern Payments</span> is a unified digital payment switch platform
                       designed to enable seamless transaction routing, monitoring, and reconciliation across ATM, UPI, and IMPS networks.
                       Built for performance, reliability, and scale, it empowers financial institutions to manage high-volume digital
                       payment ecosystems with intelligence and control.
@@ -770,7 +770,7 @@ function TransactCore() {
           <div className="designed-grid">
             {[
               {
-                title: 'Banks',
+                title: 'Bank',
                 desc: 'Empowering banks with seamless and secure payment solutions.',
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -779,8 +779,8 @@ function TransactCore() {
                 )
               },
               {
-                title: 'Co-operative Banks',
-                desc: 'Supporting co-operative banks with reliable and efficient infrastructure.',
+                title: 'Co-operative Bank',
+                desc: 'Supporting co-operative bank with reliable and efficient infrastructure.',
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -791,7 +791,7 @@ function TransactCore() {
                 )
               },
               {
-                title: 'NBFCs',
+                title: 'NBFC',
                 desc: 'Enabling NBFCs to streamline collections and disbursements.',
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -802,7 +802,7 @@ function TransactCore() {
                 )
               },
               {
-                title: 'Payment Institutions',
+                title: 'Payment Institution',
                 desc: 'Building strong payment networks for institutions of tomorrow.',
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -813,7 +813,7 @@ function TransactCore() {
                 )
               },
               {
-                title: 'Fintechs',
+                title: 'Fintech',
                 desc: 'Fueling fintech innovation with robust and scalable solutions.',
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -1359,7 +1359,7 @@ function TransactCore() {
 
             {/* Main heading */}
             <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
-              Why <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Transact Core 360</span>?
+              Why <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Transact Core</span>?
             </h2>
 
             {/* Glowing divider line below heading */}

@@ -123,5 +123,7 @@
   }
   .mc-tech-item{
     padding: 8px 16px;
+    justify-content: start;
+    flex-direction: column;
   }
 }

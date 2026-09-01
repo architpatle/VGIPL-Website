@@ -51,7 +51,7 @@ function JobSingle() {
                   ))}
                 </ul>
                 
-                <a href="mailto:hr@vgipl.in" className="tf-btn" style={{ padding: '15px 40px', borderRadius: '100px' }}>
+                <a href="mailto:hr@vginfotech.ai" className="tf-btn" style={{ padding: '15px 40px', borderRadius: '100px' }}>
                   Apply for this position
                 </a>
               </div>
@@ -76,7 +76,7 @@ function JobSingle() {
                 <hr className="my-24" />
                 <div className="text-center">
                   <p className="text-secondary mb-16">Questions? Contact HR</p>
-                  <a href="mailto:hr@vgipl.in" className="fw-bold" style={{ color: '#ff2d15' }}>hr@vgipl.in</a>
+                  <a href="mailto:hr@vginfotech.ai" className="fw-bold" style={{ color: '#ff2d15' }}>hr@vginfotech.ai</a>
                 </div>
               </div>
             </div>

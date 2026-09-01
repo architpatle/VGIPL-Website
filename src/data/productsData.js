@@ -15,7 +15,7 @@ export const PRODUCTS_DATA = [
   {
     slug: 'core-banking-solution',
     title: 'Core Banking Solution',
-    subtitle: 'Next-Generation Banking Infrastructure',
+    subtitle: 'Next-Generation Banking Enterprise Suit',
     shortDescription: 'Empower your financial institution with our robust, scalable, and secure core banking platform designed for modern banking needs.',
     icon: 'coins-solid',
     logo: eBankerImg,
@@ -177,11 +177,11 @@ export const PRODUCTS_DATA = [
         description: 'Securely share critical reports with law enforcement and medical authorities.'
       }
     ],
-    metrics: [
-      { value: '30M+', label: 'Transactions processed' },
-      { value: 'e-KYC', label: 'Total number of banks served' },
-      { value: '99.9%', label: 'System uptime' }
-    ]
+    // metrics: [
+    //   { value: '30M+', label: 'Transactions processed' },
+    //   { value: 'e-KYC', label: 'Total number of banks served' },
+    //   { value: '99.9%', label: 'System uptime' }
+    // ]
   },
   {
     slug: 'end-to-end-cyber-security',

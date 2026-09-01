@@ -28,7 +28,7 @@ function SimplifyGSTSection() {
     {
       id: '01',
       title: 'Complete',
-      subtitle: 'Automation',
+      subtitle: ' Automation',
       desc: 'Automated GST return generation and compliance processes',
       icon: <span style={{fontSize: '2rem'}}>⚡</span>,
       color: '#ff3300'
@@ -43,8 +43,8 @@ function SimplifyGSTSection() {
     },
     {
       id: '03',
-      title: 'Seamless',
-      subtitle: 'Integration',
+      title: ' Seamless',
+      subtitle: ' Integration',
       desc: 'Easy integration with existing business systems and software',
       icon: <Globe size={32} />,
       color: '#ff6600'
@@ -52,7 +52,7 @@ function SimplifyGSTSection() {
     {
       id: '04',
       title: 'Dedicated',
-      subtitle: 'Support',
+      subtitle: ' Support',
       desc: '24/7 technical support and expert guidance for all GST needs',
       icon: <Settings size={32} />,
       color: '#333'

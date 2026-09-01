@@ -58,19 +58,19 @@ const ASPProgramSection = () => {
               <div className="asp-left-metrics">
                 <div className="metric-item">
                   <div className="m-icon"><TrendingUp size={20} /></div>
-                  <span>Grow<br/>Revenue</span>
+                  <span>Grow Revenue</span>
                 </div>
                 <div className="metric-item">
                   <div className="m-icon"><Globe size={20} /></div>
-                  <span>Expand<br/>Reach</span>
+                  <span>Expand Reach</span>
                 </div>
                 <div className="metric-item">
                   <div className="m-icon"><ShieldCheck size={20} /></div>
-                  <span>Build<br/>Trust</span>
+                  <span>Build Trust</span>
                 </div>
                 <div className="metric-item">
                   <div className="m-icon"><Target size={20} /></div>
-                  <span>Create<br/>Impact</span>
+                  <span>Create Impact</span>
                 </div>
               </div>
             </motion.div>
@@ -117,19 +117,19 @@ const ASPProgramSection = () => {
                 <div className="benefits-grid">
                   <div className="benefit-item">
                     <div className="b-icon-wrap"><Percent size={24} /></div>
-                    <span>Competitive<br/>commission<br/>structure</span>
+                    <span>Competitive commission structure</span>
                   </div>
                   <div className="benefit-item">
                     <div className="b-icon-wrap"><HeadphonesIcon size={24} /></div>
-                    <span>Technical<br/>training and<br/>support</span>
+                    <span>Technical training and support</span>
                   </div>
                   <div className="benefit-item">
                     <div className="b-icon-wrap"><Megaphone size={24} /></div>
-                    <span>Marketing<br/>collateral and<br/>resources</span>
+                    <span>Marketing collateral and resources</span>
                   </div>
                   <div className="benefit-item">
                     <div className="b-icon-wrap"><UserCircle size={24} /></div>
-                    <span>Dedicated<br/>account<br/>manager</span>
+                    <span>Dedicated account manager</span>
                   </div>
                 </div>
               </motion.div>

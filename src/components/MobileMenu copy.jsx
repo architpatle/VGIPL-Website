@@ -363,11 +363,11 @@ function MobileMenu() {
             {/* <div className="new-mb-socials">
               <a href="#" className="new-mb-social-btn"><i className="icon icon-linkedin-in"></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-instagram"></i></a>
-              <a href="mailto:presales@vgipl.in" className="new-mb-social-btn"><i className="icon icon-envelope" style={{ transform: 'translateY(1px)' }}></i></a>
+              <a href="mailto:presales@vginfotech.ai" className="new-mb-social-btn"><i className="icon icon-envelope" style={{ transform: 'translateY(1px)' }}></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-facebook-f"></i></a>
               <a href="#" className="new-mb-social-btn"><i className="icon icon-youtube"></i></a>
             </div> */}
-            <p className="new-mb-email">Email: presales@vgipl.in</p>
+            <p className="new-mb-email">Email: presales@vginfotech.ai</p>
           </div>
         </div>
       </div>

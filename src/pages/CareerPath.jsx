@@ -63,19 +63,19 @@ const CareerPath = () => {
                 <h3 style={{ fontSize: '2rem', fontWeight: '800', color: '#1a1a1a', marginBottom: '20px' }}>What We Offer</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 30px 0' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
-                    <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#ffeeee', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#c00f0f', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
                     <span style={{ fontSize: '1.1rem', fontWeight: '500', color: '#1a1a1a' }}>Competitive Compensation</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
-                    <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#ffeeee', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#c00f0f', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
                     <span style={{ fontSize: '1.1rem', fontWeight: '500', color: '#1a1a1a' }}>Comprehensive Health Coverage</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
-                    <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#ffeeee', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#c00f0f', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
                     <span style={{ fontSize: '1.1rem', fontWeight: '500', color: '#1a1a1a' }}>Continuous Learning Funds</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
-                    <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#ffeeee', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#c00f0f', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
                     <span style={{ fontSize: '1.1rem', fontWeight: '500', color: '#1a1a1a' }}>Flexible Remote Options</span>
                   </li>
                 </ul>
@@ -83,7 +83,7 @@ const CareerPath = () => {
                 <div style={{ backgroundColor: '#f9f9f9', padding: '25px', borderRadius: '16px', border: '1px solid #eaeaea' }}>
                   <h4 style={{ fontWeight: '700', marginBottom: '10px' }}>Don't see a fit?</h4>
                   <p style={{ color: '#555', marginBottom: '20px' }}>Send your resume to our general talent pool and we'll reach out.</p>
-                  <a href="mailto:careers@vgipl.in" style={{ color: '#e10600', fontWeight: '700', textDecoration: 'none' }}>Email our recruiting team <i className="icon icon-arrow-right"></i></a>
+                  <a href="mailto:careers@vginfotech.ai" style={{ color: '#e10600', fontWeight: '700', textDecoration: 'none' }}>Email our recruiting team <i className="icon icon-arrow-right"></i></a>
                 </div>
               </div>
             </div>

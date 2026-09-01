@@ -718,7 +718,7 @@ function ConversationalAI() {
 
               {/* RIGHT SIDE */}
               <div className="col-lg-6">
-                <div className="timeline-modules-container effectFade fadeUp" style={{ transitionDelay: '0.2s' }}>
+                <div className="timeline-modules-container effectFade fadeUp" >
                   <div className="timeline-line"></div>
 
                   {currentModules.map((mod, idx) => (
@@ -2586,11 +2586,11 @@ function ConversationalAI() {
                       </svg>
                     </div>
                     <span className="red-arrow-bullet">►</span>
-                    <p className="so-text">Recognize and respond in Regional Language, Hindi, and English.</p>
+                    <p className="so-text">Recognize and respond in Regional Languages</p>
                   </div>
 
                   {/* Item 8: Translation */}
-                  <div className="so-list-item d-flex align-items-center gap-3">
+                  {/* <div className="so-list-item d-flex align-items-center gap-3">
                     <div className="so-icon-outer flex-shrink-0">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="so-svg-icon">
                         <path d="M5 8h14M4 4L1 20h6l1-5h8l1 5h6L19 4z" />
@@ -2599,7 +2599,7 @@ function ConversationalAI() {
                     </div>
                     <span className="red-arrow-bullet">►</span>
                     <p className="so-text">Recognize and respond in Marathi, Hindi, and English</p>
-                  </div>
+                  </div> */}
 
                 </div>
 
@@ -2990,7 +2990,7 @@ function ConversationalAI() {
 
                   <ul className="uc-bullets-list">
                     <li>Premium payment </li>
-                    <li>reminders & processing</li>
+                    <li>Reminders & processing</li>
                     <li>Policy renewal payments</li>
                   </ul>
                 </div>
@@ -3009,7 +3009,7 @@ function ConversationalAI() {
                   </div>
 
                   {/* Subtle divider inside card */}
-                  <div className="uc-card-divider-wrap">
+                  <div className="uc-card-divider-wrap ">
                     <div className="uc-card-divider-line"></div>
                     <div className="uc-card-divider-dots">
                       <span className="c-dot"></span>
@@ -3179,7 +3179,9 @@ function ConversationalAI() {
             .uc-grid {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
+              grid-auto-rows: 1fr;
               gap: 16px;
+                align-items: stretch ;
             }
 
             .uc-card {
@@ -3192,6 +3194,7 @@ function ConversationalAI() {
               padding: 18px 22px;
               box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
               transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+              min-height: 194px;
             }
 
             .uc-card:hover {
@@ -3350,6 +3353,7 @@ function ConversationalAI() {
 
               .uc-card {
                 padding: 12px;
+                min-height: 144px;
               }
 
               .uc-card-title {

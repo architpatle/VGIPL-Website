@@ -93,7 +93,7 @@ const CTABannerSection = ({ title, subtitle }) => {
               </motion.a>
 
               <motion.a 
-                href="mailto:presales@vgipl.in" 
+                href="mailto:presales@vginfotech.ai" 
                 className="cta-btn cta-btn-right"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const CTABannerSection = ({ title, subtitle }) => {
                 <div className="cta-btn-icon-wrapper-outline">
                   <Mail size={18} strokeWidth={2} />
                 </div>
-                Email: presales@vgipl.in
+                Email: presales@vginfotech.ai
               </motion.a>
             </div>
           </div>

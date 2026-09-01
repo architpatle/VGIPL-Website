@@ -13,9 +13,9 @@ import vgilLogo from "../assets/home/vgil-logo.png";
 
 function Footer() {
 
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   return (
     <footer className="vg-footer-new">
@@ -63,7 +63,7 @@ function Footer() {
               </span>
             </a>
 
-           
+
             <a
               href="https://www.instagram.com/virtualgalaxyinfotech/"
               target="_blank"
@@ -87,7 +87,7 @@ function Footer() {
               </span>
             </a>
 
-             <a
+            <a
               href="https://x.com/Virtualvgipl"
               target="_blank"
               rel="noreferrer"
@@ -121,13 +121,20 @@ function Footer() {
             © {new Date().getFullYear()} Virtual Galaxy Infotech Limited. All Rights Reserved.
           </p>
 
-          <button className="vg-footer-back-top" onClick={scrollTop}>
+          {/* <button className="vg-footer-back-top" onClick={scrollTop}>
             <span>Back to top</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="19" x2="12" y2="5" />
               <polyline points="5 12 12 5 19 12" />
             </svg>
-          </button>
+          </button> */}
+
+          <div className="vg-footer-legal">
+            <Link to="/terms">Terms</Link>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/disclaimer">Disclaimer</Link>
+            <Link to="/policies">Policies</Link>
+          </div>
 
         </div>
 

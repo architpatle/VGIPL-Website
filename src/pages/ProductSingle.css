@@ -1,3 +1,4 @@
+
 .fintech-card-heading {
     display: flex;
     align-items: center;
@@ -47,5 +48,9 @@
     .premium-image-overlay p,
     .features-benefits-section p {
         font-size: 16px !important;
+    }
+
+    .productLogo{
+        max-height: 40px !important;
     }
 }

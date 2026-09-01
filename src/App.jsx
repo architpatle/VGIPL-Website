@@ -31,8 +31,13 @@ import InvestorSingle from './pages/InvestorSingle';
 import ResourceSingle from './pages/ResourceSingle';
 import BoardManagement from './pages/BoardManagement';
 import AIPage from './pages/AIPage';
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Disclaimer from "./pages/Disclaimer";
+import Policies from "./pages/Policies";
 import NotFound from './pages/NotFound';
 import FloatingSocial from './components/FloatingSocial/FloatingSocial';
+
 
 function App() {
   const location = useLocation();
@@ -90,6 +95,10 @@ function App() {
             <Route path="/investors/:slug" element={<InvestorSingle />} />
             <Route path="/resource/:slug" element={<ResourceSingle />} />
             <Route path="/ai" element={<AIPage />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/policies" element={<Policies />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

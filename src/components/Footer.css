@@ -199,7 +199,7 @@
 }
 
 /* ---- Back to Top ---- */
-.vg-footer-back-top {
+/* .vg-footer-back-top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -225,6 +225,45 @@
 
 .vg-footer-back-top:hover svg {
   transform: translateY(-4px);
+} */
+
+
+/* ---- Legal Links ---- */
+
+.vg-footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.vg-footer-legal a {
+  color: #52525B;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.vg-footer-legal a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.4px;
+  background: #E10600;
+  transition: width 0.3s ease;
+}
+
+.vg-footer-legal a:hover {
+  color: #09090B;
+}
+
+.vg-footer-legal a:hover::after {
+  width: 100%;
 }
 
 /* ============================
@@ -316,6 +355,103 @@
 
   .vg-footer-back-top {
     justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .vg-footer-watermark {
+    opacity: 0.1;
+    width: 83%;
+    transform-origin: top center;
+  }
+
+  .vg-footer-content {
+    padding-bottom: 12px;
+  }
+
+  .vg-footer-sub {
+    margin-bottom: 20px;
+  }
+
+  /* Icon-only buttons in a single horizontal row */
+  .vg-footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .vg-social-label {
+    display: none;
+  }
+
+  .vg-social-link {
+    padding: 0;
+    gap: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: unset;
+  }
+
+  .vg-social-link:nth-child(5) {
+    grid-column: unset;
+    justify-self: unset;
+    width: auto;
+    min-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .vg-social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+
+  /* ---- Mobile Bottom Bar ---- */
+
+  .vg-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  .vg-footer-bottom > * {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  /* Main navigation */
+  .vg-footer-nav {
+    order: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Legal links */
+  .vg-footer-legal {
+    order: 2;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  /* Copyright MUST stay at the bottom */
+  .vg-footer-copy {
+    order: 3;
+    margin: 0;
   }
 }
 

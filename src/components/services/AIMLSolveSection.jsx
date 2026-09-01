@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Brain } from 'lucide-react';
 import './AIMLSolveSection.css';
+import complexAI from '../../assets/complex-ai.png'
 
 const AIMLSolveSection = () => {
   return (
@@ -22,7 +23,7 @@ const AIMLSolveSection = () => {
               <div className="ai-solve-dots"></div>
               <div className="ai-solve-image-main">
                 <img
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"
+                  src={complexAI}
                   alt="AI Solutions"
                 />
                 <div className="ai-solve-image-overlay"></div>

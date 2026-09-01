@@ -37,6 +37,11 @@ import {
 } from 'lucide-react';
 import './BoardManagement.css';
 
+
+
+
+
+
 const GROUP_COMPANIES_DATA = [
   {
     name: "Paynext Private Limited",
@@ -475,7 +480,7 @@ const POLICIES_DATA = [
               "Chhatrapati Sq., Ring Road,",
               "Nagpur, Maharashtra, India, 440015",
               "Tel.No: +91 9226531342",
-              "E-mail: investors@vgipl.in",
+              "E-mail: investors@vginfotech.ai",
               "Website: www.vgipl.com"
             ]
           },
@@ -2314,6 +2319,7 @@ function InvestorSingle() {
   const { slug } = useParams();
   const investorData = INVESTORS_DATA.find(i => i.slug === slug);
   const [activeAccordion, setActiveAccordion] = useState(null);
+  const [activeGovernanceTab, setActiveGovernanceTab] = useState("policies");
 
   if (!investorData) {
     return <Navigate to="/404" />;
@@ -2419,7 +2425,7 @@ function InvestorSingle() {
                 <h1 className="hero-title">
                   {isCorporateGovernance ? (
                     <>
-                      <span>Policies</span>
+                      <span>Corporate Governance</span>
                     </>
                   ) : (
                     <>
@@ -2450,284 +2456,666 @@ function InvestorSingle() {
         </div>
       </section>
 
-      {/* Main Grid / Disclosures Section */}
+          {/* Main Grid / Disclosures Section */}
+
       <section className="explore-section section-spacing-lg">
         <div className="container">
+
           <div className="explore-divider"></div>
-          
+
           {isCorporateGovernance ? (
-            /* CORPORATE GOVERNANCE CUSTOM ACCORDION & RETURNS VIEW */
+
+            /* =========================================
+               CORPORATE GOVERNANCE
+            ========================================= */
+
             <div className="policies-page-container">
-              
-              {/* Company Policies Section */}
-              <div className="policies-section-block">
-                <h3 className="explore-label text-left mb-3">Company Policies</h3>
-                <div className="policies-accordion-list">
-                  {POLICIES_DATA.map((policy, idx) => {
-                    const isOpen = activeAccordion === idx;
-                    return (
-                      <div 
-                        key={idx} 
-                        className={`policy-accordion-card effect-fade-up ${isOpen ? 'is-open' : ''}`}
-                        style={{ animationDelay: `${idx * 0.04}s` }}
-                      >
-                        <button
-                          className="policy-accordion-header"
-                          onClick={() => setActiveAccordion(isOpen ? null : idx)}
-                          aria-expanded={isOpen}
+
+              {/* CORPORATE GOVERNANCE TABS */}
+
+              <div className="governance-tabs">
+
+                <button
+                  type="button"
+                  className={`governance-tab ${
+                    activeGovernanceTab === "policies"
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    setActiveGovernanceTab("policies");
+                    setActiveAccordion(null);
+                  }}
+                >
+                 Company Policies
+                </button>
+
+                <button
+                  type="button"
+                  className={`governance-tab ${
+                    activeGovernanceTab === "annual"
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    setActiveGovernanceTab("annual");
+                    setActiveAccordion(null);
+                  }}
+                >
+                  Annual Returns
+                </button>
+
+              </div>
+
+
+              {/* =========================================
+                 COMPANY POLICIES
+              ========================================= */}
+
+              {activeGovernanceTab === "policies" && (
+
+                <div className="policies-section-block">
+
+                  <h3 className="explore-label text-left mb-3">
+                    Company Policies
+                  </h3>
+
+                  <div className="policies-accordion-list">
+
+                    {POLICIES_DATA.map((policy, idx) => {
+
+                      const isOpen =
+                        activeAccordion === idx;
+
+                      return (
+
+                        <div
+                          key={idx}
+                          className={`policy-accordion-card effect-fade-up ${
+                            isOpen ? "is-open" : ""
+                          }`}
+                          style={{
+                            animationDelay: `${idx * 0.04}s`
+                          }}
                         >
-                          <div className="policy-header-left">
-                            <div className="policy-brand-icon-wrap">
-                              {getPolicyIcon(policy.icon)}
-                            </div>
-                            <span className="policy-title-text">{policy.name}</span>
-                          </div>
-                          <div className="policy-header-right">
-                            {isOpen ? (
-                              <ChevronUp className="w-5 h-5 accordion-chevron-icon" />
-                            ) : (
-                              <ChevronDown className="w-5 h-5 accordion-chevron-icon" />
-                            )}
-                          </div>
-                        </button>
 
-                        <AnimatePresence initial={false}>
-                          {isOpen && (
-                            <motion.div
-                              initial="collapsed"
-                              animate="open"
-                              exit="collapsed"
-                              variants={{
-                                open: { opacity: 1, height: "auto" },
-                                collapsed: { opacity: 0, height: 0 }
-                              }}
-                              transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-                              className="policy-accordion-content-wrap"
-                            >
-                              <div className="policy-accordion-content">
-                {policy.sections && policy.sections.map((sec, secIdx) => (
-                  <div key={secIdx} className="policy-section-block-inner mb-4">
-                    <h4 className="policy-section-title">{sec.title}</h4>
-                    {sec.text && <p className="policy-section-text">{sec.text}</p>}
-                    {sec.paragraphs && sec.paragraphs.map((p, pIdx) => (
-                      <p key={pIdx} className="policy-section-text">{p}</p>
-                    ))}
-                    {sec.bullets && (
-                      <ul className="policy-section-bullets" style={{ listStyleType: /^\d+\./.test(sec.bullets[0]) ? 'none' : 'disc', paddingLeft: /^\d+\./.test(sec.bullets[0]) ? '0' : '20px' }}>
-                        {sec.bullets.map((bullet, bIdx) => (
-                          <li key={bIdx} className="policy-section-bullet-item">{bullet}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {sec.table && renderTable(sec.table)}
-                    {sec.tables && sec.tables.map((t, tIdx) => (
-                      <div key={tIdx} className="policy-table-wrapper mb-4">
-                        {t.title && <div className="policy-table-title font-weight-bold text-dark mt-3 mb-2" style={{ fontSize: '13px' }}>{t.title}</div>}
-                        {renderTable(t)}
-                      </div>
-                    ))}
-                    {sec.subsections && sec.subsections.map((sub, subIdx) => (
-                      <div key={subIdx} className="policy-subsection-block mt-3">
-                        {sub.title && <h5 className="policy-subsection-title">{sub.title}</h5>}
-                        {sub.text && <p className="policy-section-text">{sub.text}</p>}
-                        {sub.paragraphs && sub.paragraphs.map((sp, spIdx) => (
-                          <p key={spIdx} className="policy-section-text">{sp}</p>
-                        ))}
-                        {sub.bullets && (
-                          <ul className="policy-section-bullets" style={{ listStyleType: /^\d+\./.test(sub.bullets[0]) ? 'none' : 'disc', paddingLeft: /^\d+\./.test(sub.bullets[0]) ? '0' : '20px' }}>
-                            {sub.bullets.map((sBullet, sbIdx) => (
-                              <li key={sbIdx} className="policy-section-bullet-item">{sBullet}</li>
-                            ))}
-                          </ul>
-                        )}
-                        {sub.table && renderTable(sub.table)}
-                        {sub.tables && sub.tables.map((t, tIdx) => (
-                          <div key={tIdx} className="policy-table-wrapper mb-4">
-                            {t.title && <div className="policy-table-title font-weight-bold text-dark mt-3 mb-2" style={{ fontSize: '13px' }}>{t.title}</div>}
-                            {renderTable(t)}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+                          {/* POLICY HEADER */}
 
-              {/* Annual Returns Section */}
-              <div className="policies-section-block">
-                <h3 className="explore-label text-left mb-3">Annual Returns</h3>
-                <div className="annual-returns-list">
-                  {ANNUAL_RETURNS_DATA.map((item, idx) => (
-                    <div 
-                      key={idx} 
-                      className="return-row-card effect-fade-up"
-                      style={{ animationDelay: `${idx * 0.08}s` }}
-                    >
-                      <div className="return-row-left">
-                        <div className="return-doc-icon">
-                          <FileText className="w-6 h-6" />
-                        </div>
-                        <span className="return-title-text">{item.title}</span>
-                      </div>
-                      <div className="return-row-right">
-                        <a href={item.link} className="btn-return-download">
-                          <span className="btn-return-download-icon-wrap">
-                            <Download className="w-3.5 h-3.5" />
-                          </span>
-                          Download
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom Support Banner */}
-              <div 
-                className="investor-help-banner effect-fade-up mt-5" 
-                style={{ animationDelay: '0.2s' }}
-              >
-                <div className="help-banner-left">
-                  <div className="help-banner-icon-wrap">
-                    <Headphones className="help-banner-icon" />
-                  </div>
-                  <div className="help-banner-text">
-                    <h4 className="help-banner-title">Need any help?</h4>
-                    <p className="help-banner-desc">
-                      If you need any specific document or have any queries, feel free to contact our investor relations team.
-                    </p>
-                  </div>
-                </div>
-                <div className="help-banner-right">
-                  <Link to="/contact" className="btn-help-banner-cta">
-                    Get in Touch
-                    <span className="btn-help-banner-icon-wrap">
-                      <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ) : slug === 'investor-analyst-meet' ? (
-            /* ANALYST MEET CUSTOM ROW/CARD VIEW */
-            <AnalystMeetContent />
-          ) : isDocDashboard ? (
-            /* GROUP COMPANIES & FINANCIAL REPORTS CUSTOM VIEW */
-            <div className="group-companies-container">
-              <div className="company-rows-list">
-                {dashboardData.map((company, idx) => (
-                  <div
-                    key={idx}
-                    className="company-row-card effect-fade-up"
-                    style={{ animationDelay: `${idx * 0.08}s` }}
-                  >
-                    <div className="company-info-col">
-                      <div className={`company-brand-icon theme-${company.theme}`}>
-                        {getCompanyIcon(company.icon)}
-                      </div>
-                      <h3 className="company-name">{company.name}</h3>
-                    </div>
-
-                    <div className="company-vertical-divider"></div>
-
-                    <div className="company-docs-col">
-                      {company.docs.map((doc, docIdx) => (
-                        <div key={docIdx} className="fy-doc-card">
-                          <div className="fy-doc-info">
-                            <span className="fy-doc-year">{doc.year}</span>
-                            <span className="fy-doc-label">PDF</span>
-                          </div>
-                          <a
-                            href={doc.link}
-                            className="fy-doc-download-btn"
-                            aria-label={`Open ${doc.year} report for ${company.name}`}
+                          <button
+                            type="button"
+                            className="policy-accordion-header"
+                            onClick={() =>
+                              setActiveAccordion(
+                                isOpen ? null : idx
+                              )
+                            }
+                            aria-expanded={isOpen}
                           >
-                            <FileText className="fy-download-icon" />
-                          </a>
+
+                            <div className="policy-header-left">
+
+                              <div className="policy-brand-icon-wrap">
+                                {getPolicyIcon(policy.icon)}
+                              </div>
+
+                              <span className="policy-title-text">
+                                {policy.name}
+                              </span>
+
+                            </div>
+
+                            <div className="policy-header-right">
+
+                              {isOpen ? (
+
+                                <ChevronUp className="w-5 h-5 accordion-chevron-icon" />
+
+                              ) : (
+
+                                <ChevronDown className="w-5 h-5 accordion-chevron-icon" />
+
+                              )}
+
+                            </div>
+
+                          </button>
+
+
+                          {/* POLICY CONTENT */}
+
+                          <AnimatePresence initial={false}>
+
+                            {isOpen && (
+
+                              <motion.div
+                                initial="collapsed"
+                                animate="open"
+                                exit="collapsed"
+                                variants={{
+                                  open: {
+                                    opacity: 1,
+                                    height: "auto"
+                                  },
+                                  collapsed: {
+                                    opacity: 0,
+                                    height: 0
+                                  }
+                                }}
+                                transition={{
+                                  duration: 0.3,
+                                  ease: [
+                                    0.04,
+                                    0.62,
+                                    0.23,
+                                    0.98
+                                  ]
+                                }}
+                                className="policy-accordion-content-wrap"
+                              >
+
+                                <div className="policy-accordion-content">
+
+                                  {policy.sections &&
+                                    policy.sections.map(
+                                      (sec, secIdx) => (
+
+                                        <div
+                                          key={secIdx}
+                                          className="policy-section-block-inner mb-4"
+                                        >
+
+                                          {/* SECTION TITLE */}
+
+                                          {sec.title && (
+                                            <h4 className="policy-section-title">
+                                              {sec.title}
+                                            </h4>
+                                          )}
+
+
+                                          {/* SECTION TEXT */}
+
+                                          {sec.text && (
+                                            <p className="policy-section-text">
+                                              {sec.text}
+                                            </p>
+                                          )}
+
+
+                                          {/* PARAGRAPHS */}
+
+                                          {sec.paragraphs &&
+                                            sec.paragraphs.map(
+                                              (p, pIdx) => (
+
+                                                <p
+                                                  key={pIdx}
+                                                  className="policy-section-text"
+                                                >
+                                                  {p}
+                                                </p>
+
+                                              )
+                                            )}
+
+
+                                          {/* BULLETS */}
+
+                                          {sec.bullets &&
+                                            sec.bullets.length > 0 && (
+
+                                              <ul
+                                                className="policy-section-bullets"
+                                                style={{
+                                                  listStyleType:
+                                                    /^\d+\.\s*/.test(
+                                                      sec.bullets[0]
+                                                    )
+                                                      ? "none"
+                                                      : "disc",
+
+                                                  paddingLeft:
+                                                    /^\d+\.\s*/.test(
+                                                      sec.bullets[0]
+                                                    )
+                                                      ? "0"
+                                                      : "20px"
+                                                }}
+                                              >
+
+                                                {sec.bullets.map(
+                                                  (
+                                                    bullet,
+                                                    bIdx
+                                                  ) => (
+
+                                                    <li
+                                                      key={bIdx}
+                                                      className="policy-section-bullet-item"
+                                                    >
+                                                      {bullet}
+                                                    </li>
+
+                                                  )
+                                                )}
+
+                                              </ul>
+
+                                            )}
+
+
+                                          {/* TABLE */}
+
+                                          {sec.table &&
+                                            renderTable(
+                                              sec.table
+                                            )}
+
+
+                                          {/* MULTIPLE TABLES */}
+
+                                          {sec.tables &&
+                                            sec.tables.map(
+                                              (t, tIdx) => (
+
+                                                <div
+                                                  key={tIdx}
+                                                  className="policy-table-wrapper mb-4"
+                                                >
+
+                                                  {t.title && (
+                                                    <div
+                                                      className="policy-table-title font-weight-bold text-dark mt-3 mb-2"
+                                                      style={{
+                                                        fontSize:
+                                                          "13px"
+                                                      }}
+                                                    >
+                                                      {t.title}
+                                                    </div>
+                                                  )}
+
+                                                  {renderTable(t)}
+
+                                                </div>
+
+                                              )
+                                            )}
+
+
+                                          {/* SUBSECTIONS */}
+
+                                          {sec.subsections &&
+                                            sec.subsections.map(
+                                              (
+                                                sub,
+                                                subIdx
+                                              ) => (
+
+                                                <div
+                                                  key={subIdx}
+                                                  className="policy-subsection-block mt-3"
+                                                >
+
+                                                  {sub.title && (
+                                                    <h5 className="policy-subsection-title">
+                                                      {sub.title}
+                                                    </h5>
+                                                  )}
+
+
+                                                  {sub.text && (
+                                                    <p className="policy-section-text">
+                                                      {sub.text}
+                                                    </p>
+                                                  )}
+
+
+                                                  {sub.paragraphs &&
+                                                    sub.paragraphs.map(
+                                                      (
+                                                        sp,
+                                                        spIdx
+                                                      ) => (
+
+                                                        <p
+                                                          key={
+                                                            spIdx
+                                                          }
+                                                          className="policy-section-text"
+                                                        >
+                                                          {sp}
+                                                        </p>
+
+                                                      )
+                                                    )}
+
+
+                                                  {sub.bullets &&
+                                                    sub.bullets.length >
+                                                      0 && (
+
+                                                      <ul
+                                                        className="policy-section-bullets"
+                                                        style={{
+                                                          listStyleType:
+                                                            /^\d+\.\s*/.test(
+                                                              sub
+                                                                .bullets[0]
+                                                            )
+                                                              ? "none"
+                                                              : "disc",
+
+                                                          paddingLeft:
+                                                            /^\d+\.\s*/.test(
+                                                              sub
+                                                                .bullets[0]
+                                                            )
+                                                              ? "0"
+                                                              : "20px"
+                                                        }}
+                                                      >
+
+                                                        {sub.bullets.map(
+                                                          (
+                                                            sBullet,
+                                                            sbIdx
+                                                          ) => (
+
+                                                            <li
+                                                              key={
+                                                                sbIdx
+                                                              }
+                                                              className="policy-section-bullet-item"
+                                                            >
+                                                              {
+                                                                sBullet
+                                                              }
+                                                            </li>
+
+                                                          )
+                                                        )}
+
+                                                      </ul>
+
+                                                    )}
+
+
+                                                  {sub.table &&
+                                                    renderTable(
+                                                      sub.table
+                                                    )}
+
+
+                                                  {sub.tables &&
+                                                    sub.tables.map(
+                                                      (
+                                                        t,
+                                                        tIdx
+                                                      ) => (
+
+                                                        <div
+                                                          key={
+                                                            tIdx
+                                                          }
+                                                          className="policy-table-wrapper mb-4"
+                                                        >
+
+                                                          {t.title && (
+                                                            <div
+                                                              className="policy-table-title font-weight-bold text-dark mt-3 mb-2"
+                                                              style={{
+                                                                fontSize:
+                                                                  "13px"
+                                                              }}
+                                                            >
+                                                              {
+                                                                t.title
+                                                              }
+                                                            </div>
+                                                          )}
+
+                                                          {renderTable(
+                                                            t
+                                                          )}
+
+                                                        </div>
+
+                                                      )
+                                                    )}
+
+                                                </div>
+
+                                              )
+                                            )}
+
+                                        </div>
+
+                                      )
+                                    )}
+
+                                </div>
+
+                              </motion.div>
+
+                            )}
+
+                          </AnimatePresence>
+
                         </div>
-                      ))}
-                    </div>
+
+                      );
+
+                    })}
+
                   </div>
-                ))}
+
+                </div>
+
+              )}
+
+
+              {/* =========================================
+                 ANNUAL RETURNS
+              ========================================= */}
+
+              {activeGovernanceTab === "annual" && (
+
+                <div className="policies-section-block">
+
+                  <h3 className="explore-label text-left mb-3">
+                    Annual Returns
+                  </h3>
+
+                  <div className="annual-returns-list">
+
+                    {ANNUAL_RETURNS_DATA.map(
+                      (item, idx) => (
+
+                        <div
+                          key={idx}
+                          className="return-row-card effect-fade-up"
+                          style={{
+                            animationDelay: `${idx * 0.08}s`
+                          }}
+                        >
+
+                          <div className="return-row-left">
+
+                            <div className="return-doc-icon">
+                              <FileText className="w-6 h-6" />
+                            </div>
+
+                            <span className="return-title-text">
+                              {item.title}
+                            </span>
+
+                          </div>
+
+                          <div className="return-row-right">
+
+                            <a
+                              href={item.link}
+                              className="btn-return-download"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+
+                              <span className="btn-return-download-icon-wrap">
+                                <Download className="w-3.5 h-3.5" />
+                              </span>
+
+                              Download
+
+                            </a>
+
+                          </div>
+
+                        </div>
+
+                      )
+                    )}
+
+                  </div>
+
+                </div>
+
+              )}
+
+            </div>
+
+          ) : investorData.gridItems &&
+            investorData.gridItems.length > 0 ? (
+
+            /* =========================================
+               NORMAL INVESTOR GRID
+            ========================================= */
+
+            <div>
+
+              <div className="explore-label">
+                Governance Options
               </div>
 
-              {/* Bottom Support Banner */}
-              <div
-                className="investor-help-banner effect-fade-up"
-                style={{ animationDelay: `${dashboardData.length * 0.08}s` }}
-              >
-                <div className="help-banner-left">
-                  <div className="help-banner-icon-wrap">
-                    <Info className="help-banner-icon" />
-                  </div>
-                  <div className="help-banner-text">
-                    <h4 className="help-banner-title">Need any help?</h4>
-                    <p className="help-banner-desc">
-                      If you need any specific document or have any queries, feel free to contact our investor relations team.
-                    </p>
-                  </div>
-                </div>
-                <div className="help-banner-right">
-                  <Link to="/contact" className="btn-help-banner-cta">
-                    Get in Touch
-                    <span className="btn-help-banner-icon-wrap">
-                      <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ) : investorData.gridItems && investorData.gridItems.length > 0 ? (
-            <div>
-              <div className="explore-label">Governance Options</div>
               <h2 className="explore-title">
-                Select a section to view detailed corporate registers, <br />
-                committee allocations, and compliance documents.
+                Select a section to view detailed corporate
+                registers,
+                <br />
+                committee allocations, and compliance
+                documents.
               </h2>
-              
+
               <div className="row justify-content-center g-4">
-                {investorData.gridItems.map((item, index) => (
-                  <div className="col-md-6 col-lg-3 mb-24 effect-fade-up" style={{ animationDelay: `${index * 0.08}s` }} key={index}>
-                    <a href={item.link} className="mgmt-card" style={{ padding: '30px 24px' }}>
-                      <div className="mgmt-card-title" style={{ marginTop: '0', fontSize: '16px' }}>{item.title}</div>
-                      <div className="mgmt-card-action" style={{ marginTop: '16px' }}>
-                        View Document
-                      </div>
-                    </a>
-                  </div>
-                ))}
+
+                {investorData.gridItems.map(
+                  (item, index) => (
+
+                    <div
+                      className="col-md-6 col-lg-3 mb-24 effect-fade-up"
+                      style={{
+                        animationDelay: `${index * 0.08}s`
+                      }}
+                      key={index}
+                    >
+
+                      <a
+                        href={item.link}
+                        className="mgmt-card"
+                        style={{
+                          padding: "30px 24px"
+                        }}
+                      >
+
+                        <div
+                          className="mgmt-card-title"
+                          style={{
+                            marginTop: "0",
+                            fontSize: "16px"
+                          }}
+                        >
+                          {item.title}
+                        </div>
+
+                        <div
+                          className="mgmt-card-action"
+                          style={{
+                            marginTop: "16px"
+                          }}
+                        >
+                          View Document
+                        </div>
+
+                      </a>
+
+                    </div>
+
+                  )
+                )}
+
               </div>
+
             </div>
+
           ) : (
+
+            /* =========================================
+               NO DOCUMENTS FALLBACK
+            ========================================= */
+
             <div>
-              <div className="explore-label">Governance Disclosures</div>
+
+              <div className="explore-label">
+                Governance Disclosures
+              </div>
+
               <h2 className="explore-title">
-                Official corporate reports, statutory filings, and compliance disclosures
+                Official corporate reports, statutory
+                filings, and compliance disclosures
                 for Virtual Galaxy Infotech Limited.
               </h2>
-              
+
               <div className="row justify-content-center effect-fade-up">
+
                 <div className="col-lg-8">
-                  <div className="p-4 mt-4 bg-light border border-slate-100 text-center" style={{ borderRadius: '20px' }}>
-                    <p className="text-secondary mb-0" style={{ fontSize: '14.5px', lineHeight: '1.6' }}>
-                      There are currently no active document files listed in this category. For archival records, statutory copies, or specific queries, please contact our Compliance Officer at the Investor Relations office.
+
+                  <div
+                    className="p-4 mt-4 bg-light border border-slate-100 text-center"
+                    style={{
+                      borderRadius: "20px"
+                    }}
+                  >
+
+                    <p
+                      className="text-secondary mb-0"
+                      style={{
+                        fontSize: "14.5px",
+                        lineHeight: "1.6"
+                      }}
+                    >
+                      There are currently no active
+                      document files listed in this
+                      category. For archival records,
+                      statutory copies, or specific
+                      queries, please contact our
+                      Compliance Officer at the Investor
+                      Relations office.
                     </p>
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+
           )}
+
         </div>
       </section>
+
       <ContactSection />
+  
     </div>
   );
 }

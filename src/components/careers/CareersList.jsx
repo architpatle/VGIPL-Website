@@ -21,11 +21,11 @@ function CareersList() {
           </div>
           <div className="col-lg-4">
             <div className="d-flex flex-column align-items-lg-end gap-12 pt-20">
-              <a href="mailto:hr@vgipl.in" className="d-flex align-items-center gap-10 fw-semibold" style={{ color: '#ff2d15', textDecoration: 'none', fontSize: '15px' }}>
+              <a href="mailto:hr@vginfotech.ai" className="d-flex align-items-center gap-10 fw-semibold" style={{ color: '#ff2d15', textDecoration: 'none', fontSize: '15px' }}>
                 <div style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <i className="icon icon-envelope"></i>
                 </div>
-                <span>hr@vgipl.in</span>
+                <span>hr@vginfotech.ai</span>
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="d-flex align-items-center gap-10 fw-semibold" style={{ color: '#ff2d15', textDecoration: 'none', fontSize: '15px' }}>
                 <div style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0077b5', borderRadius: '4px' }}>

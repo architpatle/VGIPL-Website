@@ -19,79 +19,79 @@ export const RESOURCE_DATA = [
         link: 'https://www.facebook.com/share/p/1CYm23cUnE/',
         title: 'Virtual Galaxy Infotech Secures $1.1 Million Global Contract',
         type: 'photo',
-        image: '/assets/news/contract.png'
+        image: '/assets/news/fb1.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1EKWRWMY27/',
         title: "Shivkrupa Sahakari Pathpedhi Limited goes digital with VGIL's advanced CBS E-Banker",
         type: 'photo',
-        image: '/assets/news/ebanker.png'
+        image: '/assets/news/fb2.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1G3cMLNYzL/',
         title: 'Virtual Galaxy Infotech Secures Landmark International Mandate with Botswana Development Corporation',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb3.png'
       },
       {
         link: 'https://www.facebook.com/share/p/18euGLYTA8/',
         title: "Honored to host Canadian Consulate dignitaries at Virtual Galaxy Infotech's MIHAN SEZ Development Centre!",
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb4.png'
       },
       {
         link: 'https://www.facebook.com/share/p/18g8W9MjGP/',
         title: 'Honored to attend the Defence Expo in the Philippines and engage in collaborations between India and the Philippines',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb5.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1ENUXtyiZ1/',
         title: 'India–Kenya 3rd DefExpo | Nairobi, Kenya. Interacting with Hon. Soipan Tuya, Defence Minister of Kenya',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb6.png'
       },
       {
         link: 'https://www.facebook.com/watch/?v=999139971989370',
         title: 'Virtual Galaxy Infotech’s ₹93.29 Cr IPO attracted an astounding ₹14,440 Cr in bids',
         type: 'video',
-        image: '/assets/news/ipo.png'
+        image: '/assets/news/fb7.png'
       },
       {
         link: 'https://www.facebook.com/share/p/18axFmzTNX/',
         title: 'A proud moment for Virtual Galaxy Infotech Ltd. – officially listed on NSE India!',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb8.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1XL7HrEVfp/',
         title: 'All Indian Urban Coop Banking Summit! A powerful gathering of visionaries, leaders, and changemakers',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb9.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1BjyahHDMH/',
         title: 'Virtual Galaxy is honored to be recognized as the Leading IT Solutions Provider of the Year by the prestigious Sardar Patel Unity Awards',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb10.png'
       },
       {
         link: 'https://www.facebook.com/share/p/18WMGgstqA/',
         title: 'ZENITH 2025 – Investor & Analyst Meet by Virtual Galaxy Infotech Ltd. is set to redefine the future of digital finance',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb11.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1BV34fxvMU/',
         title: 'Virtual Galaxy Infotech Ltd. featured in CIOLook India! Recognizing Mr. Avinash Shende and Mr. Sachin Pande as Top Iconic Business Leaders to Watch in 2024',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb12.png'
       },
       {
         link: 'https://www.facebook.com/share/p/1BC4Ma7YSm/',
         title: 'Virtual Galaxy Infotech Ltd. (VGIL) featured in Business India - The Magazine of the Corporate World!',
         type: 'photo',
-        image: '/assets/news/general.png'
+        image: '/assets/news/fb13.png'
       }
     ]
   },
@@ -108,7 +108,7 @@ export const RESOURCE_DATA = [
         link: '/blog/erp-what-is',
         title: 'What is Enterprise Resource Planning and its Importance?',
         type: 'blog',
-        image: '/assets/images/blog/blog-1.png',
+        image: '/assets/images/blog/blog1.png',
         desc: 'It has been measured that businesses and industries are turning more and more towards installing an ERP system. It is proving a beneficial decision for any organization as it becomes easier to manage the various aspects of the working field with ease.',
         content: `ERP system is an integrated system that manages various aspects of business, saves cost and time. It allows any type of business to keep track of different sections such as human resources, production and stock keeping, financial management, supply chain management, etc.\n\nIt is a central hub for an end to end workflow and data. It collects an organization's shared data from multiple sources and eliminates data duplication. In today's advanced technology, such systems are considered essential for managing businesses of all sizes and in all industries.`
       },
@@ -117,7 +117,7 @@ export const RESOURCE_DATA = [
         link: '/blog/erp-advantages',
         title: 'Top 5 Advantages of Implementing an ERP System',
         type: 'blog',
-        image: '/assets/images/blog/blog-2.png',
+        image: '/assets/images/blog/blog2.png',
         desc: 'Implementing an ERP system offers numerous benefits that can transform how your business operates, from improved efficiency to better data-driven insights.',
         content: `1. Improved Efficiency: Streamline operations and automate repetitive tasks.\n2. Real-time Data: Access accurate information across all departments instantaneously.\n3. Better Collaboration: Break down silos and improve communication between teams.\n4. Scalability: Easily adapt the system as your business grows.\n5. Cost Savings: Reduce operational costs through better resource management.`
       },
@@ -126,7 +126,7 @@ export const RESOURCE_DATA = [
         link: '/blog/vpn-what-is',
         title: 'What is a Virtual Private Network?',
         type: 'blog',
-        image: '/assets/images/blog/blog-3.png',
+        image: '/assets/images/blog/blog3.png',
         desc: 'In an era of increasing digital threats, understanding how a VPN protects your corporate data is more critical than ever.',
         content: `A Virtual Private Network (VPN) creates a secure, encrypted connection between your device and the internet. For businesses, this means employees can securely access corporate servers from any location without risking data leaks or unauthorized access. It acts as a secure tunnel for your digital communications.`
       },
@@ -135,7 +135,7 @@ export const RESOURCE_DATA = [
         link: '/blog/cbs-for-banks',
         title: 'What Is Core Banking Solution For Banks?',
         type: 'blog',
-        image: '/assets/images/blog/blog-4.png',
+        image: '/assets/images/blog/blog4.png',
         desc: 'Core Banking Solutions (CBS) are the heart of modern financial institutions, enabling seamless transactions and centralized management.',
         content: `CBS allows banks to centralize their operations, providing a single view of the customer across all branches. This leads to faster transaction processing, improved customer service, and better compliance with financial regulations. It is the technological backbone that powers modern day banking.`
       },
@@ -144,7 +144,7 @@ export const RESOURCE_DATA = [
         link: '/blog/ai-banking-reshape',
         title: 'How AI-Based Banking is Reshaping the Core Banking Landscape',
         type: 'blog',
-        image: '/assets/images/blog/blog-5.png',
+        image: '/assets/images/blog/blog5.png',
         desc: 'Artificial Intelligence is no longer just a buzzword; it is actively transforming how banks interact with customers and manage risk.',
         content: `From AI-powered chatbots to advanced fraud detection algorithms, AI is making banking more personalized and secure. It helps institutions analyze vast amounts of data to predict market trends and offer tailored financial products to their customers, reshaping the entire landscape of financial services.`
       },
@@ -153,7 +153,7 @@ export const RESOURCE_DATA = [
         link: '/blog/banking-security-platform',
         title: 'Strengthening Banking Security with a Centralized Cybersecurity Management Platform',
         type: 'blog',
-        image: '/assets/images/blog/blog-6.png',
+        image: '/assets/images/blog/blog6.png',
         desc: 'A centralized approach to cybersecurity is the only way to stay ahead of sophisticated modern financial threats.',
         content: `Centralized cybersecurity platforms provide a unified view of all potential threats across the banking network. By integrating various security protocols into a single management interface, banks can respond faster to incidents and ensure that every layer of their digital infrastructure is protected against evolving cyber threats.`
       }
