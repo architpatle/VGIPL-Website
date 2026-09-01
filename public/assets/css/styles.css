@@ -2758,7 +2758,7 @@ header.header-sticky {
   align-items: center;
   padding: 7px 15px;
   border-radius: 99px;
-  color: var(--brand);
+  color: #000;
   background: var(--neutral-300);
   border: 1px solid var(--neutral-600);
 }
