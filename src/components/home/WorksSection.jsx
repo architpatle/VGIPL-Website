@@ -7,16 +7,17 @@ import coreBankingSolution from '../../assets/home/feature-work/1- Featured Work
 import erpSolution from '../../assets/home/feature-work/-2 Featured Work of best work (824_427.54px)-3.jpg';
 import featuredWork3 from '../../assets/home/feature-work/3- Featured Work of best work (824_427.54px)-2.jpg';
 import featuredWork4 from '../../assets/home/feature-work/4- Featured Work of best work (824_427.54px)-1.jpg';
-import digitalPayment from '../../assets/home/feature-work/digital-payment.jpg';
+import digitalPayment from '../../assets/home/feature-work/digital-payment.png';
 import agricultureTrading from '../../assets/home/feature-work/Agriculture-Trading.png';
 import imisSolution from '../../assets/home/feature-work/imisSolution.png';
 import conversationalAICompanion from '../../assets/home/feature-work/conversationalAICompanion.png';
 import TransactionProcessingPlatform from '../../assets/home/feature-work/TransactionProcessingPlatform.png';
 import AuditManagementPlatform from '../../assets/home/feature-work/AuditManagementPlatform.png';
 import EnterpriseWorkflowPlatform from '../../assets/home/feature-work/EnterpriseWorkflowPlatform.png';
-
-
-
+import eCRMImg from '../../assets/home/feature-work/eCRM.png';
+import eLOSImg from '../../assets/home/feature-work/eLOS.png';
+import secureViewAIImg from '../../assets/home/feature-work/secureViewAI.png';
+import digitalIdentityVerificationPlatformImg from '../../assets/home/feature-work/digitalIdentityVerificationPlatform.png';
 
 import './WorksSection.css'
 
@@ -57,7 +58,11 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
     'conversational-ai-companion',
     'transact-core',
     'audit-flux',
-    'fin-flow'
+    'fin-flow',
+    'e-crm',
+    'e-los',
+    'secure-view-ai',
+    'digital-identity-verification-platform'
     // 'your-new-product-slug', // <-- new cards get added to the right
   ];
 
@@ -68,7 +73,7 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
   // Background images cycle through this list (by index), so adding new
   // slugs above doesn't require a 1:1 new image mapping. Add more imports
   // to this array if you want more unique backgrounds.
-  const bgImagesList = [coreBankingSolution, erpSolution, featuredWork3, imisSolution, digitalPayment, agricultureTrading, featuredWork4,conversationalAICompanion, TransactionProcessingPlatform,AuditManagementPlatform,EnterpriseWorkflowPlatform ];
+  const bgImagesList = [coreBankingSolution, erpSolution, featuredWork3, imisSolution, digitalPayment, agricultureTrading, featuredWork4, conversationalAICompanion, TransactionProcessingPlatform, AuditManagementPlatform, EnterpriseWorkflowPlatform, eCRMImg, eLOSImg, secureViewAIImg, digitalIdentityVerificationPlatformImg];
 
   // ---- Carousel derived values ----
   // Group products into pages of `itemsPerPage` — each page renders as its
@@ -188,14 +193,14 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
                                     <div className="item">
                                       <div className="title text-secondary">FEATURES</div>
                                       <div className="fw-semibold text-body-3">
-                                        {product.features.slice(0, 2).map(f => f.title).join(', ')}
+                                        {product.features?.slice(0, 2).map(f => f.title).join(', ')}
                                       </div>
                                     </div>
                                     <div className="item">
                                       <div className="title text-secondary">INDUSTRY</div>
                                       <div className="fw-semibold text-body-3">
                                         {product.slug === 'core-banking-solution' ? 'Banking' :
-                                          product.slug === 'post-mortem-managementt' ? 'Healthcare' :
+                                          product.slug === 'post-mortem-management' ? 'Healthcare' :
                                             product.slug === 'end-to-end-cyber-security' ? 'Security' : 'Enterprise'}
                                       </div>
                                     </div>

@@ -122,7 +122,7 @@ function ServicesSection() {
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-2' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-2', service2Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-2' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-2'}>
                   <div className="accordion-title services-section-accordian-title">
-                    Trusted by 500+ Enterprises <br />
+                    Trusted by 200+ Enterprises <br />
                     {/* <div className="text-body-1 num">(02)</div> */}
                   </div>
                 </div>
@@ -143,7 +143,7 @@ function ServicesSection() {
               <div className={`accordion-faq_item effectFade fadeUp ${activeCard === 'faq-3' ? 'theme-dark' : 'theme-cream'}`} role="presentation" onMouseEnter={() => handleCardHover('faq-3', service3Img)}>
                 <div className={`accordion-action services-image-btn ${activeCard === 'faq-3' ? 'active-img' : 'collapsed'}`} role="button" aria-expanded={activeCard === 'faq-3'}>
                   <div className="accordion-title services-section-accordian-title">
-                    400+ Resources <br />
+                    450+ Resources <br />
                     {/* <div className="text-body-1 num">(03)</div> */}
                   </div>
                 </div>

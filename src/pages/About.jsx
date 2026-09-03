@@ -12,6 +12,7 @@ import JourneySection from '../components/about/JourneySection';
 import FaqsSection from '../components/home/FaqsSection';
 import ContactSection from '../components/home/ContactSection';
 import TeamSection from '../components/home/TeamSection';
+import OrbitalLogosSection from '../components/about/OrbitalLogoSection';
 
 function About() {
   return (
@@ -24,7 +25,8 @@ function About() {
         <ValuesSection />
       </div>
 
-      <ToolsSectionV2 />
+      {/* <ToolsSectionV2 /> */}
+      <OrbitalLogosSection />
 
       <div className="box-black">
         <div className="light-box"></div>

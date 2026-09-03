@@ -11,7 +11,7 @@ function AboutSection() {
           <div className="col-12 ">
             <div className="heading-section" style={{ marginBottom: '15px' }}>
               <div className="heading-sub fw-semibold effectFade fadeUp" style={{ display: 'inline-block', marginBottom: '15px' }}>About Us</div>
-              <div className="heading-title text-gradient-1 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building 
+              <div className="heading-title text-gradient-2 effectFade fadeRotateX" style={{ lineHeight: '1.2' }}>A Legacy of Building 
                  {/* <br className="d-none d-md-block" /> */}
                  <span> Reliable IT Foundations!</span> </div>
             </div>
@@ -33,7 +33,7 @@ function AboutSection() {
           </div>
           <div className="col-lg-5 d-flex flex-column">
             <div className="review-box mb-24 flex-grow-1 d-flex flex-column justify-content-center">
-              <div className="fw-bold mb-12 text-brand" style={{ fontSize: '0.95rem', letterSpacing: '1.2px', textTransform: 'uppercase' }}>
+              <div className="fw-bold mb-12 text-brand" style={{ fontSize: '0.95rem', letterSpacing: '1.2px' }}>
                 The Numbers Behind Our Impact
               </div>
               <div className="desc desc-none text-body-1" style={{ marginTop: '0' }}> Empowering 5,000+ bank branches, manufacturers, and global businesses <span className='impact-span'> through cutting-edge automation, seamless customer experiences, enhanced service delivery, and real-time decision support systems</span>.</div>

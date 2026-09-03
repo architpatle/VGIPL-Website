@@ -345,6 +345,10 @@ function ConversationalAI() {
     <>
       <style>
         {`
+        .prod-hero-text{
+        max-width: 900px !important;
+        margin: auto;
+        }
           @media (max-width: 768px) {
             .prod-hero-title {
               font-size: 2.2rem !important;

@@ -38,6 +38,10 @@ import Disclaimer from "./pages/Disclaimer";
 import Policies from "./pages/Policies";
 import NotFound from './pages/NotFound';
 import FloatingSocial from './components/FloatingSocial/FloatingSocial';
+import ECRM from './pages/ECRM';
+import ELOS from './pages/ELOS';
+import SecureViewAI from './pages/SecureViewAI';
+import DigitalIdentityVerificationPlatform from './pages/DigitalIdentityVerificationPlatform';
 
 
 function App() {
@@ -77,6 +81,10 @@ function App() {
             <Route path="/products/transact-core" element={<TransactCore />} />
             <Route path="/products/audit-flux" element={<AuditFlux />} />
             <Route path="/products/fin-flow" element={<FinFlow />} />
+            <Route path="/products/e-crm" element={<ECRM />} />
+            <Route path="/products/e-los" element={<ELOS />} />
+            <Route path="/products/secure-view-ai" element={<SecureViewAI />} />
+            <Route path="/products/digital-identity-verification-platform" element={<DigitalIdentityVerificationPlatform />} />
             <Route path="/products/:slug" element={<ProductSingle />} />
             <Route path="/products" element={<Works />} />
             <Route path="/work-single" element={<WorkSingle />} />

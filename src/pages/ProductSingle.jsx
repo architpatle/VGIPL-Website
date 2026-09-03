@@ -29,12 +29,17 @@ import ibsInventoryImg from '../assets/Products-img/Agriculture-img/ERP-Solution
 import ibsAccountingImg from '../assets/Products-img/Agriculture-img/ERP-Solution/finance-resource-management.jpg';
 import ibsProductionImg from '../assets/Products-img/Agriculture-img/ERP-Solution/manufacturing-resource-planning.jpg';
 import ibsAnalyticsImg from '../assets/Products-img/Agriculture-img/ERP-Solution/analytics.jpg';
+import ibsSalesImg from '../assets/Products-img/Agriculture-img/ERP-Solution/Sales.jpg'
 
 import dpOverviewImg from '../assets/Products-img/Digital-payment/overview.jpg';
 import dpCashlessImg from '../assets/Products-img/Digital-payment/cashless-payments.jpg';
 import dpInvestmentImg from '../assets/Products-img/Digital-payment/instant-investment.jpg';
 import dpRemittanceImg from '../assets/Products-img/Digital-payment/immediate-remittances.jpg';
 import dpUtilityImg from '../assets/Products-img/Digital-payment/utility-payments.jpg';
+import dpDigitalWallet from '../assets/Products-img/Digital-payment/digital-wallet.jpg';
+import dpPOSMachine from '../assets/Products-img/Digital-payment/pos-machine.jpg';
+import dpSoundBox from '../assets/Products-img/Digital-payment/sound-box.jpg';
+
 
 import autopsyOverviewImg from '../assets/Products-img/e-autopsy-img/overview.jpg';
 import autopsyRecordMgmtImg from '../assets/Products-img/e-autopsy-img/record-management.jpg';
@@ -61,8 +66,8 @@ function ProductSingle() {
   const [showBrochureModal, setShowBrochureModal] = useState(false);
 
   useEffect(() => {
-  setActiveModule(0);
-}, [slug]);
+    setActiveModule(0);
+  }, [slug]);
 
   const slugBgImages = {
     'core-banking-solution': bgCoreBanking,
@@ -81,34 +86,191 @@ function ProductSingle() {
 
   const ebankerModules = [
     {
-      title: "Overview",
-      subtitle: "E-banker, a robust and widely deployed Core Banking Solution, simplifies complex banking tasks and operations. It streamlines customer onboarding with eKYC, facilitates transactions and loans across various channels, and enhances transactions through both physical branches and digital platform",
+      title: "Digital Customer Onboarding",
+      subtitle:
+        "Streamlines customer onboarding through digital processes and Video KYC, enabling financial institutions to efficiently capture customer information, complete verification, and create a seamless onboarding experience with reduced manual effort.",
       image: overviewImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <polyline points="16 11 18 13 22 9"></polyline>
+        </svg>
+      )
     },
     {
       title: "Loan Origination System",
-      subtitle: "It facilitates the processing and management of loan applications. It automates the entire loan origination process, from application stage to sanction stage. This solution includes features like information gathering, credit analysis, loan processing, and document management. It is instrumental in reducing costs and also in improving efficiency.",
+      subtitle:
+        "Facilitates the processing and management of loan applications by automating the journey from application to sanction. It supports information gathering, customer rating, credit analysis, loan processing, and document management, helping reduce costs and improve operational efficiency.",
       image: loanOriginationImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+      )
     },
     {
       title: "Loan Management System",
-      subtitle: "It is designed to enable any Financial Institution (FI) in loan accounts for disbursements and repayments. This system vastly improves the functioning of Fis in reducing risk of errors and increasing customer satisfaction.",
+      subtitle:
+        "Enables financial institutions to manage loan accounts, including disbursements and repayments, while supporting effective NPA management. It helps identify, assess, and rehabilitate non-performing assets, reducing errors, improving resource allocation, and enhancing customer satisfaction.",
       image: loanManagementImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      )
     },
     {
-      title: "NPA Management System",
-      subtitle: "For every FI effective Non Performing Assets (NPA) management is crucial for maintaining financial stability, reducing write-offs, and promoting sustainable economic growth. This system enables the Fis to systematically identify, assess, and rehabilitate NPAs, preventing further delinquency and ensuring optimal resource allocation.",
+      title: "Financial Accounting",
+      subtitle:
+        "Supports financial institutions in managing and maintaining their accounting processes, enabling accurate financial records, streamlined operations, and better control over financial information for efficient and informed business management.",
       image: npaManagementImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+          <line x1="7" y1="8" x2="17" y2="8"></line>
+          <line x1="7" y1="12" x2="17" y2="12"></line>
+          <line x1="7" y1="16" x2="13" y2="16"></line>
+        </svg>
+      )
     },
     {
-      title: "Reporting & Analytics",
-      subtitle: "Reporting and analytics are essential components that enable FIs to track and analyse business performance, customer behaviour, and market trends. This system generates various Reports which provide valuable insights for decision-making. With accurate and timely analytics, FIs can optimize operations and make data-driven decisions to drive growth and profitability.",
+      title: "Remitter",
+      subtitle:
+        "Enables secure and seamless fund transfers through RTGS, NEFT, NACH, IMPS, UPI, and other digital payment modes. It manages remitter and beneficiary details, transaction processing, authentication, and real-time status tracking for fast, reliable, and compliant fund transfers.",
       image: reportingImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 3l4 4-4 4"></path>
+          <path d="M3 7h18"></path>
+          <path d="M7 21l-4-4 4-4"></path>
+          <path d="M21 17H3"></path>
+        </svg>
+      )
+    }
+  ];
+
+  const coreBankingMoreModules = [
+    {
+      title: "Reconciliation",
+      description:
+        "Streamline transaction reconciliation across banking channels with accurate matching, exception handling, and improved financial control.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 7h-9" />
+          <path d="M20 12h-9" />
+          <path d="M20 17h-9" />
+          <path d="M4 7l2 2 3-4" />
+          <path d="M4 17l2 2 3-4" />
+        </svg>
+      )
+    },
+    {
+      title: "Video KYC",
+      description:
+        "Enable secure digital customer verification through video-based KYC processes, reducing manual intervention and accelerating onboarding.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="5" width="15" height="14" rx="2" />
+          <path d="M18 10l3-2v8l-3-2" />
+          <circle cx="10.5" cy="10" r="2.5" />
+        </svg>
+      )
+    },
+    {
+      title: "API Integrations & Automation",
+      description:
+        "Connect banking systems with external platforms and services through secure APIs while automating repetitive operational workflows.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M8 9l-3 3 3 3" />
+          <path d="M16 9l3 3-3 3" />
+          <path d="M14 5l-4 14" />
+        </svg>
+      )
+    },
+    {
+      title: "AI-Driven Verification & Engagement",
+      description:
+        "Leverage AI-powered capabilities to strengthen customer verification, improve engagement, and deliver more intelligent banking experiences.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="4" y="4" width="16" height="16" rx="3" />
+          <circle cx="9" cy="10" r="1" />
+          <circle cx="15" cy="10" r="1" />
+          <path d="M8 15c1.2 1 2.4 1.5 4 1.5s2.8-.5 4-1.5" />
+        </svg>
+      )
+    },
+    {
+      title: "Compliance, AML & Reporting",
+      description:
+        "Support regulatory compliance with AML monitoring, structured reporting, and controls designed to strengthen governance and risk management.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+      )
+    },
+    {
+      title: "Conversational AI",
+      description:
+        "Enhance customer interactions through intelligent conversational interfaces that provide faster assistance and personalized support.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.7 9.7 0 0 1-4-.8L3 21l1.8-4.2A8.2 8.2 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" />
+          <path d="M8 11h.01M12 11h.01M16 11h.01" />
+        </svg>
+      )
+    },
+    {
+      title: "Treasury, Payments & Clearing",
+      description:
+        "Manage treasury operations, payment processing, and clearing activities through integrated workflows designed for accuracy and efficiency.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 10h18" />
+          <path d="M5 10v8" />
+          <path d="M9 10v8" />
+          <path d="M15 10v8" />
+          <path d="M19 10v8" />
+          <path d="M3 18h18" />
+          <path d="M12 3l9 5H3l9-5z" />
+        </svg>
+      )
+    },
+    {
+      title: "Mobile / Internet Banking Integrations",
+      description:
+        "Integrate core banking capabilities with mobile and internet banking platforms to deliver connected and convenient digital banking services.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="6" y="2" width="12" height="20" rx="2" />
+          <path d="M9 6h6" />
+          <circle cx="12" cy="18" r="1" />
+        </svg>
+      )
+    },
+    {
+      title: "ATM / POS / UPI / AEPS Integrations",
+      description:
+        "Connect multiple transaction channels including ATM, POS, UPI, and AEPS with the core banking ecosystem for seamless payment experiences.",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="16" rx="2" />
+          <path d="M3 9h18" />
+          <path d="M7 14h4" />
+          <path d="M15 14h2" />
+        </svg>
+      )
     }
   ];
 
@@ -180,34 +342,124 @@ function ProductSingle() {
 
   const ibsModules = [
     {
-      title: "Overview",
-      subtitle: "The Integrated Business Suite (IBS) is a comprehensive ERP software designed to unify all core business functions into a single, cohesive system. It integrates essential requirements such as finance, HR, manufacturing, services, supply chain, and procurement, ensuring a smooth flow of processes and information across the entire organization.",
-      image: ibsOverviewImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    },
-    {
-      title: "Inventory Management",
-      subtitle: "This in-built module of the solution has features for tracking inventory levels, managing inventory movements, generating purchase orders, and optimizing inventory counts. This system enables tracking and controlling inventory levels, managing workflows, and ensuring timely replenishment of stock.",
+      title: "Stores & Inventory Management",
+      subtitle:
+        "Manage inventory levels, stock movements, warehouse operations, and timely replenishment for efficient control of materials and resources.",
       image: ibsInventoryImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path><rect x="7" y="2" width="10" height="4" rx="1"></rect><line x1="12" y1="12" x2="12" y2="12.01"></line></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M21 16V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" />
+          <path d="M3 10h18" />
+          <path d="M7 6V3h10v3" />
+        </svg>
+      )
     },
     {
-      title: "Accounting",
-      subtitle: "The entire IBS suite is designed to integrate and streamline business operations, including financial management and accounting. This module manages financial transactions, recording journal entries, preparing financial statements, and maintaining ledgers within the IBS system.",
+      title: "Financial Accounting",
+      subtitle:
+        "Streamline financial transactions, journal entries, ledgers, and financial reporting with an integrated accounting system.",
       image: ibsAccountingImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 1v22" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg>
+      )
+    },
+    {
+      title: "Sales & Distribution",
+      subtitle:
+        "Manage sales and distribution processes efficiently while maintaining visibility across orders, transactions, and business operations.",
+      image: ibsSalesImg,
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+        </svg>
+      )
+    },
+    {
+      title: "HR & Payroll Management",
+      subtitle:
+        "Streamline employee management and payroll processes with an integrated HRMS designed to simplify workforce administration.",
+      image: ibsOverviewImg,
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+          <path d="M16 3.5a4 4 0 0 1 0 7" />
+        </svg>
+      )
     },
     {
       title: "Production Planning",
-      subtitle: "This module streamlines resource allocation such as materials, labour, and equipment, to meet demand while minimizing costs using in-built logic for forecasting, scheduling, and optimizing production to ensure efficiency and quality.",
+      subtitle:
+        "Optimize materials, labour, and equipment through effective production planning, scheduling, and resource allocation.",
       image: ibsProductionImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10v6M12 4v16M12 4L4 8l8 4 8-4-8-4z"></path></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 21h18" />
+          <path d="M5 21V9l7-5 7 5v12" />
+          <path d="M9 21v-6h6v6" />
+          <path d="M9 10h.01M12 10h.01M15 10h.01" />
+        </svg>
+      )
     },
     {
-      title: "Analytics",
-      subtitle: "The IBS suite has a strong Analytics module to analyze and interpret the business performance and identify trends. It provides real-time insights, predictive modelling, and scenario planning to optimize processes. This module enables a more comprehensive view of business operations, allowing organizations to drive growth and competitive advantage.",
+      title: "MIS & Analytics",
+      subtitle:
+        "Analyze business performance with real-time reporting, insights, and analytics to support informed planning and decision-making.",
       image: ibsAnalyticsImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+      )
     }
   ];
 
@@ -241,6 +493,26 @@ function ProductSingle() {
       subtitle: "V-Pay is integrated with Bharat Bill Payment System (BBPS) which empowers it to make utility bill payments across the country. The entire interface is simple, secured and easy with multilingual options.",
       image: dpUtilityImg,
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+    },
+
+    // NEW MODULES
+    {
+      title: "Digital Wallet",
+      subtitle: "V-Pay provides a secure and convenient digital wallet solution that enables customers to make seamless digital transactions. It supports features such as Scan & Pay and IMPS, offering a simple and efficient way to manage and make digital payments.",
+      image: dpDigitalWallet,
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 7H5a3 3 0 0 1 0-6h14v4"></path><path d="M4 7h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"></path><circle cx="17" cy="14" r="1"></circle></svg>
+    },
+    {
+      title: "PoS Machine",
+      subtitle: "V-Pay enables merchants to accept secure and seamless digital payments through PoS machines. It supports fast transaction processing and provides a convenient payment experience for businesses and their customers.",
+      image: dpPOSMachine,
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><rect x="7" y="7" width="10" height="5"></rect><line x1="7" y1="16" x2="7.01" y2="16"></line><line x1="11" y1="16" x2="11.01" y2="16"></line><line x1="15" y1="16" x2="15.01" y2="16"></line></svg>
+    },
+    {
+      title: "Soundbox",
+      subtitle: "V-Pay Soundbox provides clear audio alerts for successful payments, enabling merchants to receive real-time transaction confirmation. It supports dynamic QR payments and stable connectivity for a fast, secure, and seamless payment experience.",
+      image: dpSoundBox,
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
     }
   ];
 
@@ -251,32 +523,32 @@ function ProductSingle() {
       image: csOverviewImg,
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-    </svg>
+      </svg>
     },
     {
       title: "Real-time Monitoring",
       subtitle: "provides a comprehensive solution for threat hunting, incident response, and security orchestration. It integrates multiple security tools and systems, providing a single pane of glass for visibility and collaboration. Key features include threat intelligence, incident response automation, and reporting and analytics.",
       image: csRealtimeImg,
-      icon:  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-    </svg>
+      </svg>
     },
     {
       title: "Automation",
       subtitle: "It features orchestration and automation capabilities that enable the coordination of actions across multiple security tools. This allows for streamlined incident response and remediation processes by automating repetitive tasks and ensuring consistent responses to security events.",
       image: csAutomationImg,
       icon: (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-  </svg>
-)
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      )
     },
     {
       title: "Analytics",
@@ -288,28 +560,89 @@ function ProductSingle() {
 
   const autopsyModules = [
     {
-      title: "Overview",
-      subtitle: "Autopsy management software is a type of digital tool designed to streamline and organize the processes involved in conducting autopsies. This software typically includes features such as electronic reporting, specimen tracking, and laboratory information system integration.",
+      title: "Postmortem Autopsy Management",
+      subtitle:
+        "Streamline end-to-end post-mortem case management with digital registration, workflow tracking, structured PM notes, injury mapping, and reporting.",
       image: autopsyOverviewImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 3h6l1 2h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4l1-2z" />
+          <circle cx="12" cy="13" r="4" />
+        </svg>
+      )
     },
     {
-      title: "Record Management",
-      subtitle: "By automating routine tasks and providing real-time access to information, this software can also reduce errors and improve communication among healthcare teams.",
+      title: "Ante-Mortem Autopsy Examination",
+      subtitle:
+        "Capture and manage ante-mortem information through structured reporting, digital records, and supporting medical documentation for comprehensive case examination.",
       image: autopsyRecordMgmtImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <path d="M8 13h8" />
+          <path d="M8 17h5" />
+        </svg>
+      )
     },
     {
-      title: "Workflow Management",
-      subtitle: "This module helps in managing and tracking the various steps and tasks involved in the autopsy process, from case assignment to report generation, ensuring efficient and systematic workflow.",
+      title: "Blockchain-Enabled Autopsy Data Security",
+      subtitle:
+        "Protect sensitive medico-legal records with tamper-proof digital workflows, chain-of-custody controls, digital signatures, encryption, and detailed audit trails.",
       image: autopsyWorkflowMgmtImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+          <path d="M10 6.5h4" />
+          <path d="M6.5 10v4" />
+          <path d="M17.5 10v4" />
+          <path d="M10 17.5h4" />
+        </svg>
+      )
     },
     {
-      title: "Data Analysis and Reports",
-      subtitle: "The system includes modules for data analysis and research, enabling the aggregation and analysis of autopsy findings for research and educational purposes.",
+      title: "AI-Based Autopsy Analysis",
+      subtitle:
+        "Leverage AI and CNN-based analysis to examine forensic images, radiology films, and autopsy findings for faster and more informed forensic assessment.",
       image: autopsyDataAnalysisImg,
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      icon: (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <circle cx="8" cy="8" r="1.5" />
+          <path d="M3 15l5-5 4 4 3-3 6 6" />
+        </svg>
+      )
     }
   ];
 
@@ -347,6 +680,26 @@ function ProductSingle() {
     mainSubheading = "Integrated Business Suite (IBS) is a comprehensive ERP software designed to unify all core business functions.";
   }
 
+  const MODULES_PER_PAGE = 5;
+
+  const shouldUseModuleCarousel = currentModules.length > MODULES_PER_PAGE;
+
+  const modulePageCount = Math.ceil(
+    currentModules.length / MODULES_PER_PAGE
+  );
+
+  const currentModulePage = shouldUseModuleCarousel
+    ? Math.floor(activeModule / MODULES_PER_PAGE)
+    : 0;
+
+  const moduleStartIndex = currentModulePage * MODULES_PER_PAGE;
+
+  const visibleModules = shouldUseModuleCarousel
+    ? currentModules.slice(
+      moduleStartIndex,
+      moduleStartIndex + MODULES_PER_PAGE
+    )
+    : currentModules;
 
   // =========================================
   // MOBILE AUTOPLAY
@@ -380,6 +733,12 @@ function ProductSingle() {
     <>
       <style>
         {`
+
+        
+.prod-hero-text{
+        max-width: 900px !important;
+        margin: auto;
+        }
           .metrics-section {
             // padding-bottom: 0px !important;
           }
@@ -421,7 +780,7 @@ function ProductSingle() {
             {product.logo && (
               <div className="product-logo effectFade fadeUp mb-4 d-flex justify-content-center">
                 <img
-                className='productLogo'
+                  className='productLogo'
                   src={product.logo}
                   alt={`${product.title} Logo`}
                   style={{ width: 'auto', maxHeight: '80px', objectFit: 'contain', marginBottom: '8px' }}
@@ -769,6 +1128,41 @@ function ProductSingle() {
               margin-bottom: 20px;
               z-index: 1;
             }
+              .timeline-pagination {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.timeline-pagination-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d8d8d8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline-pagination-dot:hover {
+  background: #ff2b2b;
+  transform: scale(1.2);
+}
+
+.timeline-pagination-dot.active {
+  width: 10px;
+  height: 24px;
+  border-radius: 6px;
+  background: #ff2b2b;
+  box-shadow: 0 0 10px rgba(255, 43, 43, 0.35);
+}
             .timeline-card {
               background: #ffffff;
               border-radius: 20px;
@@ -776,7 +1170,7 @@ function ProductSingle() {
               box-shadow: 0 4px 20px rgba(0,0,0,0.02);
               border: 1px solid rgba(0,0,0,0.04);
               display: flex;
-              align-items: flex-start;
+              align-items: center;
               gap: 25px;
               transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
               position: relative;
@@ -840,6 +1234,7 @@ function ProductSingle() {
               color: #1a1a1a;
               margin-bottom: 0;
               transition: color 0.3s ease;
+              line-height:1.5;  
             }
             .timeline-card.active .timeline-title {
               color: #ff2b2b;
@@ -962,19 +1357,22 @@ function ProductSingle() {
                 <div className="timeline-modules-container effectFade fadeUp">
                   <div className="timeline-line"></div>
 
-                  {currentModules.map((mod, idx) => (
-                    <div key={idx} className={`timeline-card-wrap ${activeModule === idx ? 'active' : ''}`}>
-                      <div className="timeline-dot"></div>
-                      <div
-                        className={`timeline-card ${activeModule === idx ? 'active' : ''}`}
-                        onClick={() => setActiveModule(idx)}
-                      >
-                        <div className="timeline-icon-circle">
-                          {mod.icon}
-                        </div>
-                        <div className="timeline-content">
-                          <h4 className="timeline-title">{mod.title}</h4>
-                          {/* <div
+                  {visibleModules.map((mod, localIdx) => {
+                    const idx = moduleStartIndex + localIdx;
+
+                    return (
+                      <div key={idx} className={`timeline-card-wrap ${activeModule === idx ? 'active' : ''}`}>
+                        <div className="timeline-dot"></div>
+                        <div
+                          className={`timeline-card ${activeModule === idx ? 'active' : ''}`}
+                          onClick={() => setActiveModule(idx)}
+                        >
+                          <div className="timeline-icon-circle">
+                            {mod.icon}
+                          </div>
+                          <div className="timeline-content">
+                            <h4 className="timeline-title">{mod.title}</h4>
+                            {/* <div
                             className="timeline-subtitle-wrap"
                             style={{
                               maxHeight: activeModule === idx ? '250px' : '0px',
@@ -984,18 +1382,98 @@ function ProductSingle() {
                           >
                             <p className="timeline-subtitle">{mod.subtitle}</p>
                           </div> */}
-                        </div>
-                        <div className="timeline-arrow">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                          </div>
+                          <div className="timeline-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                          </div>
                         </div>
                       </div>
+                    )
+                  })}
+
+                  {shouldUseModuleCarousel && (
+                    <div className="timeline-pagination">
+                      {Array.from({ length: modulePageCount }).map((_, pageIndex) => (
+                        <button
+                          key={pageIndex}
+                          type="button"
+                          className={`timeline-pagination-dot ${currentModulePage === pageIndex ? 'active' : ''
+                            }`}
+                          onClick={() => {
+                            setActiveModule(pageIndex * MODULES_PER_PAGE);
+                          }}
+                          aria-label={`Go to module page ${pageIndex + 1}`}
+                        />
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
+      )}
+
+      {slug === 'core-banking-solution' && (
+        <section className="core-more-modules section-spacing-lg">
+          <div className="container">
+
+            <div className="core-more-modules-header text-center effectFade fadeUp">
+              <span className="core-more-modules-badge">
+                Extended Capabilities
+              </span>
+
+              <h2>
+                More <span>Modules</span>
+              </h2>
+
+              <p>
+                Extend your core banking ecosystem with powerful integrations,
+                intelligent automation, compliance capabilities, and digital
+                banking services.
+              </p>
+            </div>
+
+            <div className="core-more-modules-grid">
+              {coreBankingMoreModules.map((module, index) => (
+                <div
+                  key={index}
+                  className="core-more-module-card effectFade fadeUp"
+                >
+                  <div className="core-more-module-icon">
+                    {module.icon}
+                  </div>
+
+                  <div className="core-more-module-content">
+                    <h3>{module.title}</h3>
+                    <p>{module.description}</p>
+                  </div>
+
+                  <div className="core-more-module-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+
+                  {/* <div className="core-more-module-arrow">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="M13 6l6 6-6 6" />
+                    </svg>
+                  </div> */}
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
       )}
 
       {/* Core Platform Features & Benefits Section */}

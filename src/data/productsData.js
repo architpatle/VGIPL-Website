@@ -9,7 +9,10 @@ import conversationalAiImg from '../assets/Products-img/conversational-ai-compan
 import transactCoreImg from '../assets/Products-img/TransactCore.png';
 import auditFluxImg from '../assets/Products-img/AuditFlux.png';
 import finFlowImg from '../assets/Products-img/FinFlow.png';
-import heroBg from '../assets/home/hero-bg-img.jpg'
+import eCRMImg from '../assets/Products-img/eCRM.png';
+import eLOSImg from '../assets/Products-img/eLOS.png';
+import secureViewAIImg from '../assets/Products-img/secureViewAI.png';
+import digitalIdentityVerificationPlatformImg from '../assets/Products-img/digitalIdentityVerificationPlatform.png';
 
 export const PRODUCTS_DATA = [
   {
@@ -45,7 +48,7 @@ export const PRODUCTS_DATA = [
   },
   {
     slug: 'imis-solution',
-    title: 'Business Management Platform',
+    title: 'Information Management Platform',
     subtitle: 'Intelligent Management Information System',
     shortDescription: 'Transform raw data into actionable insights with our advanced Management Information System tailored for informed decision-making.',
     icon: 'chart-line-solid',
@@ -299,8 +302,8 @@ export const PRODUCTS_DATA = [
   {
     slug: 'fin-flow',
     title: 'Enterprise Workflow Platform',
-    subtitle: 'Agile Financial Workflow Automation',
-    shortDescription: 'Optimize your financial operations by automating approvals, invoice processing, and budget tracking with Fin Flow.',
+    subtitle: 'Unified Digital Ecosystem for Banks & Businesses',
+    shortDescription: 'Connect finance, HR, procurement, inventory, budgeting, and operational workflows on a unified platform designed to streamline business operations and deliver real-time visibility.',
     icon: 'bolt-solid',
     logo: finFlowImg,
     heroImage: finFlowImg,
@@ -323,5 +326,41 @@ export const PRODUCTS_DATA = [
       { value: '80%', label: 'Approval Speed Increase' },
       { value: '$10B+', label: 'Managed Budget' }
     ]
-  }
+  },
+   {
+    slug: 'e-crm',
+    title: 'Customer Relationship Platform',
+    subtitle: 'Smarter Relationships. Stronger Conversions',
+    shortDescription: 'Build stronger customer relationships, manage leads and opportunities, and streamline customer interactions on a centralized platform designed for financial institutions and enterprises.',
+    icon: 'user-solid',
+    logo: eCRMImg,
+    heroImage: eCRMImg,
+  },
+{
+    slug: 'e-los',
+    title: 'Smart Digital Lending',
+    subtitle: 'Intelligent Loan Origination & Recommendation',
+    shortDescription: 'Transform the lending journey with end-to-end digital loan processing, AI-driven applicant scoring, and smart loan recommendations based on customer profiles and risk factors.',
+    icon: 'coins-solid',
+    logo: eLOSImg,
+    heroImage: eLOSImg,
+},
+{
+    slug: 'secure-view-ai',
+    title: 'Intelligent Video Surveillance',
+    subtitle: 'AI-Powered Video Analytics & Actionable Intelligence',
+    shortDescription: 'Transform real-time camera streams into actionable intelligence with AI-powered video analytics, automated threat detection, real-time alerts, and intelligent surveillance.',
+    icon: 'eye',
+    logo: secureViewAIImg,
+    heroImage: secureViewAIImg,
+},
+{
+    slug: 'digital-identity-verification-platform',
+    title: 'Digital Identity Verification',
+    subtitle: 'Secure, Seamless & Compliant Digital Onboarding',
+    shortDescription: 'Enable faster, safer, and paperless customer onboarding with end-to-end digital KYC, real-time identity verification, secure API integrations, and compliance-ready verification services.',
+    icon: 'user-check-solid',
+    logo: digitalIdentityVerificationPlatformImg,
+    heroImage: digitalIdentityVerificationPlatformImg,
+},
 ];

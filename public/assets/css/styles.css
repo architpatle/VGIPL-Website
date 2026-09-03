@@ -1316,14 +1316,27 @@ h6,
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-2 {
+/* .text-gradient-2 {
   background: linear-gradient(360deg, rgba(41, 44, 46, 0) 0%, #292C2E 100%);
+  background: linear-gradient(360deg, rgba(41, 44, 46, 0.4) 0%,  #292C2E 100%, #292C2E 100%, #292C2E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0px transparent;
+  -webkit-text-fill-color: transparent;
+} */
+
+.text-gradient-2 {
+  background: linear-gradient(
+    360deg,
+    rgba(41, 44, 46, .2) 0%,
+    #292c2ee3 55%,
+    #292C2E 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke: 0px transparent;
   -webkit-text-fill-color: transparent;
 }
-
 .text-gradient-3 {
   background: linear-gradient(95.5deg, #61666A 1.91%, #292C2E 43.92%);
   -webkit-background-clip: text;

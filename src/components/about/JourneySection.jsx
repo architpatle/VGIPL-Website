@@ -311,8 +311,8 @@ function JourneySection() {
                   <i className="icon icon-user-friends-solid"></i>
                 </div>
                 <div className="stat-info">
-                  <span className="stat-number">500+</span>
-                  <span className="stat-label">Happy Clients</span>
+                  <span className="stat-number">200+</span>
+                  <span className="stat-label">Satisfied Clients</span>
                 </div>
               </div>
             </SwiperSlide>
@@ -416,14 +416,14 @@ function JourneySection() {
         .timeline-card {
           background: #ffffff;
           border-radius: 24px;
-          padding: 32px 24px 75px 24px;
+          padding: 24px 12px ;
           box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
           border: 1px solid #f1f5f9;
           text-align: center;
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          height: 330px;
+          height: 268px;
           display: flex;
           flex-direction: column;
         }

@@ -30,7 +30,7 @@ function MissionSection() {
               </div>
 
               <div
-                className="heading-title text-gradient-1 effectFade fadeRotateX"
+                className="heading-title text-gradient-2 effectFade fadeRotateX"
                 style={{ lineHeight: '1.2' }}
               >
                 Human-Centered AI,{' '}
