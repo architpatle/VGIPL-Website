@@ -18,6 +18,9 @@ import eCRMImg from '../../assets/home/feature-work/eCRM.png';
 import eLOSImg from '../../assets/home/feature-work/eLOS.png';
 import secureViewAIImg from '../../assets/home/feature-work/secureViewAI.png';
 import digitalIdentityVerificationPlatformImg from '../../assets/home/feature-work/digitalIdentityVerificationPlatform.png';
+import infrastructureAndIntelligenceImg from '../../assets/home/feature-work/infrastructureAndIntelligence.png';
+import vConnectImg from '../../assets/home/feature-work/vConnect.png';
+
 
 import './WorksSection.css'
 
@@ -62,7 +65,9 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
     'e-crm',
     'e-los',
     'secure-view-ai',
-    'digital-identity-verification-platform'
+    'digital-identity-verification-platform',
+    'infrastructure-and-intelligence',
+    'v-connect'
     // 'your-new-product-slug', // <-- new cards get added to the right
   ];
 
@@ -73,7 +78,7 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
   // Background images cycle through this list (by index), so adding new
   // slugs above doesn't require a 1:1 new image mapping. Add more imports
   // to this array if you want more unique backgrounds.
-  const bgImagesList = [coreBankingSolution, erpSolution, featuredWork3, imisSolution, digitalPayment, agricultureTrading, featuredWork4, conversationalAICompanion, TransactionProcessingPlatform, AuditManagementPlatform, EnterpriseWorkflowPlatform, eCRMImg, eLOSImg, secureViewAIImg, digitalIdentityVerificationPlatformImg];
+  const bgImagesList = [coreBankingSolution, erpSolution, featuredWork3, imisSolution, digitalPayment, agricultureTrading, featuredWork4, conversationalAICompanion, TransactionProcessingPlatform, AuditManagementPlatform, EnterpriseWorkflowPlatform, eCRMImg, eLOSImg, secureViewAIImg, digitalIdentityVerificationPlatformImg, infrastructureAndIntelligenceImg,vConnectImg];
 
   // ---- Carousel derived values ----
   // Group products into pages of `itemsPerPage` — each page renders as its

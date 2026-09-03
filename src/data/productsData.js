@@ -13,6 +13,10 @@ import eCRMImg from '../assets/Products-img/eCRM.png';
 import eLOSImg from '../assets/Products-img/eLOS.png';
 import secureViewAIImg from '../assets/Products-img/secureViewAI.png';
 import digitalIdentityVerificationPlatformImg from '../assets/Products-img/digitalIdentityVerificationPlatform.png';
+import infrastructureAndIntelligenceImg from '../assets/Products-img/infrastructureAndIntelligence.png';
+import vConnectImg from '../assets/Products-img/vConnect.png';
+
+
 
 export const PRODUCTS_DATA = [
   {
@@ -362,5 +366,23 @@ export const PRODUCTS_DATA = [
     icon: 'user-check-solid',
     logo: digitalIdentityVerificationPlatformImg,
     heroImage: digitalIdentityVerificationPlatformImg,
+},
+{
+    slug: 'infrastructure-and-intelligence',
+    title: 'Infrastructure Intelligence',
+    subtitle: 'Smarter Roads. Safer Cities',
+    shortDescription: 'AI-powered infrastructure monitoring for real-time monitoring, predictive maintenance, automated audits, and intelligent incident management.',
+    icon: 'tachometer-alt-solid',
+    logo: infrastructureAndIntelligenceImg,
+    heroImage: infrastructureAndIntelligenceImg,
+},
+{
+    slug: 'v-connect',
+    title: 'Virtual Private Network Solution',
+    subtitle: 'Smart, Secure & Scalable Connectivity',
+    shortDescription: 'Smart hybrid network connectivity with reliable performance, intelligent failover, secure communication, and scalable multi-branch connectivity.',
+    icon: 'tty-solid',
+    logo: vConnectImg,
+    heroImage: vConnectImg,
 },
 ];

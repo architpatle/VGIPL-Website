@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ECRM.css'
+import './VConnect.css'
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
-import eCRMImg from '../assets/Products-img/eCRM.png';
+import vConnectImg from '../assets/Products-img/vConnect.png';
 import CTABannerSection from '../components/services/CTABannerSection';
 
-function ECRM() {
+function VConnect() {
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const product = PRODUCTS_DATA.find((p) => p.slug === 'e-crm') || {
-        title: 'Fin Flow',
-        subtitle: 'Unified Digital Ecosystem for Banks & Businesses',
-        shortDescription: 'Optimize your financial operations by automating approvals, invoice processing, and budget tracking with Fin Flow.'
+    const product = PRODUCTS_DATA.find((p) => p.slug === 'v-connect') || {
+        title: 'Virtual Private Network Solution',
+        subtitle: 'Smart, Secure & Scalable Connectivity',
+        shortDescription: 'Smart hybrid network connectivity with reliable performance, intelligent failover, secure communication, and scalable multi-branch connectivity.'
     };
 
     const handleInputChange = (e) => {
@@ -60,7 +60,7 @@ function ECRM() {
                     <div className="content-wrap text-center">
                         <div className="product-logo effectFade fadeUp mb-4 d-flex justify-content-center">
                             <img
-                                src={eCRMImg}
+                                src={vConnectImg}
                                 alt={`${product.title} Logo`}
                                 style={{ maxWidth: 'auto', maxHeight: '80px', objectFit: 'contain', marginBottom: '8px' }}
                             />
@@ -228,7 +228,8 @@ function ECRM() {
                                                 justifyContent: 'center',
                                                 border: '1.5px solid rgba(255, 255, 255, 0.2)',
                                             }}>
-                                                {/* White customer/CRM vector icon */}
+
+                                                {/* White network connectivity vector icon */}
                                                 <div style={{
                                                     color: '#ffffff',
                                                     display: 'flex',
@@ -246,10 +247,10 @@ function ECRM() {
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                     >
-                                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                                        <circle cx="9" cy="7" r="4" />
-                                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                        <circle cx="12" cy="5" r="2.5" />
+                                                        <circle cx="5" cy="18" r="2.5" />
+                                                        <circle cx="19" cy="18" r="2.5" />
+                                                        <path d="M10.5 7l-4 8.5M13.5 7l4 8.5M7.5 18h9" />
                                                     </svg>
                                                 </div>
                                             </div>
@@ -261,7 +262,7 @@ function ECRM() {
                                 <div className="col-lg-7">
                                     <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                                         <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
-                                            <span className="text-highlight-pill">eCRM</span> is a centralized digital platform designed to manage customer data, leads, opportunities, documents, and interactions in one place. It enables financial institutions and enterprises to build stronger customer relationships while streamlining their customer management processes.
+                                            <span className="text-highlight-pill">VConnect</span> is a dedicated Virtual Private Network solution that uses broadband and 2G/3G/4G connectivity to deliver optimized and reliable network performance for modern enterprises.
                                         </p>
 
                                         {/* Red divider with a dot */}
@@ -272,7 +273,7 @@ function ECRM() {
                                         </div>
 
                                         <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
-                                            By bringing customer information and interactions together on a unified platform, eCRM provides complete visibility into customer relationships, supports faster decision-making, and helps organizations improve conversions and operational efficiency.
+                                            It provides secure, scalable, and cost-effective connectivity while maintaining high uptime and operational efficiency across data centers, branch offices, and multiple outlets.
                                         </p>
                                     </div>
                                 </div>
@@ -411,7 +412,7 @@ function ECRM() {
                             Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Complete Customer Relationship Management
+                            Reliable, Secure & Intelligent Network Connectivity
                         </p>
 
                         {/* Glowing divider line below heading */}
@@ -426,76 +427,73 @@ function ECRM() {
                         {[
                             {
                                 num: '01',
-                                title: 'Centralized Customer Data',
-                                desc: 'Manage customer information and profiles through a unified platform for complete  visibility.',
+                                title: 'Hybrid Network Connectivity',
+                                desc: 'Support Broadband, MPLS, and 2G/3G/4G connectivity with flexible infrastructure independent of service providers.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path d="M3 21v-2a6 6 0 0 1 12 0v2" />
-                                        <path d="M16 3.5a4 4 0 0 1 0 7" />
-                                        <path d="M21 21v-2a6 6 0 0 0-3-5.2" />
+                                        <circle cx="6" cy="6" r="2" />
+                                        <circle cx="18" cy="6" r="2" />
+                                        <circle cx="12" cy="18" r="2" />
+                                        <path d="M8 6h8M7.5 7.5l3 8M16.5 7.5l-3 8" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '02',
-                                title: 'Lead & Opportunity Management',
-                                desc: 'Capture, track, and manage leads and opportunities throughout the customer lifecycle.',
+                                title: 'Auto Failover & Load Balancing',
+                                desc: 'Automatically switch between primary and secondary links to maintain continuous connectivity and maximize network uptime.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M3 17l6-6 4 4 8-8" />
-                                        <path d="M17 7h4v4" />
+                                        <path d="M4 8h12" />
+                                        <path d="M13 5l3 3-3 3" />
+                                        <path d="M20 16H8" />
+                                        <path d="M11 13l-3 3 3 3" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '03',
-                                title: 'Customer Interaction Management',
-                                desc: 'Maintain a complete record of customer interactions and engagement across channels.',
+                                title: 'High Availability & Protocol Compatibility',
+                                desc: 'Use intelligent routing to eliminate single points of failure while supporting both IPv4 and IPv6 protocols.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.98L3 21l1.98-4A8.5 8.5 0 1 1 21 11.5z" />
-                                        <path d="M8 11h8" />
-                                        <path d="M8 8h5" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12l2.5 2.5L16 9" />
+                                        <path d="M12 3v3M12 18v3" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '04',
-                                title: 'Document Management',
-                                desc: 'Centralize customer-related documents for easy access, tracking, and efficient processing.',
+                                title: 'Secure Network Infrastructure',
+                                desc: 'Protect network communication with data confidentiality, origin authentication, replay protection, firewall capabilities, and role-based access.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                        <polyline points="14 2 14 8 20 8" />
-                                        <line x1="8" y1="13" x2="16" y2="13" />
-                                        <line x1="8" y1="17" x2="14" y2="17" />
+                                        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+                                        <path d="M9 12l2 2 4-4" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '05',
-                                title: 'Workflow Automation',
-                                desc: 'Streamline customer management processes with automated workflows.',
+                                title: 'Managed Network Services',
+                                desc: 'Simplify network operations with monitoring, performance reporting, security management, configuration management, and proactive troubleshooting.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="3" width="6" height="6" rx="1" />
-                                        <rect x="15" y="15" width="6" height="6" rx="1" />
-                                        <path d="M9 6h3a3 3 0 0 1 3 3v6" />
-                                        <path d="M12 18H9a3 3 0 0 1-3-3v-3" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2 2-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.8v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1-2-2 .1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6v-2.8h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2-2 .1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5V5h2.8v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 2 2-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2v2.8h-.2a1.7 1.7 0 0 0-1.5 1z" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '06',
-                                title: 'Analytics & Insights',
-                                desc: 'Leverage customer data and relationship insights to support better decisions.',
+                                title: 'Cost-Effective Connectivity',
+                                desc: 'Reduce CAPEX and OPEX by using broadband and wireless connectivity for secure data center and branch office communication.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <line x1="4" y1="19" x2="4" y2="10" />
-                                        <line x1="10" y1="19" x2="10" y2="5" />
-                                        <line x1="16" y1="19" x2="16" y2="12" />
-                                        <line x1="22" y1="19" x2="22" y2="3" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M9 9h6M9 12h5M9 15h6" />
+                                        <path d="M12 6v12" />
                                     </svg>
                                 )
                             }
@@ -704,7 +702,7 @@ function ECRM() {
                             Technology & <span style={{ color: '#ff2b2b' }}>Architecture</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Secure, Scalable & Connected CRM Architecture
+                            Reliable Connectivity. Higher Uptime. Lower Costs.
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
@@ -717,57 +715,57 @@ function ECRM() {
                     <div className="designed-grid">
                         {[
                             {
-                                title: 'API-Ready Integrations',
-                                desc: 'Connect eCRM with existing business applications and external systems through flexible API integrations.',
+                                title: 'Hybrid Network Infrastructure',
+                                desc: 'Support Broadband, MPLS, and 2G/3G/4G connectivity through flexible infrastructure independent of service providers.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M8 9l-4 3 4 3" />
-                                        <path d="M16 9l4 3-4 3" />
-                                        <path d="M14 5l-4 14" />
+                                        <circle cx="6" cy="6" r="2" />
+                                        <circle cx="18" cy="6" r="2" />
+                                        <circle cx="12" cy="18" r="2" />
+                                        <path d="M8 6h8M7.5 7.5l3 8M16.5 7.5l-3 8" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Secure & Role-Based Access',
-                                desc: 'Protect customer information with secure access controls and role-based permissions.',
+                                title: 'Intelligent Failover & Load Balancing',
+                                desc: 'Automatically switch between primary and secondary links while balancing network traffic to maintain high availability.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="11" width="18" height="10" rx="2" />
-                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                        <circle cx="12" cy="16" r="1" />
+                                        <path d="M4 8h12" />
+                                        <path d="M13 5l3 3-3 3" />
+                                        <path d="M20 16H8" />
+                                        <path d="M11 13l-3 3 3 3" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Centralized Customer Data Layer',
-                                desc: 'Maintain customer information and interactions through a unified and structured data environment.',
+                                title: 'IPv4 & IPv6 Compatibility',
+                                desc: 'Support both IPv4 and IPv6 protocols with intelligent routing designed to eliminate single points of failure.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <ellipse cx="12" cy="5" rx="8" ry="3" />
-                                        <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                                        <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12l2.5 2.5L16 9" />
+                                        <path d="M7 7h3M14 7h3M7 17h3M14 17h3" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Web & Mobile Accessibility',
-                                desc: 'Access customer information and CRM functions across web and mobile environments for greater flexibility.',
+                                title: 'Secure Network Architecture',
+                                desc: 'Protect network communication with confidentiality, authentication, replay protection, firewall capabilities, and role-based access.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="4" width="18" height="13" rx="2" />
-                                        <line x1="8" y1="21" x2="16" y2="21" />
-                                        <line x1="12" y1="17" x2="12" y2="21" />
-                                        <rect x="16" y="7" width="4" height="7" rx="1" />
+                                        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+                                        <path d="M9 12l2 2 4-4" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Scalable Architecture',
-                                desc: 'Support growing customer data, users, and business operations with a scalable platform architecture.',
+                                title: 'Managed Network Services',
+                                desc: 'Support network monitoring, performance reporting, security and configuration management, proactive troubleshooting, and SLA management.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="7 17 17 7" />
-                                        <polyline points="7 7 17 7 17 17" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" />
                                     </svg>
                                 )
                             }
@@ -863,7 +861,7 @@ function ECRM() {
                             Operational <span style={{ color: '#ff2b2b' }}>Benefits</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Better Customer Engagement & Operational Efficiency
+                            Seamless Connectivity. Maximum Uptime. Smarter Networks.
                         </p>
 
                         {/* Glowing divider line below heading */}
@@ -876,81 +874,81 @@ function ECRM() {
                     <div className="benefits-grid">
                         {[
                             {
-                                title: 'Complete Customer Visibility',
+                                title: 'High Network Uptime',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12l2.5 2.5L16 9" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Reduced CAPEX & OPEX',
+                                icon: (
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 10h8M8 14h8M12 7v10" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Uninterrupted Connectivity',
+                                icon: (
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M4 8h12" />
+                                        <path d="M13 5l3 3-3 3" />
+                                        <path d="M20 16H8" />
+                                        <path d="M11 13l-3 3 3 3" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Secure Network Communication',
+                                icon: (
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+                                        <path d="M9 12l2 2 4-4" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Scalable Multi-Branch Connectivity',
+                                icon: (
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="5" r="2" />
+                                        <circle cx="5" cy="18" r="2" />
+                                        <circle cx="19" cy="18" r="2" />
+                                        <path d="M12 7v4M10 12l-4 4M14 12l4 4" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Flexible Connectivity Options',
+                                icon: (
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                         <circle cx="12" cy="12" r="3" />
+                                        <path d="M5 12a7 7 0 0 1 14 0" />
+                                        <path d="M2 12a10 10 0 0 1 20 0" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Improved Customer Engagement',
+                                title: 'Proactive Network Management',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.98L3 21l1.98-4A8.5 8.5 0 1 1 21 11.5z" />
-                                        <path d="M8 11h8" />
-                                        <path d="M8 8h5" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Faster Lead Conversion',
+                                title: 'Improved Operational Efficiency',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M3 17l6-6 4 4 8-8" />
-                                        <polyline points="17 7 21 7 21 11" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                title: 'Streamlined Operations',
-                                icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                                        <rect x="14" y="14" width="7" height="7" rx="1" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                title: 'Better Decision-Making',
-                                icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <line x1="4" y1="19" x2="4" y2="12" />
-                                        <line x1="10" y1="19" x2="10" y2="7" />
-                                        <line x1="16" y1="19" x2="16" y2="10" />
-                                        <line x1="22" y1="19" x2="22" y2="4" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                title: 'Stronger Customer Relationships',
-                                icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.78-8.84a5.5 5.5 0 0 0 .06-7.78z" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                title: 'Efficient Customer Data Management',
-                                icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <ellipse cx="12" cy="5" rx="8" ry="3" />
-                                        <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                                        <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                title: 'Personalized Customer Service',
-                                icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="8" r="4" />
-                                        <path d="M4 21a8 8 0 0 1 16 0" />
-                                        <path d="M19 8v4" />
-                                        <path d="M21 10h-4" />
+                                        <path d="M4 19V5" />
+                                        <path d="M4 19h16" />
+                                        <path d="M7 15l4-4 3 2 6-7" />
+                                        <path d="M16 6h4v4" />
                                     </svg>
                                 )
                             }
@@ -1187,7 +1185,7 @@ function ECRM() {
             </div> */}
 
                         <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
-                            Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>eCRM</span>?
+                            Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VConnect</span>?
                         </h2>
 
                         {/* Glowing divider line below heading */}
@@ -1202,63 +1200,67 @@ function ECRM() {
                         {[
                             {
                                 num: '01',
-                                title: 'Unified Customer Management',
-                                desc: 'Bring customer data, interactions, leads, opportunities, and documents together on one platform.',
+                                title: 'Reliable Hybrid Network Architecture',
+                                desc: 'Combine Broadband, MPLS, and 2G/3G/4G connectivity for flexible and reliable network infrastructure.',
                                 icon: (
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path d="M3 21v-2a6 6 0 0 1 12 0v2" />
-                                        <path d="M16 3.5a4 4 0 0 1 0 7" />
-                                        <path d="M21 21v-2a6 6 0 0 0-3-5.2" />
+                                        <circle cx="6" cy="6" r="2" />
+                                        <circle cx="18" cy="6" r="2" />
+                                        <circle cx="12" cy="18" r="2" />
+                                        <path d="M8 6h8M7.5 7.5l3 8M16.5 7.5l-3 8" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '02',
-                                title: 'Complete Customer Visibility',
-                                desc: 'Gain a comprehensive view of customer relationships to support timely and informed decisions.',
+                                title: 'Intelligent Failover & High Availability',
+                                desc: 'Maintain continuous connectivity with automatic failover, load balancing, and intelligent routing.',
                                 icon: (
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
-                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M4 8h12" />
+                                        <path d="M13 5l3 3-3 3" />
+                                        <path d="M20 16H8" />
+                                        <path d="M11 13l-3 3 3 3" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '03',
-                                title: 'Improved Operational Efficiency',
-                                desc: 'Streamline customer management processes and reduce manual effort through centralized workflows.',
+                                title: 'Scalable Multi-Branch Connectivity',
+                                desc: 'Extend secure and reliable connectivity across multiple branches, outlets, and business locations.',
                                 icon: (
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                                        <circle cx="12" cy="5" r="2" />
+                                        <circle cx="5" cy="18" r="2" />
+                                        <circle cx="19" cy="18" r="2" />
+                                        <path d="M12 7v4M10 12l-4 4M14 12l4 4" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '04',
-                                title: 'Scalable & Secure Platform',
-                                desc: 'Support evolving business needs with a secure, scalable architecture and controlled access.',
+                                title: 'Secure Network Communication',
+                                desc: 'Protect business communication with data confidentiality, authentication, replay protection, and controlled internet access.',
                                 icon: (
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                        <path d="M12 8v5" />
-                                        <path d="M9.5 10.5L12 13l2.5-2.5" />
+                                        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+                                        <path d="M9 12l2 2 4-4" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '05',
-                                title: 'Stronger Customer Engagement',
-                                desc: 'Enable more effective and personalized customer interactions throughout the customer lifecycle.',
+                                title: 'Reduced Infrastructure & Operational Costs',
+                                desc: 'Optimize CAPEX and OPEX by leveraging broadband and wireless connectivity for secure network communication.',
                                 icon: (
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.78-8.84a5.5 5.5 0 0 0 .06-7.78z" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M9 9h6M9 12h5M9 15h6" />
+                                        <path d="M12 6v12" />
                                     </svg>
                                 )
                             }
+
                         ].map((card, idx) => (
                             <div key={idx} className="effectFade fadeUp h-100" >
                                 <div className="why-choose-card">
@@ -1511,7 +1513,7 @@ function ECRM() {
                             </div>
 
                             <p className="outcome-text">
-                                eCRM brings customer data, interactions, leads, opportunities, and processes together on a unified platform—enabling organizations to improve customer engagement, streamline operations, make informed decisions, and build stronger, long-term customer relationships.
+                                VConnect delivers secure, reliable, and cost-effective network connectivity across data centers, branch offices, and multiple outlets. With hybrid connectivity, intelligent failover, load balancing, and managed network services, it helps businesses maintain high availability and improve operational efficiency.
                             </p>
 
                             {/* 4 Outcome Keyword Highlights */}
@@ -1544,11 +1546,11 @@ function ECRM() {
             <div id="contact-section">
                 <CTABannerSection
                     title={`Transform Your Business Operations with ${product.title}`}
-                    subtitle={`Connect your customer data, interactions, and processes on one intelligent platform built for stronger engagement and greater efficiency.`}
+                    subtitle={`Enable secure, reliable, and cost-effective network connectivity with intelligent failover, flexible connectivity options, and managed network services.w`}
                 />
             </div>
         </>
     );
 }
 
-export default ECRM;
+export default VConnect;

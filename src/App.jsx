@@ -42,6 +42,8 @@ import ECRM from './pages/ECRM';
 import ELOS from './pages/ELOS';
 import SecureViewAI from './pages/SecureViewAI';
 import DigitalIdentityVerificationPlatform from './pages/DigitalIdentityVerificationPlatform';
+import InfrastructureAndIntelligence from './pages/InfrastructureAndIntelligence';
+import VConnect from './pages/VConnect';
 
 
 function App() {
@@ -85,6 +87,8 @@ function App() {
             <Route path="/products/e-los" element={<ELOS />} />
             <Route path="/products/secure-view-ai" element={<SecureViewAI />} />
             <Route path="/products/digital-identity-verification-platform" element={<DigitalIdentityVerificationPlatform />} />
+            <Route path="/products/infrastructure-and-intelligence" element={<InfrastructureAndIntelligence />} />
+            <Route path="/products/v-connect" element={<VConnect />} />
             <Route path="/products/:slug" element={<ProductSingle />} />
             <Route path="/products" element={<Works />} />
             <Route path="/work-single" element={<WorkSingle />} />
@@ -97,10 +101,7 @@ function App() {
             <Route path="/careers/why-join" element={<WhyJoin />} />
             <Route path="/careers/meet-our-people" element={<MeetOurPeople />} />
             <Route path="/careers/career-path" element={<CareerPath />} />
-             <Route
-              path="/careers/:jobId"
-              element={<CareerDetails />}
-            />
+            <Route path="/careers/:jobId" element={<CareerDetails />} />
             <Route path="/careers/:slug" element={<JobSingle />} />
             <Route path="/ipo" element={<IPO />} />
             <Route path="/investors/board-and-management" element={<BoardManagement />} />
@@ -116,7 +117,7 @@ function App() {
           </Routes>
         </div>
       </main>
-          <Footer />
+      <Footer />
 
       <MobileMenu />
     </>

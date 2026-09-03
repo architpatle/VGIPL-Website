@@ -62,7 +62,7 @@ function DigitalIdentityVerificationPlatform() {
                             <img
                                 src={digitalIdentityVerificationPlatformImg}
                                 alt={`${product.title} Logo`}
-                                style={{ maxWidth: '160px', height: 'auto', objectFit: 'contain', marginBottom: '8px' }}
+                                style={{ maxWidth: 'auto', maxHeight: '80px', objectFit: 'contain', marginBottom: '8px' }}e
                             />
                         </div>
                         <div className="title text-display-2 effectFade fadeRotateX prod-hero-title">
@@ -1195,65 +1195,65 @@ function DigitalIdentityVerificationPlatform() {
                     <div className="why-choose-grid">
                         {[
                             {
-    num: '01',
-    title: 'End-to-End Digital KYC',
-    desc: 'Enable complete digital KYC and identity verification through a single, streamlined platform.',
-    icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-            <circle cx="9" cy="8" r="4" />
-            <path d="M3 21a6 6 0 0 1 12 0" />
-            <path d="M15 14l2 2 4-4" />
-        </svg>
-    )
-},
-{
-    num: '02',
-    title: 'Real-Time Verification',
-    desc: 'Perform real-time identity verification through secure APIs for faster and more efficient onboarding.',
-    icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 7v5l3 2" />
-            <path d="M18 5l2-2" />
-        </svg>
-    )
-},
-{
-    num: '03',
-    title: 'Comprehensive Verification Services',
-    desc: 'Access Video KYC, PAN, Aadhaar, GSTIN, credit bureau, bank statement, and other document verification services.',
-    icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-            <rect x="4" y="3" width="16" height="18" rx="2" />
-            <path d="M8 8h8M8 12h6M8 16h4" />
-            <path d="M16 15l2 2 3-3" />
-        </svg>
-    )
-},
-{
-    num: '04',
-    title: 'Secure & Compliant Platform',
-    desc: 'Support data privacy, secure audit trails, encryption, and regulatory KYC/AML requirements.',
-    icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-            <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
-            <path d="M9 12l2 2 4-4" />
-        </svg>
-    )
-},
-{
-    num: '05',
-    title: 'Banking & Payment Integration',
-    desc: 'Connect digital identity verification with banking and payment ecosystems through secure integrations.',
-    icon: (
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="M3 10h18" />
-            <path d="M7 15h4" />
-            <path d="M15 14l2 2 3-3" />
-        </svg>
-    )
-}
+                                num: '01',
+                                title: 'End-to-End Digital KYC',
+                                desc: 'Enable complete digital KYC and identity verification through a single, streamlined platform.',
+                                icon: (
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+                                        <circle cx="9" cy="8" r="4" />
+                                        <path d="M3 21a6 6 0 0 1 12 0" />
+                                        <path d="M15 14l2 2 4-4" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                num: '02',
+                                title: 'Real-Time Verification',
+                                desc: 'Perform real-time identity verification through secure APIs for faster and more efficient onboarding.',
+                                icon: (
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M12 7v5l3 2" />
+                                        <path d="M18 5l2-2" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                num: '03',
+                                title: 'Comprehensive Verification Services',
+                                desc: 'Access Video KYC, PAN, Aadhaar, GSTIN, credit bureau, bank statement, and other document verification services.',
+                                icon: (
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+                                        <rect x="4" y="3" width="16" height="18" rx="2" />
+                                        <path d="M8 8h8M8 12h6M8 16h4" />
+                                        <path d="M16 15l2 2 3-3" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                num: '04',
+                                title: 'Secure & Compliant Platform',
+                                desc: 'Support data privacy, secure audit trails, encryption, and regulatory KYC/AML requirements.',
+                                icon: (
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+                                        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" />
+                                        <path d="M9 12l2 2 4-4" />
+                                    </svg>
+                                )
+                            },
+                            {
+                                num: '05',
+                                title: 'Banking & Payment Integration',
+                                desc: 'Connect digital identity verification with banking and payment ecosystems through secure integrations.',
+                                icon: (
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                                        <path d="M3 10h18" />
+                                        <path d="M7 15h4" />
+                                        <path d="M15 14l2 2 3-3" />
+                                    </svg>
+                                )
+                            }
                         ].map((card, idx) => (
                             <div key={idx} className="effectFade fadeUp h-100" >
                                 <div className="why-choose-card">

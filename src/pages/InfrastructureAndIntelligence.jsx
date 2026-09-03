@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ECRM.css'
+import './InfrastructureAndIntelligence.css'
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
-import eCRMImg from '../assets/Products-img/eCRM.png';
+import infrastructureAndIntelligenceImg from '../assets/Products-img/infrastructureAndIntelligence.png';
 import CTABannerSection from '../components/services/CTABannerSection';
 
-function ECRM() {
+function InfrastructureAndIntelligence() {
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const product = PRODUCTS_DATA.find((p) => p.slug === 'e-crm') || {
-        title: 'Fin Flow',
-        subtitle: 'Unified Digital Ecosystem for Banks & Businesses',
-        shortDescription: 'Optimize your financial operations by automating approvals, invoice processing, and budget tracking with Fin Flow.'
+    const product = PRODUCTS_DATA.find((p) => p.slug === 'infrastructure-and-intelligence') || {
+        title: 'Infrastructure Intelligence',
+        subtitle: 'Smarter Roads. Safer Cities.',
+        shortDescription: 'AI-powered infrastructure monitoring for real-time monitoring, predictive maintenance, automated audits, and intelligent incident management.'
     };
 
     const handleInputChange = (e) => {
@@ -60,7 +60,7 @@ function ECRM() {
                     <div className="content-wrap text-center">
                         <div className="product-logo effectFade fadeUp mb-4 d-flex justify-content-center">
                             <img
-                                src={eCRMImg}
+                                src={infrastructureAndIntelligenceImg}
                                 alt={`${product.title} Logo`}
                                 style={{ maxWidth: 'auto', maxHeight: '80px', objectFit: 'contain', marginBottom: '8px' }}
                             />
@@ -228,7 +228,8 @@ function ECRM() {
                                                 justifyContent: 'center',
                                                 border: '1.5px solid rgba(255, 255, 255, 0.2)',
                                             }}>
-                                                {/* White customer/CRM vector icon */}
+
+                                                {/* White infrastructure monitoring vector icon */}
                                                 <div style={{
                                                     color: '#ffffff',
                                                     display: 'flex',
@@ -246,10 +247,12 @@ function ECRM() {
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                     >
-                                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                                        <circle cx="9" cy="7" r="4" />
-                                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                        <path d="M3 19h18" />
+                                                        <path d="M5 19v-7l7-5 7 5v7" />
+                                                        <path d="M9 19v-4h6v4" />
+                                                        <path d="M7 12h10" />
+                                                        <path d="M12 7V3" />
+                                                        <path d="M10 5l2-2 2 2" />
                                                     </svg>
                                                 </div>
                                             </div>
@@ -261,7 +264,7 @@ function ECRM() {
                                 <div className="col-lg-7">
                                     <div style={{ paddingLeft: '20px' }} className="md-p-0 overview-desc">
                                         <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
-                                            <span className="text-highlight-pill">eCRM</span> is a centralized digital platform designed to manage customer data, leads, opportunities, documents, and interactions in one place. It enables financial institutions and enterprises to build stronger customer relationships while streamlining their customer management processes.
+                                            <span className="text-highlight-pill">Infrastructure & Intelligence</span> is a unified AI-driven platform designed to transform highways, smart cities, industrial zones, private estates, airports, and other infrastructure environments through intelligent monitoring and management.
                                         </p>
 
                                         {/* Red divider with a dot */}
@@ -272,7 +275,7 @@ function ECRM() {
                                         </div>
 
                                         <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.8', marginBottom: '0' }}>
-                                            By bringing customer information and interactions together on a unified platform, eCRM provides complete visibility into customer relationships, supports faster decision-making, and helps organizations improve conversions and operational efficiency.
+                                            The platform combines real-time AI monitoring, automated audits, predictive maintenance, and intelligent incident management to help authorities and enterprises detect infrastructure defects, respond faster, and plan maintenance more effectively.
                                         </p>
                                     </div>
                                 </div>
@@ -411,7 +414,7 @@ function ECRM() {
                             Key <span style={{ color: '#ff2b2b' }}>Capabilities</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Complete Customer Relationship Management
+                            Intelligent Monitoring & Predictive Infrastructure Management
                         </p>
 
                         {/* Glowing divider line below heading */}
@@ -426,76 +429,77 @@ function ECRM() {
                         {[
                             {
                                 num: '01',
-                                title: 'Centralized Customer Data',
-                                desc: 'Manage customer information and profiles through a unified platform for complete  visibility.',
+                                title: 'AI-Powered Monitoring',
+                                desc: 'Monitor infrastructure in real time using CCTV, LiDAR, and thermal imaging to detect traffic issues, hazards, and defects.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path d="M3 21v-2a6 6 0 0 1 12 0v2" />
-                                        <path d="M16 3.5a4 4 0 0 1 0 7" />
-                                        <path d="M21 21v-2a6 6 0 0 0-3-5.2" />
+                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M4 4l2 2M20 4l-2 2" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '02',
-                                title: 'Lead & Opportunity Management',
-                                desc: 'Capture, track, and manage leads and opportunities throughout the customer lifecycle.',
+                                title: 'Road Asset Tracking',
+                                desc: 'Track roads, pavement conditions, potholes, signage, and other infrastructure assets through GIS-based digital mapping.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M3 17l6-6 4 4 8-8" />
-                                        <path d="M17 7h4v4" />
+                                        <path d="M4 5l6-2 4 2 6-2v16l-6 2-4-2-6 2V5z" />
+                                        <path d="M10 3v16M14 5v16" />
+                                        <circle cx="17" cy="10" r="2" />
+                                        <path d="M17 12v2" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '03',
-                                title: 'Customer Interaction Management',
-                                desc: 'Maintain a complete record of customer interactions and engagement across channels.',
+                                title: 'Safety Audits & Compliance',
+                                desc: 'Automate safety assessments, black-spot detection, and compliance reporting to support smarter maintenance planning.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.98L3 21l1.98-4A8.5 8.5 0 1 1 21 11.5z" />
-                                        <path d="M8 11h8" />
-                                        <path d="M8 8h5" />
+                                        <path d="M5 3h14v18H5z" />
+                                        <path d="M8 7h8M8 11h6" />
+                                        <path d="M8 16l2 2 5-5" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '04',
-                                title: 'Document Management',
-                                desc: 'Centralize customer-related documents for easy access, tracking, and efficient processing.',
+                                title: 'Incident Detection & Alerts',
+                                desc: 'Receive instant geo-fenced alerts for floods, debris, cracks, and road obstructions with automated escalation workflows.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                        <polyline points="14 2 14 8 20 8" />
-                                        <line x1="8" y1="13" x2="16" y2="13" />
-                                        <line x1="8" y1="17" x2="14" y2="17" />
+                                        <path d="M12 3l9 17H3L12 3z" />
+                                        <path d="M12 9v5" />
+                                        <circle cx="12" cy="17" r=".5" />
+                                        <path d="M19 5l2-2" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '05',
-                                title: 'Workflow Automation',
-                                desc: 'Streamline customer management processes with automated workflows.',
+                                title: 'Predictive Analytics',
+                                desc: 'Use AI-powered forecasting and digital twin simulations to optimize maintenance, budgets, and infrastructure lifecycle planning.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="3" width="6" height="6" rx="1" />
-                                        <rect x="15" y="15" width="6" height="6" rx="1" />
-                                        <path d="M9 6h3a3 3 0 0 1 3 3v6" />
-                                        <path d="M12 18H9a3 3 0 0 1-3-3v-3" />
+                                        <path d="M4 19V5" />
+                                        <path d="M4 19h16" />
+                                        <path d="M7 15l4-4 3 2 6-7" />
+                                        <path d="M16 6h4v4" />
                                     </svg>
                                 )
                             },
                             {
                                 num: '06',
-                                title: 'Analytics & Insights',
-                                desc: 'Leverage customer data and relationship insights to support better decisions.',
+                                title: 'Centralized Infrastructure Intelligence',
+                                desc: 'Bring infrastructure monitoring, alerts, audits, and predictive insights together through a unified management ecosystem.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <line x1="4" y1="19" x2="4" y2="10" />
-                                        <line x1="10" y1="19" x2="10" y2="5" />
-                                        <line x1="16" y1="19" x2="16" y2="12" />
-                                        <line x1="22" y1="19" x2="22" y2="3" />
+                                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                                        <path d="M7 8h4M7 12h6M7 16h3" />
+                                        <circle cx="17" cy="10" r="2" />
+                                        <path d="M15 16h4" />
                                     </svg>
                                 )
                             }
@@ -704,7 +708,7 @@ function ECRM() {
                             Technology & <span style={{ color: '#ff2b2b' }}>Architecture</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Secure, Scalable & Connected CRM Architecture
+                            Advanced AI & Connected Infrastructure Technology
                         </p>
 
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', width: '120px', margin: '0 auto' }}>
@@ -717,57 +721,59 @@ function ECRM() {
                     <div className="designed-grid">
                         {[
                             {
-                                title: 'API-Ready Integrations',
-                                desc: 'Connect eCRM with existing business applications and external systems through flexible API integrations.',
+                                title: 'Edge AI Architecture',
+                                desc: 'Process infrastructure data closer to the source for real-time monitoring, faster detection, and responsive operations.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M8 9l-4 3 4 3" />
-                                        <path d="M16 9l4 3-4 3" />
-                                        <path d="M14 5l-4 14" />
+                                        <rect x="6" y="6" width="12" height="12" rx="2" />
+                                        <path d="M9 9h6v6H9z" />
+                                        <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Secure & Role-Based Access',
-                                desc: 'Protect customer information with secure access controls and role-based permissions.',
+                                title: '5G IoT Connectivity',
+                                desc: 'Connect cameras, sensors, and infrastructure assets through high-speed IoT connectivity for continuous monitoring.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="11" width="18" height="10" rx="2" />
-                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                        <circle cx="12" cy="16" r="1" />
+                                        <circle cx="12" cy="18" r="2" />
+                                        <path d="M8.5 14.5a5 5 0 0 1 7 0" />
+                                        <path d="M5.5 11.5a9 9 0 0 1 13 0" />
+                                        <path d="M2.5 8.5a13 13 0 0 1 19 0" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Centralized Customer Data Layer',
-                                desc: 'Maintain customer information and interactions through a unified and structured data environment.',
+                                title: 'Computer Vision',
+                                desc: 'Use AI-powered computer vision to identify potholes, cracks, hazards, traffic issues, and other infrastructure defects.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <ellipse cx="12" cy="5" rx="8" ry="3" />
-                                        <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                                        <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" />
+                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M4 4l2 2M20 4l-2 2" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Web & Mobile Accessibility',
-                                desc: 'Access customer information and CRM functions across web and mobile environments for greater flexibility.',
+                                title: 'Digital Twin Technology',
+                                desc: 'Simulate infrastructure conditions and forecast maintenance requirements to support lifecycle planning and budgeting.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="4" width="18" height="13" rx="2" />
-                                        <line x1="8" y1="21" x2="16" y2="21" />
-                                        <line x1="12" y1="17" x2="12" y2="21" />
-                                        <rect x="16" y="7" width="4" height="7" rx="1" />
+                                        <path d="M4 6l8-3 8 3-8 3-8-3z" />
+                                        <path d="M4 12l8 3 8-3" />
+                                        <path d="M4 18l8 3 8-3" />
+                                        <path d="M4 6v12M12 9v12M20 6v12" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Scalable Architecture',
-                                desc: 'Support growing customer data, users, and business operations with a scalable platform architecture.',
+                                title: 'Cloud + Edge AI',
+                                desc: 'Combine cloud capabilities with edge-based intelligence to support scalable monitoring across highways, cities, and distributed infrastructure.',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="7 17 17 7" />
-                                        <polyline points="7 7 17 7 17 17" />
+                                        <path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 8a5 5 0 0 0 1 10z" />
+                                        <rect x="9" y="12" width="6" height="5" rx="1" />
+                                        <path d="M12 12V9" />
                                     </svg>
                                 )
                             }
@@ -863,7 +869,7 @@ function ECRM() {
                             Operational <span style={{ color: '#ff2b2b' }}>Benefits</span>
                         </h2>
                         <p style={{ fontSize: '1.15rem', color: '#666', marginBottom: '24px' }}>
-                            Better Customer Engagement & Operational Efficiency
+                            Smarter Infrastructure. Faster Response. Lower Downtime.
                         </p>
 
                         {/* Glowing divider line below heading */}
@@ -876,81 +882,81 @@ function ECRM() {
                     <div className="benefits-grid">
                         {[
                             {
-                                title: 'Complete Customer Visibility',
+                                title: '98% Defect Detection Accuracy',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
-                                        <circle cx="12" cy="12" r="3" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12l2.5 2.5L16 9" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Improved Customer Engagement',
+                                title: '40% Reduction in Downtime',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.98L3 21l1.98-4A8.5 8.5 0 1 1 21 11.5z" />
-                                        <path d="M8 11h8" />
-                                        <path d="M8 8h5" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M12 7v5l3 2" />
+                                        <path d="M5 5l2 2" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Faster Lead Conversion',
+                                title: 'Faster Maintenance Response',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M3 17l6-6 4 4 8-8" />
-                                        <polyline points="17 7 21 7 21 11" />
+                                        <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Streamlined Operations',
+                                title: 'Predictive Infrastructure Intelligence',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                                        <path d="M4 19V5" />
+                                        <path d="M4 19h16" />
+                                        <path d="M7 15l4-4 3 2 6-7" />
+                                        <path d="M16 6h4v4" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Better Decision-Making',
+                                title: 'Real-Time Centralized Dashboards',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <line x1="4" y1="19" x2="4" y2="12" />
-                                        <line x1="10" y1="19" x2="10" y2="7" />
-                                        <line x1="16" y1="19" x2="16" y2="10" />
-                                        <line x1="22" y1="19" x2="22" y2="4" />
+                                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                                        <path d="M7 9h4v3H7zM13 9h4v3h-4zM7 15h10" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Stronger Customer Relationships',
+                                title: 'Automated Compliance & Reporting',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.78-8.84a5.5 5.5 0 0 0 .06-7.78z" />
+                                        <path d="M5 3h14v18H5z" />
+                                        <path d="M8 7h8M8 11h6" />
+                                        <path d="M8 16l2 2 5-5" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Efficient Customer Data Management',
+                                title: 'Scalable Infrastructure Monitoring',
                                 icon: (
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <ellipse cx="12" cy="5" rx="8" ry="3" />
-                                        <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
-                                        <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" />
+                                        <rect x="3" y="4" width="7" height="6" rx="1" />
+                                        <rect x="14" y="4" width="7" height="6" rx="1" />
+                                        <rect x="3" y="14" width="7" height="6" rx="1" />
+                                        <rect x="14" y="14" width="7" height="6" rx="1" />
+                                        <path d="M10 7h4M7 10v4M17 10v4M10 17h4" />
                                     </svg>
                                 )
                             },
                             {
-                                title: 'Personalized Customer Service',
+                                title: 'Reduced Maintenance Costs',
                                 icon: (
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="8" r="4" />
-                                        <path d="M4 21a8 8 0 0 1 16 0" />
-                                        <path d="M19 8v4" />
-                                        <path d="M21 10h-4" />
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#ff2b2b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 10h8M8 14h8" />
+                                        <path d="M12 7v10" />
                                     </svg>
                                 )
                             }
@@ -1187,7 +1193,7 @@ function ECRM() {
             </div> */}
 
                         <h2 className='section-heading-responsive' style={{ fontSize: '3.2rem', fontWeight: '800', color: '#1a1a1a', letterSpacing: '-1.5px', marginBottom: '20px', lineHeight: '1.2' }}>
-                            Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>eCRM</span>?
+                            Why Choose <span style={{ background: 'linear-gradient(to right, #ff2b2b, #ff5b5b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Infrastructure & Intelligence</span>?
                         </h2>
 
                         {/* Glowing divider line below heading */}
@@ -1201,64 +1207,66 @@ function ECRM() {
                     <div className="why-choose-grid">
                         {[
                             {
-                                num: '01',
-                                title: 'Unified Customer Management',
-                                desc: 'Bring customer data, interactions, leads, opportunities, and documents together on one platform.',
-                                icon: (
-                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path d="M3 21v-2a6 6 0 0 1 12 0v2" />
-                                        <path d="M16 3.5a4 4 0 0 1 0 7" />
-                                        <path d="M21 21v-2a6 6 0 0 0-3-5.2" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                num: '02',
-                                title: 'Complete Customer Visibility',
-                                desc: 'Gain a comprehensive view of customer relationships to support timely and informed decisions.',
-                                icon: (
-                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                num: '03',
-                                title: 'Improved Operational Efficiency',
-                                desc: 'Streamline customer management processes and reduce manual effort through centralized workflows.',
-                                icon: (
-                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                                        <rect x="14" y="14" width="7" height="7" rx="1" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                num: '04',
-                                title: 'Scalable & Secure Platform',
-                                desc: 'Support evolving business needs with a secure, scalable architecture and controlled access.',
-                                icon: (
-                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                        <path d="M12 8v5" />
-                                        <path d="M9.5 10.5L12 13l2.5-2.5" />
-                                    </svg>
-                                )
-                            },
-                            {
-                                num: '05',
-                                title: 'Stronger Customer Engagement',
-                                desc: 'Enable more effective and personalized customer interactions throughout the customer lifecycle.',
-                                icon: (
-                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.78-8.84a5.5 5.5 0 0 0 .06-7.78z" />
-                                    </svg>
-                                )
-                            }
+    num: '01',
+    title: 'AI-Powered Infrastructure Monitoring',
+    desc: 'Leverage AI-driven monitoring to detect infrastructure defects, hazards, traffic issues, and road conditions in real time.',
+    icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+            <rect x="6" y="6" width="12" height="12" rx="2" />
+            <path d="M9 9h6v6H9z" />
+            <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+        </svg>
+    )
+},
+{
+    num: '02',
+    title: 'Up to 98% Defect Detection Accuracy',
+    desc: 'Automatically detect potholes, cracks, and road damage with up to 98% accuracy and severity grading.',
+    icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M8 12l2.5 2.5L16 9" />
+        </svg>
+    )
+},
+{
+    num: '03',
+    title: 'Predictive Maintenance Intelligence',
+    desc: 'Use AI forecasting and digital twin simulations to proactively plan maintenance and optimize infrastructure lifecycles.',
+    icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+            <path d="M4 19V5" />
+            <path d="M4 19h16" />
+            <path d="M7 15l4-4 3 2 6-7" />
+            <path d="M16 6h4v4" />
+        </svg>
+    )
+},
+{
+    num: '04',
+    title: 'Automated Safety & Compliance',
+    desc: 'Automate safety assessments, black-spot detection, audits, and compliance reporting for smarter maintenance planning.',
+    icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+            <path d="M5 3h14v18H5z" />
+            <path d="M8 7h8M8 11h6" />
+            <path d="M8 16l2 2 5-5" />
+        </svg>
+    )
+},
+{
+    num: '05',
+    title: 'Real-Time Incident Management',
+    desc: 'Receive geo-fenced alerts for floods, debris, cracks, and road obstructions with automated escalation workflows.',
+    icon: (
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="why-choose-icon">
+            <path d="M12 3l9 17H3L12 3z" />
+            <path d="M12 9v5" />
+            <circle cx="12" cy="17" r=".5" />
+        </svg>
+    )
+}
+
                         ].map((card, idx) => (
                             <div key={idx} className="effectFade fadeUp h-100" >
                                 <div className="why-choose-card">
@@ -1511,7 +1519,7 @@ function ECRM() {
                             </div>
 
                             <p className="outcome-text">
-                                eCRM brings customer data, interactions, leads, opportunities, and processes together on a unified platform—enabling organizations to improve customer engagement, streamline operations, make informed decisions, and build stronger, long-term customer relationships.
+                                Infrastructure & Intelligence brings real-time monitoring, automated safety audits, predictive analytics, and intelligent incident management together to help authorities and enterprises detect infrastructure issues earlier, respond faster, and plan maintenance more effectively.
                             </p>
 
                             {/* 4 Outcome Keyword Highlights */}
@@ -1544,11 +1552,11 @@ function ECRM() {
             <div id="contact-section">
                 <CTABannerSection
                     title={`Transform Your Business Operations with ${product.title}`}
-                    subtitle={`Connect your customer data, interactions, and processes on one intelligent platform built for stronger engagement and greater efficiency.`}
+                    subtitle={`Transform infrastructure management with real-time monitoring, intelligent defect detection, predictive maintenance, automated compliance, and faster incident response.`}
                 />
             </div>
         </>
     );
 }
 
-export default ECRM;
+export default InfrastructureAndIntelligence;

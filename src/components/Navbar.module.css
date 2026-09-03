@@ -316,6 +316,8 @@
   font-weight: 700;
   color: #111827;
   margin: 0;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .previewDesc {
