@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './SecureViewAI.css'
 import { PRODUCTS_DATA } from '../data/productsData';
 import abstractWorldMapImg from '../assets/Products-img/image.png';
-import SecureViewAIImg from '../assets/Products-img/SecureViewAI.png';
+import SecureViewAIImg from '../assets/Products-img/secureViewAI.png';
 import CTABannerSection from '../components/services/CTABannerSection';
 
 function SecureViewAI() {
