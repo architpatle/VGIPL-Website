@@ -52,7 +52,15 @@ const resumeUpload = multer({
     },
 });
 
-app.use(cors());
+app.use(cors(
+    //     {
+    //   origin: [
+    //     "https://vgipl.com",
+    //     "https://www.vgipl.com",
+    //      "include test domain here"
+    //   ],
+    // }
+));
 app.use(express.json());
 
 
