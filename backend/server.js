@@ -53,13 +53,14 @@ const resumeUpload = multer({
 });
 
 app.use(cors(
-    //     {
-    //   origin: [
-    //     "https://vgipl.com",
-    //     "https://www.vgipl.com",
-    //      "include test domain here"
-    //   ],
-    // }
+    {
+        origin: [
+            "http://localhost:5173",
+            "https://vgipl.com",
+            "https://www.vgipl.com",
+            //      "include test domain here"
+        ],
+    }
 ));
 app.use(express.json());
 
