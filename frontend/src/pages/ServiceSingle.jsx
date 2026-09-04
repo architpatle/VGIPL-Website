@@ -46,7 +46,7 @@ function ServiceSingle() {
 
   return (
     <>
-      {slug !== 'mobile-computing' && slug !== 'dr-dc' && slug !== 'digital-solutions' && slug !== 'ai-ml' && <ServiceSingleHero service={service} />}
+      {slug !== 'mobile-computing' && slug !== 'dc-dr' && slug !== 'digital-solutions' && slug !== 'ai-ml' && <ServiceSingleHero service={service} />}
       
       {/* Conditionally render sections based on the service slug */}
       {slug === 'ai-ml' ? (
@@ -67,7 +67,7 @@ function ServiceSingle() {
           <DigitalSocialSection />
           <DigitalCTASection />
         </>
-      ) : slug === 'dr-dc' ? (
+      ) : slug === 'dc-dr' ? (
         <>
           <DRDCHero />
           <DRDCSolveSection />

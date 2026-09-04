@@ -159,22 +159,36 @@ function ContactSection() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const formData = new FormData();
+
+      formData.append('name', name);
+      formData.append('email', email);
+
+      formData.append(
+        'phone',
+        phoneNumber
+          ? `+${getCountryCallingCode(selectedPhoneCountry)}${phoneNumber}`
+          : ''
+      );
+
+      const selectedCountryData = countryOptions.find(
+        (country) => country.code === selectedCountry
+      );
+
+      formData.append(
+        'country',
+        selectedCountryData?.name || selectedCountry
+      );
+
+      formData.append('message', message);
+
+      if (selectedFile) {
+        formData.append('file', selectedFile);
+      }
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone: phoneNumber
-            ? `+${getCountryCallingCode(selectedPhoneCountry)}${phoneNumber}`
-            : '',
-          career: '',
-          product: '',
-          website: '',
-          message,
-        }),
+        body: formData,
       });
 
       const data = await response.json();
@@ -381,7 +395,7 @@ function ContactSection() {
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept="image/*,.pdf,application/pdf"
+                  accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp"
                   onChange={handleFileChange}
                   style={{ display: 'none' }}
                 />

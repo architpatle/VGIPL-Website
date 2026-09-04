@@ -49,7 +49,7 @@ const DRDCServicesProvideSection = () => {
           <motion.div className="dr-sp-header" variants={itemVariants}>
             <div className="dr-sp-badge">
               <Database size={20} className="badge-icon" />
-              <span>DR & DC Services We Provide</span>
+              <span>DC & DR Services We Provide</span>
             </div>
             <p className="dr-sp-subtitle">
               8 comprehensive data center and disaster recovery solutions for your business

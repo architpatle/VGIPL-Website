@@ -32,9 +32,8 @@ function CountryDropdown({
 
   return (
     <div
-      className={`job-country-dropdown ${mode} ${
-        isOpen ? "is-open" : ""
-      }`}
+      className={`job-country-dropdown ${mode} ${isOpen ? "is-open" : ""
+        }`}
     >
 
       {/* Trigger */}
@@ -85,9 +84,8 @@ function CountryDropdown({
               <button
                 type="button"
                 key={country.code}
-                className={`job-country-dropdown-option ${
-                  country.code === value ? "selected" : ""
-                }`}
+                className={`job-country-dropdown-option ${country.code === value ? "selected" : ""
+                  }`}
                 onClick={() => handleSelect(country)}
               >
 
@@ -138,6 +136,8 @@ const JobApplicationForm = ({ jobTitle }) => {
 
   const [submitted, setSubmitted] = useState(false);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   /* =========================================================
      COUNTRY OPTIONS
@@ -222,22 +222,59 @@ const JobApplicationForm = ({ jobTitle }) => {
      SUBMIT
   ========================================================= */
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const applicationData = {
-      jobTitle,
-      ...formData,
-      phoneCountry: selectedPhoneCountry,
-      phoneCountryCode:
-        getCountryCallingCode(selectedPhoneCountry),
-      phoneNumber,
-      resume: selectedFile,
-    };
+    if (!selectedFile) {
+      setSubmitError("Please attach your resume.");
+      return;
+    }
 
-    console.log("Application submitted:", applicationData);
+    setIsSubmitting(true);
+    setSubmitError("");
 
-    setSubmitted(true);
+    try {
+      const data = new FormData();
+
+      data.append("jobTitle", jobTitle);
+      data.append("name", formData.name);
+      data.append("email", formData.email);
+
+      data.append(
+        "phone",
+        `+${getCountryCallingCode(selectedPhoneCountry)}${phoneNumber}`
+      );
+
+      data.append("message", formData.message);
+      data.append("resume", selectedFile);
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/job-application`,
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Failed to submit application."
+        );
+      }
+
+      setSubmitted(true);
+
+    } catch (error) {
+      console.error("JOB APPLICATION ERROR:", error);
+
+      setSubmitError(
+        error.message || "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
 
@@ -394,9 +431,8 @@ const JobApplicationForm = ({ jobTitle }) => {
             </label>
 
             <div
-              className={`job-attachment ${
-                selectedFile ? "has-file" : ""
-              }`}
+              className={`job-attachment ${selectedFile ? "has-file" : ""
+                }`}
               onClick={handleAttachmentClick}
               role="button"
               tabIndex={0}
@@ -462,11 +498,18 @@ const JobApplicationForm = ({ jobTitle }) => {
             <button
               type="submit"
               className="job-application-submit"
+              disabled={isSubmitting}
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
 
           </div>
+          
+          {submitError && (
+            <div className="job-submit-error">
+              {submitError}
+            </div>
+          )}
 
         </form>
 

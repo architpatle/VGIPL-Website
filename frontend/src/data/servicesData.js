@@ -136,8 +136,8 @@ export const SERVICES_DATA = [
     ]
   },
   {
-    slug: 'dr-dc',
-    title: 'DR & DC',
+    slug: 'dc-dr',
+    title: 'DC & DR',
     subtitle: 'Disaster Recovery & Data Center Solutions',
     description: 'Ensure business continuity and secure data management with our comprehensive DR and DC services.',
     icon: 'tachometer-alt-solid',

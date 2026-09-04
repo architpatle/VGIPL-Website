@@ -399,7 +399,7 @@ const CareerDetails = () => {
 )}
           <div style={{ marginTop: "25px" }}>
             <Link
-              to="/careers"
+              to="/careers/career-path"
               style={{
                 color: "#111",
                 textDecoration: "none",

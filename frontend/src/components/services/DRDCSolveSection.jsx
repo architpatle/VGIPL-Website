@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Network, ArrowRight } from 'lucide-react';
 import './DRDCSolveSection.css';
 import { Link } from 'react-router-dom';
+import dcdrImg from '../../../public/assets/images/services/disaster_recovery.png'
 
 const DRDCSolveSection = () => {
   return (
@@ -19,7 +20,7 @@ const DRDCSolveSection = () => {
             >
               <div className="dr-solve-backdrop"></div>
               <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+                src={dcdrImg}
                 alt="Data Center Server Room"
                 className="img-fluid dr-solve-img"
               />
@@ -39,7 +40,7 @@ const DRDCSolveSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="dr-section-title mb-4">
-                Solve IT Infrastructure Issues With <span className="text-red">DR & DC</span>
+                Solve IT Infrastructure Issues With <span className="text-red">DC & DR</span>
               </h2>
               <div className="dr-solve-text-box">
                 <p className="dr-section-desc">
@@ -49,7 +50,7 @@ const DRDCSolveSection = () => {
                   Our solutions offer high optimization, lowest latency, scalability on demand, and complete data centre management with lower cost of ownership.
                 </p>
               </div>
-              {/* <Link to='/services/dr-dc/#services'> */}
+              {/* <Link to='/services/dc-dr/#services'> */}
                 <a href='#servicesDRDC' className="btn-outline-dr mt-4">
                   Explore Services <ArrowRight size={18} className="ms-2" />
                 </a>

@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './ProductSingle.css';
 import { useParams, Link } from 'react-router-dom';
+import {
+  getCountries,
+  getCountryCallingCode,
+} from 'react-phone-number-input';
+
+import countryLabels from 'react-phone-number-input/locale/en';
+import flags from 'react-phone-number-input/flags';
 import { PRODUCTS_DATA } from '../data/productsData';
 import NotFound from './NotFound';
 import CTABannerSection from '../components/services/CTABannerSection';
@@ -60,10 +67,189 @@ import bgErp from '../assets/home/hero-bg-img.jpg';
 import bgMis from '../assets/home/hero-bg-img.jpg';
 import bgVpay from '../assets/home/hero-bg-img.jpg';
 
+function BrochureCountryDropdown({
+  value,
+  onChange,
+  options,
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const selected = options.find(
+    (country) => country.code === value
+  );
+
+  const handleSelect = (country) => {
+    onChange(country.code);
+    setIsOpen(false);
+  };
+
+  return (
+    <div
+      className={`brochure-country-dropdown ${isOpen ? 'is-open' : ''
+        }`}
+    >
+      <button
+        type="button"
+        className="brochure-country-dropdown-trigger"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        <span className="brochure-country-selected-content">
+
+          {selected && (
+            <span className="brochure-country-flag">
+              {flags[selected.code] &&
+                React.createElement(flags[selected.code])}
+            </span>
+          )}
+
+          {selected && (
+            <span className="brochure-country-selected-code">
+              +{selected.phone}
+            </span>
+          )}
+
+        </span>
+
+        <svg
+          className="brochure-country-dropdown-arrow"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="brochure-country-dropdown-menu">
+          <div className="brochure-country-dropdown-list">
+
+            {options.map((country) => (
+              <button
+                type="button"
+                key={country.code}
+                className={`brochure-country-dropdown-option ${country.code === value ? 'selected' : ''
+                  }`}
+                onClick={() => handleSelect(country)}
+              >
+                <span className="brochure-country-option-flag">
+                  {flags[country.code] &&
+                    React.createElement(flags[country.code])}
+                </span>
+
+                <span className="brochure-country-option-name">
+                  {country.name}
+                </span>
+
+                <span className="brochure-country-option-code">
+                  +{country.phone}
+                </span>
+              </button>
+            ))}
+
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ProductSingle() {
   const { slug } = useParams();
   const [activeModule, setActiveModule] = useState(0);
   const [showBrochureModal, setShowBrochureModal] = useState(false);
+
+  const [brochureFormData, setBrochureFormData] = useState({
+    name: '',
+    email: '',
+    city: '',
+  });
+
+  const handleBrochureSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!brochureMap[slug]) {
+      setBrochureSubmitError('Brochure not available for this product.');
+      return;
+    }
+
+    setBrochureIsSubmitting(true);
+    setBrochureSubmitError('');
+
+    try {
+      const data = {
+        productSlug: slug,
+        productTitle: brochureMap[slug].title,
+        name: brochureFormData.name,
+        email: brochureFormData.email,
+        phone: `+${getCountryCallingCode(brochurePhoneCountry)}${brochurePhone}`,
+        city: brochureFormData.city,
+      };
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/brochure`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Something went wrong.');
+      }
+
+      // Download the brochure only after successful submission
+      const brochure = brochureMap[slug];
+
+      const link = document.createElement('a');
+      link.href = brochure.file;
+      link.download = brochure.name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      // Reset form
+      setBrochureFormData({
+        name: '',
+        email: '',
+        city: '',
+      });
+
+      setBrochurePhone('');
+      setBrochurePhoneCountry('IN');
+      setBrochureSubmitError('');
+      setShowBrochureModal(false);
+    } catch (error) {
+      console.error('Brochure submission error:', error);
+      setBrochureSubmitError(
+        error.message || 'Something went wrong. Please try again.'
+      );
+    } finally {
+      setBrochureIsSubmitting(false);
+    }
+  };
+
+  const [brochurePhoneCountry, setBrochurePhoneCountry] = useState('IN');
+  const brochureCountryOptions = getCountries()
+    .map((code) => ({
+      code,
+      name: countryLabels[code],
+      phone: getCountryCallingCode(code),
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const [brochurePhone, setBrochurePhone] = useState('');
+  const [brochureIsSubmitting, setBrochureIsSubmitting] = useState(false);
+  const [brochureSubmitError, setBrochureSubmitError] = useState('');
 
   useEffect(() => {
     setActiveModule(0);
@@ -80,9 +266,30 @@ function ProductSingle() {
   };
 
   const currentBg = slugBgImages[slug] || '';
+  const brochureMap = {
+    'core-banking-solution': {
+      title: 'Core Banking Solution',
+      file: '/assets/.pdf/Brochures/CoreBankingSolution.pdf',
+      name: 'CoreBankingSolution.pdf',
+    },
+    'imis-solution': {
+      title: 'IMIS Solution',
+      file: '/assets/.pdf/Brochures/IMISSolution.pdf',
+      name: 'IMISSolution.pdf',
+    },
+    'digital-payments': {
+      title: 'Digital Payments',
+      file: '/assets/.pdf/Brochures/DigitalPayments.pdf',
+      name: 'DigitalPayments.pdf',
+    },
+    'end-to-end-cyber-security': {
+      title: 'End-to-End Cyber Security',
+      file: '/assets/.pdf/Brochures/EndtoEndCyberSecurity.pdf',
+      name: 'EndtoEndCyberSecurity.pdf',
+    },
+  };
 
-  const allowedBrochureSlugs = ['core-banking-solution', 'imis-solution', 'digital-payments', 'end-to-end-cyber-security'];
-  const showBrochureButton = allowedBrochureSlugs.includes(slug);
+  const showBrochureButton = Boolean(brochureMap[slug]);
 
   const ebankerModules = [
     {
@@ -969,6 +1176,8 @@ function ProductSingle() {
                   { top: '50%', left: '-100px', transform: 'translateY(-50%)' },
                 ];
 
+
+
                 return (
                   <div key={index} className="col-lg-4 col-md-6 col-sm-12 card-top-m">
                     <div className="fintech-stat-card effectFade fadeUp">
@@ -1574,41 +1783,305 @@ function ProductSingle() {
       {/* Brochure Modal */}
       {showBrochureModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, backdropFilter: 'blur(4px)' }}>
-          <div style={{ background: '#fff', borderRadius: '8px', padding: '40px', width: '100%', maxWidth: '600px', margin: '20px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)', position: 'relative', animation: 'modalFadeIn 0.3s ease-out forwards' }}>
+          <div style={{ background: '#fff', borderRadius: '8px', padding: '24px', width: '100%', maxWidth: '600px', margin: '20px', boxShadow: '0 25px 50px rgba(0,0,0,0.15)', position: 'relative', animation: 'modalFadeIn 0.3s ease-out forwards' }}>
 
             <button
-              onClick={() => setShowBrochureModal(false)}
+              onClick={() => {
+                if (!brochureIsSubmitting) {
+                  setShowBrochureModal(false);
+                }
+              }}
               style={{ position: 'absolute', top: '15px', right: '15px', background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#888' }}
             >
               &times;
             </button>
 
-            <form onSubmit={(e) => { e.preventDefault(); setShowBrochureModal(false); alert('Brochure download started!'); }}>
-              <div className="row g-3">
-                <div className="col-md-6">
-                  <input type="text" placeholder="Full name*" required style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', borderRadius: '4px', outline: 'none', color: '#333' }} />
-                </div>
-                <div className="col-md-6">
-                  <input type="email" placeholder="Email*" required style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', borderRadius: '4px', outline: 'none', color: '#333' }} />
-                </div>
-                <div className="col-md-6">
-                  <div style={{ display: 'flex', border: '1px solid #e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
-                    <div style={{ padding: '12px 10px', background: '#f8f9fa', borderRight: '1px solid #e0e0e0', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                      <span role="img" aria-label="India flag">🇮🇳</span>
-                      <span style={{ fontSize: '0.6rem', color: '#888' }}>▼</span>
-                    </div>
-                    <input type="tel" placeholder="Phone number*" required style={{ width: '100%', padding: '12px 15px', border: 'none', outline: 'none', color: '#333' }} />
+            <form onSubmit={handleBrochureSubmit} className="brochure-form">
+
+              <div className="brochure-form-grid">
+
+                {/* NAME */}
+                <div className="brochure-field">
+                  <label htmlFor="brochure-name">
+                    Full Name <span>*</span>
+                  </label>
+
+                  <div className="brochure-control">
+                    <svg
+                      className="brochure-control-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                      />
+                      <path
+                        d="M5 20C5.7 16.7 8.2 15 12 15C15.8 15 18.3 16.7 19 20"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+
+                    <input
+                      id="brochure-name"
+                      type="text"
+                      placeholder="Enter your full name"
+                      value={brochureFormData.name}
+                      onChange={(e) =>
+                        setBrochureFormData({
+                          ...brochureFormData,
+                          name: e.target.value,
+                        })
+                      }
+                      required
+                    />
                   </div>
                 </div>
-                <div className="col-md-6">
-                  <input type="text" placeholder="City" style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', borderRadius: '4px', outline: 'none', color: '#333' }} />
+
+
+                {/* EMAIL */}
+                <div className="brochure-field">
+                  <label htmlFor="brochure-email">
+                    Email Address <span>*</span>
+                  </label>
+
+                  <div className="brochure-control">
+                    <svg
+                      className="brochure-control-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                      />
+                      <path
+                        d="M4 7L12 13L20 7"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    <input
+                      id="brochure-email"
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={brochureFormData.email}
+                      onChange={(e) =>
+                        setBrochureFormData({
+                          ...brochureFormData,
+                          email: e.target.value,
+                        })
+                      }
+                      required
+                    />
+                  </div>
                 </div>
+
+
+                {/* PHONE */}
+                <div className="brochure-field">
+                  <label htmlFor="brochure-phone">
+                    Phone Number <span>*</span>
+                  </label>
+
+                  <div className="brochure-phone-input-wrapper">
+
+                    <BrochureCountryDropdown
+                      value={brochurePhoneCountry}
+                      onChange={setBrochurePhoneCountry}
+                      options={brochureCountryOptions}
+                    />
+
+                    <input
+                      id="brochure-phone"
+                      type="tel"
+                      className="brochure-phone-number-input"
+                      value={brochurePhone}
+                      onChange={(e) =>
+                        setBrochurePhone(
+                          e.target.value.replace(/\D/g, '')
+                        )
+                      }
+                      placeholder="Enter phone number"
+                      inputMode="numeric"
+                      autoComplete="tel"
+                      pattern="[0-9]*"
+                      required
+                    />
+
+                  </div>
+                </div>
+
+
+                {/* CITY */}
+                <div className="brochure-field">
+                  <label htmlFor="brochure-city">
+                    City
+                  </label>
+
+                  <div className="brochure-control">
+                    <svg
+                      className="brochure-control-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21C12 21 19 15.7 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 15.7 12 21 12 21Z"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                      />
+                      <circle
+                        cx="12"
+                        cy="9.5"
+                        r="2.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                      />
+                    </svg>
+
+                    <input
+                      id="brochure-city"
+                      type="text"
+                      placeholder="Enter your city"
+                      value={brochureFormData.city}
+                      onChange={(e) =>
+                        setBrochureFormData({
+                          ...brochureFormData,
+                          city: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                </div>
+
               </div>
 
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '15px', marginTop: '30px' }}>
-                <button type="button" onClick={() => setShowBrochureModal(false)} style={{ padding: '10px 24px', background: '#fff', border: '1px solid #e0e0e0', borderRadius: '4px', color: '#555', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e => e.currentTarget.style.background = '#f0f0f0'} onMouseOut={e => e.currentTarget.style.background = '#fff'}>Cancel</button>
-                <button type="submit" style={{ padding: '10px 24px', background: '#8a8d91', border: 'none', borderRadius: '4px', color: '#fff', fontWeight: '500', cursor: 'pointer', transition: 'background 0.2s' }} onMouseOver={e => e.currentTarget.style.background = '#6c757d'} onMouseOut={e => e.currentTarget.style.background = '#8a8d91'}>Submit</button>
+
+              {/* ERROR */}
+              {brochureSubmitError && (
+                <div className="brochure-submit-error">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    />
+                    <path
+                      d="M12 8V13"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    />
+                    <circle
+                      cx="12"
+                      cy="16.5"
+                      r="1"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <span>{brochureSubmitError}</span>
+                </div>
+              )}
+
+
+              {/* ACTIONS */}
+              <div className="brochure-form-footer">
+
+                <p className="brochure-form-note">
+                  Your information is kept secure and will only be used
+                  to provide the requested product information.
+                </p>
+
+                <div className="brochure-form-actions">
+
+                  <button
+                    type="button"
+                    className="brochure-cancel-btn"
+                    disabled={brochureIsSubmitting}
+                    onClick={() => {
+                      if (!brochureIsSubmitting) {
+                        setShowBrochureModal(false);
+                      }
+                    }}
+                  >
+                    Cancel
+                  </button>
+
+                  <button
+                    type="submit"
+                    className="brochure-submit-btn"
+                    disabled={brochureIsSubmitting}
+                  >
+                    {brochureIsSubmitting ? (
+                      <>
+                        <span className="brochure-spinner" />
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        Download Brochure
+
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 3V15"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M7 11L12 16L17 11"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M5 21H19"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+
+                </div>
+
               </div>
+
             </form>
 
           </div>

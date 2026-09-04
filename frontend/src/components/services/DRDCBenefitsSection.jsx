@@ -39,7 +39,7 @@ const DRDCBenefitsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="dr-section-title">
-            How VGIL's DR & DC Solutions <span className="text-red">Benefit You?</span>
+            How VGIL's DC & DR Solutions <span className="text-red">Benefit You?</span>
           </h2>
           <p className="dr-section-subtitle">
             Transform your IT infrastructure with our cutting-edge data center solutions

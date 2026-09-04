@@ -22,7 +22,7 @@ const DRDCHero = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="dr-badge mx-auto">
-                <span className="badge-dot" ></span> DR & DC Services
+                <span className="badge-dot" ></span> DC & DR Services
               </div>
               <h1 className="dr-hero-title text-center">
                 {/* End-to-End Data Centre <span className="text-red">Infrastructure</span> For Your Business */}
