@@ -73,7 +73,7 @@ function HeroGradient() {
                 </div>
 
                 <span className="fw-semibold text-gradient-1">
-                  &nbsp;Partner
+                  &nbsp;Partner 
                 </span>
               </div>
               {/* <div className="title-icon ">
