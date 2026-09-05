@@ -2,6 +2,29 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import JobApplicationForm from "../components/JobApplicationForm";
 
+import jobs from "../data/jobsData";
+
+import {
+  Mail,
+  MapPin,
+  Briefcase,
+  Clock,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowLeft,
+  ArrowRight,
+  Send,
+  FileText,
+  GraduationCap,
+  Building2,
+  BadgeCheck
+} from "lucide-react";
+
+import { FaLinkedinIn } from "react-icons/fa";
+
+import "./CareerDetails.css";
+
 const CareerDetails = () => {
   const { jobId } = useParams();
 
@@ -11,172 +34,7 @@ const CareerDetails = () => {
     window.scrollTo(0, 0);
   }, [jobId]);
 
-  const jobs = {
-    "business-development-analyst": {
-      title: "Business Development Analyst",
-      category: "Engineering",
-      type: "Full-Time",
-      location: "Nagpur / Pune / Mumbai / Hyderabad, India",
-      positions: "5",
-      experience: "4 years",
 
-      description: [
-        "Conduct market research to analyze industry trends, customer needs, and identify growth opportunities",
-        "Identify and generate new business opportunities through research, networking, and lead generation activities.",
-        "Analyze business and sales data to prepare reports, dashboards, and presentations for decision- making.",
-        "Track competitor activities, market positioning, and provide actionable market insights.",
-        "Support business growth strategies, planning, and execution of new initiatives.",
-        "Collaborate closely with sales and marketing teams to improve lead conversion and customer acquisition.",
-        "Assist in preparing client proposals, presentations, and business pitches.",
-        "Monitor key performance indicators (KPIs) and recommend improvements for business performance.",
-        "Maintain and update CRM systems to ensure accurate tracking of leads, client interactions, andsales pipeline.",
-        "Stay updated with IT trends, technologies, and competitor solutions to improve pitching effectiveness.",
-        "Convert qualified leads into customers by understanding technical requirements, proposing suitable solutions, handling objections, and closing deals.",
-      ],
-
-      qualifications: [
-        "A Master of Business Administration (MBA) will be considered an added advantage.",
-        "Bachelor’s degree in Business Administration, Marketing, IT, or related field.",
-      ]
-    },
-
-    "customer-acquisition-execution": {
-      title: "Customer Acquisition Executive",
-      category: "Marketing",
-      type: "Full-Time",
-      location: "Nagpur, India",
-      positions: "3",
-      experience: "3 years",
-
-      description: [
-        "Identify, qualify, and generate high-quality leads through cold calling, email outreach, LinkedIn, tech forums, referrals, industry events, and various lead generation portals to build a strong IT sales pipeline.",
-        "Plan and execute customer acquisition strategies aligned with organizational goals, focusingonIT products and services such as software solutions, SaaS, and cloud services.",
-        "Conduct market research to understand client requirements, emerging technologies, competitor offerings, and new business opportunities.",
-        "Initiate and manage communication with prospects through calls, emails, virtual demos, webinars, and meetings to position IT solutions effectively.",
-        "Convert prospects into qualified leads and subsequently into customers by understanding technical requirements, proposing appropriate solutions, addressing objections, and successfully closing deals Build and maintain long-term client relationships to ensure customer satisfaction, repeat business, and cross-selling/up-selling opportunities.",
-        "Collaborate with marketing, pre-sales, and technical teams to align campaigns, proposals, and lead generation strategies.",
-        "Track and analyze key performance metrics such as conversion rates, cost per acquisition, lead quality, and ROI.",
-        "Maintain accurate CRM records of leads, interactions, proposals, and deal progress.",
-        "Conduct regular follow-ups and nurture leads through the sales funnel for timely closures.",
-        "Stay updated with IT trends, technologies, and competitor solutions to improve pitching effectiveness.",
-        "Prepare and present daily/weekly reports on sales performance, pipeline status, forecasts, and achievements",
-      ],
-
-      qualifications: [
-        "Bachelor’s degree in Business Administration, Marketing, IT, or related field.",
-        
-      ]
-    },
-
-    "solution": {
-      title: "Solution Opportunity Manager (Govt.& BFSI)",
-      category: "Marketing",
-      type: "Full-Time",
-      location: "Chennai, Jaipur, Hyderabad, Mumbai, Nagpur / India",
-      positions: "5",
-      experience: "8+ years",
-
-      description: [
-        "Identify and pursue new business opportunities within Government and BFSI sectors.",
-        "Build and maintain strong relationships with key decision-makers and stakeholders.",
-        "Lead RFP responses, including solution design, documentation, and submission.",
-        "Conduct solution presentations and participate in client meetings and discussions.",
-        "Handle contract negotiations and closure of business deals.",
-        "Develop and execute sales strategies to achieve revenue targets.",
-        "Expand existing client accounts and identify cross-selling/up-selling opportunities.",
-        "Attend industry events, seminars, and networking forums to represent the organization.",
-        "Track sales pipeline, monitor progress, and report updates to management regularly.",
-        "Collaborate with internal teams (technical, delivery, management) for successful project execution",
-        "Stay updated with government procurement processes and BFSI regulations",
-        "Analyze market trends and competitor activities to identify growth opportunities",
-      ],
-
-      qualifications: [
-        "Bachelor’s or Master’s Degree (B.E / MBA or equivalent)."
-      ]
-    },
-
-    // "product-manager": {
-    //   title: "Technical Product Manager",
-    //   category: "Product",
-    //   type: "Full-Time",
-    //   location: "Nagpur, India",
-    //   positions: "1",
-    //   experience: "4+ years",
-
-    //   description: [
-    //     "Define and communicate product vision and strategy.",
-    //     "Create and maintain product roadmaps.",
-    //     "Work closely with engineering, design, and business teams.",
-    //     "Understand customer requirements and translate them into product features.",
-    //     "Analyze market trends and competitor products.",
-    //     "Prioritize product features based on business and customer needs.",
-    //     "Monitor product KPIs and performance.",
-    //     "Coordinate product launches and continuous improvements."
-    //   ],
-
-    //   qualifications: [
-    //     "Bachelor's degree in Business, Technology, Engineering, or related field.",
-    //     "Experience managing technical products.",
-    //     "Strong understanding of software development processes.",
-    //     "Excellent communication, analytical, and leadership skills."
-    //   ]
-    // },
-
-    // "sales-executive": {
-    //   title: "Business Development Analyst",
-    //   category: "Marketing",
-    //   type: "Sales",
-    //   location: "Chennai, Jaipur, Hyderabad, Mumbai, Nagpur",
-    //   positions: "5",
-    //   experience: "4 years",
-
-    //   description: [
-    //     "Conduct market research to analyze industry trends, customer needs, and identify growth opportunities.",
-    //     "Identify and generate new business opportunities through research, networking, and lead generation activities.",
-    //     "Analyze business and sales data to prepare reports, dashboards, and presentations for decision-making.",
-    //     "Track competitor activities, market positioning, and provide actionable market insights.",
-    //     "Support business growth strategies, planning, and execution of new initiatives.",
-    //     "Collaborate closely with sales and marketing teams to improve lead conversion and customer acquisition.",
-    //     "Assist in preparing client proposals, presentations, and business pitches.",
-    //     "Monitor key performance indicators (KPIs) and recommend improvements for business performance.",
-    //     "Maintain and update CRM systems to ensure accurate tracking of leads, client interactions, and sales pipeline.",
-    //     "Stay updated with IT trends, technologies, and competitor solutions to improve pitching effectiveness.",
-    //     "Convert qualified leads into customers by understanding technical requirements, proposing suitable solutions, handling objections, and closing deals."
-    //   ],
-
-    //   qualifications: [
-    //     "A Master of Business Administration (MBA) will be considered an added advantage.",
-    //     "Bachelor’s degree in Business Administration, Marketing, IT, or related field."
-    //   ]
-    // },
-
-    // "data-scientist": {
-    //   title: "Data Scientist (AI/ML)",
-    //   category: "Data",
-    //   type: "Full-Time",
-    //   location: "Remote",
-    //   positions: "1",
-    //   experience: "3+ years",
-
-    //   description: [
-    //     "Develop machine learning models and data-driven solutions.",
-    //     "Analyze large datasets to identify patterns and trends.",
-    //     "Build predictive models and recommendation systems.",
-    //     "Clean, process, and transform structured and unstructured data.",
-    //     "Evaluate machine learning models and improve their performance.",
-    //     "Collaborate with engineering and product teams.",
-    //     "Present data insights to technical and business stakeholders."
-    //   ],
-
-    //   qualifications: [
-    //     "Bachelor's or Master's degree in Computer Science, Data Science, Mathematics, or related field.",
-    //     "Experience with Python and machine learning frameworks.",
-    //     "Strong understanding of statistics and data analysis.",
-    //     "Knowledge of machine learning and AI concepts."
-    //   ]
-    // }
-  };
 
   // Find the selected job
   const job = jobs[jobId];
@@ -197,20 +55,6 @@ const CareerDetails = () => {
           <h1>Job Not Found</h1>
           <p>This job position does not exist.</p>
 
-          {/* <Link
-            to="/careers"
-            style={{
-              display: "inline-block",
-              marginTop: "15px",
-              background: "#e10600",
-              color: "#fff",
-              padding: "12px 25px",
-              borderRadius: "30px",
-              textDecoration: "none"
-            }}
-          >
-            Back to Careers
-          </Link> */}
         </div>
       </div>
     );
@@ -218,195 +62,336 @@ const CareerDetails = () => {
 
   return (
     <>
-      {/* HEADER */}
-      <section
-        style={{
-          padding: "120px 20px 40px 20px",
-          borderBottom: "1px solid #eee",
-          background: "#fff"
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1250px",
-            margin: "auto",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            flexWrap:'wrap',
-            gap: "30px"
-          }}
-        >
-          <div>
-            <p
-              style={{
-                margin: "0 0 8px",
-                color: "#333",
-                fontSize: "14px"
-              }}
-            >
-              Careers
-            </p>
+      {/* ================= HERO ================= */}
 
-            <h1
-              style={{
-                margin: 0,
-                color: "#e10600",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: "800"
-              }}
-            >
-              {job.title}
-            </h1>
+      <section className="career-details-hero">
+        <div className="career-details-hero__overlay"></div>
+
+        <div className="container career-details-hero__container">
+          <div className="career-breadcrumb">
+            <Link to="/careers/career-path">Careers</Link>
+            <span>/</span>
+            <span>{job.title}</span>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "12px"
-            }}
-          >
-            <a
-              href="mailto:hr@vginfotech.ai"
-              style={{
-                color: "#e10600"
-              }}
-            >
-              ✉ hr@vginfotech.ai
-            </a>
+          <div className="career-details-hero__content">
+            <div className="career-details-hero__main">
+              <div className="career-hero-label">
+                <Briefcase size={16} />
+                <span>Career Opportunity</span>
+              </div>
 
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: "#e10600"
-              }}
-            >
-              in LinkedIn
-            </a>
+              <h1>{job.title}</h1>
+
+              <p>
+                Join Virtual Galaxy and become part of a team building innovative
+                technology solutions and creating meaningful impact.
+              </p>
+
+              <div className="career-hero-meta">
+                <div className="career-meta-pill">
+                  <MapPin size={18} />
+                  <span>{job.location}</span>
+                </div>
+
+                <div className="career-meta-pill">
+                  <Clock size={18} />
+                  <span>{job.type}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="career-contact-card">
+              <p className="career-contact-card__label">
+                HAVE QUESTIONS?
+              </p>
+
+              <h4>Connect with our team</h4>
+
+              <a href="mailto:hr@vginfotech.ai">
+                <span className="career-contact-icon">
+                  <Mail size={17} />
+                </span>
+
+                <span>hr@vginfotech.ai</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/virtualgalaxy/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="career-contact-icon linkedin">
+                  <FaLinkedinIn size={16} />
+                </span>
+
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* JOB INFO */}
-      <section style={{ padding: "30px 6% 10px" }}>
-        <div
-          style={{
-            maxWidth: "1250px",
-            margin: "auto",
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(180px, 1fr))",
-            gap: "7px"
-          }}
-        >
-          <InfoCard
-            title="Job Category"
-            value={job.category}
-          />
 
-          <InfoCard
-            title="Job Type"
-            value={job.type}
-          />
+      {/* ================= JOB INFORMATION ================= */}
 
-          <InfoCard
-            title="Location"
-            value={job.location}
-          />
+      <section className="career-info-section">
+        <div className="container">
+          <div className="career-info-grid">
 
-          <InfoCard
-            title="Positions"
-            value={job.positions}
-          />
+            <InfoCard
+              icon={<Building2 size={22} />}
+              title="Job Category"
+              value={job.category}
+            />
 
-          <InfoCard
-            title="Experience"
-            value={job.experience}
-          />
+            <InfoCard
+              icon={<Briefcase size={22} />}
+              title="Job Type"
+              value={job.type}
+            />
+
+            <InfoCard
+              icon={<MapPin size={22} />}
+              title="Location"
+              value={job.location}
+            />
+
+            <InfoCard
+              icon={<Users size={22} />}
+              title="Open Positions"
+              value={job.positions}
+            />
+
+            <InfoCard
+              icon={<Award size={22} />}
+              title="Experience"
+              value={job.experience}
+            />
+
+          </div>
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section style={{ padding: "20px 6% 70px" }}>
-        <div
-          style={{
-            maxWidth: "1250px",
-            margin: "auto"
-          }}
-        >
-          <h2 style={headingStyle}>
-            Job Description
-          </h2>
 
-          <ul style={listStyle}>
-            {job.description.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+      {/* ================= MAIN CONTENT ================= */}
 
-          <h2
-            style={{
-              ...headingStyle,
-              marginTop: "35px"
-            }}
-          >
-            Qualification
-          </h2>
+      <section className="career-content-section">
+        <div className="container">
+          <div className="career-layout">
 
-          <ul style={listStyle}>
-            {job.qualifications.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
 
-  <button
-  type="button"
-  onClick={() => {
-    setShowApplicationForm(true);
+            {/* LEFT CONTENT */}
 
-    setTimeout(() => {
-      document
-        .getElementById("job-application")
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-    }, 100);
-  }}
-  style={{
-    display: "inline-block",
-    background: "#e10600",
-    color: "#fff",
-    padding: "13px 25px",
-    marginTop:"40px",
-    borderRadius: "30px",
-    border: "none",
-    textDecoration: "none",
-    fontWeight: "700",
-    cursor: "pointer"
-  }}
->
-  Apply Now
-</button>
+            <main className="career-main-content">
 
-{showApplicationForm && (
-  <div id="job-application">
-    <JobApplicationForm jobTitle={job.title} />
-  </div>
-)}
-          <div style={{ marginTop: "25px" }}>
+              {/* JOB DESCRIPTION */}
+
+              <div className="career-content-card">
+                <div className="career-section-heading">
+                  <div className="career-heading-icon">
+                    <FileText size={21} />
+                  </div>
+
+                  <div>
+                    <span>ROLE OVERVIEW</span>
+                    <h2>Job Description</h2>
+                  </div>
+                </div>
+
+                <div className="career-description-intro">
+                  <p>
+                    We are looking for a talented and motivated professional to
+                    join our growing team. The role involves the following key
+                    responsibilities:
+                  </p>
+                </div>
+
+                <ul className="career-list">
+                  {job.description.map((item, index) => (
+                    <li key={index}>
+                      <CheckCircle size={19} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+
+              {/* QUALIFICATIONS */}
+
+              {job.qualifications?.length > 0 && (
+                <div className="career-content-card">
+                  <div className="career-section-heading">
+                    <div className="career-heading-icon">
+                      <GraduationCap size={22} />
+                    </div>
+
+                    <div>
+                      <span>WHAT WE'RE LOOKING FOR</span>
+                      <h2>Qualifications</h2>
+                    </div>
+                  </div>
+
+                  <ul className="career-list qualification-list">
+                    {job.qualifications.map((item, index) => (
+                      <li key={index}>
+                        <CheckCircle size={19} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {job.certifications?.length > 0 && (
+                <div className="career-content-card">
+                  <div className="career-section-heading">
+                    <div className="career-heading-icon certification-heading-icon">
+                      <BadgeCheck size={22} />
+                    </div>
+
+                    <div>
+                      <span>PROFESSIONAL CREDENTIALS</span>
+                      <h2>Certifications</h2>
+                    </div>
+                  </div>
+
+                  <div className="career-certification-note">
+                    <span>Optional</span>
+                  </div>
+
+                  <ul className="career-list certification-list">
+                    {job.certifications.map((item, index) => (
+                      <li key={index}>
+                        <CheckCircle size={19} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+            </main>
+
+
+            {/* RIGHT SIDEBAR */}
+
+            <aside className="career-sidebar">
+
+              <div className="career-apply-card">
+
+                <div className="career-apply-card__top">
+                  <div className="career-apply-icon">
+                    <Send size={22} />
+                  </div>
+
+                  <span>READY TO JOIN US?</span>
+                </div>
+
+                <h3>Apply for this position</h3>
+
+                <p>
+                  Take the next step in your career and become part of our
+                  growing team.
+                </p>
+
+                <button
+                  type="button"
+                  className="career-apply-button"
+                  onClick={() => {
+                    setShowApplicationForm(true);
+
+                    setTimeout(() => {
+                      document
+                        .getElementById("job-application")
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    }, 100);
+                  }}
+                >
+                  <span>Apply Now</span>
+                  <ArrowRight size={19} />
+                </button>
+
+                <div className="career-apply-divider"></div>
+
+                <div className="career-sidebar-info">
+
+                  <div>
+                    <MapPin size={17} />
+
+                    <div>
+                      <span>LOCATION</span>
+                      <strong>{job.location}</strong>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Award size={17} />
+
+                    <div>
+                      <span>EXPERIENCE</span>
+                      <strong>{job.experience}</strong>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div className="career-help-card">
+                <h4>Need help?</h4>
+
+                <p>
+                  Have questions about this opportunity? Our recruitment team is
+                  happy to help.
+                </p>
+
+                <a href="mailto:hr@vginfotech.ai">
+                  <Mail size={17} />
+                  Contact HR
+                </a>
+              </div>
+
+            </aside>
+
+          </div>
+
+          {/* APPLICATION FORM */}
+
+          {showApplicationForm && (
+            <div
+              id="job-application"
+              className="career-application-wrapper"
+            >
+              <div className="career-application-heading">
+                <span>APPLICATION FORM</span>
+
+                <h2>Apply for {job.title}</h2>
+
+                <p>
+                  Complete the form below and our recruitment team will review
+                  your application.
+                </p>
+              </div>
+
+              <JobApplicationForm jobTitle={job.title} />
+            </div>
+          )}
+
+          {/* BACK LINK */}
+
+          <div className="career-back-wrapper">
             <Link
               to="/careers/career-path"
-              style={{
-                color: "#111",
-                textDecoration: "none",
-                fontWeight: "600"
-              }}
+              className="career-back-link"
             >
-              ← Back to Careers
+              <ArrowLeft size={18} />
+              <span>Back to All Careers</span>
             </Link>
           </div>
         </div>
@@ -415,37 +400,19 @@ const CareerDetails = () => {
   );
 };
 
-const InfoCard = ({ title, value }) => {
+const InfoCard = ({ icon, title, value }) => {
   return (
-    <div
-      style={{
-        minHeight: "85px",
-        padding: "15px",
-        border: "1px solid #e10600",
-        background: "#fff5f3",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center"
-      }}
-    >
-      <span
-        style={{
-          fontSize: "13px",
-          marginBottom: "7px"
-        }}
-      >
-        {title}
-      </span>
+    <div className="career-info-card">
 
-      <strong
-        style={{
-          fontSize: "15px"
-        }}
-      >
-        {value}
-      </strong>
+      <div className="career-info-card__icon">
+        {icon}
+      </div>
+
+      <div className="career-info-card__content">
+        <span>{title}</span>
+        <strong>{value}</strong>
+      </div>
+
     </div>
   );
 };

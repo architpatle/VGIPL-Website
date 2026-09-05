@@ -723,3 +723,36 @@
 .plainTable td {
   color: #52525b;
 }
+
+/* Append these to Policies.module.css (replaces the previous version of this file) */
+
+.subHeading {
+  margin: 22px 0 10px;
+  color: #e10600;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tableName {
+  margin: 26px 0 8px;
+  color: #09090b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.emptyPolicy {
+  padding: 24px;
+  border: 1px dashed #d4d4d8;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #71717a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.emptyPolicy a {
+  color: #e10600;
+  font-weight: 600;
+}
