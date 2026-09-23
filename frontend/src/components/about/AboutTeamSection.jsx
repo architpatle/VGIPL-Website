@@ -132,14 +132,30 @@ function AboutTeamSection() {
       fit: "contain",
       bg: "rgba(0,0,0,0.03)",
       linkedin: "https://www.linkedin.com/in/ayush-sharma-1425a2189/"
+    },
+    {
+      name: "Mr. Sunil Kulkarni",
+      role: "Additional Non-Executive Director",
+      desc: "Driving strategic growth through fintech, digital payments, and technology expertise.",
+      img: "/assets/images/about/founders/sunil-kulkarni.png",
+      fit: "contain",
+      bg: "rgba(0,0,0,0.03)",
+      linkedin: "https://www.linkedin.com/in/sunil-kulkarni-12a3291/"
     }
   ];
 
-  const leftColumnMembers = [boardMembers[0], boardMembers[2], boardMembers[4]];
-  const rightColumnMembers = [boardMembers[1], boardMembers[3], boardMembers[5]];
+  // const leftColumnMembers = [boardMembers[0], boardMembers[2], boardMembers[4], boardMembers[6]];
+  // const rightColumnMembers = [boardMembers[1], boardMembers[3], boardMembers[5]];
+
+  const isOddCount = boardMembers.length % 2 !== 0;
+  const pairedMembers = isOddCount ? boardMembers.slice(0, -1) : boardMembers;
+  const lastOddMember = isOddCount ? boardMembers[boardMembers.length - 1] : null;
+
+  const leftColumnMembers = pairedMembers.filter((_, i) => i % 2 === 0);
+  const rightColumnMembers = pairedMembers.filter((_, i) => i % 2 === 1);
 
   return (
-    <div ref={sectionRef} className="section-team section-spacing-lg" style={{ backgroundColor: '#ffffff'}}>
+    <div ref={sectionRef} className="section-team section-spacing-lg" style={{ backgroundColor: '#ffffff' }}>
       <div className="container">
         {/* Founders Section */}
         {/* <div className="heading-section center mb-64">
@@ -329,6 +345,40 @@ function AboutTeamSection() {
                 </div>
               ))}
             </div>
+
+
+            {lastOddMember && (
+              <div className="board-col-full">
+                <div
+                  className="board-card anim-on-scroll anim-slide-left"
+                  onClick={() => handleCardClick(lastOddMember)}
+                  onMouseMove={handleTilt}
+                  onMouseLeave={handleTiltReset}
+                >
+                  <div className="board-card-img-wrapper shine-effect" style={{ backgroundColor: lastOddMember.bg }}>
+                    <img
+                      src={lastOddMember.img}
+                      alt={lastOddMember.name}
+                      style={{ objectFit: lastOddMember.fit }}
+                    />
+                  </div>
+                  <div className="board-card-info">
+                    <span className="board-card-role">{lastOddMember.role}</span>
+                    <h4 className="board-card-name">{lastOddMember.name}</h4>
+                    <p className="board-card-desc">{lastOddMember.desc}</p>
+                  </div>
+
+                  <a href={lastOddMember.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="board-linkedin-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <i className="icon icon-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="board-footer-text effectFade fadeUp">
@@ -382,7 +432,7 @@ function AboutTeamSection() {
                 {/* Default Visible Name & Role */}
                 <div className="member-info-static">
                   <h6 style={{ color: '#111827', fontSize: '18px', fontWeight: '700', }}>{member.name}</h6>
-                  <p style={{ color: '#4b5563', fontSize: '13px', fontWeight: '500', maxWidth: '240px', margin: '0 auto', lineHeight:'1.4'}}>{member.role}</p>
+                  <p style={{ color: '#4b5563', fontSize: '13px', fontWeight: '500', maxWidth: '240px', margin: '0 auto', lineHeight: '1.4' }}>{member.role}</p>
                 </div>
               </div>
             ))}
@@ -592,9 +642,10 @@ function AboutTeamSection() {
           .board-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap:24px;
+            column-gap:24px;
+            row-gap:5px;
             position: relative;
-            align-items: center;
+            align-items: start;
             max-width: 1200px;
             margin: 0 auto;
           }
@@ -610,6 +661,17 @@ function AboutTeamSection() {
             flex-direction: column;
             gap: 5px;
           }
+
+          .board-col-full {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.board-col-full .board-card {
+  width: 100%;
+  max-width: calc(50% - 12px); /* matches a single column's width given the 24px gap */
+}
 
           .board-col-center {
             position: relative;
@@ -862,6 +924,11 @@ function AboutTeamSection() {
             .board-col-left, .board-col-right {
               gap: 30px;
             }
+
+            .board-col-full .board-card {   /* add this line */
+  max-width: 100%;
+}
+
             .board-col-center {
               display: none;
             }
@@ -1257,7 +1324,7 @@ function AboutTeamSection() {
            min-height: 228px}
            }
         `}
-        
+
         </style>
 
         {/* Detail Modal for Mobile */}
@@ -1291,7 +1358,7 @@ function AboutTeamSection() {
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 }
 
