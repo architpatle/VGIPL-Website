@@ -1,20 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import team1Image from '../../assets/home/ownwer-img/avinash-shende-clear-bg.png';
 import team2Image from '../../assets/home/ownwer-img/sachin-pande-clear-bg.png';
-import logoImage from '../../assets/home/ownwer-img/vg-logo-2.png';
-import avinashSignature from '../../assets/home/signature.png';
-import sachinSignature from '../../assets/home/sachin-signature.png';
-
-// Import VGIL Team Members
-import alhadImg from '../../assets/home/ownwer-img/Alhad_Hardas.jpg';
-import anilImg from '../../assets/home/ownwer-img/Anil_Katwale.jpg';
-import bharatImg from '../../assets/home/ownwer-img/bharat-zade.jpg';
-import harshjitImg from '../../assets/home/ownwer-img/harshjit-deshmukh.jpg';
-import ninadImg from '../../assets/home/ownwer-img/ninad-mairal.jpg';
-import nitendraImg from '../../assets/home/ownwer-img/Nitendra_Bisen.jpg';
-import sachinBImg from '../../assets/home/ownwer-img/sachin_burghate.jpg';
-import satishImg from '../../assets/home/ownwer-img/Satish_Kukde.jpg';
-import anjaliImg from '../../assets/home/ownwer-img/anjali-padhe.png'
+import Leadership from './Leadership';
 
 function AboutTeamSection() {
   const [activeDirector, setActiveDirector] = useState(null);
@@ -65,18 +52,6 @@ function AboutTeamSection() {
   const handleTiltReset = (e) => {
     e.currentTarget.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
   };
-  const vgilTeam = [
-    { name: 'Mr. Harshjit Deshmukh', role: 'Director - Domestic Business Development', img: harshjitImg },
-    { name: 'Mr. Bharat Zade', role: 'Director - Operations & Digital Transformation', img: bharatImg },
-    { name: 'Mr. Ninad Mairal', role: 'Director - International Business Development', img: ninadImg },
-    { name: 'Mr. Sachin Burghate', role: 'Director - Technical (BFSI)', img: sachinBImg },
-    { name: 'Mr. Alhad Hardas', role: 'Director - Banking Domain Services', img: alhadImg },
-    { name: 'Mr. Satish Kukde', role: 'Principal Database Architect', img: satishImg },
-    { name: 'Mr. Anil Katwale', role: 'Principal Solution Architect', img: anilImg },
-    { name: 'Mr. Nitendra Bisen', role: 'Principal Service Strategist', img: nitendraImg },
-    { name: 'Mrs. Anjali Padhye', role: 'Company Secretary and Compliance Officer', img: anjaliImg },
-
-  ];
 
   const boardMembers = [
     {
@@ -381,13 +356,14 @@ function AboutTeamSection() {
             )}
           </div>
 
-          <div className="board-footer-text effectFade fadeUp">
-            <span>Together, our board leads with vision, accountability, and a shared commitment to build a stronger tomorrow.</span>
-          </div>
+
         </div>
 
-        <div className="vgil-standalone-section" >
+        {/* <div className="vgil-standalone-section bg-red-100" >
           <div className="heading-section center mb-80">
+            <div className="board-footer-text effectFade fadeUp">
+              <span>Together, our board leads with vision, accountability, and a shared commitment to build a stronger tomorrow.</span>
+            </div>
             <h4 className="text-dark effectFade fadeUp vgil-title-responsive">
               Leadership That Drives Our Vision
             </h4>
@@ -409,7 +385,6 @@ function AboutTeamSection() {
                       transition: 'all 0.6s ease'
                     }}
                   />
-                  {/* Glass Overlay on Hover */}
                   <div className="card-overlay" style={{
                     position: 'absolute',
                     bottom: '-100%',
@@ -429,7 +404,6 @@ function AboutTeamSection() {
                     <p style={{ color: '#ff4d00', fontSize: '13px', fontWeight: '500', lineHeight: '1.4' }}>{member.role}</p>
                   </div>
                 </div>
-                {/* Default Visible Name & Role */}
                 <div className="member-info-static">
                   <h6 style={{ color: '#111827', fontSize: '18px', fontWeight: '700', }}>{member.name}</h6>
                   <p style={{ color: '#4b5563', fontSize: '13px', fontWeight: '500', maxWidth: '240px', margin: '0 auto', lineHeight: '1.4' }}>{member.role}</p>
@@ -437,7 +411,9 @@ function AboutTeamSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
+
+        <Leadership />
 
         <style>{`
           .section-team .heading-sub.style-1 {
@@ -536,15 +512,6 @@ function AboutTeamSection() {
             transform: scale(1.08);
           }
 
-          /* ====== VGIL CARD HOVER ENHANCEMENT ====== */
-          .vgil-card-unique {
-            transition: transform 0.15s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
-            will-change: transform;
-          }
-          .vgil-card-unique:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
-            border-color: rgba(225, 6, 0, 0.2) !important;
-          }
 
           /* ====== MOBILE: Disable 3D tilt & heavy animations ====== */
           @media (max-width: 768px) {
@@ -845,49 +812,6 @@ function AboutTeamSection() {
             box-shadow: 0 4px 10px rgba(0, 119, 181, 0.2);
           }
 
-          .board-footer-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 60px;
-            width: 100%;
-          }
-
-          .board-footer-text::before, .board-footer-text::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
-          }
-
-          .board-footer-text span {
-            font-size: 14px;
-            color: #64748b;
-            font-style: italic;
-            text-align: center;
-            font-weight: 500;
-          }
-
-          .team-grid-responsive {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px 30px;
-            max-width: 1300px;
-            margin: 0 auto;
-          }
-          .vgil-card-unique {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 30px;
-            height: 280px;
-            width: 280px;
-            margin: 0 auto 8px;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-          }
-
           @media (max-width: 1199px) {
             .founders-container {
               gap: 20px;
@@ -895,10 +819,7 @@ function AboutTeamSection() {
             .founder-item {
               flex: 0 0 323px;
             }
-            .team-grid-responsive {
-              grid-template-columns: repeat(3, 1fr);
-              gap: 40px 20px;
-            }
+            
           }
 
           @media (max-width: 991px) {
@@ -909,13 +830,6 @@ function AboutTeamSection() {
             .founder-item {
               flex: 0 0 100%;
               max-width: 425px;
-            }
-
-            .team-grid-responsive {
-              grid-template-columns: repeat(2, 1fr);
-            }
-            .vgil-title-responsive {
-              font-size: 28px !important;
             }
             .board-layout {
               grid-template-columns: 1fr;
@@ -942,16 +856,6 @@ function AboutTeamSection() {
           }
 
           @media (max-width: 640px) {
-            .team-grid-responsive {
-              grid-template-columns: 1fr;
-            }
-            .vgil-card-unique {
-              width: 100%;
-              max-width: 280px;
-            }
-            .vgil-title-responsive {
-              font-size: 24px !important;
-            }
             .board-card {
               flex-direction: column;
               text-align: center;
@@ -1053,12 +957,6 @@ function AboutTeamSection() {
               // margin-top: 40px !important;
               // margin-bottom: 40px !important;
             }
-            .vgil-standalone-section {
-              margin-top: 40px !important;
-            }
-            .board-footer-text {
-              margin-top: 24px !important;
-            }
             h2.heading-title {
               font-size: 26px !important;
             }
@@ -1125,40 +1023,10 @@ function AboutTeamSection() {
               font-size: 11px !important;
             }
 
-            /* VGIL Standalone Team Grid Mobile overrides */
-            .team-grid-responsive {
-              grid-template-columns: 1fr 1fr !important;
-              gap: 20px 12px !important;
-              padding: 0 12px !important;
-            }
-            .vgil-card-unique {
-              width: 100% !important;
-              max-width: 150px !important;
-              height: 150px !important;
-              margin: 0 auto 10px !important;
-              border-radius: 18px !important;
-            }
-            .vgil-card-unique img {
-              padding: 14px 0px 0px 0px !important;
-            }
-            .card-overlay {
-              display: none !important;
-            }
-            .member-info-static h6 {
-              font-size: 14px !important;
-              margin-bottom: 2px !important;
-            }
-            .member-info-static p {
-              font-size: 11px !important;
-              line-height: 1.3 !important;
-              max-width: 100% !important;
-            }
-          }
+           
+                      }
 
-          /* Default (Desktop) */
-          // .leader-name {
-          //   display: none !important;
-          // }
+        
           .leader-signature {
             display: block !important;
             height: 80px;
@@ -1313,10 +1181,6 @@ function AboutTeamSection() {
               opacity: 1;
               transform: scale(1) translateY(0);
             }
-          }
-
-          .vgil-standalone-section .effectFade {
-            animation-duration: 1s;
           }
 
            @media (max-width: 399px){
