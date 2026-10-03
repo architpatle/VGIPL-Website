@@ -28,6 +28,20 @@ const AnalystMeetContent = () => {
   const meets = [
     {
       id: 'meet-1',
+      date: 'Aug 21, 2026',
+      theme: 'orange',
+      iconName: 'calendar',
+      files: [
+        {
+          title: 'Intimation Investor Meet',
+          type: 'PDF',
+          url: '/assets/.pdf/Investor Analyst-Meet/Investor_Meet_21_08_2026.pdf',
+          iconType: 'pdf'
+        },
+      ]
+    },
+    {
+      id: 'meet-2',
       date: 'Jun 03, 2026',
       theme: 'orange',
       iconName: 'calendar',
@@ -43,14 +57,26 @@ const AnalystMeetContent = () => {
           type: 'PDF',
           url: '/assets/.pdf/Investor Analyst-Meet/Investors_Presentation.pdf',
           iconType: 'pdf'
-        }
+        },
+        {
+          title: 'Audio Recording - Investor Earning Conference Call Dated June 03, 2026',
+          type: 'AUDIO',
+          url: '/assets/recording/Investor_Earning_Conference_Call_Dated_June_03_2026.mp3',
+          iconType: 'audio'
+        },
+        {
+          title: 'Transcript of Earnings Conference Call',
+          type: 'PDF',
+          url: '/assets/.pdf/Investor Analyst-Meet/Transcript_of_Earnings_Conference_Call.pdf',
+          iconType: 'pdf'
+        },
       ]
     },
     {
-      id: 'meet-2',
+      id: 'meet-3',
       date: 'Mar 06, 2026',
-      theme: 'blue',
-      iconName: 'chart',
+      theme: 'orange',
+      iconName: 'calendar',
       files: [
         {
           title: 'Intimation of Schedule of Investor Meetings',
@@ -61,10 +87,10 @@ const AnalystMeetContent = () => {
       ]
     },
     {
-      id: 'meet-3',
+      id: 'meet-4',
       date: 'Nov 28, 2025',
-      theme: 'green',
-      iconName: 'users',
+      theme: 'orange',
+      iconName: 'calendar',
       files: [
         {
           title: 'Earnings Conference Call',
@@ -93,10 +119,10 @@ const AnalystMeetContent = () => {
       ]
     },
     {
-      id: 'meet-4',
+      id: 'meet-5',
       date: 'Jun 20, 2025',
-      theme: 'purple',
-      iconName: 'audio',
+      theme: 'orange',
+      iconName: 'calendar',
       files: [
         {
           title: 'Virtual Galaxy Invite',

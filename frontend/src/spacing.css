@@ -1247,12 +1247,12 @@
     max-height: 300px !important;
     position: absolute;
     width: auto !important;
-    right: 90px !important
+    right: -20px !important
   }
 
   .benefits-design .benefits-design-inner .item-img-2 {
     /* top: 15px !important; */
-    right: 300px !important;
+    right: 250px !important;
     max-height: 160px !important;
     width: auto !important;
   }

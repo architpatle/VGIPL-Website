@@ -4,6 +4,9 @@ import { Calendar, Users, BarChart3, FileText, Info, ArrowRight } from 'lucide-r
 import ContactSection from '../home/ContactSection';
 import '../../pages/BoardManagement.css';
 
+import preferentailWarrants from '../../assets/Investors-Info-img/Preferential Allotment of Warrants.png'
+
+
 const warrantGroups = [
   {
     id: 'group-1',
@@ -26,8 +29,8 @@ const warrantGroups = [
   {
     id: 'group-2',
     title: 'EGM Notices & Proceedings',
-    theme: 'blue',
-    iconName: 'users',
+    theme: 'orange',
+    iconName: 'calendar',
     files: [
       {
         title: 'Notice of Extra Ordinary General Meeting - 17 March 2026',
@@ -44,8 +47,8 @@ const warrantGroups = [
   {
     id: 'group-3',
     title: 'Approvals & Resolutions',
-    theme: 'green',
-    iconName: 'chart',
+    theme: 'orange',
+    iconName: 'calendar',
     files: [
       {
         title: 'In-principle Approval',
@@ -116,6 +119,11 @@ function PreferentialWarrants() {
                 Information on the preferential allotment of warrants and related disclosures.
               </p>
             </div>
+            <div className="col-lg-5 col-12 text-center mt-4 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.1s' }}>
+                <div className="hero-img-wrap" style={{ maxWidth: '280px' }}>
+                  <img src={preferentailWarrants} alt={preferentailWarrants} />
+                </div>
+            </div>
           </div>
         </div>
       </section>
@@ -124,7 +132,7 @@ function PreferentialWarrants() {
       <section className="explore-section">
         <div className="container">
           <div className="explore-divider"></div>
-          
+
           <div className="group-companies-container" style={{ marginTop: '0' }}>
             <div className="company-rows-list">
               {warrantGroups.map((group, idx) => (
@@ -149,15 +157,15 @@ function PreferentialWarrants() {
                     {group.files.map((file, fIdx) => (
                       <div key={fIdx} className="fy-doc-card" style={{ width: '100%', maxWidth: '320px' }}>
                         <div className="fy-doc-info" style={{ flex: '1', minWidth: '0', marginRight: '12px' }}>
-                          <span 
-                            className="fy-doc-year" 
-                            title={file.title} 
-                            style={{ 
+                          <span
+                            className="fy-doc-year"
+                            title={file.title}
+                            style={{
                               display: 'block',
-                              whiteSpace: 'nowrap', 
-                              overflow: 'hidden', 
-                              textOverflow: 'ellipsis', 
-                              width: '100%' 
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              width: '100%'
                             }}
                           >
                             {file.title}

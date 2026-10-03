@@ -1,75 +1,92 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { List, User, IndianRupee, BarChart3, ShieldCheck } from 'lucide-react';
-import imgMaterialCreditors from '../../assets/Investors-Info-img/Material_Creditors.png';
 import '../../pages/BoardManagement.css';
+import imgMaterialCreditors from '../../assets/Investors-Info-img/Material_Creditors.png';
 
 function MaterialCreditors() {
   return (
     <div className="board-mgmt-wrapper  pb-12 flex flex-col justify-start">
       {/* Hero / Header Section */}
-      <section className="hero-section relative overflow-hidden  border-b border-[#f8fafc]">
-        {/* Decorative Wavy Lines SVG */}
-        <svg className="absolute left-0 top-0 w-[280px] h-[280px] opacity-20 pointer-events-none animate-[pulse_6s_ease-in-out_infinite]" viewBox="0 0 200 200" fill="none">
-          <path d="M-50,30 C30,70 70,-10 130,30 C190,70 230,-10 290,30" stroke="#ff4d00" strokeWidth="0.8" strokeDasharray="1.5 1.5" />
-          <path d="M-50,50 C30,90 70,10 130,50 C190,90 230,10 290,50" stroke="#ff4d00" strokeWidth="0.8" />
-          <path d="M-50,70 C30,110 70,30 130,70 C190,110 230,30 290,70" stroke="#ff4d00" strokeWidth="0.8" />
-          <path d="M-50,90 C30,130 70,50 130,90 C190,130 230,50 290,90" stroke="#ff4d00" strokeWidth="0.8" />
-        </svg>
+      {/* Hero / Header Section */}
+      <section className="hero-section">
+        <div className="hero-glow-1"></div>
+        <div className="hero-glow-2"></div>
 
-        <div className="container relative z-10">
+        <div className="container">
           {/* Breadcrumbs */}
           <div className="row mb-3">
             <div className="col-12 text-left">
               <nav aria-label="breadcrumb">
-                <ol className="breadcrumb bg-transparent p-0 m-0" style={{ fontSize: '13px' }}>
+                <ol
+                  className="breadcrumb bg-transparent p-0 m-0"
+                  style={{ fontSize: '13px' }}
+                >
                   <li className="breadcrumb-item">
-                    <Link to="/" className="text-secondary hover:text-[#ff4d00] transition-colors no-underline">Home</Link>
+                    <Link
+                      to="/"
+                      className="text-secondary hover:text-[#ff4d00] transition-colors no-underline"
+                    >
+                      Home
+                    </Link>
                   </li>
+
                   <li className="breadcrumb-item">
-                    <Link to="/investors/board-and-management" className="text-secondary hover:text-[#ff4d00] transition-colors no-underline">Investors</Link>
+                    <Link
+                      to="/investors/board-and-management"
+                      className="text-secondary hover:text-[#ff4d00] transition-colors no-underline"
+                    >
+                      Investors
+                    </Link>
                   </li>
+
                   <li className="breadcrumb-item active" aria-current="page">
-                    <span className="text-[#ff4d00] font-bold">Material Creditors</span>
+                    <span className="text-[#ff4d00] font-bold">
+                      Material Creditors
+                    </span>
                   </li>
                 </ol>
               </nav>
             </div>
           </div>
 
-          {/* Centered Header Content with right-side illustration */}
-          <div className="relative mt-4 py-3 text-center">
-            <div className="max-w-[750px] mx-auto effect-fade-up">
-              <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight leading-tight m-0 text-[#1b305a]">
-                Virtual Galaxy Infotech Limited Material Creditors
-              </h1>
-
-              {/* Decorative Divider */}
-              <div className="flex items-center justify-center gap-1.5 my-3">
-                <div className="w-8 h-[2.5px] bg-[#ff4d00] rounded-full"></div>
-                <div className="w-1.5 h-1.5 bg-[#ff4d00] rounded-full"></div>
-                <div className="w-8 h-[2.5px] bg-[#ff4d00] rounded-full"></div>
+          {/* Hero Content */}
+          <div className="row align-items-center mt-3">
+            {/* Left Content */}
+            <div className="col-lg-7 col-12 text-left effect-fade-up">
+              <div className="tag-badge">
+                <span className="tag-dot" />
+                <span className="tag-text">Investor Relations</span>
               </div>
 
-              <p className="text-gray-600 font-medium text-xs md:text-sm mt-3 mb-0">
+              <h1 className="hero-title">
+                <span>Material</span>{' '}
+                <span className="highlight">Creditors</span>
+                <div className="hero-title-underline"></div>
+              </h1>
+
+              <p className="hero-desc">
                 Details of Outstanding Overdue to material Creditors as at{' '}
-                <span className="text-[#ff4d00] font-bold">December 31st, 2024</span>
+                <span className="text-[#ff4d00] font-bold">
+                  December 31st, 2024
+                </span>
               </p>
             </div>
 
-            {/* Absolute Positioned Illustration on the Right */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[220px] h-[220px] d-none d-lg-block pointer-events-none effect-fade-up" style={{ animationDelay: '0.1s' }}>
-              {/* Concentric background curves */}
-              <svg className="absolute inset-0 w-full h-full opacity-[0.15]" viewBox="0 0 100 100" fill="none">
-                <circle cx="50" cy="50" r="35" stroke="#ff4d00" strokeWidth="0.5" strokeDasharray="1.5 1.5" />
-                <circle cx="50" cy="50" r="42" stroke="#ff4d00" strokeWidth="0.5" />
-                <circle cx="50" cy="50" r="49" stroke="#ff4d00" strokeWidth="0.5" strokeDasharray="2.5 2.5" />
-              </svg>
-              <img 
-                src={imgMaterialCreditors} 
-                alt="Material Creditors Illustration" 
-                className="w-full h-full object-contain opacity-[0.1]" 
-              />
+            {/* Right Illustration */}
+            <div
+              className="col-lg-5 col-12 text-center mt-4 mt-lg-0 effect-fade-up"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <div
+                className="hero-img-wrap"
+                style={{ maxWidth: '280px' }}
+              >
+                <img
+                  src={imgMaterialCreditors}
+                  alt="Material Creditors"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -78,13 +95,13 @@ function MaterialCreditors() {
       {/* Main Grid / Disclosures Section */}
       <section className="explore-section flex-grow">
         <div className="container max-w-[950px] mx-auto px-4">
-          
+
           {/* Table Container Card */}
           <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.02)] border border-solid border-slate-100 max-w-[850px] mx-auto w-full overflow-hidden mb-6 effect-fade-up" style={{ animationDelay: '0.1s' }}>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-left text-sm m-0">
                 <thead>
-                  <tr 
+                  <tr
                     className="border-b border-solid border-slate-100"
                     style={{ background: 'linear-gradient(90deg, #ffebe5 0%, #fff5f2 100%)' }}
                   >

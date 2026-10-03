@@ -10,6 +10,10 @@ import MaterialCreditors from '../components/investors/MaterialCreditors';
 import PreferentialWarrants from '../components/investors/PreferentialWarrants';
 import MaterialContracts from '../components/investors/MaterialContracts';
 import MaterialDocuments from '../components/investors/MaterialDocuments';
+import AnnualReports from '../components/investors/AnnualReports';
+import NoticeOfMeeting from '../components/investors/NoticeOfMeeting';
+import Dividend from '../components/investors/Dividend';
+import Announcement from '../components/investors/Announcement';
 import {
   Building2,
   TrendingUp,
@@ -35,17 +39,17 @@ import {
   Headphones,
   FileCode
 } from 'lucide-react';
+
+import {
+    Calendar
+} from 'lucide-react';
+
 import './BoardManagement.css';
-
-
-
-
-
 
 const GROUP_COMPANIES_DATA = [
   {
     name: "Paynext Private Limited",
-    icon: "building-2",
+    icon: "calendar",
     theme: "orange",
     docs: [
       { year: "FY 2024-2025", link: "/assets/.pdf/Group Companies/Paynext Private Limited/FY 2024-2025.pdf" },
@@ -56,8 +60,8 @@ const GROUP_COMPANIES_DATA = [
   },
   {
     name: "Sampada Infrasolutions Private Limited",
-    icon: "building",
-    theme: "blue",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "FY 2023-24", link: "/assets/.pdf/Group Companies/Sampada Infosolutions Private Limited/FY 2023-24.pdf" },
       { year: "FY 2022-23", link: "/assets/.pdf/Group Companies/Sampada Infosolutions Private Limited/FY 2022-23.pdf" },
@@ -66,8 +70,8 @@ const GROUP_COMPANIES_DATA = [
   },
   {
     name: "SIP Fund Private Limited",
-    icon: "trending-up",
-    theme: "green",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "FY 2023-2024", link: "/assets/.pdf/Group Companies/SIP Fund Private Limited/FY 2023-2024.pdf" },
       { year: "FY 2022-2023", link: "/assets/.pdf/Group Companies/SIP Fund Private Limited/FY 2022-2023.pdf" },
@@ -76,8 +80,8 @@ const GROUP_COMPANIES_DATA = [
   },
   {
     name: "Virtual Galaxy Fintech Private Limited",
-    icon: "building-2",
-    theme: "purple",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "FY 2024-2025", link: "/assets/.pdf/Group Companies/Virtual Galaxy Fintech Private Limited/FY 2024-2025.pdf" },
       { year: "FY 2023-2024", link: "/assets/.pdf/Group Companies/Virtual Galaxy Fintech Private Limited/FY 2023-2024.pdf" },
@@ -87,8 +91,8 @@ const GROUP_COMPANIES_DATA = [
   },
   {
     name: "Virtual Galaxy Insurance Brokers Private Limited",
-    icon: "shield",
-    theme: "gold",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "FY 2023-2024", link: "/assets/.pdf/Group Companies/Virtual Galaxy Insurance Brokers Private Limited/FY 2023-2024.pdf" },
       { year: "FY 2022-2023", link: "/assets/.pdf/Group Companies/Virtual Galaxy Insurance Brokers Private Limited/FY 2022-2023.pdf" },
@@ -100,7 +104,7 @@ const GROUP_COMPANIES_DATA = [
 const FINANCIAL_REPORTS_DATA = [
   {
     name: "FY 2025-2026",
-    icon: "book-open",
+    icon: "calendar",
     theme: "orange",
     docs: [
       { year: "Independent Auditor's Report", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2025-2026/Independent Auditor's Report.pdf" },
@@ -111,8 +115,8 @@ const FINANCIAL_REPORTS_DATA = [
   },
   {
     name: "FY 2024-2025",
-    icon: "trending-up",
-    theme: "blue",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "Independent Auditor's Report", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2024-2025/Independent Auditor's Report.pdf" },
       { year: "Year End Results", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2024-2025/Year End Results.pdf" }
@@ -120,8 +124,8 @@ const FINANCIAL_REPORTS_DATA = [
   },
   {
     name: "FY 2023-2024",
-    icon: "book-open",
-    theme: "green",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "VGIPL Audited Financials", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2023-2024/VGIPL Audited Financials.pdf" },
       { year: "VGIPL CFS", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2023-2024/VGIPL CFS.pdf" }
@@ -129,8 +133,8 @@ const FINANCIAL_REPORTS_DATA = [
   },
   {
     name: "FY 2022-2023",
-    icon: "trending-up",
-    theme: "purple",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "VGIPL Audited Financials", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2022-2023/VGIPL Audited Financials.pdf" },
       { year: "VGIPL CFS", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2022-2023/VGIPL CFS.pdf" }
@@ -138,11 +142,19 @@ const FINANCIAL_REPORTS_DATA = [
   },
   {
     name: "FY 2021-2022",
-    icon: "book-open",
-    theme: "gold",
+    icon: "calendar",
+    theme: "orange",
     docs: [
       { year: "VGIPL Audited Financials", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2021-2022/VGIPL Audited Financials.pdf" },
       { year: "VGIPL CFS", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/FY 2021-2022/VGIPL CFS.pdf" }
+    ]
+  },
+  {
+    name: "other",
+    icon: "calendar",
+    theme: "orange",
+    docs: [
+      { year: "AFS Apr-Dec-2024", link: "/assets/.pdf/Financial Information Statutory Reports of VGIL/Other/AFS-Apr-Dec-2024.pdf" }
     ]
   }
 ];
@@ -2220,6 +2232,8 @@ const getCompanyIcon = (iconName) => {
       return <BookOpen className="company-icon-svg" />;
     case 'users':
       return <Users className="company-icon-svg" />;
+      case 'calendar':
+      return <Calendar className="company-icon-svg" />;
     case 'building':
     case 'building-2':
     default:
@@ -2273,9 +2287,9 @@ const renderTable = (tableData) => {
                 {hRow.map((hCell, hcIdx) => {
                   const isObj = typeof hCell === 'object' && hCell !== null;
                   return (
-                    <th 
-                      key={hcIdx} 
-                      colSpan={isObj ? hCell.colSpan : 1} 
+                    <th
+                      key={hcIdx}
+                      colSpan={isObj ? hCell.colSpan : 1}
                       rowSpan={isObj ? hCell.rowSpan : 1}
                     >
                       {isObj ? hCell.text : hCell}
@@ -2298,9 +2312,9 @@ const renderTable = (tableData) => {
               {row.map((col, cIdx) => {
                 const isObj = typeof col === 'object' && col !== null;
                 return (
-                  <td 
-                    key={cIdx} 
-                    colSpan={isObj ? col.colSpan : 1} 
+                  <td
+                    key={cIdx}
+                    colSpan={isObj ? col.colSpan : 1}
                     rowSpan={isObj ? col.rowSpan : 1}
                   >
                     {isObj ? col.text : col}
@@ -2328,7 +2342,12 @@ function InvestorSingle() {
   const isGroupCompanies = slug === 'group-companies';
   const isFinancialReports = slug === 'financial-information-reports';
   const isCorporateGovernance = slug === 'corporate-governance';
-  const isAnnouncement = slug === 'announcement' || slug === 'dividend';
+  const isAnalystMeet = slug === 'investor-analyst-meet';
+  const isAnnualReports = slug === 'annual-reports';
+  const isNoticeOfMeeting = slug === 'notice-of-meetings';
+  const isDividend = slug === 'dividend';
+  const isAnnouncement = slug === 'announcement';
+  // const isAnnouncement = slug === '' || slug === '';
   const isDocDashboard = isGroupCompanies || isFinancialReports;
   const dashboardData = isGroupCompanies ? GROUP_COMPANIES_DATA : FINANCIAL_REPORTS_DATA;
 
@@ -2436,7 +2455,7 @@ function InvestorSingle() {
                   <div className="hero-title-underline"></div>
                 </h1>
                 <p className="hero-desc">
-                  {isCorporateGovernance 
+                  {isCorporateGovernance
                     ? "Our policies ensure transparency, accountability, and responsible governance across all operations."
                     : investorData.desc
                   }
@@ -2456,14 +2475,105 @@ function InvestorSingle() {
         </div>
       </section>
 
-          {/* Main Grid / Disclosures Section */}
+      {/* Main Grid / Disclosures Section */}
 
       <section className="explore-section section-spacing-lg">
         <div className="container">
 
           <div className="explore-divider"></div>
 
-          {isCorporateGovernance ? (
+          {isDividend ? (
+            <Dividend />
+          ) : isAnnouncement ? (
+            <Announcement />
+          ) : isAnnualReports ? (
+            <AnnualReports />
+          ) : isNoticeOfMeeting ? (
+            <NoticeOfMeeting />
+          ) : isAnalystMeet ? (
+            <AnalystMeetContent />
+          ) : isDocDashboard ? (
+
+            <div className="group-companies-container">
+
+              <div className="company-rows-list">
+
+                {dashboardData.map((group, idx) => (
+
+                  <div
+                    key={idx}
+                    className="company-row-card effect-fade-up"
+                    style={{
+                      animationDelay: `${idx * 0.05}s`
+                    }}
+                  >
+
+                    {/* Company Name */}
+                    <div className="company-info-col">
+
+                      <div className={`company-brand-icon theme-${group.theme}`}>
+                        {getCompanyIcon(group.icon)}
+                      </div>
+
+                      <h3 className="company-name">
+                        {group.name}
+                      </h3>
+
+                    </div>
+
+
+                    {/* Divider */}
+                    <div className="company-vertical-divider"></div>
+
+
+                    {/* Documents */}
+                    <div className="company-docs-col">
+
+                      {group.docs?.map((doc, docIdx) => (
+
+                        <div
+                          key={docIdx}
+                          className="fy-doc-card"
+                        >
+
+                          <div className="fy-doc-info">
+
+                            <span className="fy-doc-year">
+                              {doc.year}
+                            </span>
+
+                            <span className="fy-doc-label">
+                              PDF
+                            </span>
+
+                          </div>
+
+                          <a
+                            href={doc.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="fy-doc-download-btn"
+                            aria-label={`Open ${doc.year}`}
+                          >
+                            <FileText className="fy-download-icon" />
+                          </a>
+
+                        </div>
+
+                      ))}
+
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+          ) : isCorporateGovernance ? (
+
 
             /* =========================================
                CORPORATE GOVERNANCE
@@ -2477,26 +2587,24 @@ function InvestorSingle() {
 
                 <button
                   type="button"
-                  className={`governance-tab ${
-                    activeGovernanceTab === "policies"
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`governance-tab ${activeGovernanceTab === "policies"
+                    ? "active"
+                    : ""
+                    }`}
                   onClick={() => {
                     setActiveGovernanceTab("policies");
                     setActiveAccordion(null);
                   }}
                 >
-                 Company Policies
+                  Company Policies
                 </button>
 
                 <button
                   type="button"
-                  className={`governance-tab ${
-                    activeGovernanceTab === "annual"
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`governance-tab ${activeGovernanceTab === "annual"
+                    ? "active"
+                    : ""
+                    }`}
                   onClick={() => {
                     setActiveGovernanceTab("annual");
                     setActiveAccordion(null);
@@ -2531,9 +2639,8 @@ function InvestorSingle() {
 
                         <div
                           key={idx}
-                          className={`policy-accordion-card effect-fade-up ${
-                            isOpen ? "is-open" : ""
-                          }`}
+                          className={`policy-accordion-card effect-fade-up ${isOpen ? "is-open" : ""
+                            }`}
                           style={{
                             animationDelay: `${idx * 0.04}s`
                           }}
@@ -2793,7 +2900,7 @@ function InvestorSingle() {
 
                                                   {sub.bullets &&
                                                     sub.bullets.length >
-                                                      0 && (
+                                                    0 && (
 
                                                       <ul
                                                         className="policy-section-bullets"
@@ -3115,7 +3222,7 @@ function InvestorSingle() {
       </section>
 
       <ContactSection />
-  
+
     </div>
   );
 }

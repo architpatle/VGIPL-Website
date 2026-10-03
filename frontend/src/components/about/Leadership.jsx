@@ -13,6 +13,7 @@ import nitendraImg from '../../assets/home/ownwer-img/Nitendra_Bisen.jpg';
 import sachinBImg from '../../assets/home/ownwer-img/sachin_burghate.jpg';
 import satishImg from '../../assets/home/ownwer-img/Satish_Kukde.jpg';
 import anjaliImg from '../../assets/home/ownwer-img/anjali-padhe.png';
+import abhayImg from '../../assets/home/ownwer-img/abhay-chaudhary.png'
 
 const vgilTeam = [
   { name: 'Mr. Harshjit Deshmukh', role: 'Director - Domestic Business Development', img: harshjitImg },
@@ -24,6 +25,8 @@ const vgilTeam = [
   { name: 'Mr. Anil Katwale', role: 'Principal Solution Architect', img: anilImg },
   { name: 'Mr. Nitendra Bisen', role: 'Principal Service Strategist', img: nitendraImg },
   { name: 'Mrs. Anjali Padhye', role: 'Company Secretary and Compliance Officer', img: anjaliImg },
+  { name: 'Mr. Abhay Chaudhary ', role: 'Chief Product Officer', img: abhayImg },
+
 ];
 
 // Seconds for one full revolution. Higher = slower.

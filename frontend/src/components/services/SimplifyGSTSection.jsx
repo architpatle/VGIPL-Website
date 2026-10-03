@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, CheckCircle, Globe, Settings, ArrowRight } from 'lucide-react';
+import { Monitor, CheckCircle, Globe, Settings, ArrowRight, Sparkles } from 'lucide-react';
 import './SimplifyGSTSection.css';
 
 function SimplifyGSTSection() {
@@ -17,8 +17,8 @@ function SimplifyGSTSection() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -30,8 +30,8 @@ function SimplifyGSTSection() {
       title: 'Complete',
       subtitle: ' Automation',
       desc: 'Automated GST return generation and compliance processes',
-      icon: <span style={{fontSize: '2rem'}}>⚡</span>,
-      color: '#ff3300'
+      icon: <Sparkles size={32} />,
+      color: '#ff6600'
     },
     {
       id: '02',
@@ -39,7 +39,7 @@ function SimplifyGSTSection() {
       subtitle: 'Compliance',
       desc: 'Ensure complete compliance with government regulations and requirements',
       icon: <CheckCircle size={32} />,
-      color: '#333'
+      color: '#ff6600'
     },
     {
       id: '03',
@@ -55,14 +55,14 @@ function SimplifyGSTSection() {
       subtitle: ' Support',
       desc: '24/7 technical support and expert guidance for all GST needs',
       icon: <Settings size={32} />,
-      color: '#333'
+      color: '#ff6600'
     }
   ];
 
   return (
     <section className="simplify-gst-section section-spacing-lg">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="text-center section-header"
           initial="hidden"
           whileInView="visible"
@@ -80,7 +80,7 @@ function SimplifyGSTSection() {
             </div>
             <div className="icon-wrap right-icon"><CheckCircle size={24} color="#333" /></div>
           </motion.div>
-          
+
           <motion.div className="line-divider" variants={itemVariants}></motion.div>
 
           <motion.h3 className="sub-title" variants={itemVariants}>
@@ -91,7 +91,7 @@ function SimplifyGSTSection() {
           </motion.p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="cards-grid"
           initial="hidden"
           whileInView="visible"
@@ -100,9 +100,9 @@ function SimplifyGSTSection() {
         >
           <div className="connecting-line"></div>
           {cards.map((card, index) => (
-            <motion.div 
-              key={index} 
-              className={`benefit-card ${index === 0 ? 'active-card' : ''}`}
+            <motion.div
+              key={index}
+              className={`benefit-card ${index === 0 ? '' : ''}`}
               variants={itemVariants}
               whileHover={{ y: -10 }}
             >
@@ -111,7 +111,7 @@ function SimplifyGSTSection() {
                 {card.icon}
               </div>
               <h4 className="card-title">
-                {card.title}<br/><span>{card.subtitle}</span>
+                {card.title}<br /><span>{card.subtitle}</span>
               </h4>
               <p className="card-desc">{card.desc}</p>
               <div className="card-arrow">

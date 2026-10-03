@@ -2,20 +2,20 @@ import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ContactSection from '../components/home/ContactSection';
-import { 
-  Users, 
-  FileText, 
-  UserCheck, 
-  Handshake, 
-  ChevronRight, 
-  ArrowLeft, 
+import {
+  Users,
+  FileText,
+  UserCheck,
+  Handshake,
+  ChevronRight,
+  ArrowLeft,
   ArrowUpRight
 } from 'lucide-react';
 
 // Import actual images from assets
 import avinashShendeImg from '../assets/home/ownwer-img/avinash-shende-clear-bg.png';
 import sachinPandeImg from '../assets/home/ownwer-img/sachin-pande-clear-bg.png';
-import anjaliPadhyeImg from '../assets/home/ownwer-img/Anjali_Padhye.jpg';
+import anjaliPadhyeImg from '../assets/home/ownwer-img/anjali-padhe-2.png';
 import alhadImg from '../assets/home/ownwer-img/Alhad_Hardas.jpg';
 import anilImg from '../assets/home/ownwer-img/Anil_Katwale.jpg';
 import bharatImg from '../assets/home/ownwer-img/bharat-zade.jpg';
@@ -24,10 +24,135 @@ import ninadImg from '../assets/home/ownwer-img/ninad-mairal.jpg';
 import nitendraImg from '../assets/home/ownwer-img/Nitendra_Bisen.jpg';
 import sachinBImg from '../assets/home/ownwer-img/sachin_burghate.jpg';
 import satishImg from '../assets/home/ownwer-img/Satish_Kukde.jpg';
+import mangeshImg from '../assets/home/ownwer-img/mangesh-more.png';
+
+
 
 // Import laptop/charts illustration from Products assets
 import solutionOverviewImg from '../assets/Products-img/conversational-AI-img/solution-overview.png';
 import './BoardManagement.css';
+
+const BOARD_DIRECTORS_COMPOSITION = [
+  {
+    name: 'Mr. Avinash Narayanrao Shende',
+    designation: 'Chairman, Executive Director & Chief Financial Officer',
+  },
+  {
+    name: 'Mr. Sachin Purushottam Pande',
+    designation: 'Managing Director & Chief Technology Officer',
+  },
+  {
+    name: 'Mrs. Bhanupriya Nikhil Thakur',
+    designation: 'Non-Executive, Independent Woman Director',
+  },
+  {
+    name: 'Mr. Ayush Munnalal Sharma',
+    designation: 'Non-Executive Independent Director',
+  },
+  {
+    name: 'Mr. Asit Oberoi',
+    designation: 'Professional, Non-Executive Director',
+  },
+  {
+    name: 'Mr. Jaideep Narayan Pawar',
+    designation: 'Non-Executive Independent Director',
+  },
+];
+
+const BOARD_COMMITTEES_COMPOSITION = [
+  {
+    title: 'AUDIT COMMITTEE',
+    columns: ['Name of Director', 'Designation', 'Position in Committee'],
+    rows: [
+      {
+        name: 'Mrs. Bhanupriya Nikhil Thakur',
+        designation: 'Independent Director',
+        position: 'Chairperson',
+      },
+      {
+        name: 'Mr. Ayush Munnalal Sharma',
+        designation: 'Independent Director',
+        position: 'Member',
+      },
+      {
+        name: 'Mr. Jaideep Narayan Pawar',
+        designation: 'Independent Director',
+        position: 'Member',
+      },
+    ],
+  },
+  {
+    title: 'NOMINATION AND REMUNERATION COMMITTEE',
+    columns: ['Name of Director', 'Designation', 'Position in Committee'],
+    rows: [
+      {
+        name: 'Mr. Ayush Munnalal Sharma',
+        designation: 'Independent Director',
+        position: 'Chairperson',
+      },
+      {
+        name: 'Mrs. Bhanupriya Nikhil Thakur',
+        designation: 'Independent Director',
+        position: 'Member',
+      },
+      {
+        name: 'Mr. Asit Oberoi',
+        designation: 'Non-Executive Director',
+        position: 'Member',
+      },
+    ],
+  },
+  {
+    title: 'STAKEHOLDERS’ RELATIONSHIP COMMITTEE',
+    columns: [
+      'Name of Director',
+      'Nature of Directorship',
+      'Designation in Committee',
+    ],
+    rows: [
+      {
+        name: 'Mr. Jaideep Narayan Pawar',
+        designation: 'Independent Director',
+        position: 'Chairperson',
+      },
+      {
+        name: 'Mr. Avinash Narayanrao Shende',
+        designation: 'Executive Director',
+        position: 'Member',
+      },
+      {
+        name: 'Mr. Sachin Purushottam Pande',
+        designation: 'Executive Director',
+        position: 'Member',
+      },
+    ],
+  },
+  {
+    title: 'CORPORATE SOCIAL RESPONSIBILITY COMMITTEE',
+    columns: [
+      'Name of Director',
+      'Nature of Directorship',
+      'Designation in Committee',
+    ],
+    rows: [
+      {
+        name: 'Mr. Avinash Narayanrao Shende',
+        designation: 'Executive Director',
+        position: 'Chairman',
+      },
+      {
+        name: 'Mr. Sachin Purushottam Pande',
+        designation: 'Executive Director',
+        position: 'Member',
+      },
+      {
+        name: 'Mr. Jaideep Narayan Pawar',
+        designation: 'Independent Director',
+        position: 'Member',
+      },
+    ],
+  },
+];
 
 // High-fidelity realistic mock data for subpages using imported images
 const SUBPAGES_DATA = {
@@ -39,37 +164,43 @@ const SUBPAGES_DATA = {
         name: "Mr. Avinash Narayanrao Shende",
         role: "Chairman, Executive Director & Chief Financial Officer",
         img: avinashShendeImg,
-        linkedin: "https://www.linkedin.com/in/avinash-shende/"
+        linkedin: "https://www.linkedin.com/in/avinash-shende-a09b863/"
       },
       {
         name: "Mr. Sachin Purushottam Pande",
         role: "Managing Director & Chief Technology Officer",
         img: sachinPandeImg,
-        linkedin: "https://www.linkedin.com/in/sachin-pande/"
+        linkedin: "https://www.linkedin.com/in/sachin-pande-317620157/"
       },
       {
         name: "Mrs. Bhanupriya Nikhil Thakur",
         role: "Non-Executive, Independent Woman Director",
         img: "/assets/images/about/founders/bhanupriya-clear-bg.png",
-        linkedin: "https://www.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/fcs-bhanupriya-sharma-thakur/"
       },
       {
         name: "Mr. Ayush Munnalal Sharma",
         role: "Non-Executive Independent Director",
         img: "/assets/images/about/founders/ayush-sharma-clear-bg.png",
-        linkedin: "https://www.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/ayush-sharma-1425a2189/"
       },
       {
         name: "Mr. Asit Oberoi",
         role: "Professional, Non-Executive Director",
         img: "/assets/images/about/founders/asit-oberoi.jpg",
-        linkedin: "https://www.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/asit-oberoi-88910120/"
       },
       {
         name: "Mr. Jaideep Narayan Pawar",
         role: "Non-Executive Independent Director",
         img: "/assets/images/about/founders/jaideep-pawar.jpg",
-        linkedin: "https://www.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/jaideep-pawar/"
+      },
+      {
+        name: "Mr. Sunil Kulkarni",
+        role: "Additional Non-Executive Director",
+        img: "/assets/images/about/founders/sunil-kulkarni.png",
+        linkedin: "https://www.linkedin.com/in/sunil-kulkarni-12a3291/"
       }
     ]
   },
@@ -115,21 +246,21 @@ const SUBPAGES_DATA = {
         role: "Chairman, Executive Director & Chief Financial Officer",
         bio: "Directs overall corporate operations, budget allocation, and investor affairs with a focus on growth and strategic banking innovation.",
         img: avinashShendeImg,
-        linkedin: "https://www.linkedin.com/in/avinash-shende/"
+        linkedin: "https://www.linkedin.com/in/avinash-shende-a09b863/"
       },
       {
         name: "Mr. Sachin Purushottam Pande",
         role: "Managing Director & Chief Technology Officer",
         bio: "Oversees technology engineering, core systems architecture, and IT operations, driving digital banking suites and technological advancements.",
         img: sachinPandeImg,
-        linkedin: "https://www.linkedin.com/in/sachin-pande/"
+        linkedin: "https://www.linkedin.com/in/sachin-pande-317620157/"
       },
       {
         name: "Mrs. Anjali Padhye",
         role: "Company Secretary & Compliance Officer",
         bio: "Manages corporate secretarial affairs, legal compliance, and board listings, ensuring the highest standards of corporate governance.",
         img: anjaliPadhyeImg,
-        linkedin: "https://www.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/anjali-padhye-118a58240/"
       }
     ]
   },
@@ -138,26 +269,31 @@ const SUBPAGES_DATA = {
     subtitle: "Eminent industry experts providing advisory support in emerging technologies and compliance.",
     items: [
       {
-        name: "Nitendra Bisen",
-        role: "Principal Service Strategist",
-        domain: "IT Services Strategy",
-        bio: "Aligning IT consulting and enterprise architectures with next-generation digital trends.",
-        img: nitendraImg
+        name: "CS Mangesh More",
+        role: "Chief Advisor to the Company",
+        img: mangeshImg
       },
-      {
-        name: "Anil Katwale",
-        role: "Principal Solution Architect",
-        domain: "Enterprise Architecture",
-        bio: "Design lead for highly scalable banking cores, API integrations, and cloud operations.",
-        img: anilImg
-      },
-      {
-        name: "Satish Kukde",
-        role: "Principal Database Architect",
-        domain: "Database Architecture",
-        bio: "Specializes in high-transaction DB tuning, disaster recovery, and data security compliance.",
-        img: satishImg
-      }
+      // {
+      //   name: "Nitendra Bisen",
+      //   role: "Principal Service Strategist",
+      //   domain: "IT Services Strategy",
+      //   bio: "Aligning IT consulting and enterprise architectures with next-generation digital trends.",
+      //   img: nitendraImg
+      // },
+      // {
+      //   name: "Anil Katwale",
+      //   role: "Principal Solution Architect",
+      //   domain: "Enterprise Architecture",
+      //   bio: "Design lead for highly scalable banking cores, API integrations, and cloud operations.",
+      //   img: anilImg
+      // },
+      // {
+      //   name: "Satish Kukde",
+      //   role: "Principal Database Architect",
+      //   domain: "Database Architecture",
+      //   bio: "Specializes in high-transaction DB tuning, disaster recovery, and data security compliance.",
+      //   img: satishImg
+      // }
     ]
   }
 };
@@ -247,12 +383,12 @@ function BoardManagement() {
                 <div className="hero-title-underline"></div>
               </h1>
               <p className="hero-desc">
-                {subpage 
-                  ? currentSubpageData?.subtitle 
+                {subpage
+                  ? currentSubpageData?.subtitle
                   : "Meet the visionary leadership and expert advisors orchestrating sustainable growth and technological excellence at Virtual Galaxy."
                 }
               </p>
-              
+
               <div className="mt-4 d-flex gap-3">
                 {subpage ? (
                   <button
@@ -276,14 +412,14 @@ function BoardManagement() {
 
             {/* Right side illustration */}
             <div className="col-lg-6 col-12 text-center mt-5 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.15s' }}>
-              <motion.div 
+              <motion.div
                 className="hero-img-wrap"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               >
-                <img 
-                  src={solutionOverviewImg} 
-                  alt="Board & Management Illustration" 
+                <img
+                  src={solutionOverviewImg}
+                  alt="Board & Management Illustration"
                 />
               </motion.div>
             </div>
@@ -299,7 +435,7 @@ function BoardManagement() {
             {!subpage ? (
               /* CARDS OVERVIEW DASHBOARD */
               <div>
-                
+
                 <motion.div
                   key="dashboard"
                   initial={{ opacity: 0, y: 15 }}
@@ -317,7 +453,7 @@ function BoardManagement() {
                           className="mgmt-card"
                         >
                           <div>
-                            <div className="mgmt-card-icon-wrap">
+                            <div className="mgmt-card-icon-wrap mx-auto">
                               <IconComponent className="w-6 h-6" />
                             </div>
                             <h3 className="mgmt-card-title">{card.title}</h3>
@@ -344,14 +480,14 @@ function BoardManagement() {
                 className="subpage-section"
               >
                 <div className="subpage-container">
-                  
+
                   {/* Detailed Title */}
-                  <div className={`${subpage === 'directors' ? 'directors-title-wrap' : 'subpage-title-wrap'} effect-fade-up`}>
+                  {/* <div className={`${subpage === 'directors' ? 'directors-title-wrap' : 'subpage-title-wrap'} effect-fade-up`}>
                     <h2 className="subpage-heading">{currentSubpageData?.title}</h2>
                     {subpage !== 'directors' && (
                       <p className="subpage-subheading">{currentSubpageData?.subtitle}</p>
                     )}
-                  </div>
+                  </div> */}
 
                   {/* Board of Directors View */}
                   {subpage === 'directors' && (
@@ -359,8 +495,8 @@ function BoardManagement() {
                       {currentSubpageData?.items.map((person, idx) => {
                         const isEven = idx % 2 === 0;
                         return (
-                          <div 
-                            key={idx} 
+                          <div
+                            key={idx}
                             className={`director-row-card effect-fade-up ${isEven ? 'flex-row' : 'flex-row-reverse text-right'}`}
                             style={{ animationDelay: `${idx * 0.08}s` }}
                           >
@@ -378,10 +514,10 @@ function BoardManagement() {
                               <span className="director-row-role">{person.role}</span>
                               <div className={`director-row-social-wrap ${isEven ? 'justify-content-start' : 'justify-content-end'}`}>
                                 {person.linkedin && (
-                                  <a 
-                                    href={person.linkedin} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+                                  <a
+                                    href={person.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="director-linkedin-btn"
                                     aria-label={`LinkedIn profile of ${person.name}`}
                                   >
@@ -397,31 +533,116 @@ function BoardManagement() {
                   )}
 
                   {/* Committees of Board View */}
+                  {/* Committees of Board View */}
                   {subpage === 'committees' && (
-                    <div className="row g-4 mt-2">
-                      {currentSubpageData?.items.map((comm, idx) => (
-                        <div key={idx} className="col-lg-4 col-md-6 col-12 effect-fade-up" style={{ animationDelay: `${idx * 0.08}s` }}>
-                          <div className="committee-card">
-                            <div>
-                              <h4 className="committee-title">{comm.name}</h4>
-                              <p className="committee-desc">{comm.purpose}</p>
-                            </div>
-                            <div>
-                              <h5 className="committee-members-title">Committee Members</h5>
-                              <ul className="list-unstyled p-0 m-0">
-                                {comm.members.map((member, mIdx) => (
-                                  <li key={mIdx} className="committee-member-item">
-                                    <span>{member.name}</span>
-                                    <span className="committee-member-role">
-                                      {member.role.split(' ')[0]}
-                                    </span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                    <div className="composition-page">
+
+                      {/* =====================================================
+        COMPOSITION OF BOARD OF DIRECTORS
+        ===================================================== */}
+                      <section className="composition-board-section effect-fade-up">
+                        <div className="composition-heading">
+                          <span className="composition-eyebrow">
+                            VIRTUAL GALAXY INFOTECH LIMITED
+                          </span>
+
+                          <h2>COMPOSITION OF BOARD OF DIRECTORS</h2>
+
+                          <div className="composition-heading-line">
+                            <span></span>
+                            <i></i>
+                            <span></span>
                           </div>
                         </div>
-                      ))}
+
+                        <div className="composition-table-card">
+                          <div className="composition-table-wrap">
+                            <table className="composition-table">
+                              <thead>
+                                <tr>
+                                  <th>Name of Director</th>
+                                  <th>Designation</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                {BOARD_DIRECTORS_COMPOSITION.map((director, index) => (
+                                  <tr key={index}>
+                                    <td>{director.name}</td>
+                                    <td>{director.designation}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </section>
+
+
+                      {/* =====================================================
+        COMPOSITION OF BOARD COMMITTEES
+        ===================================================== */}
+                      <section className="board-committees-section">
+
+                        <div className="composition-heading committees-heading">
+                          <h2>COMPOSITION OF BOARD COMMITTEES</h2>
+
+                          <div className="composition-heading-line">
+                            <span></span>
+                            <i></i>
+                            <span></span>
+                          </div>
+                        </div>
+
+
+                        {/* Committee Tables */}
+                        <div className="committee-tables-list">
+
+                          {BOARD_COMMITTEES_COMPOSITION.map((committee, index) => (
+                            <article
+                              key={committee.title}
+                              className="committee-table-card effect-fade-up"
+                              style={{
+                                animationDelay: `${index * 0.08}s`,
+                              }}
+                            >
+                              <div className="committee-table-header">
+                                <div className="committee-index">
+                                  {String(index + 1).padStart(2, '0')}
+                                </div>
+
+                                <h3>{committee.title}</h3>
+                              </div>
+
+                              <div className="composition-table-wrap">
+                                <table className="composition-table committee-composition-table">
+                                  <thead>
+                                    <tr>
+                                      {committee.columns.map((column, columnIndex) => (
+                                        <th key={columnIndex}>
+                                          {column}
+                                        </th>
+                                      ))}
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    {committee.rows.map((member, memberIndex) => (
+                                      <tr key={memberIndex}>
+                                        <td>{member.name}</td>
+                                        <td>{member.designation}</td>
+                                        <td>{member.position}</td>
+                                      </tr>
+                                    ))}
+                                  </tbody>
+                                </table>
+                              </div>
+                            </article>
+                          ))}
+
+                        </div>
+                      </section>
+
                     </div>
                   )}
 
@@ -442,10 +663,10 @@ function BoardManagement() {
                                 )}
                               </div>
                               {person.linkedin && (
-                                <a 
-                                  href={person.linkedin} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer" 
+                                <a
+                                  href={person.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="kmp-linkedin-btn"
                                   aria-label={`LinkedIn profile of ${person.name}`}
                                 >
@@ -468,28 +689,75 @@ function BoardManagement() {
 
                   {/* Advisors View */}
                   {subpage === 'advisors' && (
-                    <div className="row g-4 mt-2">
-                      {currentSubpageData?.items.map((person, idx) => (
-                        <div key={idx} className="col-lg-4 col-md-6 col-12 effect-fade-up" style={{ animationDelay: `${idx * 0.08}s` }}>
-                          <div className="advisor-card">
-                            <div className="advisor-avatar">
+                    <div className="directors-list mt-4">
+                      {currentSubpageData?.items.map((person, idx) => {
+                        const isEven = idx % 2 === 0;
+
+                        return (
+                          <div
+                            key={idx}
+                            className={`director-row-card effect-fade-up ${isEven
+                                ? 'flex-row'
+                                : 'flex-row-reverse text-right'
+                              }`}
+                            style={{
+                              animationDelay: `${idx * 0.08}s`,
+                            }}
+                          >
+                            {/* Avatar */}
+                            <div className="director-row-avatar-wrap">
                               {person.img ? (
-                                <img src={person.img} alt={person.name} className="profile-avatar-img" />
+                                <img
+                                  src={person.img}
+                                  alt={person.name}
+                                  className="director-row-img"
+                                />
                               ) : (
-                                <div className="profile-avatar-initials">
-                                  {person.name.split(' ').map(n => n[0]).join('')}
+                                <div className="director-row-initials">
+                                  {person.name
+                                    .split(' ')
+                                    .filter(Boolean)
+                                    .map(n => n[0])
+                                    .join('')}
                                 </div>
                               )}
                             </div>
-                            <h4 className="advisor-name">{person.name}</h4>
-                            <span className="advisor-role">{person.role}</span>
-                            <p className="advisor-bio">{person.bio}</p>
-                            <div className="advisor-footer">
-                              Domain: <span className="advisor-footer-val">{person.domain}</span>
+
+                            {/* Information */}
+                            <div className="director-row-info">
+                              <h4 className="director-row-name">
+                                {person.name}
+                              </h4>
+
+                              <span className="director-row-role">
+                                {person.role}
+                              </span>
+
+                              {person.linkedin && (
+                                <div
+                                  className={`director-row-social-wrap ${isEven
+                                      ? 'justify-content-start'
+                                      : 'justify-content-end'
+                                    }`}
+                                >
+                                  <a
+                                    href={person.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="director-linkedin-btn"
+                                    aria-label={`LinkedIn profile of ${person.name}`}
+                                  >
+                                    <i
+                                      className="icon icon-linkedin-in"
+                                      style={{ fontSize: '18px' }}
+                                    ></i>
+                                  </a>
+                                </div>
+                              )}
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   )}
                 </div>

@@ -101,7 +101,7 @@ function IPO() {
                   }}
                 >
                   <div className="d-flex align-items-center justify-content-between mb-24">
-                    <img src={vgilLogo} alt="VGI Logo" style={{ height: '35px', width: 'auto', objectFit: 'contain' }} />
+                    {/* <img src={vgilLogo} alt="VGI Logo" style={{ height: '35px', width: 'auto', objectFit: 'contain' }} /> */}
                     <div style={{ 
                       width: '40px', 
                       height: '40px', 

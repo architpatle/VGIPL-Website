@@ -63,7 +63,7 @@ const itemVariants = {
     open: (index) => ({
         opacity: 1,
         scale: 1,
-        y: (index + 1) * 68,
+        y: -(index + 1) * 68,
 
         transition: {
             type: "spring",

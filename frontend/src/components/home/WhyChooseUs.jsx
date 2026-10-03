@@ -194,7 +194,7 @@ function WhyChooseUs() {
                                     <div className={`benefits-design-inner ${styles.wcuCard}`}>
                                         <img className="item-img-1" src={img1} alt="" />
                                         <img className="item-img-2 rightleft" src={img2} alt="" />
-                                        <img className="item-img-3 updown" src={img3} alt="" />
+                                        {/* <img className="item-img-3 updown" src={img3} alt="" /> */}
                                     </div>
                                 </div>
                             </div>

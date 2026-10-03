@@ -4,6 +4,10 @@ import { Calendar, Users, BarChart3, FileText, Info, ArrowRight } from 'lucide-r
 import ContactSection from '../home/ContactSection';
 import '../../pages/BoardManagement.css';
 
+import imgMaterialContracts from '../../assets/Investors-Info-img/Material Contracts.png';
+
+
+
 const contractGroups = [
   {
     id: 'group-1',
@@ -26,8 +30,8 @@ const contractGroups = [
   {
     id: 'group-2',
     title: 'Banking & Escrow Agreements',
-    theme: 'blue',
-    iconName: 'users',
+    theme: 'orange',
+    iconName: 'calendar',
     files: [
       {
         title: 'Banker to the Issuer Agreement',
@@ -44,8 +48,8 @@ const contractGroups = [
   {
     id: 'group-3',
     title: 'Market Making & Underwriting',
-    theme: 'green',
-    iconName: 'chart',
+    theme: 'orange',
+    iconName: 'calendar',
     files: [
       {
         title: 'Market Maker Agreement',
@@ -67,8 +71,8 @@ const contractGroups = [
   {
     id: 'group-4',
     title: 'Monitoring & Depository Agreements',
-    theme: 'purple',
-    iconName: 'users',
+    theme: 'orange',
+    iconName: 'calendar',
     files: [
       {
         title: 'Monitoring Agency Agreement',
@@ -144,6 +148,11 @@ function MaterialContracts() {
                 Key material contracts that govern our strategic partnerships and business operations.
               </p>
             </div>
+            <div className="col-lg-5 col-12 text-center mt-4 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.1s' }}>
+              <div className="hero-img-wrap" style={{ maxWidth: '280px' }}>
+                <img src={imgMaterialContracts} alt={imgMaterialContracts} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -152,7 +161,7 @@ function MaterialContracts() {
       <section className="explore-section">
         <div className="container">
           <div className="explore-divider"></div>
-          
+
           <div className="group-companies-container" style={{ marginTop: '0' }}>
             <div className="company-rows-list">
               {contractGroups.map((group, idx) => (
@@ -177,15 +186,15 @@ function MaterialContracts() {
                     {group.files.map((file, fIdx) => (
                       <div key={fIdx} className="fy-doc-card" style={{ width: '100%', maxWidth: '320px' }}>
                         <div className="fy-doc-info" style={{ flex: '1', minWidth: '0', marginRight: '12px' }}>
-                          <span 
-                            className="fy-doc-year" 
-                            title={file.title} 
-                            style={{ 
+                          <span
+                            className="fy-doc-year"
+                            title={file.title}
+                            style={{
                               display: 'block',
-                              whiteSpace: 'nowrap', 
-                              overflow: 'hidden', 
-                              textOverflow: 'ellipsis', 
-                              width: '100%' 
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              width: '100%'
                             }}
                           >
                             {file.title}
