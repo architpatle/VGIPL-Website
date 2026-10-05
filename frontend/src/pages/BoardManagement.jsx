@@ -29,7 +29,8 @@ import mangeshImg from '../assets/home/ownwer-img/mangesh-more.png';
 
 
 // Import laptop/charts illustration from Products assets
-import solutionOverviewImg from '../assets/Products-img/conversational-AI-img/solution-overview.png';
+// import solutionOverviewImg from '../assets/Products-img/conversational-AI-img/solution-overview.png';
+import imgBoardManagement from '../assets/Investors-Info-img/Board_Managment.png';
 import './BoardManagement.css';
 
 const BOARD_DIRECTORS_COMPOSITION = [
@@ -414,11 +415,11 @@ function BoardManagement() {
             <div className="col-lg-6 col-12 text-center mt-5 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.15s' }}>
               <motion.div
                 className="hero-img-wrap"
-                animate={{ y: [0, -8, 0] }}
+                // animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               >
                 <img
-                  src={solutionOverviewImg}
+                  src={imgBoardManagement}
                   alt="Board & Management Illustration"
                 />
               </motion.div>

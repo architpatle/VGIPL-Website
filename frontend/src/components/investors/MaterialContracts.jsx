@@ -149,7 +149,7 @@ function MaterialContracts() {
               </p>
             </div>
             <div className="col-lg-5 col-12 text-center mt-4 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.1s' }}>
-              <div className="hero-img-wrap" style={{ maxWidth: '280px' }}>
+              <div className="hero-img-wrap" style={{ maxWidth: '100%' }}>
                 <img src={imgMaterialContracts} alt={imgMaterialContracts} />
               </div>
             </div>

@@ -80,7 +80,7 @@ function MaterialCreditors() {
             >
               <div
                 className="hero-img-wrap"
-                style={{ maxWidth: '280px' }}
+                style={{ maxWidth: '100%' }}
               >
                 <img
                   src={imgMaterialCreditors}

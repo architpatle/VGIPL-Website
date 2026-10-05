@@ -41,7 +41,7 @@ import {
 } from 'lucide-react';
 
 import {
-    Calendar
+  Calendar
 } from 'lucide-react';
 
 import './BoardManagement.css';
@@ -2232,7 +2232,7 @@ const getCompanyIcon = (iconName) => {
       return <BookOpen className="company-icon-svg" />;
     case 'users':
       return <Users className="company-icon-svg" />;
-      case 'calendar':
+    case 'calendar':
       return <Calendar className="company-icon-svg" />;
     case 'building':
     case 'building-2':
@@ -2397,40 +2397,105 @@ function InvestorSingle() {
 
           {isAnnouncement ? (
             /* Centered Announcement Hero */
-            <div className="row justify-content-center mt-3">
-              <div className="col-lg-8 col-12 text-center">
+            <div className="row align-items-center mt-3">
+
+              {/* Left Column: Text */}
+              <div className="col-lg-7 col-12 text-left">
+
                 <motion.div
-                  className="tag-badge hero-center-badge"
+                  className="tag-badge"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.5,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
                 >
                   <span className="tag-dot tag-dot-pulse" />
-                  <span className="tag-text">Investor Relations</span>
+                  <span className="tag-text">
+                    Investor Relations
+                  </span>
                 </motion.div>
+
                 <motion.h1
-                  className="hero-title hero-title-center"
+                  className="hero-title"
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.1,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
                 >
-                  <span>{investorData.title}</span>
+                  {isCorporateGovernance ? (
+                    <>
+                      <span>Corporate</span>{' '}
+                      <span className="highlight">Governance</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>{investorData.title.split(' ')[0]}</span>{' '}
+                      <span className="highlight">
+                        {investorData.title.split(' ').slice(1).join(' ')}
+                      </span>
+                    </>
+                  )}
+
                   <motion.div
-                    className="hero-title-underline hero-underline-center"
+                    className="hero-title-underline"
                     initial={{ width: 0, opacity: 0 }}
                     animate={{ width: 40, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.4,
+                      ease: [0.16, 1, 0.3, 1]
+                    }}
                   />
                 </motion.h1>
+
                 <motion.p
-                  className="hero-desc hero-desc-center"
+                  className="hero-desc"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.25,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
                 >
-                  {investorData.desc}
+                  {isCorporateGovernance
+                    ? "Our policies ensure transparency, accountability, and responsible governance across all operations."
+                    : investorData.desc
+                  }
                 </motion.p>
+
               </div>
+
+
+              {/* Right Column: Logo / Illustration */}
+              <div
+                className="col-lg-5 col-12 text-center mt-4 mt-lg-0"
+              >
+                {investorData.logo && (
+                  <motion.div
+                    className="hero-img-wrap"
+                    style={{ maxWidth: '100%' }}
+                    initial={{ opacity: 0, y: 25 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.1,
+                      ease: [0.16, 1, 0.3, 1]
+                    }}
+                  >
+                    <img
+                      src={investorData.logo}
+                      alt={`${investorData.title} Logo`}
+                    />
+                  </motion.div>
+                )}
+              </div>
+
             </div>
           ) : (
             /* Default Left-Aligned Hero */
@@ -2465,7 +2530,7 @@ function InvestorSingle() {
               {/* Right Column: Logo/Illustration */}
               <div className="col-lg-5 col-12 text-center mt-4 mt-lg-0 effect-fade-up" style={{ animationDelay: '0.1s' }}>
                 {investorData.logo && (
-                  <div className="hero-img-wrap" style={{ maxWidth: '280px' }}>
+                  <div className="hero-img-wrap" style={{ maxWidth: '100%' }}>
                     <img src={investorData.logo} alt={`${investorData.title} Logo`} />
                   </div>
                 )}
