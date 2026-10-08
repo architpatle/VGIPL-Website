@@ -230,9 +230,9 @@ function Navbar() {
                   <h3 className={styles.previewTitle}>{activeItem.title}</h3>
                   <p className={styles.previewDesc}>{activeItem.description}</p>
                 </div>
-                <div className={styles.previewBtn}>
+                <div className={`${styles.previewBtn} tf-btn`}>
                   Learn More
-                  <i className="icon icon-long-arrow-alt-right-solid"></i>
+                  {/* <i className="icon icon-long-arrow-alt-right-solid"></i> */}
                 </div>
               </Link>
             )}

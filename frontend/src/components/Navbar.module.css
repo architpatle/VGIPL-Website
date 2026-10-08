@@ -209,14 +209,20 @@
 }
 
 .categoryItem:hover {
-  background: #f3f4f6;
-  color: #111827;
+  /* background: #f3f4f6; */
+  /* color: #111827; */
 }
 
 .categoryActive {
-  background: #e10600 !important;
+  /* background: #e10600 !important; */
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2);
+  /* box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2); */
+
+  background: linear-gradient(90deg,
+      #DE6F04 0%,
+      #E5531C 38%,
+      #DE3B46 78%,
+      #DE2360 100%);
 }
 
 .categoryIcon {
@@ -330,13 +336,13 @@
 
 .previewBtn {
   width: fit-content;
-  background: #e10600;
-  color: #ffffff;
+  /* background: #e10600; */
+  /* color: #ffffff; */
   padding: 10px 24px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
+  /* border-radius: 100px; */
+  /* text-decoration: none; */
+  /* font-weight: 600; */
+  /* font-size: 14px; */
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -345,9 +351,9 @@
 
 .previewBtn:hover,
 .previewCard:hover .previewBtn {
-  background: #c00500;
+  /* background: #c00500; */
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2);
+  /* box-shadow: 0 4px 12px rgba(225, 6, 0, 0.2); */
 }
 
 /* Actions */

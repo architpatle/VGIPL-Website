@@ -73,7 +73,7 @@ useEffect(() => {
           {/* Left Card - Mr. Avinash Shende */}
           <div className="leader-card-item card-left founder-card founder-left">
             <div className="leader-image-wrap">
-              <div className="image-bg-box">
+              <div className="image-bg-box founder1-bg">
                 <img src={team1Image} alt="Mr. Avinash Shende" className="leader-profile-img" />
               </div>
               <div className="profile-icon-badge">
@@ -104,7 +104,7 @@ useEffect(() => {
           {/* Right Card - Mr. Sachin Pande */}
           <div className="leader-card-item card-right founder-card founder-right">
             <div className="leader-image-wrap">
-              <div className="image-bg-box">
+              <div className="image-bg-box founder2-bg">
                 <img src={team2Image} alt="Mr. Sachin Pande" className="leader-profile-img" />
               </div>
               <div className="profile-icon-badge">

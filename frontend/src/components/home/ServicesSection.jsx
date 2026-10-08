@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import service1Img from "../../assets//home/Why-Choose-Us/globe.png";
-import service2Img from "../../assets/home/Why-Choose-Us/bank.png";
-import service3Img from "../../assets/home/Why-Choose-Us/engineer.png";
-import service4Img from "../../assets/home/Why-Choose-Us/ai.png";
+import service1Img from "../../assets//home/Why-Choose-Us/Global expertise in connected systems.png";
+import service2Img from "../../assets/home/Why-Choose-Us/Finance, Factory, and Boardroom Triptych.png";
+import service3Img from "../../assets/home/Why-Choose-Us/India Operations Control Room Collaboration.png";
+import service4Img from "../../assets/home/Why-Choose-Us/Integrated IT Operations Control Centre.png";
 
 function ServicesSection() {
   const [activeImage, setActiveImage] = useState(service1Img);
@@ -179,7 +179,7 @@ function ServicesSection() {
                       <div className="list-tags services-section-accordian-list-tags">
                         <a href="#" className="tags-item fw-semibold">Automate Transactions Seamlessly</a>
                         <a href="#" className="tags-item fw-semibold">Intelligent Insights</a>
-                        <a href="#" className="tags-item fw-semibold">Deliver Exceptional Customer Experience</a>
+                        <a href="#" className="tags-item fw-semibold">Intelligent Insights</a>
                       </div>
                     </div>
                   </div>

@@ -226,7 +226,7 @@
 
   .section-about-us .review-box .border-bottom {
     /* margin-bottom: 12px !important; */
-    padding-bottom: 0px !important;
+    /* padding-bottom: 0px !important; */
   }
 
   .section-about-us .review-box .mt-20 {
@@ -1007,7 +1007,7 @@
 
   .section-about-us .review-box .border-bottom {
     /* margin-bottom: 14px !important; */
-    padding-bottom: 10px !important;
+    /* padding-bottom: 10px !important; */
   }
 
   .section-partner {
@@ -1064,7 +1064,7 @@
 
   .section-about-us .review-box .border-bottom {
     /* margin-bottom: 12px !important; */
-    padding-bottom: 8px !important;
+    /* padding-bottom: 8px !important; */
   }
 
   .section-partner {
@@ -1452,11 +1452,36 @@
 }
 
 .leader-image-wrap .image-bg-box {
-  background-color: #fdf5f0 !important;
+  /* background-color: #fdf5f0 !important; */
   /* Soft premium background */
   border-radius: 20px !important;
   aspect-ratio: 1.1 / 1 !important;
   overflow: hidden !important;
+  
+}
+
+.founder1-bg{
+background:
+  radial-gradient(
+    ellipse 75% 85% at 50% 42%,
+    #F0D5BC 0%,
+    #F4E2D3 25%,
+    #F8EDE7 50%,
+    #FCF7F4 72%,
+    #FEFDFC 100%
+  );
+}
+
+.founder2-bg{
+  background:
+  radial-gradient(
+    ellipse 75% 85% at 50% 42%,
+    #CDC5ED 0%,
+    #D8D3F1 25%,
+    #E3E0F4 50%,
+    #F0EEF7 72%,
+    #FAF9FC 100%
+  );
 }
 
 .leader-profile-img {

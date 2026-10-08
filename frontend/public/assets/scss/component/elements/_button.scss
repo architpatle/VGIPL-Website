@@ -12,20 +12,20 @@
     font-size: 16px;
     line-height: 24px;
     padding: 14px 24px;
-    background: 
-    radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
-    linear-gradient(0deg, #272727, #272727);
-    box-shadow:
-    0px -3px 0px 0px #080808 inset,
-    0px 1px 0px 0px #FFFFFF4D inset,
-    0px 2.77px 2.21px 0px #0000001F,
-    0px 6.65px 5.32px 0px #00000021,
-    0px 12.52px 10.02px 0px #00000022,
-    0px 22.34px 17.87px 0px #00000024,
-    0px 41.78px 33.42px 0px #00000026,
-    0px 100px 80px 0px #00000026,
-    0px 3px 3px 0px #00000024,
-    0px 2.77px 2.21px 0px #0000001F;
+    // background: 
+    // radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+    // linear-gradient(0deg, #272727, #272727);
+    // box-shadow:
+    // 0px -3px 0px 0px #080808 inset,
+    // 0px 1px 0px 0px #FFFFFF4D inset,
+    // 0px 2.77px 2.21px 0px #0000001F,
+    // 0px 6.65px 5.32px 0px #00000021,
+    // 0px 12.52px 10.02px 0px #00000022,
+    // 0px 22.34px 17.87px 0px #00000024,
+    // 0px 41.78px 33.42px 0px #00000026,
+    // 0px 100px 80px 0px #00000026,
+    // 0px 3px 3px 0px #00000024,
+    // 0px 2.77px 2.21px 0px #0000001F;
     overflow: hidden;
     &:hover {
         box-shadow: 
@@ -96,11 +96,11 @@
 
 button.animate-btn::after,
 .animate-btn.tf-btn::after {
-    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0) 20%, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0) 70%);
+    // background-image: linear-gradient(120deg, rgba(0, 0, 0, 0) 20%, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0) 70%);
 }
 
 .animate-btn.animate-dark::after {
-    background-image: linear-gradient(90deg, transparent, rgb(0 0 0 /0.25), transparent);
+    // background-image: linear-gradient(90deg, transparent, rgb(0 0 0 /0.25), transparent);
 }
 
 

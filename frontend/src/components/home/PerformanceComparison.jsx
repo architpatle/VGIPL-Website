@@ -125,7 +125,7 @@ function PerformanceComparison() {
 
                 <Link
                   to="/contact"
-                  className="tf-btn pc-btn"
+                  className="tf-btn-2 pc-btn"
                 >
 
                   Get In Touch
