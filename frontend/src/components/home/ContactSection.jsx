@@ -399,7 +399,7 @@ function ContactSection() {
                   onChange={handleFileChange}
                   style={{ display: 'none' }}
                 />
-                <div className=" d-flex">
+                <div className=" d-flex justify-center">
                   <button
                     type="submit"
                     className="tf-btn w-100"
