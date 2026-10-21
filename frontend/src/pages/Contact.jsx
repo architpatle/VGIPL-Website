@@ -6,6 +6,7 @@ import './Contact.css';
 import contactHeroBg from '../assets/home/hero-bg-img.jpg';
 import './Contact.css'
 import ContactSection from '../components/home/ContactSection';
+import FaqsSection from '../components/home/FaqsSection';
 
 
 function Contact() {
@@ -166,7 +167,7 @@ function Contact() {
 
       <ContactSection />
 
-      <div className="section-faqs flat-spacing">
+      {/* <div className="section-faqs flat-spacing">
         <div className="container">
           <div className="heading-section center ">
             <div className="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
@@ -201,6 +202,9 @@ function Contact() {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="section-faqs flat-spacing">
+        <FaqsSection />
       </div>
     </>
   );
