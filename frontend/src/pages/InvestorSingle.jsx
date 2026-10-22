@@ -14,6 +14,7 @@ import AnnualReports from '../components/investors/AnnualReports';
 import NoticeOfMeeting from '../components/investors/NoticeOfMeeting';
 import Dividend from '../components/investors/Dividend';
 import Announcement from '../components/investors/Announcement';
+import ShareholdingPattern from "../components/investors/shareholding pattern/ShareholdingPattern";
 import {
   Building2,
   TrendingUp,
@@ -2339,7 +2340,7 @@ function InvestorSingle() {
     return <Navigate to="/404" />;
   }
 
-  const isGroupCompanies = slug === 'group-companies';
+  const isGroupCompanies = slug === 'promotion-related-entities';
   const isFinancialReports = slug === 'financial-information-reports';
   const isCorporateGovernance = slug === 'corporate-governance';
   const isAnalystMeet = slug === 'investor-analyst-meet';
@@ -2559,7 +2560,7 @@ function InvestorSingle() {
             <AnalystMeetContent />
           ) : isDocDashboard ? (
 
-            <div className="group-companies-container">
+            <div className="promotion-related-entities-container">
 
               <div className="company-rows-list">
 
@@ -2676,6 +2677,20 @@ function InvestorSingle() {
                   }}
                 >
                   Annual Returns
+                </button>
+
+                <button
+                  type="button"
+                  className={`governance-tab ${activeGovernanceTab === "shareholding-pattern"
+                    ? "active"
+                    : ""
+                    }`}
+                  onClick={() => {
+                    setActiveGovernanceTab("shareholding-pattern");
+                    setActiveAccordion(null);
+                  }}
+                >
+                  Shareholding Pattern
                 </button>
 
               </div>
@@ -3152,6 +3167,14 @@ function InvestorSingle() {
 
                 </div>
 
+              )}
+
+              {/* =========================================
+                  SHAREHOLDING PATTERN
+                  ========================================= */}
+
+              {activeGovernanceTab === "shareholding-pattern" && (
+                <ShareholdingPattern />
               )}
 
             </div>

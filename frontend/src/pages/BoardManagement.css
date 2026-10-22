@@ -116,7 +116,7 @@
 .hero-img-wrap {
   width: 100%;
   max-width: 440px;
-  margin-left:  auto;
+  margin-left: auto;
   background: #ffffff;
   border: 1px solid #f1f5f9;
   border-radius: 28px;
@@ -890,7 +890,7 @@
    Group Companies Subpage Layout Styles
    ========================================================================== */
 
-.group-companies-container {
+.promotion-related-entities-container {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
@@ -1244,11 +1244,9 @@
   margin-top: 20px;
   padding: 24px 36px;
 
-  background: linear-gradient(
-    135deg,
-    #fffcfb 0%,
-    #fffbf8 100%
-  );
+  background: linear-gradient(135deg,
+      #fffcfb 0%,
+      #fffbf8 100%);
 
   border: 1.5px solid #ffeedd;
   border-radius: 20px;
@@ -1384,7 +1382,7 @@
 
 @media (max-width: 1199px) {
 
-  .group-companies-container {
+  .promotion-related-entities-container {
     max-width: 100%;
   }
 
@@ -1818,7 +1816,7 @@
 }
 
 .policy-accordion-content {
-  padding: 0 28px 24px 92px;
+  padding: 0 28px 24px 28px;
   /* Offset to align with header title text */
   text-align: left;
 }
@@ -2322,6 +2320,484 @@
   font-weight: 700;
   margin-top: 24px;
   margin-bottom: 8px;
+}
+
+/* =========================================================
+   SHAREHOLDING PATTERN TABLES
+========================================================= */
+
+.shareholding-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 16px 0 24px;
+}
+
+.shareholding-information-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 16px;
+  color: #292929;
+}
+
+.shareholding-information-table th {
+  background-color: #f21c08;
+  color: #ffffff;
+  text-align: left;
+  font-weight: 700;
+  padding: 14px 12px;
+  border: 1px solid #d5d5d5;
+}
+
+.shareholding-information-table td {
+  padding: 13px 12px;
+  border: 1px solid #d5d5d5;
+  vertical-align: middle;
+  line-height: 1.45;
+}
+
+.shareholding-information-table td:first-child {
+  width: 68%;
+}
+
+.shareholding-information-table td:last-child {
+  width: 32%;
+}
+
+.declaration-table th:first-child,
+.declaration-table td:first-child {
+  width: 6%;
+}
+
+.declaration-table th:nth-child(2),
+.declaration-table td:nth-child(2) {
+  width: 43%;
+}
+
+.declaration-table th:nth-child(3),
+.declaration-table td:nth-child(3) {
+  width: 7%;
+}
+
+.declaration-table th:nth-child(4),
+.declaration-table td:nth-child(4) {
+  width: 16%;
+}
+
+.declaration-table th:nth-child(5),
+.declaration-table td:nth-child(5) {
+  width: 14%;
+}
+
+.declaration-table th:nth-child(6),
+.declaration-table td:nth-child(6) {
+  width: 14%;
+}
+
+.foreign-ownership-table th:first-child,
+.foreign-ownership-table td:first-child {
+  width: 50%;
+}
+
+.foreign-ownership-table th:nth-child(2),
+.foreign-ownership-table td:nth-child(2) {
+  width: 25%;
+}
+
+.foreign-ownership-table th:nth-child(3),
+.foreign-ownership-table td:nth-child(3) {
+  width: 25%;
+}
+
+/* =========================================================
+   SUMMARY STATEMENT TABLE
+   Table I - Summary Statement holding of specified securities
+========================================================= */
+
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.summary-statement-wrapper {
+  width: 100%;
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   FIXED TABLE TITLE
+========================================================= */
+
+.summary-statement-title {
+  width: 100%;
+
+  padding: 14px 12px;
+
+  background-color: #f21c08;
+  color: #ffffff;
+
+  border: 1px solid #f21c08;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   SCROLLABLE TABLE VIEWPORT
+========================================================= */
+
+.summary-statement-scroll {
+  width: 100%;
+
+  /*
+    Fixed viewport height.
+    The table content will scroll vertically
+    when it exceeds this height.
+  */
+  height: 500px;
+
+  /*
+    Horizontal scrolling is required because
+    the table contains 17 columns.
+  */
+  overflow-x: auto;
+
+  /*
+    Vertical scrolling is required because
+    the table height is larger than the viewport.
+  */
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+
+  background-color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.summary-statement-table {
+  /*
+    max-content prevents the table from
+    squeezing all 17 columns into the viewport.
+  */
+  width: max-content;
+
+  /*
+    Ensures the table still has a reasonable
+    minimum width.
+  */
+  min-width: 1500px;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+
+  font-size: 14px;
+  color: #292929;
+}
+
+
+/* =========================================================
+   TABLE CELLS
+========================================================= */
+
+.summary-statement-table th,
+.summary-statement-table td {
+  border: 1px solid #d5d5d5;
+
+  padding: 10px;
+
+  vertical-align: middle;
+
+  text-align: left;
+
+  line-height: 1.45;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.summary-statement-table thead th {
+  font-weight: 500;
+
+  background-color: #ffffff;
+  color: #292929;
+}
+
+
+/* =========================================================
+   TABLE DATA
+========================================================= */
+
+.summary-statement-table tbody td {
+  height: 70px;
+}
+
+
+/* =========================================================
+   COLUMN 1
+   Category
+========================================================= */
+
+.summary-statement-table th:nth-child(1),
+.summary-statement-table td:nth-child(1) {
+  width: 80px;
+}
+
+
+/* =========================================================
+   COLUMN 2
+   Category of shareholder
+========================================================= */
+
+.summary-statement-table th:nth-child(2),
+.summary-statement-table td:nth-child(2) {
+  width: 110px;
+}
+
+
+/* =========================================================
+   COLUMN 3
+   Nos. Of shareholders
+========================================================= */
+
+.summary-statement-table th:nth-child(3),
+.summary-statement-table td:nth-child(3) {
+  width: 105px;
+}
+
+
+/* =========================================================
+   COLUMN 4
+   Fully paid equity shares
+========================================================= */
+
+.summary-statement-table th:nth-child(4),
+.summary-statement-table td:nth-child(4) {
+  width: 100px;
+}
+
+
+/* =========================================================
+   COLUMN 5
+   Partly paid equity shares
+========================================================= */
+
+.summary-statement-table th:nth-child(5),
+.summary-statement-table td:nth-child(5) {
+  width: 65px;
+}
+
+
+/* =========================================================
+   COLUMN 6
+   Depository Receipts
+========================================================= */
+
+.summary-statement-table th:nth-child(6),
+.summary-statement-table td:nth-child(6) {
+  width: 95px;
+}
+
+
+/* =========================================================
+   COLUMN 7
+   Total shares held
+========================================================= */
+
+.summary-statement-table th:nth-child(7),
+.summary-statement-table td:nth-child(7) {
+  width: 100px;
+}
+
+
+/* =========================================================
+   COLUMN 8
+   Shareholding percentage
+========================================================= */
+
+.summary-statement-table th:nth-child(8),
+.summary-statement-table td:nth-child(8) {
+  width: 110px;
+}
+
+
+/* =========================================================
+   COLUMNS 9 - 11
+   Voting Rights
+========================================================= */
+
+.summary-statement-table th:nth-child(9),
+.summary-statement-table td:nth-child(9),
+
+.summary-statement-table th:nth-child(10),
+.summary-statement-table td:nth-child(10),
+
+.summary-statement-table th:nth-child(11),
+.summary-statement-table td:nth-child(11) {
+  width: 100px;
+}
+
+
+/* =========================================================
+   COLUMN 12
+   Total percentage
+========================================================= */
+
+.summary-statement-table th:nth-child(12),
+.summary-statement-table td:nth-child(12) {
+  width: 85px;
+}
+
+
+/* =========================================================
+   COLUMNS 13 - 15
+   Convertible securities / Warrants / ESOP
+========================================================= */
+
+.summary-statement-table th:nth-child(13),
+.summary-statement-table td:nth-child(13),
+
+.summary-statement-table th:nth-child(14),
+.summary-statement-table td:nth-child(14),
+
+.summary-statement-table th:nth-child(15),
+.summary-statement-table td:nth-child(15) {
+  width: 105px;
+}
+
+
+/* =========================================================
+   COLUMN 16
+   Outstanding securities
+========================================================= */
+
+.summary-statement-table th:nth-child(16),
+.summary-statement-table td:nth-child(16) {
+  width: 120px;
+}
+
+
+/* =========================================================
+   COLUMN 17
+   Fully diluted shares
+========================================================= */
+
+.summary-statement-table th:nth-child(17),
+.summary-statement-table td:nth-child(17) {
+  width: 110px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.summary-statement-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.summary-statement-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.summary-statement-scroll::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 4px;
+}
+
+.summary-statement-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+
+
+/* =========================================================
+   MOBILE / SMALL SCREEN
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .summary-statement-wrapper {
+    margin-top: 20px;
+  }
+
+  .summary-statement-title {
+    padding: 12px 10px;
+
+    font-size: 14px;
+  }
+
+  .summary-statement-scroll {
+    height: 450px;
+  }
+
+  .summary-statement-table {
+    min-width: 1500px;
+
+    font-size: 13px;
+  }
+
+  .summary-statement-table th,
+  .summary-statement-table td {
+    padding: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .summary-statement-scroll {
+    height: 400px;
+  }
+
+  .summary-statement-table {
+    min-width: 1500px;
+
+    font-size: 12px;
+  }
+
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .shareholding-information-table {
+    min-width: 700px;
+    font-size: 14px;
+  }
+
+  .shareholding-information-table th,
+  .shareholding-information-table td {
+    padding: 11px 10px;
+  }
+
 }
 
 /* ==========================================================================

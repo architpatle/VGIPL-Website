@@ -151,7 +151,7 @@ const NoticeOfMeeting = () => {
   return (
 
     <div
-      className="group-companies-container"
+      className="promotion-related-entities-container"
       style={{ marginTop: '0' }}
     >
 

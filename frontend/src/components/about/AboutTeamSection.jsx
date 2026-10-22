@@ -110,7 +110,7 @@ function AboutTeamSection() {
     },
     {
       name: "Mr. Sunil Kulkarni",
-      role: "Additional Non-Executive Director",
+      role: "Professional Non-Executive Director",
       desc: "Driving strategic growth through fintech, digital payments, and technology expertise.",
       img: "/assets/images/about/founders/sunil-kulkarni.png",
       fit: "contain",

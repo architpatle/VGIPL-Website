@@ -31,12 +31,12 @@ export const INVESTORS_DATA = [
     ]
   },
   {
-    slug: 'group-companies',
-    title: 'Group Companies',
+    slug: 'promotion-related-entities',
+    title: 'Promotion Related Entities',
     icon: 'building',
     heroImage: imgGroupCompanies,
     logo: imgGroupCompanies,
-    desc: 'Information about our group companies and subsidiaries working synergistically across various sectors.',
+    desc: 'Information about our promotion related entities companies and subsidiaries working synergistically across various sectors.',
     gridItems: []
   },
   {

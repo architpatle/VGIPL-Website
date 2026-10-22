@@ -162,7 +162,7 @@ function MaterialContracts() {
         <div className="container">
           <div className="explore-divider"></div>
 
-          <div className="group-companies-container" style={{ marginTop: '0' }}>
+          <div className="promotion-related-entities-container" style={{ marginTop: '0' }}>
             <div className="company-rows-list">
               {contractGroups.map((group, idx) => (
                 <div

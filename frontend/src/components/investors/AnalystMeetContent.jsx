@@ -259,7 +259,7 @@ const AnalystMeetContent = () => {
   }, []);
 
   return (
-    <div className="group-companies-container" style={{ marginTop: '0' }}>
+    <div className="promotion-related-entities-container" style={{ marginTop: '0' }}>
       {/* HTML5 Audio Tag */}
       <audio 
         ref={audioRef} 

@@ -277,7 +277,7 @@ function MaterialDocuments() {
         <div className="container">
           <div className="explore-divider"></div>
 
-          <div className="group-companies-container" style={{ marginTop: '0' }}>
+          <div className="promotion-related-entities-container" style={{ marginTop: '0' }}>
             <div className="company-rows-list">
               {documentsData.map((group, idx) => (
                 <div

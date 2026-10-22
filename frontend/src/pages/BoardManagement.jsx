@@ -199,7 +199,7 @@ const SUBPAGES_DATA = {
       },
       {
         name: "Mr. Sunil Kulkarni",
-        role: "Additional Non-Executive Director",
+        role: "Professional Non-Executive Director",
         img: "/assets/images/about/founders/sunil-kulkarni.png",
         linkedin: "https://www.linkedin.com/in/sunil-kulkarni-12a3291/"
       }
@@ -538,10 +538,12 @@ function BoardManagement() {
                   {subpage === 'committees' && (
                     <div className="composition-page">
 
+                      
+
                       {/* =====================================================
         COMPOSITION OF BOARD OF DIRECTORS
         ===================================================== */}
-                      <section className="composition-board-section effect-fade-up">
+                      {/* <section className="composition-board-section effect-fade-up">
                         <div className="composition-heading">
                           <span className="composition-eyebrow">
                             VIRTUAL GALAXY INFOTECH LIMITED
@@ -577,7 +579,7 @@ function BoardManagement() {
                             </table>
                           </div>
                         </div>
-                      </section>
+                      </section> */}
 
 
                       {/* =====================================================
@@ -586,6 +588,9 @@ function BoardManagement() {
                       <section className="board-committees-section">
 
                         <div className="composition-heading committees-heading">
+                          <span className="composition-eyebrow">
+                            VIRTUAL GALAXY INFOTECH LIMITED
+                          </span>
                           <h2>COMPOSITION OF BOARD COMMITTEES</h2>
 
                           <div className="composition-heading-line">
