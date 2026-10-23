@@ -40,7 +40,7 @@ function ShareholdingPattern30June2026() {
             {/* TABLE 9 */}
             <IndividualHinduUndividedFamily8 />
 
-            {/* TABLE 9 */}
+            {/* TABLE 10 */}
             <AnyOther />
         </div>
     );

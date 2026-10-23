@@ -2730,6 +2730,348 @@
   background: #8f8f8f;
 }
 
+/* =========================================
+   SHAREHOLDER DETAIL TABLE
+   ========================================= */
+
+.shareholder-detail-wrapper {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.shareholder-detail-title {
+  width: 100%;
+  padding: 12px 12px;
+  background-color: #f21c08;
+  color: #ffffff;
+  border: 1px solid #f21c08;
+  box-sizing: border-box;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.shareholder-detail-scroll {
+  width: 100%;
+  max-height: 650px;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+
+  background-color: #ffffff;
+}
+
+.shareholder-detail-table {
+  width: 100%;
+  min-width: 950px;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+
+  font-size: 14px;
+  color: #292929;
+}
+
+.shareholder-detail-table th,
+.shareholder-detail-table td {
+  border: 1px solid #d5d5d5;
+
+  padding: 10px;
+
+  vertical-align: middle;
+  text-align: left;
+
+  line-height: 1.45;
+
+  box-sizing: border-box;
+
+  font-weight: 400;
+}
+
+.shareholder-detail-table th {
+  width: 110px;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
+.shareholder-detail-table td {
+  min-width: 125px;
+}
+
+/* Section rows */
+.shareholder-detail-table .shareholder-detail-section-row td {
+  padding: 10px;
+
+  background-color: #ffffff;
+
+  font-weight: 500;
+  text-align: left;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+   ========================================= */
+
+.shareholder-detail-table th:first-child {
+  width: 110px;
+}
+
+.shareholder-detail-table td {
+  width: 135px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+.shareholder-detail-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.shareholder-detail-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.shareholder-detail-scroll::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 4px;
+}
+
+.shareholder-detail-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .shareholder-detail-wrapper {
+    margin-top: 20px;
+  }
+
+  .shareholder-detail-title {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .shareholder-detail-scroll {
+    max-height: 600px;
+  }
+
+  .shareholder-detail-table {
+    min-width: 950px;
+    font-size: 13px;
+  }
+
+  .shareholder-detail-table th,
+  .shareholder-detail-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shareholder-detail-scroll {
+    max-height: 550px;
+  }
+
+  .shareholder-detail-table {
+    min-width: 950px;
+    font-size: 12px;
+  }
+
+  .shareholder-detail-table th,
+  .shareholder-detail-table td {
+    padding: 8px;
+  }
+}
+
+/* =========================================================
+   ANY OTHER TABLE
+   31 MARCH 2026
+========================================================= */
+
+.any-other-wrapper {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.any-other-table {
+  width: 100%;
+  min-width: 780px;
+  table-layout: fixed;
+}
+
+/* 5 physical columns:
+   1. Label
+   2. HUF
+   3. LLP
+   4. LLP / More than 1 percentage
+   5. Total
+*/
+
+.any-other-table th,
+.any-other-table td {
+  border: 1px solid #d5d5d5;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: left;
+  box-sizing: border-box;
+  color: #292929;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.any-other-table tr td:first-child {
+  width: 102px;
+}
+
+.any-other-table tr td:nth-child(2) {
+  width: 92px;
+}
+
+.any-other-table tr td:nth-child(3) {
+  width: 92px;
+}
+
+.any-other-table tr td:nth-child(4) {
+  width: 326px;
+}
+
+.any-other-table tr td:nth-child(5) {
+  width: 182px;
+}
+
+/* Label column */
+
+.any-other-label-cell {
+  font-weight: 500;
+}
+
+/* Section separators */
+
+.any-other-section-row {
+  padding: 8px 10px !important;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
+/* Subsection */
+
+.any-other-subsection-row {
+  font-weight: 500;
+  padding: 8px 10px !important;
+}
+
+/* Taller rows */
+
+.any-other-tall-row td {
+  min-height: 80px;
+}
+
+.any-other-extra-tall-row td {
+  min-height: 130px;
+}
+
+/* Name row */
+
+.any-other-name-row td {
+  height: 70px;
+}
+
+/* Keep content vertically centered */
+
+.any-other-table td {
+  vertical-align: middle;
+}
+
+/* Scrollbar */
+
+.any-other-wrapper .summary-statement-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.any-other-wrapper .summary-statement-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.any-other-wrapper .summary-statement-scroll::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 4px;
+}
+
+.any-other-wrapper .summary-statement-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .any-other-wrapper {
+    margin-top: 20px;
+  }
+
+  .any-other-table {
+    min-width: 780px;
+    font-size: 13px;
+  }
+
+  .any-other-table th,
+  .any-other-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .any-other-table tr td:first-child {
+    width: 102px;
+  }
+
+  .any-other-table tr td:nth-child(2) {
+    width: 92px;
+  }
+
+  .any-other-table tr td:nth-child(3) {
+    width: 92px;
+  }
+
+  .any-other-table tr td:nth-child(4) {
+    width: 326px;
+  }
+
+  .any-other-table tr td:nth-child(5) {
+    width: 182px;
+  }
+}
+
+@media (max-width: 480px) {
+  .any-other-table {
+    min-width: 780px;
+    font-size: 12px;
+  }
+
+  .any-other-table th,
+  .any-other-table td {
+    padding: 7px;
+    font-size: 12px;
+  }
+}
 
 /* =========================================================
    MOBILE / SMALL SCREEN
