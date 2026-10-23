@@ -3073,6 +3073,94 @@
   }
 }
 
+.general-information-wrapper {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.general-information-title {
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #f21c08;
+  color: #ffffff;
+  border: 1px solid #f21c08;
+  box-sizing: border-box;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.general-information-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.general-information-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #ffffff;
+
+  font-size: 15px;
+  color: #292929;
+}
+
+.general-information-table td {
+  border: 1px solid #d5d5d5;
+  padding: 10px;
+  vertical-align: middle;
+  line-height: 1.45;
+  box-sizing: border-box;
+}
+
+.general-information-label {
+  width: 73%;
+}
+
+.general-information-value {
+  width: 27%;
+}
+
+@media (max-width: 768px) {
+  .general-information-wrapper {
+    margin-top: 20px;
+  }
+
+  .general-information-title {
+    padding: 11px 10px;
+    font-size: 14px;
+  }
+
+  .general-information-table {
+    font-size: 14px;
+  }
+
+  .general-information-table td {
+    padding: 9px 10px;
+  }
+
+  .general-information-label {
+    width: 65%;
+  }
+
+  .general-information-value {
+    width: 35%;
+  }
+}
+
+@media (max-width: 480px) {
+  .general-information-table {
+    font-size: 13px;
+  }
+
+  .general-information-table td {
+    padding: 8px;
+  }
+}
+
 /* =========================================================
    MOBILE / SMALL SCREEN
 ========================================================= */
@@ -3124,6 +3212,7 @@
   }
 
 }
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */

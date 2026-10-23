@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 import ShareholdingPattern30June2026 from "./30-june-2026/ShareholdingPattern30June2026";
 import ShareholdingPattern31March2026 from "./31-march-2026/ShareholdingPattern31March2026";
+import ShareholdingPattern31December2025 from "./31-december-2025/ShareholdingPattern31December2025";
 
 
 const SHAREHOLDING_PATTERN_DATA = [
@@ -22,16 +23,7 @@ const SHAREHOLDING_PATTERN_DATA = [
     {
         id: "31-december-2025",
         title: "Shareholding Pattern 31 December 2025",
-        content: {
-            description:
-                "Dummy shareholding pattern data for the quarter ended 31 December 2025.",
-
-            rows: [
-                ["Promoter & Promoter Group", "53.10%"],
-                ["Public Shareholders", "46.50%"],
-                ["Others", "0.40%"],
-            ],
-        },
+        content:<ShareholdingPattern31December2025 />
     },
 
     {
