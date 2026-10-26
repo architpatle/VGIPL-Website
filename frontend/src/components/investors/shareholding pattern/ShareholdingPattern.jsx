@@ -6,6 +6,7 @@ import ShareholdingPattern30June2026 from "./30-june-2026/ShareholdingPattern30J
 import ShareholdingPattern31March2026 from "./31-march-2026/ShareholdingPattern31March2026";
 import ShareholdingPattern31December2025 from "./31-december-2025/ShareholdingPattern31December2025";
 import ShareholdingPattern30September2025 from "./30-september-2025/ShareholdingPattern30September2025";
+import ShareholdingPattern22May2025 from "./22-may-2025/ShareholdingPattern22May2025";
 
 
 const SHAREHOLDING_PATTERN_DATA = [
@@ -36,16 +37,7 @@ const SHAREHOLDING_PATTERN_DATA = [
     {
         id: "22-may-2025-post-listing",
         title: "Shareholding Pattern 22 May 2025 - Post Listing",
-        content: {
-            description:
-                "Dummy shareholding pattern data following the company's listing on 22 May 2025.",
-
-            rows: [
-                ["Promoter & Promoter Group", "54.00%"],
-                ["Public Shareholders", "45.60%"],
-                ["Others", "0.40%"],
-            ],
-        },
+        content: <ShareholdingPattern22May2025 />
     },
 ];
 

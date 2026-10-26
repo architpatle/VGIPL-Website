@@ -340,7 +340,7 @@ function SummaryStatement() {
                                 No of Voting (XIV) Rights
                             </th>
                             <th rowSpan="2">
-                                	Total as a % of (A+B+C)
+                                Total as a % of (A+B+C)
                             </th>
                         </tr>
 

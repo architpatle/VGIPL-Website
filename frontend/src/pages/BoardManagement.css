@@ -3231,9 +3231,48 @@
 
 }
 
-.shareholding-light-highlight {
+.shareholding-light-highlight, .general-information-label-cell  {
   background-color: #fff0eb !important;
   color: #292929 !important;
+}
+
+.declaration-grey-cell {
+  background-color: #dddddd !important;
+}
+
+/* Main light peach cells */
+.summary-statement-highlight-cell {
+    background-color: #fdf0eb !important; 
+    color: #292929 !important;
+}
+
+/* Secondary grouped header cells */
+.summary-statement-grey-cell {
+    background-color: #dcdcdc !important;
+}
+
+/* Table title */
+.summary-statement-title-cell {
+    background-color: #f21c08 !important;
+    color: #ffffff !important;
+}
+
+.summary-statement-table {
+    table-layout: fixed;
+}
+
+
+.summary-statement-table th:last-child,
+.summary-statement-table td:last-child {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.summary-statement-section-cell {
+    background-color: #fdf0eb;
+    text-align: left;
+    font-weight: 600;
 }
 
 /* ==========================================================================

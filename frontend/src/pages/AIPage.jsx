@@ -8,6 +8,8 @@ import {
 import { Link } from 'react-router-dom';
 import aiImg from '../assets/aiImg.png';
 
+import AiProduct from "../components/ai-page/AiProduct";
+
 function AIPage() {
   // SEO Protection: Prevent search indexing
   useEffect(() => {
@@ -698,6 +700,9 @@ function AIPage() {
             </div>
           </div>
         </section>
+
+        {/* SECTION 4: AI PRODUCTS */}
+        <AiProduct />
 
         {/* SECTION 4: INDUSTRY EXPERIENCES */}
         <section style={{ background: '#faf8f6', padding: '40px 0', borderTop: '1px solid #e5e7eb', borderBottom: '1px solid #e5e7eb', borderRadius: '24px', margin: '20px 0' }}>
