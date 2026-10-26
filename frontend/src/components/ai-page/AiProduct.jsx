@@ -178,11 +178,11 @@ function VirtualVaaniVisual() {
                 <div className="call-status" />
             </div>
 
-            <div className="vaani-language">
+            {/* <div className="vaani-language">
                 <span>Hindi</span>
                 <span>Marathi</span>
                 <span>English</span>
-            </div>
+            </div> */}
 
             <div className="vaani-secure">
                 <ShieldCheck size={15} />
